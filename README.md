@@ -1,4 +1,4 @@
-Oin Calendar Project
+Welcome to the Bulgarian Calendar Project
 ====================
 
 There have been lots of researches regarding how old Bulgarians have measured 
@@ -62,3 +62,36 @@ Then 3 implementations on top of this API interface has been implemented:
   - Implementation of the Gregorian calendar (the modern calendar used in European countries)
   - Implementation of the Old Bulgarain calendar.
 
+Old Bulgarain Calendar Principles
+=================================
+
+The Bulgarian calendar is the calendar of the ancient Bulgarians restored from 
+written historical data 
+[Nominalia of the Bulgarian khans](https://en.wikipedia.org/wiki/Nominalia_of_the_Bulgarian_khans) 
+and the folk tales and legends. 
+There are studies of various scholars who sometimes quite differ in  
+conclusions reached.
+
+Beginning of the Calendar
+-------------------------
+Most researchers accept the starting point on the 22-nd day of the winter 
+solstice (December 21) during the year 5505 BC – in other words, we can assume 
+that the first year of the Bulgarian calendar coincides almost completely 
+with 5504 BC in the Gregorian calendar.
+
+````
++---------------------------------------+-----------------------------+
+| .. 20 21 22 23 24 25 26 27 28 29 30 31| 1 2 3 4 5 6 7 8 9 10 11 ... |
++-------+--------------------------------+-----------------------------+
+| December 5505 yr. before Christ.......| January 5504 yr. before Ch. |
++-------+-------------------------------+-----------------------------+
+        |
+		+-------------------------------------------------------------+
+		|1  2  3  4  5  6  7  8  9 10 11 12           ...             |
+		+-------------------------------------------------------------+
+		| First Month of the First year of Old Bulgarian Calendar     |
+		+-------------------------------------------------------------+
+		|
+		|
+		Winter Solar solstice
+````
