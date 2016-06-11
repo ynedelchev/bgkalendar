@@ -1,0 +1,59 @@
+body {
+  background-color: #AABBCC;
+  background-image: url(/backgrnd.gif);
+  margin:0px;
+  padding: 0px;
+}
+
+.mainpage {
+   min-height: 603px;
+   border-style: solid;
+   border-color: red;
+   /* background: url(/images/dilom.png) no-repeat left top; */
+}
+
+table.upmenu {
+  width: 100%;
+  background-color: #222222;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-top: 1px;
+}
+table.linktabs {
+  border: none;
+}
+td.linktabs {
+  border-style: solid;
+  border-collapse:collapse;
+  border-color: #555555;
+  border-width: 1px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #303030;
+  padding-left:  10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  margin: 0px;
+  
+}
+a.linktabs {
+  text-decoration: none;
+}
+a.linktabs:link {
+  color: #AAAAFF;
+}
+a.linktabs:visited {
+  color: #9999CC;
+}
+a.linktabs:hover {
+  text-decoration: underline;
+  color: #9999CC;
+}
+
+table.noborder {
+  border: none;
+}
+
+table#searchinman {
+  margin-left: 25px;
+}

@@ -1,0 +1,19 @@
+td.yearperiod {
+  vertical-align: bottom; 
+}
+td.dayofweek {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+td.dayofweekgr {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+
+
+p.calendarvertical {
+   display: inline;
+}

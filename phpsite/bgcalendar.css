@@ -1,0 +1,195 @@
+.calendarbody {
+  background-color: #AABBCC;
+  background-image: url(/backgrnd.png); 
+  margin:10px;
+  padding: 10px;
+}
+
+
+h1.upmenu {
+   padding: 5px;
+   margin: 0px;
+   width: 100%;
+   color: #AAAABB;
+   background-color: #222233; 
+   text-align: center;
+   margin-bottom: 0.2em;
+}
+
+div.textpanel {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-color: red;
+  border-style: solid; 
+  border-width: 1px;
+  background-color: rgba(250, 250, 250, 0.7);
+  width:     1200px;
+  max-width: 1700px;
+  min-width: 400px;
+}
+
+.calendartable
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+}
+
+.esyl_1, .e4syl_1
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+ background-color: rgba(70, 70, 250, 0.6); 
+}
+.esyn_1, .e4syn_1
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+ background-color: rgba(100, 100, 250, 0.6);
+}
+.esyn_2, .e4syn_2
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+ background-color: rgba(250, 100, 100, 0.6); 
+}
+
+.esyl_2, .e4syl_2
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+ background-color: rgba(250, 70, 70, 0.6);
+}
+.calendarweekrow 
+{
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ //vertical-align: top;
+ //text-align: right;
+ background-color: rgba(200, 200, 200, 1.0);
+}
+.calendarvertical 
+{
+  border:0px solid red;
+  vertical-align: bottom; 
+  writing-mode: tb-rl;
+
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -sand-transform: rotate(-90deg); // Internet Explorer via http://www.useragentman.com/tests/cssSandpaper/rotateTest.html
+  transform: rotate(-90deg);
+
+  white-space:nowrap;
+  display:block;
+  bottom:0;
+  max-width:30px;
+  font-weight: normal;
+  text-shadow: 0px 0px 1px #333;
+}
+td.yearperiod {
+  padding-bottom: 1em;
+}
+div.yearperiod {
+  max-height:10em; 
+}
+div.dayofweek 
+{
+  max-height:2em;
+}
+
+.calendartdleftseparator
+{
+ border-collapse: collapse;
+ border-left-color: blue;
+ border-left-style: solid;
+ border-left-width:1px;
+ border-right-width:0px;
+ border-top-width:0px;
+ border-bottom-width:0px;
+}
+.calendartdrightseparator
+{
+ border-collapse: collapse;
+ border-left-color: blue;
+ border-left-style: solid;
+ border-left-width:0px;
+ border-right-width:1px;
+ border-top-width:0px;
+ border-bottom-width:0px;
+}
+.celendarleftalign 
+{
+ text-align: center:
+}
+
+
+.calendartable.plainrowheaders th[scope=row]
+{
+ font-weight:normal;
+ text-align:left
+}
+
+.calendartable td ul,.calendartable td ol,.calendartable td dl
+{ 
+  text-align:right
+}
+
+.calendartable.hlist td ul,.calendartable.hlist td ol,.calendartable.hlist td dl
+{
+  text-align:inherit
+}
+
+img.calendarimage {
+  width: 2em; 
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+
+.oldbg
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+ font-family: "Izhitsa", "Times New Roman", "Times", "serif";
+ #font-family: "Times New Roman", "Times", "serif";
+}
+
+
