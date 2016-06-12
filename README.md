@@ -44,8 +44,8 @@ Under the `phpsite` sub-directory, you can find a PHP version of the library.
 That makes it easy to use that library in your own PHP Web site. 
 
 We also have a sample site with a main page `phpsite/index.php` and some `css` 
-styling and so on. Look at the `phpsite/kalendar.html` for an explanation of 
-the principles of the calendar.
+styling and so on. Look at the [`phpsite/kalendar.html`](https://github.com/ynedelchev/bgkalendar/blob/master/phpsite/kalendar.html) 
+for an explanation of the principles of the calendar.
 
 Sample of this site has been installed on http://bgkalendar.no-ip.info/bgkalendar.
 
@@ -210,3 +210,7 @@ composition of the week. As we said in the Bulgarian calendar, such days are Eni
 *: There are also hypotheses, that the first and second month of each quarter had 30 days, but the third had 31 days. 
 Common across all hypotheses is that the year is divided into quarters of 91 days.
 
+License
+-------
+
+[MIT License](http://adampritchard.mit-license.org/).
