@@ -1,18 +1,20 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+<!-- Please use markdown-toc -i README.md to update the table of contents -->
+<!-- -->
+**Table of Contents**  *generated with [Markdown-TOC](https://www.npmjs.com/package/markdown-toc#install)*
+
+<!-- toc -->
 
 - [Welcome to the Bulgarian Calendar Project](#welcome-to-the-bulgarian-calendar-project)
 - [Java Library](#java-library)
-  - [Testing the Java Library](#testing-the-java-library)
+  * [Testing the Java Library](#testing-the-java-library)
 - [PHP Library and Web Site](#php-library-and-web-site)
 - [Gregorian and Julian Calendar](#gregorian-and-julian-calendar)
 - [Old Bulgarain Calendar Principles](#old-bulgarain-calendar-principles)
-  - [Beginning of the Calendar](#beginning-of-the-calendar)
-  - [Structure of the year](#structure-of-the-year)
-  - [License](#license)
+  * [Beginning of the Calendar](#beginning-of-the-calendar)
+  * [Structure of the year](#structure-of-the-year)
+  * [License](#license)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- tocstop -->
 
 Welcome to the Bulgarian Calendar Project
 ====================
