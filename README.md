@@ -95,12 +95,12 @@ with 5504 BC in the Gregorian calendar.
         ^
         |
         |
-		    Winter Solar solstice
+        Winter Solar solstice
 ````
 
 When doing calculations and comparison with the Gregorian and/or Julian calendar, 
-please bare in mind that in both Julian and Gregorian calendars there is no zero year
-- that is to say, that 1-st year BC is immediately followed by the 1st year after Christ.
+please bare in mind that in both Julian and Gregorian calendars there is no zero year - that is to say, 
+that 1-st year BC is immediately followed by the 1-st year after Christ.
 
 ````
 +---------------------------------------+------------------------------+
@@ -186,20 +186,20 @@ Eni is represented as the last 31-st day in the 12-th month.
 
 It is assumed that the days Eni and Behti, are not counted as days of a week. 
 These are the so-called days which are not «not counted». 
-Without them, the rest of the days that count, form exactly52 weeks. 
-So if the year begins on Monday, will also begin next year on Monday, 
+Without them, the rest of the days that count, form exactly 52 weeks. 
+So if the year begins on Monday, the next year will also begin on Monday and
 each calendar date remains fixed forever in a specific day of the week.
 
 Some researchers suggest that Bulgarian week began with Sunday. Basis for such an 
-assumption is the name of a day Wednesday - sryada  - means in Bulgarian 'middle' (of the week).
+assumption is the name of a day Wednesday - `sryada`  - that means in Bulgarian 'middle' (of the week).
 An alternative assumption is that Monday was widely adopted as the first day of the week. 
-The grounds for such an alternative assumption are the names of the following days: Tuesday (vtornik), 
-Thursday (chetvartak) and Friday (petak) - meaning, respectively, second, fourth and fifth (day of the week) 
-- in bulgarian sekond - vtori, fourth - chetvarti, fifth - peti. That is to say if Tuesday is the second day, 
+The grounds for such an alternative assumption are the names of the following days: Tuesday (`vtornik`), 
+Thursday (`chetvartak`) and Friday (`petak`) - meaning, respectively, second, fourth and fifth (day of the week)  - in bulgarian 
+sekond - `vtori`, fourth - `chetvarti`, fifth - `peti`. That is to say if Tuesday is the second day, 
 then Monday is supposed to be the first. In our model, we accept contingent names of days of the week - 
 1-st, 2-nd, 3-rd, 4-th, 5-th, 6-th and 7-th.
 
-In the table above, we have represented with the latin numbers (I, II, III, IV, V, VI, VII) to destinguish them 
+In the table above, we have represented them with the latin numbers (I, II, III, IV, V, VI, VII) to destinguish them 
 from the days of the month.
 
 In any case, the days of the week do not match to the days of the week that we know from the modern Gregorian calendar. 
@@ -207,5 +207,6 @@ This is because in the modern calendar, there are no days that are not counted a
 composition of the week. As we said in the Bulgarian calendar, such days are Eni and Behti.
 
 
-*: There are also hypotheses, that the first and second month of each quarter had 30 days, but the third had 31 days. Common across all hypotheses is that the year is divided into quarters of 91 days.
+*: There are also hypotheses, that the first and second month of each quarter had 30 days, but the third had 31 days. 
+Common across all hypotheses is that the year is divided into quarters of 91 days.
 
