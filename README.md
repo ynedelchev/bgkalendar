@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Welcome to the Bulgarian Calendar Project](#welcome-to-the-bulgarian-calendar-project)
+- [Java Library](#java-library)
+  - [Testing the Java Library](#testing-the-java-library)
+- [PHP Library and Web Site](#php-library-and-web-site)
+- [Gregorian and Julian Calendar](#gregorian-and-julian-calendar)
+- [Old Bulgarain Calendar Principles](#old-bulgarain-calendar-principles)
+  - [Beginning of the Calendar](#beginning-of-the-calendar)
+  - [Structure of the year](#structure-of-the-year)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Welcome to the Bulgarian Calendar Project
 ====================
 
@@ -134,52 +150,52 @@ In our model the conditional Behti is represented as the last 31-st day in the 6
 Eni is represented as the last 31-st day in the 12-th month.
 
 ````
-                                        YEAR
-                                        
+                                        YEAR                                 
+                                                                             
             First Month             Second Month           Third Month
-            
+                                                                             
         I II III IV  V VI VII   I II III IV  V VI VII   I II III IV  V VI VII
-        
+                                                                              
         1  2  3   4  5  6  7              1  2  3  4                    1  2  
         8  9 10  11 12 13 14    5  6  7   8  9 10 11    3  4  5   6  7  8  9
  Q1     15 16 17  18 19 20 21   12 13 14  15 16 17 18   10 11 12  13 14 15 16
         22 23 24  25 26 27 28   19 20 21  22 23 24 25   17 18 19  20 21 22 23
         29 30 31                26 27 28  29 30         24 25 26  27 28 29 30
-        
-                                        
+                                                                             
+                                                                             
             Forth Month              Fifth Month             Sixth Month
-            
+                                                                             
         I II III IV  V VI VII   I II III IV  V VI VII   I II III IV  V VI VII
-        
+                                                                              
         1  2  3   4  5  6  7              1  2  3  4                    1  2  
         8  9 10  11 12 13 14    5  6  7   8  9 10 11    3  4  5   6  7  8  9
  Q2    15 16 17  18 19 20 21   12 13 14  15 16 17 18   10 11 12  13 14 15 16
        22 23 24  25 26 27 28   19 20 21  22 23 24 25   17 18 19  20 21 22 23
        29 30 31                26 27 28  29 30         24 25 26  27 28 29 30
-                                                        
-                                                          Day Behty (31-st)
-        
+                                                                            
+                                                          Day Behty (31-st) - only on leap years
+                                                                            
             Sevent Month             Eight Month             Nineth Month
-            
+                                                                             
         I II III IV  V VI VII   I II III IV  V VI VII   I II III IV  V VI VII
-        
+                                                                             
         1  2  3   4  5  6  7              1  2  3  4                    1  2  
         8  9 10  11 12 13 14    5  6  7   8  9 10 11    3  4  5   6  7  8  9
  Q3    15 16 17  18 19 20 21   12 13 14  15 16 17 18   10 11 12  13 14 15 16
        22 23 24  25 26 27 28   19 20 21  22 23 24 25   17 18 19  20 21 22 23
        29 30 31                26 27 28  29 30         24 25 26  27 28 29 30
-        
-                                        
-            Tenth Month              Eleventh Month         Twelveth Month
-            
+                                                                             
+                                                                             
+            Tenth Month              Eleventh Month         Twelveth Month   
+                                                                             
         I II III IV  V VI VII   I II III IV  V VI VII   I II III IV  V VI VII
-        
+                                                                             
         1  2  3   4  5  6  7              1  2  3  4                    1  2  
         8  9 10  11 12 13 14    5  6  7   8  9 10 11    3  4  5   6  7  8  9
  Q4    15 16 17  18 19 20 21   12 13 14  15 16 17 18   10 11 12  13 14 15 16
        22 23 24  25 26 27 28   19 20 21  22 23 24 25   17 18 19  20 21 22 23
        29 30 31                26 27 28  29 30         24 25 26  27 28 29 30
-                                                        
+                                                                              
                                                           Day Eni (31-st)
 
 ````
