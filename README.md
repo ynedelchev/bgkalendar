@@ -65,7 +65,7 @@ We also have a sample site with a main page `phpsite/index.php` and some `css`
 styling and so on. Look at the [`phpsite/kalendar.html`](https://github.com/ynedelchev/bgkalendar/blob/master/phpsite/kalendar.html) 
 for an explanation of the principles of the calendar.
 
-Sample of this site has been installed on [http://bgkalendar.com](http://bgkalendar.com]).
+Sample of this site has been installed on [http://bgkalendar.com](http://bgkalendar.com).
 
 Gregorian and Julian Calendar
 =============================
