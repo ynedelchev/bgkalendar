@@ -24,7 +24,7 @@ times and the researches showed that there has been an Old Bulgarian calendar
 which has been (according to most researchers) solar based.
 
 This project aims to provide a library and a 
-[web-site](http://bgkalendar.no-ip.info/bgkalendar/) for calculation of the 
+[web-site](http://bgkalendar.com/) for calculation of the 
 current year, month and day according to the assumptive Old Bulgarian calendar.
 
 Calculation is based on some assumptions. For example when does the calendar 
@@ -65,7 +65,7 @@ We also have a sample site with a main page `phpsite/index.php` and some `css`
 styling and so on. Look at the [`phpsite/kalendar.html`](https://github.com/ynedelchev/bgkalendar/blob/master/phpsite/kalendar.html) 
 for an explanation of the principles of the calendar.
 
-Sample of this site has been installed on http://bgkalendar.no-ip.info/bgkalendar.
+Sample of this site has been installed on [http://bgkalendar.com](http://bgkalendar.com]).
 
 Gregorian and Julian Calendar
 =============================
