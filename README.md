@@ -12,7 +12,8 @@
 - [Old Bulgarain Calendar Principles](#old-bulgarain-calendar-principles)
   * [Beginning of the Calendar](#beginning-of-the-calendar)
   * [Structure of the year](#structure-of-the-year)
-  * [License](#license)
+  * [Cycles for correction of the calendar](#cycles-for-correction-of-the-calendar)
+- [License](#license)
 
 <!-- tocstop -->
 
