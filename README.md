@@ -228,7 +228,159 @@ composition of the week. As we said in the Bulgarian calendar, such days are Eni
 *: There are also hypotheses, that the first and second month of each quarter had 30 days, but the third had 31 days. 
 Common across all hypotheses is that the year is divided into quarters of 91 days.
 
+Cycles for correction of the calendar
+-------------------------------------
+Tropical Earth year - that is the time for which the Earth makes one complete lap around the Sun, equals 190 419 365.242 Earth days - that is to say 365 days, 5 hours, 48 minutes and 45.5 seconds. So in a calendar year of 365 days, it goes faster with a quarter day (5 hours, 48 minutes and seconds 45.5) each year. After four years, the calendar year is starting approximately 1 day before completing the astronomical round of the Earth around the Sun.
+
+
+To stay in sync, the calendar year need to be corrected by adding a leap day every four years - the so-called day Behti that is added at the end of the 6th month. This adjustment, however, is not sufficient because the high gain of the calendar was not exactly a day (24 hours). It is 23 hours, 15 minutes and 2 seconds. So after adding the leap day the calendar begins to lag.
+
+
+This requires a system of additional adjustments. This system divides the calendar into periods, as shown below.
+
+
+===Four year period
+
+
+Every forth year has an additional leap day named Behti at the end of the 6-th month. A year with a leap day would be called a leap year. An year without a leap day would be called a non-leap year.
+
+````
+   +----------------+-----------------+---------------+-----------------+
+   | First Non Leap | Second Non Leap | Thir Non Leap | *Fourth LEAP*   |
+   | Year           | Year            | Year          | *Year*          |
+   +----------------+-----------------+---------------+-----------------+
+
+````
+
+===Twelve year period
+
+Three four - year periods form one 12 year period. This period is not characterized by a calendar adjustment, but what makes it specila is that each year from the 12 year cycle has an animal assigned to it - that is why this 12 year cycle is also called animalian cycle. Various researchers adopt different order of animals, as well as different starting animal. The names of the animals are also controversial. Here are some examples:
+
+````
+ +---------------------------------------------------------------------------------------------+
+ |                                       According To                                          |
+ +-------------------------+---------------------------------------------+---------------------+
+ |       Georgi Krustev    |             Yordan Vulchev                  |    Petur Dobrev     |
+ +-------------------------+---------------------------------------------+---------------------+
+ | animal       | name(s)  |    animal    |          name(s)             |  animal  |  name(s) |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Pig          |   Dox    | Pig          | dox, dok, prase              |                     |
+ +--------------+----------+--------------+------------------------------+---------------------+
+ | Mouse        |   Karan  | Mouse        | somor, shushi                | Mouse    | Somor    |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Ox           |   Shegor | Ox           | shegor, kuvrat, buza, busman | Ox       | Shegor   |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Snow Leopard |   Barus  | Tiger        | bars, parus, barus           | -        |          |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Rabbit       |   Dvan   | Rabbit       | dvansh                       | Rabbit   | Dvan     |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Dragon       |   Hala   | Dragon-Snake | ver, dragun, kala, slav      | Dragon   | Ver      |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Snake        |          | Snake        | dilom, delyan, attilla       | Snake    | Dilom    |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Horse        |   Tag    | Horse        | tek, tag, tih, alasha        | Horse    | Teku     |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Monkey       |   Pisin  | Monkey       | pesin, pisin                 | -        | -        |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Ram          |          | Ram          | suruh, sever, rasate         | -        | -        |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Cock         |   Tox    | Cock         | toh, tah                     | Cock     | Toh      |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+ | Dog          |   Et-h   | Dog          | et-h                         | Dog      | Et-h     |
+ +--------------+----------+--------------+------------------------------+----------+----------+
+                                                                         | Boar     | Dohs     |
+                                                                         +----------+----------+
+```` 
+Each 12-year period has been either male or female. In a male period - all years within this period were male - the corresponding animals have been male. In a female period - all years within the period comply with the animals of the female sex. After each male 12 year period, a female one follows. After that a mail period again and so on...
+
+===Sixty year period (star day)
+
+A period of 60 years equals exactly to 5 twelve-year cycles or 15 four-year cycles. It was conventially called "star day" Yordan Vulchev. Since the 60-year cycle is multiple of 4 year periods, then it, generally, ends in a leap year. Such a star day would be called - a leap star day.
+
+
+In certain cases, for the correction of the calendar, the leap day of the last year in the 60 year period neet to be taken away. In such case, we will call the star day a non leap star day.
+
+````
+                  Leap Star Day                                         NON Leap Star Day              
+  +-------+--------------+------+---------------+       +-------+--------------+------+----------------+
+  | BLACK | Four Yrs: 1  | № 1. | Non leap year |       | BLACK | Four Yrs: 1  | № 1. | Non leap year  |
+  |       |              | № 2. | Non leap year |       |       |              | № 2. | Non leap year  |
+  |       |              | № 3. | Non leap year |       |       |              | № 3. | Non leap year  |
+  |       |              | № 4. | Leap year     |       |       |              | № 4. | Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 2  | № 5. | Non leap year |       |       | Four Yrs: 2  | № 5. | Non leap year  |
+  |       |              | № 6. | Non leap year |       |       |              | № 6. | Non leap year  |
+  |       |              | № 7. | Non leap year |       |       |              | № 7. | Non leap year  |
+  |       |              | № 8. | Leap year     |       |       |              | № 8. | Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 3  | № 9. | Non leap year |       |       | Four Yrs: 3  | № 9. | Non leap year  |
+  |       |              | № 10.| Non leap year |       |       |              | № 10.| Non leap year  |
+  |       |              | № 11.| Non leap year |       |       |              | № 11.| Non leap year  |
+  |       |              | № 12.| Leap year     |       |       |              | № 12.| Leap year      |
+  +---------------------------------------------+       +----------------------------------------------+
+  | RED   | Four Yrs: 4  | № 13.| Non leap year |       | RED   | Four Yrs: 4  | № 13.| Non leap year  |
+  |       |              | № 14.| Non leap year |       |       |              | № 14.| Non leap year  |
+  |       |              | № 15.| Non leap year |       |       |              | № 15.| Non leap year  |
+  |       |              | № 16.| Leap year     |       |       |              | № 16.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 5  | № 17.| Non leap year |       |       | Four Yrs: 5  | № 17.| Non leap year  |
+  |       |              | № 18.| Non leap year |       |       |              | № 18.| Non leap year  |
+  |       |              | № 19.| Non leap year |       |       |              | № 19.| Non leap year  |
+  |       |              | № 20.| Leap year     |       |       |              | № 20.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 6  | № 21.| Non leap year |       |       | Four Yrs: 6  | № 21.| Non leap year  |
+  |       |              | № 22.| Non leap year |       |       |              | № 22.| Non leap year  |
+  |       |              | № 23.| Non leap year |       |       |              | № 23.| Non leap year  |
+  |       |              | № 24.| Leap year     |       |       |              | № 24.| Leap year      |
+  +---------------------------------------------+       +----------------------------------------------+
+  | Y     | Four Yrs: 7  | № 25.| Non leap year |       | Y     | Four Yrs: 7  | № 25.| Non leap year  |
+  | E     |              | № 26.| Non leap year |       | E     |              | № 26.| Non leap year  |
+  | L     |              | № 27.| Non leap year |       | L     |              | № 27.| Non leap year  |
+  | L     |              | № 28.| Leap year     |       | L     |              | № 28.| Leap year      |
+  | O     |-------------------------------------+       | O     |--------------------------------------+
+  | W     | Four Yrs: 8  | № 29.| Non leap year |       | W     | Four Yrs: 8  | № 29.| Non leap year  |
+  |       |              | № 30.| Non leap year |       |       |              | № 30.| Non leap year  |
+  |       |              | № 31.| Non leap year |       |       |              | № 31.| Non leap year  |
+  |       |              | № 32.| Leap year     |       |       |              | № 32.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 9  | № 33.| Non leap year |       |       | Four Yrs: 9  | № 33.| Non leap year  |
+  |       |              | № 34.| Non leap year |       |       |              | № 34.| Non leap year  |
+  |       |              | № 35.| Non leap year |       |       |              | № 35.| Non leap year  |
+  |       |              | № 36.| Leap year     |       |       |              | № 36.| Leap year      |
+  +---------------------------------------------+       +----------------------------------------------+
+  | BLUE  | Four Yrs: 10 | № 37.| Non leap year |       | BLUE  | Four Yrs: 10 | № 37.| Non leap year  |
+  |       |              | № 38.| Non leap year |       |       |              | № 38.| Non leap year  |
+  |       |              | № 39.| Non leap year |       |       |              | № 39.| Non leap year  |
+  |       |              | № 40.| Leap year     |       |       |              | № 40.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 11 | № 41.| Non leap year |       |       | Four Yrs: 11 | № 41.| Non leap year  |
+  |       |              | № 42.| Non leap year |       |       |              | № 42.| Non leap year  |
+  |       |              | № 43.| Non leap year |       |       |              | № 43.| Non leap year  |
+  |       |              | № 44.| Leap year     |       |       |              | № 44.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 12 | № 45.| Non leap year |       |       | Four Yrs: 12 | № 45.| Non leap year  |
+  |       |              | № 46.| Non leap year |       |       |              | № 46.| Non leap year  |
+  |       |              | № 47.| Non leap year |       |       |              | № 37.| Non leap year  |
+  |       |              | № 48.| Leap year     |       |       |              | № 48.| Leap year      |
+  +---------------------------------------------+       +----------------------------------------------+
+  | WHITE | Four Yrs: 13 | № 49.| Non leap year |       | WHITE | Four Yrs: 13 | № 49.| Non leap year  |
+  |       |              | № 50.| Non leap year |       |       |              | № 50.| Non leap year  |
+  |       |              | № 51.| Non leap year |       |       |              | № 51.| Non leap year  |
+  |       |              | № 52.| Leap year     |       |       |              | № 52.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 14 | № 53.| Non leap year |       |       | Four Yrs: 14 | № 53.| Non leap year  |
+  |       |              | № 54.| Non leap year |       |       |              | № 54.| Non leap year  |
+  |       |              | № 55.| Non leap year |       |       |              | № 55.| Non leap year  |
+  |       |              | № 56.| Leap year     |       |       |              | № 56.| Leap year      |
+  |       |-------------------------------------+       |       |--------------------------------------+
+  |       | Four Yrs: 15 | № 57.| Non leap year |       |       | Four Yrs: 15 | № 57.| Non leap year  |
+  |       |              | № 58.| Non leap year |       |       |              | № 58.| Non leap year  |
+  |       |              | № 59.| Non leap year |       |       |              | № 59.| Non leap year  |
+  |       |              | № 60.| *Leap year*   |       |       |              | № 60.| *Non leap year*|
+  +---------------------------------------------+       +----------------------------------------------+
+````
+
 License
--------
+=======
 
 [MIT License](http://adampritchard.mit-license.org/).
