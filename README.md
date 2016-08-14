@@ -240,7 +240,7 @@ To stay in sync, the calendar year need to be corrected by adding a leap day eve
 This requires a system of additional adjustments. This system divides the calendar into periods, as shown below.
 
 
-===Four year period
+=== Four year period
 
 
 Every forth year has an additional leap day named Behti at the end of the 6-th month. A year with a leap day would be called a leap year. An year without a leap day would be called a non-leap year.
@@ -253,7 +253,7 @@ Every forth year has an additional leap day named Behti at the end of the 6-th m
 
 ````
 
-===Twelve year period
+=== Twelve year period
 
 Three four - year periods form one 12 year period. This period is not characterized by a calendar adjustment, but what makes it specila is that each year from the 12 year cycle has an animal assigned to it - that is why this 12 year cycle is also called animalian cycle. Various researchers adopt different order of animals, as well as different starting animal. The names of the animals are also controversial. Here are some examples:
 
@@ -294,7 +294,7 @@ Three four - year periods form one 12 year period. This period is not characteri
 ```` 
 Each 12-year period has been either male or female. In a male period - all years within this period were male - the corresponding animals have been male. In a female period - all years within the period comply with the animals of the female sex. After each male 12 year period, a female one follows. After that a mail period again and so on...
 
-===Sixty year period (star day)
+=== Sixty year period (star day)
 
 A period of 60 years equals exactly to 5 twelve-year cycles or 15 four-year cycles. It was conventially called "star day" Yordan Vulchev. Since the 60-year cycle is multiple of 4 year periods, then it, generally, ends in a leap year. Such a star day would be called - a leap star day.
 
