@@ -399,7 +399,7 @@ The five elements/colors/directions are:
 ````
 
 Each of the 5 12-year periods, is considered either male or female in an alternating sequence.
-Star day, which begins with the men's 12-year period, will be called male, 
+Star day, which begins with the male 12-year period, will be called male, 
 and one that begins with the female 12-year period would be called female. 
 Within two consecutive star days (120 years), we can find all of the possible combinations of element, sex and animal.
 So the combination of element, sex and animal can be used to identify a date within a 120-year period.
@@ -421,6 +421,41 @@ So the combination of element, sex and animal can be used to identify a date wit
           +--------------------------------------------------------------------------------+
 ````
 
+
+### Four hundred and twenty year period (STAR WEEK)
+
+When we group 7 star days (each consisting of 60 years), we receive an amount of 420 years, 
+which we call a `star week`.The first, third and fifth `star day`s in each `star week` are always non-leap star days. 
+The second, fourth and sixth are always leap. 
+The seventh Star day in general is also leap, but when there is a need for further correction in the calendar, it is replaced by a non-leap one. 
+A star week in which the last star day is non-leap, will be called - non-leap. Similarly if the last star day is leap, the whole star week 
+would be called - leap. 
+
+````
+
+
+        LEAP STAR WEEK                                NON-LEAP STAR WEEK
+                       years      days                               years      days
+1.  Non-Leap star day:    60    21 914        1.  Non-Leap star day:    60    21 914
+2.      Leap star day:    60    21 915        2.      Leap star day:    60    21 915
+3.  Non-Leap star day:    60    21 914        3.  Non-Leap star day:    60    21 914
+4.      Leap star day:    60    21 915        4.      Leap star day:    60    21 915
+5.  Non-Leap star day:    60    21 914        5.  Non-Leap star day:    60    21 914
+6.      Leap star day:    60    21 915        6.      Leap star day:    60    21 915
+7.      Leap star day:    60    21 915        7.      Leap star day:    60    21 914
+ 
+                Total:   420   153 402                        Total:   420   153 401
+  
+````
+
+Some researchers call the first star day - "Star Monday", the second - "Star Tuesday" etc..., 
+while others are starting from "Star Sunday". 
+In our research that is unimportant and in the table above we have indicated them just with the numbers from 1 to 7.
+Each star week consists of 420 Earth years. 
+The difference between a non leap leap and leap star week is only in the last start day. 
+The leap star week ends on a leap star day, which in its turn means that this star day (60 years) ends on a leap year. 
+Conversely, the non-leap star week ends on non-leap star day, which in turn means that this star day (60 years)
+ends on a non-leap year.
 
 
 License
