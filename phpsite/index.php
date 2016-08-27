@@ -1756,7 +1756,7 @@ $wday = bcmod($igr, 7);
 
 <div class="clearfloat"/>
 <hr/>
-Изходен код: <a href="bgkalendar-snapshot.zip">сваляне</a>
+Изходен код и документация на английски: <a href="https://github.com/ynedelchev/bgkalendar/">от гитхъб.</a>
 <br/>
 <!-- Tracker code start -->
 <div id="eXTReMe"><a href="http://extremetracking.com/open?login=yordan">

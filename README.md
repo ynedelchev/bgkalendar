@@ -381,6 +381,48 @@ In certain cases, for the correction of the calendar, the leap day of the last y
   +---------------------------------------------+       +----------------------------------------------+
 ````
 
+Actually the only difference between the `leap star day` and `non-leap star day` is in the last year - the 60-th year.
+In the `leap star day` it is a leap year. In the `non-leap star day` it is not.
+Each star day is split into 5 12 year periods. Each of these periods has been assigned an element, a corresponding color and direction. 
+The five elements/colors/directions are:
+
+````
+
+       Element    Color      Direction
+     
+  1.   Water      BLACK      Center
+  2.   Fire       RED        South ??? - direction to be checked again
+  3.   Earth      YELLOW     South ??? - direction to be checked again
+  4.   Tree       BLUE       North
+  5.   Metal      WHITE      East
+  
+````
+
+Each of the 5 12-year periods, is considered either male or female in an alternating sequence.
+Star day, which begins with the men's 12-year period, will be called male, 
+and one that begins with the female 12-year period would be called female. 
+Within two consecutive star days (120 years), we can find all of the possible combinations of element, sex and animal.
+So the combination of element, sex and animal can be used to identify a date within a 120-year period.
+
+````
+                    Element    SEX        Years
+          +--------------------------------------------------------------------------------+
+          |    I.   Water       MALE       1   2   3   4   5   6   7   8   9  10  11  12   |
+   MALE   |   II.   Fire      FEMALE      13  14  15  16  17  18  19  20  21  22  23  24   |
+   STAR   |  III.   Earth       MALE      25  26  27  28  29  30  31  32  33  34  35  36   |
+   YEAR   |   IV.   Tree      FEMALE      37  38  39  40  41  42  43  44  45  46  47  48   |
+          |    V.   Metal       MALE      49  50  51  52  53  54  55  56  57  58  59  60   |
+          +--------------------------------------------------------------------------------+
+          |   VI.   Water     FEMALE      61  62  63  64  65  66  67  68  69  70  71  72   |
+   FEMALE |  VII.   Fire        MALE      73  74  75  76  77  78  79  80  81  82  83  84   |
+   STAR   | VIII.   Earth     FEMALE      85  86  87  88  89  90  91  92  93  94  95  96   |
+   YEAR   |   IX.   Tree        MALE      97  98  99 100 101 102 103 104 105 106 107 108   |
+          |    X.   Metal     FEMALE     109 110 111 112 113 114 115 116 117 118 119 120   |
+          +--------------------------------------------------------------------------------+
+````
+
+
+
 License
 =======
 
