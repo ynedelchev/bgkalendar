@@ -610,6 +610,23 @@ $weekdaygr = (int)(($daysgr + $weekdayCorrection )% 7);
 </head>
 <body class="calendarbody" onload="javascript:initialize();">
 
+<!-- Facebook Like Button JavaScript SDK - START -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Facebook Like Button JavaScript SDK - END -->
+
+<!-- The actual Facebook like and share button START -->
+<div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+<!-- The actual Facebook like and share button END -->
+<br/>
+
+
 Тази страница представлява опит за компютърен модел на <a href="kalendar.html">древният български календар</a> и сравнението му със съвременния грегориански календар.
 <br/>
 <br/>
