@@ -1,0 +1,23 @@
+    
+.forumbtn {
+	
+	border-color: grey;
+	text-align: left;
+	font-size: 11px;
+	font-family: helvetica, arial, sans-serif;
+	background: #4c69ba;
+    background: linear-gradient(#4c69ba, #3b55a0);
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    height: 20px;
+    text-shadow: 0 -1px 0 #354c8c;
+    white-space: nowrap;
+	
+	padding: 4px 10px 4px 10px;
+    position: relative;
+    vertical-align: top;
+	text-decoration: none;
+}

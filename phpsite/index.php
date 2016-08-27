@@ -179,6 +179,7 @@ $weekdaygr = (int)(($daysgr + $weekdayCorrection )% 7);
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <title>Българският Календар</title>
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
+   <link rel="stylesheet" type="text/css" href="forum.css" /> 
    <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="bgcalendar-ie.css" /> 
    <![endif]-->
@@ -624,6 +625,8 @@ $weekdaygr = (int)(($daysgr + $weekdayCorrection )% 7);
 <!-- The actual Facebook like and share button START -->
 <div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
 <!-- The actual Facebook like and share button END -->
+<a class="forumbtn" href="http://bgkalendar.com/forum">Форум</a>
+<br/>
 <br/>
 
 
