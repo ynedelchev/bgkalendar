@@ -625,7 +625,7 @@ $weekdaygr = (int)(($daysgr + $weekdayCorrection )% 7);
 <!-- The actual Facebook like and share button START -->
 <div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
 <!-- The actual Facebook like and share button END -->
-<a class="forumbtn" href="http://bgkalendar.com/forum">Форум</a>
+<a class="forumbtn" href="http://bgkalendar.com/forum">Дискусии</a>
 <br/>
 <br/>
 
