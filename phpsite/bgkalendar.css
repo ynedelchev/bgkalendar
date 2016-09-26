@@ -238,4 +238,120 @@ div.month {
  margin-top:  3px;
 }
 
+div.info {
+ border: 1px solid red;
+ max-width: 540px;
+ padding: 0.5em;
+}
+
+div.calendartype {
+          border-style: solid;
+          border-width: 1px;
+          border-color: white;
+          position: relative;
+          display: inline;
+          float: left;
+          border-top-right-radius: 1em;
+          background-color: rgba(230, 230, 230, 1);
+}
+div.openclosebutton {
+          border-style: solid;
+          border-width: 1px;
+          border-color: blue;
+          background-color: lightgray;
+          font-weight: bold;
+          width: 2em;
+          height: 2em;
+          border-radius: 1em; 
+          text-align: center;
+          line-height: 2em;
+          cursor: hand;
+          cursor: pointer;
+}
+div.openclosebutton-closed {
+          float: left;
+          display: none;
+          cursor: hand;
+          cursor: pointer;
+}
+a.openclosebutton:hover div {
+          background-color: blue;
+          color: white;
+          font-weight: bold;
+}
+div.openclosebutton-position {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          display: inline-block;
+}
+        
+div.clearfloat {
+          clear: both;
+}
+div.calendartypetitle {
+          border-style: none;
+          text-shadow: 0px 0px 1px #333; 
+          display: inline-block;
+}
+a.details {
+        //text-decoration: none;
+        color: rgb(0,0,200);
+}
+a.details:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+        cursor: hand;
+}
+div.details {
+        border-style: solid;
+        border-width: 1px;
+        border-color: blue;
+        display: block;
+}
+.details {
+         vertical-align: top;
+         text-align: left;
+}
+td.detailsleft {
+         padding-right: 1em;
+}
+td.detailsright {
+         padding-left: 1em;
+}
+a.period {
+         text-decoration: none;
+}
+a.period:hover {
+         text-decoration: underline;
+}
+td.today {
+         background-color: rgb(0, 0, 255);
+         color: lightgray;
+}
+td.subota {
+         background-color: rgb(173, 216, 230);
+}
+td.nedelya {
+         background-color: rgb(153, 196, 230);;
+}
+
+table.shortdata {
+         display: inline;
+         border-collapse: collapse;
+}
+th.shortdata, td.shortdata {
+         cellspacing: 0px; 
+         callpadding: 0px;
+         padding: 0px; 
+         margin: 0px;
+         border-collapse: collapse;
+         //border: 1px solid red;
+}
+.bold {
+         font-weight: bold;
+}
+.nobr { white-space:nowrap; }
+
 
