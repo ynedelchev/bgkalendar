@@ -13,6 +13,12 @@
   * [Beginning of the Calendar](#beginning-of-the-calendar)
   * [Structure of the year](#structure-of-the-year)
   * [Cycles for correction of the calendar](#cycles-for-correction-of-the-calendar)
+    + [Four year period](#four-year-period)
+    + [Twelve year period](#twelve-year-period)
+    + [Sixty year period (star day)](#sixty-year-period-star-day)
+    + [Four hundred and twenty year period (STAR WEEK)](#four-hundred-and-twenty-year-period-star-week)
+    + [Star month](#star-month)
+    + [Star year](#star-year)
 - [License](#license)
 
 <!-- tocstop -->
@@ -457,6 +463,34 @@ The leap star week ends on a leap star day, which in its turn means that this st
 Conversely, the non-leap star week ends on non-leap star day, which in turn means that this star day (60 years)
 ends on a non-leap year.
 
+### Star month
+
+Like the weeks on Earth are grouped stars in a month, the same way every 4 star weeks are grouped in a star month.
+So one star month equals 1 680 Earth years. Star month could also be a "leap" or "non leap".
+Here is its structure in both cases.
+
+````
+                                 LEAP STAR MONTH                                                       NON LEAP STAR MONTH
+
+                     Sequential number of star day  Years       Days                           Sequential number of star day  Years       Days
+                     -----------------------------                                             -----------------------------
+     Leap star week    1   2   3   4   5   6   7      420    153 402           Leap star week    1   2   3   4   5   6   7      420    153 402
+ Non-Leap star week    8   9  10  11  12  13  14      420    153 401       Non-Leap star week    8   9  10  11  12  13  14      420    153 401
+     Leap star week   15  16  17  18  19  20  21      420    153 402           Leap star week   15  16  17  18  19  20  21      420    153 402
+     Leap star week   22  23  24  25  26  27  28      420    153 402       Non-Leap star week   22  23  24  25  26  27  28      420    153 401
+     
+                                          Total:    1 680    613 607                                                 Total:   1 680    613 606
+````
+
+### Star year
+
+Twelve star months form a so-called star year. Star year consists of exactly 20 160 Earth years. 
+Sixth star month of the star year is always non leap. The other star months except the last month are always leap. 
+The last star month is generally leap but can be non leap if further adjustment to the calendar is needed. 
+To understand when such correction happens, see the description of star age.
+
+````
+````
 
 License
 =======
