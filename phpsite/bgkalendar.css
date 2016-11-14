@@ -354,4 +354,19 @@ th.shortdata, td.shortdata {
 }
 .nobr { white-space:nowrap; }
 
-
+a.up, a.down {
+        text-decoration: none;
+        color: gray;
+}
+a.up:hover {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: hand;
+        color: rgb(0,0,200);
+}
+a.down:hover {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: hand;
+        color: rgb(200,0,0);
+}

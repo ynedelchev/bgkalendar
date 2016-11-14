@@ -117,6 +117,15 @@ $secund  = -1;
 $gr = new LetoGregorian();
 $bg = new LetoBulgarian();
 
+$daysbgFromStartOfCalendarTillJavaEpoch = $bg->startOfCalendarInDaysBeforeJavaEpoch();
+$daysgrFromStartOfCalendarTillJavaEpoch = $gr->startOfCalendarInDaysBeforeJavaEpoch();
+
+if ($daysbgFromStartOfCalendar != null) {
+  $daysgrFromStartOfCalendar = $daysbgFromStartOfCalendar - $daysbgFromStartOfCalendarTillJavaEpoch + $daysgrFromStartOfCalendarTillJavaEpoch;
+} else if ($daysgrFromStartOfCalendar != null) {
+  $daysbgFromStartOfCalendar = $daysgrFromStartOfCalendar - $daysgrFromStartOfCalendarTillJavaEpoch + $daysbgFromStartOfCalendarTillJavaEpoch;
+}  
+
 $periodsbg = null;
 $periodsgr = null;
 if ($daysbgFromStartOfCalendar == null) {
@@ -131,8 +140,6 @@ if ($daysbgFromStartOfCalendar == null) {
    $minute   = bcdiv($remainng, '60', 0);
    $remainng = bcmod($remainng, '60');
    $secund   = $remainng ;
-   $daysbgFromStartOfCalendarTillJavaEpoch = $bg->startOfCalendarInDaysBeforeJavaEpoch();
-   $daysgrFromStartOfCalendarTillJavaEpoch = $gr->startOfCalendarInDaysBeforeJavaEpoch();
    $daysFromJavaEpoch = bcdiv($secundsFromJavaEpoch, $secundsInDay, 0);  // How much complete days have passed since EPOCH
    $daysbgFromStartOfCalendar = bcadd($daysbgFromStartOfCalendarTillJavaEpoch, $daysFromJavaEpoch);
    $daysgrFromStartOfCalendar = bcadd($daysgrFromStartOfCalendarTillJavaEpoch, $daysFromJavaEpoch);
@@ -170,6 +177,8 @@ $daysbg = $periodsbg[0]->getAbsoluteNumber();
 $daysgr = $periodsgr[0]->getAbsoluteNumber();
 $weekdaybg = (int)(($daysbg + $weekdayCorrection )% 7);
 $weekdaygr = (int)(($daysgr + $weekdayCorrection )% 7);
+
+$daysgr = $daysgrFromStartOfCalendar; // Nasty fix for nasty bug. Obvously getAbsoluteNumber() for Gregorian calendar is not OK.
 
 $daybgformatted   = formatMinimumDigits($daybg, 2);
 $monthbgformatted = formatMinimumDigits($monthbg, 2);
@@ -215,7 +224,8 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
           var indexbg = <?php echo $indexbg;?>;
           var indexgr = 
           <?php echo bcsub($indexbg, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));?>;
-          var jepochindex = <?php echo bcsub($indexbg, $daysbgFromStartOfCalendarTillJavaEpoch);?>;
+          //var jepochindex = <?php echo bcsub($indexbg, $daysbgFromStartOfCalendarTillJavaEpoch);?>;
+          var jepochindex = indexbg;
           var i = 0;
           for (i = 0; i <= (366 + 31); i++) {
              var namebg = "daybg" + (indexbg + i);
@@ -226,13 +236,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
              var gr = document.getElementById(namegr);
 
              if (bg != null) {
-                setFuncOnFocus( "onfocus_" + namebg, namebg, namegr);
-                setFuncOnBlur ( "onblur_" + namebg, namebg, namegr);
+                setFuncOnFocus( "onfocus_"     + namebg, namebg, namegr);
+                setFuncOnBlur ( "onblur_"      + namebg, namebg, namegr);
                 setFuncOnmover( "onmouseover_" + namebg, namebg, namegr);
-                setFuncOnmout ( "onmouseout_" + namebg, namebg, namegr);
-                setFuncOnmdown( "onmousedown_" + namebg, namebg, namegr, jepoch);
-                setFuncOnmup  ( "onmouseup_" + namebg, namebg, namegr, jepoch);
-                setFuncOnkpres( "onkeypress_" + namebg, namebg, namegr, jepoch);
+                setFuncOnmout ( "onmouseout_"  + namebg, namebg, namegr);
+                setFuncOnmdown( "onmousedown_" + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch);
+                setFuncOnmup  ( "onmouseup_"   + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch)
+                setFuncOnkpres( "onkeypress_"  + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch);
            
                 bg.onfocus     = this["onfocus_" + namebg];
                 bg.onblur      = this["onblur_"  + namebg];
@@ -252,7 +262,8 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
           var indexgr = <?php echo $indexgr;?>;
           var indexbg = 
           <?php echo bcadd($indexgr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));?>;
-          var jepochindex = <?php echo bcsub($indexgr, $daysgrFromStartOfCalendarTillJavaEpoch);?>;
+          //var jepochindex = <?php echo bcsub($indexgr, $daysgrFromStartOfCalendarTillJavaEpoch);?>;
+          var jepochindex = indexgr;
           var i = 0;
           for (i = 0; i <= (366 + 31); i++) {
              var namebg = "daybg" + (indexbg + i);
@@ -263,13 +274,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
              var gr = document.getElementById(namegr);
 
              if (gr != null) {
-                setFuncOnFocus( "onfocus_" + namegr, namegr, namebg);
-                setFuncOnBlur ( "onblur_" + namegr, namegr, namebg);
+                setFuncOnFocus( "onfocus_"     + namegr, namegr, namebg);
+                setFuncOnBlur ( "onblur_"      + namegr, namegr, namebg);
                 setFuncOnmover( "onmouseover_" + namegr, namegr, namebg);
-                setFuncOnmout ( "onmouseout_" + namegr, namegr, namebg);
-                setFuncOnmdown( "onmousedown_" + namegr, namegr, namebg, jepoch);
-                setFuncOnmup  ( "onmouseup_" + namegr, namegr, namebg, jepoch);
-                setFuncOnkpres( "onkeypress_" + namegr, namegr, namebg, jepoch);
+                setFuncOnmout ( "onmouseout_"  + namegr, namegr, namebg);
+                setFuncOnmdown( "onmousedown_" + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch);
+                setFuncOnmup  ( "onmouseup_"   + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch);
+                setFuncOnkpres( "onkeypress_"  + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch);
            
                 gr.onfocus     = this["onfocus_" + namegr];
                 gr.onblur      = this["onblur_"  + namegr];
@@ -324,15 +335,17 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 </div>
 </center>
 <div>
-<nobr>Ден: <?php echo $daybgformatted;?>,</nobr> 
-<nobr>Месец: <?php echo $periodsbg[1]->getStructure()->getName();?>,</nobr> 
+<nobr>Ден:    <?php echo $daybgformatted;?>,</nobr> 
+<nobr>Месец:  <?php echo $periodsbg[1]->getStructure()->getName();?>,</nobr> 
 <nobr>Година: <?php echo $yearbgformatted;?></nobr>
 &nbsp; &nbsp;
 <nobr>
 [
 <?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>
 &nbsp; &nbsp;
-<?php echo formatMinimumDigits($hour, 2);?>:<?php echo formatMinimumDigits($minute, 2);?>:<?php echo formatMinimumDigits($secund, 2);?>
+<?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
+  <?php echo formatMinimumDigits($hour, 2);?>:<?php echo formatMinimumDigits($minute, 2);?>:<?php echo formatMinimumDigits($secund, 2);?>
+<?php } ?>
 ]
 </nobr>
 &nbsp; &nbsp;
@@ -342,6 +355,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
    <table>
        <tr>
            <td class="details bold">Ден:</td>
+           <td class="details bold"><a class="up" href="?db=<?php echo $daysbg + 1;?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - 1; ?>">&#x25BC;</a></td>
            <td class="details"><?php echo seqPrefixM($periodsbg[0]->getNumber() + 1);?></td>
            <td class="details">
                <?php if ($daybg == 31 && $monthbg == 12) :?>
@@ -359,10 +373,16 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
        </tr>
        <tr>
            <td class="details bold">Месец:</td>
+           <td class="details bold">
+               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+           </td>
            <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsbg[1]->getNumber() + 1) . " (" . $periodsbg[1]->getStructure()->getName() . ")";?></td>
        </tr>
        <tr>
            <td class="details bold">Година:</td>
+           <td class="details bold">
+               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+           </td>
            <td class="details nobr"><?php echo seqPrefixF($periodsbg[2]->getAbsoluteNumber() + 1);?></td>
            <td class="details"><a class="period" href="kalendar.html#12g"><?php echo $YEAR_ANIMALS   [($periodsbg[2]->getAbsoluteNumber()) % 12];?></a>
                 (<?php echo $YEAR_ANIMALS_BG[($periodsbg[2]->getAbsoluteNumber()) % 12];?>)<br/>
@@ -1226,7 +1246,9 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 [
 <?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargrformatted;?>
 &nbsp; 
-<?php echo formatMinimumDigits($hour, 2);?>:<?php echo formatMinimumDigits($minute, 2);?>:<?php echo formatMinimumDigits($secund, 2);?>
+<?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
+  <?php echo formatMinimumDigits($hour, 2);?>:<?php echo formatMinimumDigits($minute, 2);?>:<?php echo formatMinimumDigits($secund, 2);?>
+<?php } ?>
 ]
 </nobr>
 &nbsp; &nbsp;
@@ -1236,6 +1258,9 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
    <table>
        <tr>
            <td class="details bold">Ден:</td>
+           <td class="details bold">
+               <a class="up" href="?dg=<?php echo $daysgr + 1;?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - 1; ?>">&#x25BC;</a>
+           </td>
            <td class="details"><?php echo seqPrefixM($periodsgr[0]->getNumber() + 1);?></td>
            <td class="details">
                <?php $weekdaygr = $WEEKDAYS[bcmod($daysgrFromStartOfCalendar, '7')];?>
@@ -1244,10 +1269,16 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        </tr>
        <tr>
            <td class="details bold">Месец:</td>
+           <td class="details bold">
+               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+           </td>
            <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsgr[1]->getNumber() + 1) . " (" . $periodsgr[1]->getStructure()->getName() . ")";?></td>
        </tr>
        <tr>
            <td class="details bold">Година:</td>
+           <td class="details bold">
+               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+           </td>
            <td class="details nobr"><?php echo seqPrefixF($periodsgr[2]->getAbsoluteNumber() + 1);?></td>
            <td class="details">
                 <?php echo seqPrefixF($periodsgr[2]->getNumber()+1);?> от началото на Четиригодие<br/>

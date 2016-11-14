@@ -143,18 +143,21 @@
      }
 
      var mdownjepochindex = null;
-     function mdown(daybg, daygr, jepochindex) {
+     var mdownparam = null;
+     function mdown(daybg, daygr, param, jepochindex) {
          mdownjepochindex = jepochindex;
+         mdownparam = param;
      }
 
-     function mup(daybg, daygr, jepochindex) {
+     function mup(daybg, daygr, param, jepochindex) {
         window.location = window.location.protocol + '//' 
                         + window.location.host 
                         + window.location.port
                         + window.location.pathname 
-                        + "?jepochindex=" + mdownjepochindex;  
+                        + "?" + (mdownparam != null ? mdownparam : param )
+                        + "=" + (mdownjepochindex != null ? mdownjepochindex : jepochindex);  
      }
-     function kpress(e, daybg, daygr, jepochindex) {
+     function kpress(e, daybg, daygr, param, jepochindex) {
       /*
          alert( "e = " + e + "\n"
                +"daybg = " + daybg + "\n"
@@ -215,8 +218,8 @@
      function setFuncOnBlur ( setName, namebg, namegr ) { this[setName] = function() { unfocused(namebg, namegr); }; }
      function setFuncOnmover( setName, namebg, namegr ) { this[setName] = function() {     mover(namebg, namegr); }; }
      function setFuncOnmout ( setName, namebg, namegr ) { this[setName] = function() {      mout(namebg, namegr); }; }
-     function setFuncOnmdown( setName, namebg, namegr, jepoch ){ this[setName] = function(){mdown(namebg, namegr, jepoch);}; }
-     function setFuncOnmup  ( setName, namebg, namegr, jepoch ){ this[setName] = function(){mup(namebg, namegr, jepoch); };}
-     function setFuncOnkpres( setName, namebg, namegr, jepoch ){ this[setName] = function(){kpress(namebg, namegr, jepoch);}; }
+     function setFuncOnmdown( setName, namebg, namegr, param, jepoch ){ this[setName] = function(){mdown (namebg, namegr, param, jepoch);}; }
+     function setFuncOnmup  ( setName, namebg, namegr, param, jepoch ){ this[setName] = function(){mup   (namebg, namegr, param, jepoch); };}
+     function setFuncOnkpres( setName, namebg, namegr, param, jepoch ){ this[setName] = function(){kpress(namebg, namegr, param, jepoch);}; }
 
 
