@@ -306,39 +306,37 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <div class="toptitle"><span class="toptitle">Българският Календар</span> 
 
 <div class="lang"> 
-  <a href="bg">
-  <div class="phoca-box">
-    <div class="phoca-flagbox">
-      <span class="phoca-flag bg"/>
+  <div class="flag-box">
+    <div class="flag-flagbox">
+      <span class="flag bg currentflag"/>
     </div>
-    <div class="phoca-title">bg</div>
+    <div class="flag-title">bg</div>
   </div>
-  </a>
 
   <a href="en">
-  <div class="phoca-box">
-    <div class="phoca-flagbox">
-      <span class="phoca-flag en"/>
+  <div class="flag-box">
+    <div class="flag-flagbox">
+      <span class="flag en selectflag"/>
     </div>
-    <div class="phoca-title">en</div>
+    <div class="flag-title">en</div>
   </div>
   </a>
 
   <a href="de">
-  <div class="phoca-box">
-    <div class="phoca-flagbox">
-      <span class="phoca-flag de"/>
+  <div class="flag-box">
+    <div class="flag-flagbox">
+      <span class="flag de selectflag"/>
     </div>
-    <div class="phoca-title">de</div>
+    <div class="flag-title">de</div>
   </div>
   </a>
 
   <a href="ru">
-  <div class="phoca-box">
-    <div class="phoca-flagbox">
-      <span class="phoca-flag ru"/>
+  <div class="flag-box">
+    <div class="flag-flagbox">
+      <span class="flag ru selectflag"/>
     </div>
-    <div class="phoca-title">ru</div>
+    <div class="flag-title">ru</div>
   </div>
   </a>
 <br/>

@@ -1,10 +1,10 @@
 /* From: http://www.phoca.cz/cssflags/ */
-.phoca-box {
+.flag-box {
  float: left;
  position: relative;
  border: 0px;
 }
-.phoca-flagbox {
+.flag-flagbox {
  width: 40px;
  height: 20px;
  display: inline-block;
@@ -13,7 +13,7 @@
  border: 0px;
  margin-right: 5px;
 }
-.phoca-flag {
+.flag {
  position: absolute;
  top: 0;
  bottom: 0;
@@ -24,9 +24,14 @@
  margin: auto;
  display: inline-block;
  vertical-align: middle;
+}
+.selectflag {
  box-shadow: 0px 0px 2px 2px rgb(50, 50, 50);
 }
-.phoca-title {
+.currentflag {
+ box-shadow: 0px 0px 2px 2px rgb(100, 100, 250);
+}
+.flag-title {
  vertical-align: middle;
  text-align: center;
  font-weight: bold;
