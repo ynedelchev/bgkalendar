@@ -305,7 +305,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <div class="toptitle"><span class="toptitle">Българският Календар</span> 
 
 <div class="lang"> 
-  <a href="http://bgkalendar.com/bg">
+  <a href="bg">
   <div class="phoca-box">
     <div class="phoca-flagbox">
       <span class="phoca-flag bg"/>
@@ -314,7 +314,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
   </div>
   </a>
 
-  <a href="http://bgkalendar.com/en">
+  <a href="en">
   <div class="phoca-box">
     <div class="phoca-flagbox">
       <span class="phoca-flag en"/>
@@ -323,7 +323,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
   </div>
   </a>
 
-  <a href="http://bgkalendar.com/de">
+  <a href="de">
   <div class="phoca-box">
     <div class="phoca-flagbox">
       <span class="phoca-flag de"/>
@@ -332,7 +332,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
   </div>
   </a>
 
-  <a href="http://bgkalendar.com/ru">
+  <a href="ru">
   <div class="phoca-box">
     <div class="phoca-flagbox">
       <span class="phoca-flag ru"/>
