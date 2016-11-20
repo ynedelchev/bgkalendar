@@ -198,6 +198,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
    <link rel="stylesheet" type="text/css" href="forum.css" /> 
    <link rel="stylesheet" type="text/css" href="navigation.css" /> 
+   <!-- extreme_yordan_0601ace132628511a2a71ae3a980c736 -->
    <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="bgcalendar-ie.css" /> 
    <![endif]-->
@@ -1549,10 +1550,29 @@ $wday = bcmod($igr, 7);
 </table>
 </div>
 
-<div class="clearfloat"/>
-<hr/>
-Изходен код и документация на английски: <a href="https://github.com/ynedelchev/bgkalendar/">от гитхъб.</a>
-<br/>
+<div class="footer">
+<div class="footerfloat">
+ <span class="footer bold">Карта на сайта</span>
+ <ul>
+     <li><a class="footer" href="."><span class="footer">Главна страница</span></a></li>
+     <li><a class="footer" href="kalendar.html"><span class="footer">Принципи на Българския Календар</span></a></li>
+     <li><a class="footer" href="imennik.html"><span class="footer">Именник на Българските Канове</span></a></li>
+     <li><a class="footer" href="imennik.html"><span class="forum">Дискусии</span></a></li>
+ </ul>
+</div>
+<div class="footerfloat">
+ <span class="footer bold">Контакт</span></b>
+ <ul>
+     <li><a class="footer" href="mailto:admin@bgkalendar.com"><span class="footer">admin@bgkalendar.com</span></a></li>
+ </ul>
+</div>
+<div class="footerfloat">
+ <span class="footer bold">Разработка</span>
+ <ul>
+     <li><a class="footer" href="https://github.com/ynedelchev/bgkalendar/"><span class="footer">Изходен код</span></a></li>
+ </ul>
+</div>
+<div class="footerfloat">
 <!-- Tracker code start -->
 <div id="eXTReMe"><a href="http://extremetracking.com/open?login=yordan">
 <img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
@@ -1575,6 +1595,8 @@ EXd.write("<img "+EXsrc+"=http://e0.extreme-dm.com",
 src="http://e0.extreme-dm.com/s9.g?login=yordan&amp;j=n&amp;jv=n" />
 </div></noscript></div>
 <!-- Tracker code end-->
+</div>
+</div>
 
 </body>
 </html>
