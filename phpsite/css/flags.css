@@ -1,0 +1,61 @@
+/* From: http://www.phoca.cz/cssflags/ */
+.phoca-box {
+ float: left;
+ position: relative;
+ border: 0px;
+}
+.phoca-flagbox {
+ width: 40px;
+ height: 20px;
+ display: inline-block;
+ vertical-align: middle;
+ position: relative;
+ border: 0px;
+ margin-right: 5px;
+}
+.phoca-flag {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ border: 0px;
+    
+ margin: auto;
+ display: inline-block;
+ vertical-align: middle;
+ box-shadow: 0px 0px 2px 2px rgb(50, 50, 50);
+}
+.phoca-title {
+ vertical-align: middle;
+ text-align: center;
+ font-weight: bold;
+}
+/* bulgaria */
+.bg {
+ background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiMwMDk2NmUiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2Q2MjYxMiIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4NCg==');
+ width: 100%;
+ height: 100%;
+ background-size: 100% 100%;
+}
+/* united_kingdom */
+.en {
+ background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTAgMzAiIGhlaWdodD0iNjAwIj4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJ0Ij4NCjxwYXRoIGQ9Im0zMCwxNWgzMHYxNXp2MTVoLTMwemgtMzB2LTE1enYtMTVoMzB6Ii8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPHBhdGggZmlsbD0iIzAwMjQ3ZCIgZD0ibTAsMHYzMGg2MHYtMzB6Ii8+DQo8cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0ibTAsMGw2MCwzMG0wLTMwbC02MCwzMCIvPg0KPHBhdGggc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjQiIGQ9Im0wLDBsNjAsMzBtMC0zMGwtNjAsMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIvPg0KPHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjxwYXRoIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjwvc3ZnPg==');
+ width: 100%;
+ height: 100%;
+ background-size: 100% 100%;
+}
+/* germany */
+.de {
+ background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjMDAwIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiNkMDAiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2ZmY2UwMCIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4=');
+ width: 100%;
+ height: 100%;
+ background-size: 100% 100%;
+}
+/* russia */
+.ru {
+ background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiMwMGYiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2YwMCIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4=');
+ width: 100%;
+ height: 100%;
+ background-size: 100% 100%;
+}

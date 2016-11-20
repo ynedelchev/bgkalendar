@@ -194,8 +194,10 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <title>Българският Календар</title>
+   <link rel="stylesheet" type="text/css" href="css/flags.css" /> 
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
    <link rel="stylesheet" type="text/css" href="forum.css" /> 
+   <link rel="stylesheet" type="text/css" href="navigation.css" /> 
    <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="bgcalendar-ie.css" /> 
    <![endif]-->
@@ -297,23 +299,70 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
      }
    </script>
 </head>
-<body class="calendarbody" onload="javascript:initialize();">
+<body class="body" onload="javascript:initialize();">
 
-<!-- Facebook Like Button JavaScript SDK - START -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- Facebook Like Button JavaScript SDK - END -->
+<nav>
+<div class="toptitle"><span class="toptitle">Българският Календар</span> 
 
-<!-- The actual Facebook like and share button START -->
-<div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-<!-- The actual Facebook like and share button END -->
-<a class="forumbtn" href="http://bgkalendar.com/forum">Дискусии</a>
+<div class="lang"> 
+  <a href="http://bgkalendar.com/bg">
+  <div class="phoca-box">
+    <div class="phoca-flagbox">
+      <span class="phoca-flag bg"/>
+    </div>
+    <div class="phoca-title">bg</div>
+  </div>
+  </a>
+
+  <a href="http://bgkalendar.com/en">
+  <div class="phoca-box">
+    <div class="phoca-flagbox">
+      <span class="phoca-flag en"/>
+    </div>
+    <div class="phoca-title">en</div>
+  </div>
+  </a>
+
+  <a href="http://bgkalendar.com/de">
+  <div class="phoca-box">
+    <div class="phoca-flagbox">
+      <span class="phoca-flag de"/>
+    </div>
+    <div class="phoca-title">de</div>
+  </div>
+  </a>
+
+  <a href="http://bgkalendar.com/ru">
+  <div class="phoca-box">
+    <div class="phoca-flagbox">
+      <span class="phoca-flag ru"/>
+    </div>
+    <div class="phoca-title">ru</div>
+  </div>
+  </a>
+<br/>
+    <!-- Facebook Like Button JavaScript SDK - START -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Facebook Like Button JavaScript SDK - END -->
+
+    <!-- The actual Facebook like and share button START -->
+    <div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div> 
+    <!-- The actual Facebook like and share button END -->
+</div>
+<ul class="topmenu">
+    <li class="topmenucurrent"><span class="topmenu">Главна</span></li>
+    <li class="topmenu"><a class="topmenu" href="forum"><span class="topmenu">Дискусии</span></a></li>
+</ul>
+</nav>
+   
+
 <br/>
 <br/>
 
@@ -1526,9 +1575,6 @@ EXd.write("<img "+EXsrc+"=http://e0.extreme-dm.com",
 src="http://e0.extreme-dm.com/s9.g?login=yordan&amp;j=n&amp;jv=n" />
 </div></noscript></div>
 <!-- Tracker code end-->
-
-
-
 
 </body>
 </html>
