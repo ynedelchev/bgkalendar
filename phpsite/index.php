@@ -130,7 +130,7 @@ $periodsbg = null;
 $periodsgr = null;
 if ($daysbgFromStartOfCalendar == null) {
    $timezoneCorrection    = '7200'; // Two hours ahead of GMT in seconds.
-   $dailysavingCorrection = '31536000';//(1L * 60L * 60L * 1000L); // One hour ahead of usual winter time. 0 - means winter time.
+   $dailysavingCorrection = '0';//(1L * 60L * 60L * 1000L); // One hour ahead of usual winter time. 0 - means winter time.
 
    $secundsFromJavaEpoch = bcadd(time(), bcadd($timezoneCorrection, $dailysavingCorrection)); // Two hour ahead of GMT
    $secundsInDay = '86400';   // Seconds in a day.
