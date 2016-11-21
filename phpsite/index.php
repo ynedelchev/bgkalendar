@@ -310,7 +310,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
     <div class="flag-flagbox">
       <span class="flag bg currentflag"/>
     </div>
-    <div class="flag-title">bg</div>
+    <div class="flag-title-current">bg</div>
   </div>
 
   <a href="en">
@@ -339,8 +339,31 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
     <div class="flag-title">ru</div>
   </div>
   </a>
-<br/>
-    <!-- Facebook Like Button JavaScript SDK - START -->
+  <div class="flag-box" style="margin-left: 20px;">
+    <div class="flag-flagbox" style="min-height: 24px; ">
+<!-- Twitter Button Start -->
+<a class="twitter-share-button" 
+  href="https://twitter.com/intent/tweet?text=%D0%92%D0%B8%D0%B6+%D0%BA%D0%BE%D1%8F+%D0%B4%D0%B0%D1%82%D0%B0+%D1%81%D0%BC%D0%B5+%D0%B4%D0%BD%D0%B5%D1%81+%D1%81%D0%BF%D0%BE%D1%80%D0%B5%D0%B4+%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%8F%D1%82+%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8+%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D0%B5%D0%BD+%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80+&url=http%3A%2F%2Fbgkalendar.com&hashtagsbgkalendar&">Tweet</a>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<!-- Twitter Button End -->
+    </div>
+    <div class="flag-title" style="min-height: 25px;"> 
+<!-- Facebook Like Button JavaScript SDK - START -->
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -349,11 +372,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <!-- Facebook Like Button JavaScript SDK - END -->
+<!-- Facebook Like Button JavaScript SDK - END -->
 
-    <!-- The actual Facebook like and share button START -->
+<!-- The actual Facebook like and share button START -->
     <div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div> 
-    <!-- The actual Facebook like and share button END -->
+<!-- The actual Facebook like and share button END -->
+    </div>
+  </div>
 </div>
 <ul class="topmenu">
     <li class="topmenucurrent"><span class="topmenu">Главна</span></li>

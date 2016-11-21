@@ -2,15 +2,13 @@
 .flag-box {
  float: left;
  position: relative;
- border: 0px;
 }
 .flag-flagbox {
- width: 40px;
- height: 20px;
+ width: 25px;
+ height: 15px;
  display: inline-block;
  vertical-align: middle;
  position: relative;
- border: 0px;
  margin-right: 5px;
 }
 .flag {
@@ -19,48 +17,44 @@
  bottom: 0;
  left: 0;
  right: 0;
- border: 0px;
     
- margin: auto;
  display: inline-block;
- vertical-align: middle;
+ vertical-align: top;
 }
 .selectflag {
  box-shadow: 0px 0px 2px 2px rgb(50, 50, 50);
 }
+.selectflag:hover {
+ box-shadow: 0px 0px 2px 2px rgb(100, 100, 250);
+}
 .currentflag {
  box-shadow: 0px 0px 2px 2px rgb(100, 100, 250);
 }
-.flag-title {
+.flag-title,.flag-title-current {
  vertical-align: middle;
  text-align: center;
  font-weight: bold;
 }
+.flag-title:hover {
+ text-shadow: 0 0 2px rgb(100, 100, 250);
+}
 /* bulgaria */
 .bg {
  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiMwMDk2NmUiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2Q2MjYxMiIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4NCg==');
- width: 100%;
- height: 100%;
- background-size: 100% 100%;
+ background-size: contain;
 }
 /* united_kingdom */
 .en {
- background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTAgMzAiIGhlaWdodD0iNjAwIj4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJ0Ij4NCjxwYXRoIGQ9Im0zMCwxNWgzMHYxNXp2MTVoLTMwemgtMzB2LTE1enYtMTVoMzB6Ii8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPHBhdGggZmlsbD0iIzAwMjQ3ZCIgZD0ibTAsMHYzMGg2MHYtMzB6Ii8+DQo8cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0ibTAsMGw2MCwzMG0wLTMwbC02MCwzMCIvPg0KPHBhdGggc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjQiIGQ9Im0wLDBsNjAsMzBtMC0zMGwtNjAsMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIvPg0KPHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjxwYXRoIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjwvc3ZnPg==');
- width: 100%;
- height: 100%;
- background-size: 100% 100%;
+ background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTAgMzAiIGhlaWdodD0iNjAwIj4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJ0Ij4NCjxwYXRoIGQ9Im0yNSwxNWgyNXYxNXp2MTVoLTI1emgtMjV2LTE1enYtMTVoMjV6Ii8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPHBhdGggZmlsbD0iIzAwMjQ3ZCIgZD0ibTAsMHYzMGg1MHYtMzB6Ii8+DQo8cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0ibTAsMGw1MCwzMG0wLTMwbC01MCwzMCIvPg0KPHBhdGggc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjQiIGQ9Im0wLDBsNTAsMzBtMC0zMGwtNTAsMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIvPg0KPHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJtMjUsMHYzMG0tMjUtMTVoNTAiLz4NCjxwYXRoIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJtMjUsMHYzMG0tMjUtMTVoNTAiLz4NCjwvc3ZnPg0K');
+ background-size: contain;
 }
 /* germany */
 .de {
  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjMDAwIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiNkMDAiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2ZmY2UwMCIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4=');
- width: 100%;
- height: 100%;
- background-size: 100% 100%;
+ background-size: contain;
 }
 /* russia */
 .ru {
  background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjZmZmIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIGZpbGw9IiMwMGYiIGQ9Im0wLDFoNXYyaC01eiIvPg0KPHBhdGggZmlsbD0iI2YwMCIgZD0ibTAsMmg1djFoLTV6Ii8+DQo8L3N2Zz4=');
- width: 100%;
- height: 100%;
- background-size: 100% 100%;
+ background-size: contain;
 }
