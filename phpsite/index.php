@@ -144,15 +144,9 @@ if ($daysbgFromStartOfCalendar == null) {
    $daysbgFromStartOfCalendar = bcadd($daysbgFromStartOfCalendarTillJavaEpoch, $daysFromJavaEpoch);
    $daysgrFromStartOfCalendar = bcadd($daysgrFromStartOfCalendarTillJavaEpoch, $daysFromJavaEpoch);
 
-   //$periodsbg  = $bg->getToday();
-   $periodsbg = $bg->calculateCalendarPeriods($daysbgFromStartOfCalendar);
-
-   //$periodsgr  = $gr->getToday();
-   $periodsgr = $gr->calculateCalendarPeriods($daysgrFromStartOfCalendar);
-} else {
-   $periodsbg = $bg->calculateCalendarPeriods($daysbgFromStartOfCalendar);
-   $periodsgr = $gr->calculateCalendarPeriods($daysgrFromStartOfCalendar);
-}
+} 
+$periodsbg = $bg->calculateCalendarPeriods($daysbgFromStartOfCalendar);
+$periodsgr = $gr->calculateCalendarPeriods($daysgrFromStartOfCalendar);
 
 if ($periodsbg == null || $periodsgr == null) {
    throw new LetoException("Невъзможно изчисляването на текущата дата поради неизвестна причина.");

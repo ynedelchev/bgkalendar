@@ -1,0 +1,31 @@
+# In order this to work you need to disable modules mod_dir and mod_autoindex 
+# or somehow temp switch them off for this directory
+# To disable them just go the /etc/apache2/mods-enabled and delete the symlinks 
+# corresponding to them. 
+
+<IfModule mod_dir.c>
+    RewriteOptions AllowNoSlash
+    DirectorySlash Off
+</IfModule>
+
+RewriteEngine On
+
+# Purpose of L flag is not to exist out of mod_rewrite processing. 
+# mod_rewrite rules are run in a loop and L acts as continue in 
+# programming parallels.
+# To fix this you can do:Purpose of L flag is not to exist out of 
+# mod_rewrite processing. mod_rewrite rules are run in a loop and 
+# L acts as continue in programming parallels.
+# Apparently Apache also passes the rewritten URL through these rules
+# To fix this you can do:
+
+RewriteCond %{ENV:REDIRECT_STATUS} .
+RewriteRule ^ - [L]
+
+RewriteCond %{ENV:ELEMENT} .
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_URI} ^(.*)/?$
+RewriteCond %{DOCUMENT_ROOT}/%1 -d
+RewriteRule "^(.*)/?$" $1/index.php [L,QSA,END]
+
