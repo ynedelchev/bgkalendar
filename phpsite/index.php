@@ -17,6 +17,20 @@ require_once("leto/impl/bulgarian/LetoBulgarian.php");
 require_once("leto/impl/gregorian/LetoGregorianMonth.php");
 require_once("leto/impl/gregorian/LetoGregorian.php");
 
+$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg';
+function tr($bg, $en, $de, $ru) {
+  global $lang;
+  if ($lang == 'bg' || $lang == null) {
+    echo $bg;
+  } else if ($lang == 'en') {
+    echo $en;
+  } else if ($lang == 'de') {
+    echo $de;
+  } else if ($lang == 'ru') {
+    echo $ru;
+  } 
+}
+ 
 function formatMinimumDigits($display, $minimumLetters) {
      return str_pad($display, $minimumLetters, '0', STR_PAD_LEFT);
 }
@@ -95,12 +109,30 @@ function getBckGrnd($indexbg, $daysbgFromStartOfCalendar, $wday) {
 }
 
 
-$WEEKDAYS = array ( "Понеделник", "Вторник", "Сряда", "Четвъртък", "Петък", "Събота", "Неделя" );
-$WEEKDAYS_SHORT = array ( "пн", "вт", "ср", "чт", "пт", "сб", "не" );
-$PERIOD_NAMES = array ( "Ден", "Месец", "Година", "Четиригодие", "Звезден Ден", 
-                        "Звездна Седмица", "Звезден месец" , "Звездна Година", "Звездна Епоха" );
-$YEAR_ANIMALS = array ( "Плъх", "Вол", "Барс", "Заек", "Дракон", "Змия", "Кон", "Овен", "Маймуна", "Петел", "Куче", "Глиган");
-$YEAR_ANIMALS_BG = array("Сомор", "Шегор", "Вери", "Дванш", "Дракон", "Дилом", "Морин", "Теку", "Маймуна", "Тох", "Етх", "Дохс");
+$WEEKDAYS          = array ( 'Понеделник', 'Вторник',  'Сряда',     'Четвъртък',  'Петък',   'Събота',   'Неделя'      );
+$WEEKDAYS_EN       = array ( 'Monday',     'Tuesday',  'Wednesday', 'Thursday',   'Friday',  'Saturday', 'Sunday'      );
+$WEEKDAYS_DE       = array ( 'Montag',     'Dienstag', 'Mitwoh',    'Donnerstag', 'Freitag', 'Samstag',  'Sontag'      );
+$WEEKDAYS_RU       = array ( 'Понедельник', 'Вторник',  'Среда',    'Четверг',    'Пятница', 'Субота',   'Воскресение' );
+
+$WEEKDAYS_SHORT    = array ( 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'не' );
+$WEEKDAYS_SHORT_EN = array ( 'mo', 'tu', 'we', 'th', 'fr', 'sa', 'su' );
+$WEEKDAYS_SHORT_DE = array ( 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So' );
+$WEEKDAYS_SHORT_RU = array ( 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'не' );
+
+$PERIOD_NAMES      = array ( 'Ден',  'Месец', 'Година', 'Четиригодие', 'Звезден Ден',  'Звездна Седмица','Звезден месец', 'Звездна Година','Звездна Епоха'  );
+$PERIOD_NAMES_EN   = array ( 'Day',  'Month', 'Year',   'Four Years',  'Star Day',     'Star Week',      'Star Month' ,   'Star Year',     'Star Epoch'     );
+$PERIOD_NAMES_DE   = array ( 'Tag',  'Monat', 'Jahr',   'Vier Jahre',  'Sterntag',     'Sternwoche',     'Sternmonat' ,   'Sternjahr',     'Sternzeitalter' );
+$PERIOD_NAMES_RU   = array ( 'День', 'Месяц', 'Год',    'Четыре Года', 'Звездный День','Звездная Неделя','Звездный Месяц','Звездный Год',  'Звездная Эпоха' );
+
+$YEAR_ANIMALS      = array ( 'Плъх',  'Вол',   'Барс',          'Заек',   'Дракон', 'Змия',     'Кон',   'Овен',   'Маймуна',  'Петел', 'Куче',   'Глиган'     );
+$YEAR_ANIMALS_EN   = array ( 'Mouse', 'Ox',    'Snow Leopard',  'Rabbit', 'Dragon', 'Snake',    'Horse', 'Ram',    'Monkey',   'Cock',  'Dog',    'Pig'        );
+$YEAR_ANIMALS_DE   = array ( 'Maus',  'Ochse', 'Schneeleopard', 'Hase',   'Drache', 'Schlange', 'Pferd', 'Widder', 'Affe',     'Hahn',  'Hund',   'Wildschwein');
+$YEAR_ANIMALS_RU   = array ( 'Крыса', 'Вол',   'Снежный Барс',  'Заяц',   'Дракон', 'Змея',     'Конь',  'Овен',   'Обезьяна', 'Петух', 'Собака', 'Боров'      );
+
+$YEAR_ANIMALS_BG   = array("Сомор", "Шегор",   "Вери", "Дванш",   "Дракон", "Дилом", "Морин", "Теку", "Маймуна",  "Тох",  "Етх",  "Дохс" );
+$YEAR_ANIMALS_BG_EN= array("Somor", "Shegor",  "Very", "Dvansh",  "Dragon", "Dilom", "Morin", "Teku", "Monkey",   "Toh",  "Etch", "Dohs" );
+$YEAR_ANIMALS_BG_DE= array("Somor", "Schegor", "Weri", "Dwansch", "Drache", "Dilom", "Morin", "Teku", "Affe",     "Toch", "Etch", "Dochs");
+$YEAR_ANIMALS_BG_RU= array("Сомор", "Шегор",   "Вери", "Дванш",   "Дракон", "Дилом", "Морин", "Теку", "Обезьяна", "Тох",  "Етх",  "Дохс" );
 $DETAILS_URL_PARAMETER = "m";
 $DAYS_BG_URL_PARAMETER = "db";
 $DAYS_GR_URL_PARAMETER = "dg";
@@ -187,7 +219,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>Българският Календар</title>
+   <title><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></title>
    <link rel="stylesheet" type="text/css" href="css/flags.css" /> 
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
    <link rel="stylesheet" type="text/css" href="forum.css" /> 
@@ -297,42 +329,45 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <body class="body" onload="javascript:initialize();">
 
 <nav>
-<div class="toptitle"><span class="toptitle">Българският Календар</span> 
+<div class="toptitle"><span class="toptitle"><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></span> 
 
 <div class="lang"> 
+  <?php if ($lang != 'bg') echo '<a href="?lang=bg">'; ?> 
   <div class="flag-box">
     <div class="flag-flagbox">
-      <span class="flag bg currentflag"/>
+      <span class="flag bg <?php echo $lang != 'bg' ? 'selectflag' :  'currentflag';?>"/>
     </div>
-    <div class="flag-title-current">bg</div>
+    <div class="flag-title<?php echo $lang == 'bg' ? '-current' : '';?>">bg</div>
   </div>
+  <?php echo '</a>';?> 
 
-  <a href="en">
+  <?php if ($lang != 'en') echo '<a href="?lang=en">'; ?> 
   <div class="flag-box">
     <div class="flag-flagbox">
-      <span class="flag en selectflag"/>
+      <span class="flag en <?php echo $lang != 'en' ? 'selectflag' :  'currentflag';?>"/>
     </div>
-    <div class="flag-title">en</div>
+    <div class="flag-title<?php echo $lang == 'en' ? '-current' : '';?>">en</div>
   </div>
-  </a>
+  <?php echo '</a>';?> 
 
-  <a href="de">
+  <?php if ($lang != 'de') echo '<a href="?lang=de">'; ?> 
   <div class="flag-box">
     <div class="flag-flagbox">
-      <span class="flag de selectflag"/>
+      <span class="flag de <?php echo $lang != 'de' ? 'selectflag' :  'currentflag';?>"/>
     </div>
-    <div class="flag-title">de</div>
+    <div class="flag-title<?php echo $lang == 'de' ? '-current' : '';?>">de</div>
   </div>
-  </a>
+  <?php echo '</a>';?> 
 
-  <a href="ru">
+  <?php if ($lang != 'ru') echo '<a href="?lang=ru">'; ?> 
   <div class="flag-box">
     <div class="flag-flagbox">
-      <span class="flag ru selectflag"/>
+      <span class="flag ru <?php echo $lang != 'ru' ? 'selectflag' :  'currentflag';?>"/>
     </div>
-    <div class="flag-title">ru</div>
+    <div class="flag-title<?php echo $lang == 'ru' ? '-current' : '';?>">ru</div>
   </div>
-  </a>
+  <?php echo '</a>';?> 
+
   <div class="flag-box" style="margin-left: 20px;">
     <div class="flag-flagbox" style="min-height: 24px; ">
 <!-- Twitter Button Start -->
@@ -375,8 +410,8 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
   </div>
 </div>
 <ul class="topmenu">
-    <li class="topmenucurrent"><span class="topmenu">Главна</span></li>
-    <li class="topmenu"><a class="topmenu" href="forum"><span class="topmenu">Дискусии</span></a></li>
+    <li class="topmenucurrent"><span class="topmenu"><?php tr('Главна', 'Home', 'Grundseite', 'Главная страница');?></span></li>
+    <li class="topmenu"><a class="topmenu" href="forum"><span class="topmenu"><?php tr('Дискусии', 'Phorum', 'Forum', 'Форум');?></span></a></li>
 </ul>
 </nav>
    
@@ -384,8 +419,10 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <br/>
 <br/>
 
-
-Тази страница представлява опит за компютърен модел на <a href="kalendar.html">древният български календар</a> и сравнението му със съвременния грегориански календар.
+<?php tr('Тази страница представлява опит за компютърен модел на <a href="kalendar.html">древният български календар</a> и сравнението му със съвременния грегориански календар.',
+'This page is an attempt for a computer model of <a href="kalendar.html">the ancient Bulgarian calendar</a> and its comparison with the modern Gregorian calendar.',
+'Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.',
+'Этот сайт есть попытка компюторного моделя <a href="kalendar.html">древном болгарско календаря</a> и его сравнение современном грегорианском календаря.'); ?>
 <br/>
 <br/>
 
@@ -398,13 +435,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 </a>
 <center>
 <div class="calendartypetitle">
-   Древен Български Календар
+   <?php tr('Древен Български Календар', 'Ancient Bulgarian Calendar', 'Der uralt Bulgarish Kalender', 'Древний Болгарский Календарь'); ?>
 </div>
 </center>
 <div>
-<nobr>Ден:    <?php echo $daybgformatted;?>,</nobr> 
-<nobr>Месец:  <?php echo $periodsbg[1]->getStructure()->getName();?>,</nobr> 
-<nobr>Година: <?php echo $yearbgformatted;?></nobr>
+<nobr><?php tr('Ден',   'Day',   'Tag',   'День');   echo ": "; echo $daybgformatted;?>,</nobr> 
+<nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');  echo ": "; echo $periodsbg[1]->getStructure()->getName();?>,</nobr> 
+<nobr><?php tr('Година','Year',  'Jahr',  'Год');    echo ": "; echo $yearbgformatted;?></nobr>
 &nbsp; &nbsp;
 <nobr>
 [
@@ -417,68 +454,76 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 </nobr>
 &nbsp; &nbsp;
 
-<a class="details" onclick="javascript:showhidedetails('detailsbg');">Детайли</a></div>
+<a class="details" onclick="javascript:showhidedetails('detailsbg');"><?php tr('Детайли', 'Details', 'Details', 'Подробности');?></a></div>
 <div class="details" id="detailsbg">
    <table>
        <tr>
-           <td class="details bold">Ден:</td>
+           <td class="details bold"><?php tr('Ден',   'Day',   'Tag',   'День');?>:</td>
            <td class="details bold"><a class="up" href="?db=<?php echo $daysbg + 1;?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - 1; ?>">&#x25BC;</a></td>
            <td class="details"><?php echo seqPrefixM($periodsbg[0]->getNumber() + 1);?></td>
            <td class="details">
-               <?php if ($daybg == 31 && $monthbg == 12) :?>
-                    (Еднажден, Игнажден, Ани-Алем");
-               <?php elseif ($daybg == 31 && $monthbg == 6) : ?>
-                    (Ени-Джитем)
-               <?php else : ?>
-                    &nbsp;
-               <?php endif; ?>
+               <?php 
+               if ($daybg == 31 && $monthbg == 12) { 
+                   tr('(Еднажден, Игнажден, Ани-Алем")', '(Ednazhden, Ignazhden, Ani-alem)', '(Ednazhden, Ignazhden, Ani-Alem)', '(Еднажден, Игнажден, Ани-Алем)');
+               } elseif ($daybg == 31 && $monthbg == 6) {
+                   tr('(Ени-Джитем)', '(Eni-Dzhhitem)', '(Eni-Dzhitem)', '(Ени-Джитем)');
+               } else {
+                    echo '&nbsp;';
+               }
+               ?>
                <?php $weekdaybg = getBulgarianWeekDay($monthbg+1, $daybg+1);?>
                <?php if ($weekdaybg != 0) : ?>
-                    ден <?php echo seqPrefixM($weekdaybg);?> от българската седмица
+                    <?php tr('ден', 'day', 'Tag', 'день'); echo ' '; echo seqPrefixM($weekdaybg); tr('от българската седмица', 'from the Bulgarian week', 'von bulgarischen Woche', 'болгарской недели'); ?>
                <?php endif; ?>
            </td>
        </tr>
        <tr>
-           <td class="details bold">Месец:</td>
+           <td class="details bold"><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>:</td>
            <td class="details bold">
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
            <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsbg[1]->getNumber() + 1) . " (" . $periodsbg[1]->getStructure()->getName() . ")";?></td>
        </tr>
        <tr>
-           <td class="details bold">Година:</td>
+           <td class="details bold"><?php tr('Година','Year',  'Jahr',  'Год');?>:</td>
            <td class="details bold">
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
            <td class="details nobr"><?php echo seqPrefixF($periodsbg[2]->getAbsoluteNumber() + 1);?></td>
-           <td class="details"><a class="period" href="kalendar.html#12g"><?php echo $YEAR_ANIMALS   [($periodsbg[2]->getAbsoluteNumber()) % 12];?></a>
-                (<?php echo $YEAR_ANIMALS_BG[($periodsbg[2]->getAbsoluteNumber()) % 12];?>)<br/>
-                <?php echo seqPrefixF($periodsbg[2]->getNumber()+1);?> от началото на Четиригодие<br/>
+           <td class="details">
+                <a class="period" href="kalendar.html#12g">
+                  <?php 
+                     $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
+                     tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
+                  ?>
+                </a>
+                (<?php tr($YEAR_ANIMALS_BG[$anim], $YEAR_ANIMALS_BG_EN[$anim], $YEAR_ANIMALS_BG_DE[$anim], $YEAR_ANIMALS_BG_RU[$anim]);?>)<br/>
+                <?php echo seqPrefixF($periodsbg[2]->getNumber()+1); tr(' от началото на Четиригодие', ' from the beginning of four year period', ' von dem Anfang als vier Jahre lange Abschnitt', ' с начала четырёх летном периоде');?><br/>
                 <?php $yearbginstaryear = ( ( $periodsbg[2]->getAbsoluteNumber() ) % 60 ) + 1; ?>
-                <?php echo seqPrefixF($yearbginstaryear);?> от началото на 60 годишния Звезден Ден
+                <?php echo seqPrefixF($yearbginstaryear); tr(' от началото на 60 годишния Звезден Ден', ' from the beginning of the 60 year long Star Day', ' von dem Anfang als 60 Jahre lange Sternwoche', ' с начала 60 летний Звездный День');?>
            </td>
        </tr>
    </table>
    <table>
        <tr>
-            <td class="details bold"><a href="kalendar.html#4g" class="period">Четиригодие</a>:</td>
+            <td class="details bold"><a href="kalendar.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefixN($periodsbg[3]->getNumber()+1);?></td>
 
-            <td class="details bold detailsright"><a class="period" href="kalendar.html#1680g">Звезден Месец</a>:</td>
+            <td class="details bold detailsright"><a class="period" href="kalendar.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:</td>
             <td class="details nobr"><?php echo seqPrefixM($periodsbg[6]->getNumber()+1);?></td>
        </tr>
        <tr>
-            <td class="details bold"><a class="period" href="kalendar.html#60g">Звезден Ден</a>:</td>
+            <td class="details bold"><a class="period" href="kalendar.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefixM($periodsbg[4]->getNumber()+1);?></td>
 
-            <td class="details bold detailsright"><a class="period" href="kalendar.html#20160g">Звездна Година</a>:</td>
+            <td class="details bold detailsright"><a class="period" href="kalendar.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:</td>
             <td class="details nobr"><?php echo seqPrefixF($periodsbg[7]->getNumber()+1);?></td>
        </tr>
        <tr>
-            <td class="details bold"><a class="period" href="kalendar.html#420">Звездна Седмица</a>:</td>
+            <td class="details bold"><a class="period" href="kalendar.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefixF($periodsbg[5]->getNumber()+1);?></td>
 
-            <td class="details bold detailsright"><a class="period" href="kalendar.html#10080000g">Звездна Епоха</a>:</td>
+            <td class="details bold detailsright"><a class="period" href="kalendar.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:</td>
             <td class="details nobr"><?php echo seqPrefixF($periodsbg[8]->getNumber()+1);?></td>
        </tr>
        <?php if (file_exists(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php')) { ?>
@@ -503,10 +548,10 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
-        <div class="calendarvertical yearperiod">Първо Полугодие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Първо Полугодие', 'First half of the year', 'Erst Halbjahr', 'Первое Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Първо Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Първо Тримесечие', 'First Quarter', 'Erst Vierteljah', 'Первая Четверть');?></div>
        </td>
        <td>
            <div class="month">
