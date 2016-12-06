@@ -6,10 +6,14 @@ class LetoGregorianMonth extends LetoPeriodStructureBean {
     
     private static $DEFAULT_LOCALE = "bg";
     private static $sLocaleMonthNames = array(
-         "bg" => array("Януари",  "Февруари", "Март",      "Април",    "Май",      "Юни",
-                       "Юли",     "Август",   "Септември", "Октомври", "Ноември",  "Декември"),
-         "en" => array("January", "February", "March",     "April",    "May",       "June",
-                       "July",    "August",   "September", "October",  "November", "December")
+         'bg' => array('Януари',  'Февруари', 'Март',      'Април',    'Май',      'Юни',
+                       'Юли',     'Август',   'Септември', 'Октомври', 'Ноември',  'Декември'),
+         'en' => array('January', 'February', 'March',     'April',    'May',      'June',
+                       'July',    'August',   'September', 'October',  'November', 'December'),
+         'de' => array('Januar',  'Februar',  'März',      'April',    'Mai',      'Juni',
+                       'Juli',    'August',   'September', 'Oktober',  'November', 'Dezember'),
+         'ru' => array('Януарь',  'Февраль',  'Март',      'Апрель',   'Май',      'Июнь',
+                       'Июль',    'Август',   'Септябрь',  'Октябрь',  'Ноябрь',   'Декабрь')
     );
     
         

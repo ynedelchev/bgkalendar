@@ -6,10 +6,14 @@ class LetoBulgarianMonth extends LetoPeriodStructureBean {
     
     private static $DEFAULT_LOCALE = "bg";
     private static $sLocaleMonthNames = array(
-              "bg" => array ( "Първи",  "Втори", "Трети",      "Четвърти",    "Пети",      "Шести",
-                              "Седми",  "Осми",  "Девети",     "Десети",      "Единайсти",  "Дванайсти" ),
-              "en" => array ("First",  "Second",   "Third",     "Fourth",    "Fifth",    "Sixth",
-                             "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth")
+              'bg' => array ( 'Първи',  'Втори',   'Трети',   'Четвърти',  'Пети',         'Шести',
+                              'Седми',  'Осми',    'Девети',  'Десети',    'Единайсти',    'Дванайсти' ),
+              'en' => array ('First',   'Second',  'Third',   'Fourth',    'Fifth',        'Sixth',
+                             'Seventh', 'Eight',   'Ninth',   'Tenth',     'Eleventh',     'Twelvth'),
+              'de' => array ('Zuerst',  'Zweiter', 'Dritter', 'Vierter',   'Fünfter',      'Sechster',
+                             'Siebter', 'Achter',  'Neunter', 'Zehntel',   'Elfter',       'Zwölfter'),
+              'ru' => array ('Первый',  'Второй',  'Третий',  'Четвёртый', 'Пятый',        'Шестой',
+                             'Седьмой', 'Восьмой', 'Девятый', 'Десятый',   'Одиннадцатый', 'Двенадцатый')
     );
     
     

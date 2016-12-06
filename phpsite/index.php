@@ -18,17 +18,20 @@ require_once("leto/impl/gregorian/LetoGregorianMonth.php");
 require_once("leto/impl/gregorian/LetoGregorian.php");
 
 $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg';
-function tr($bg, $en, $de, $ru) {
+function tri($bg, $en, $de, $ru) {
   global $lang;
   if ($lang == 'bg' || $lang == null) {
-    echo $bg;
+    return $bg;
   } else if ($lang == 'en') {
-    echo $en;
+    return $en;
   } else if ($lang == 'de') {
-    echo $de;
+    return $de;
   } else if ($lang == 'ru') {
-    echo $ru;
+    return $ru;
   } 
+}
+function tr($bg, $en, $de, $ru) {
+  echo tri($bg, $en, $de, $ru);
 }
  
 function formatMinimumDigits($display, $minimumLetters) {
@@ -440,7 +443,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 </center>
 <div>
 <nobr><?php tr('Ден',   'Day',   'Tag',   'День');   echo ": "; echo $daybgformatted;?>,</nobr> 
-<nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');  echo ": "; echo $periodsbg[1]->getStructure()->getName();?>,</nobr> 
+<nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');  echo ": "; echo $periodsbg[1]->getStructure()->getName($lang);?>,</nobr> 
 <nobr><?php tr('Година','Year',  'Jahr',  'Год');    echo ": "; echo $yearbgformatted;?></nobr>
 &nbsp; &nbsp;
 <nobr>
@@ -548,16 +551,16 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
-        <div class="calendarvertical yearperiod"><?php tr('Първо Полугодие', 'First half of the year', 'Erst Halbjahr', 'Первое Полугодие');?></div>
+        <div class="calendarvertical yearperiod"><?php tr('Първо Полугодие', 'First half of the year', 'Erste Halbjahr', 'Первое Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod"><?php tr('Първо Тримесечие', 'First Quarter', 'Erst Vierteljah', 'Первая Четверть');?></div>
+        <div class="calendarvertical yearperiod"><?php tr('Първо Тримесечие', 'First Quarter', 'Erste Vierteljah', 'Первая Четверть');?></div>
        </td>
        <td>
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Първи</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Първи', 'First Month', 'Ersten Monat', 'Первый Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -618,7 +621,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Втори</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Втори', 'Second Month', 'Zweiten Monat', 'Второй Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -679,7 +682,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Трети</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Трети', 'Tird Month', 'Dritten Monat', 'Третий Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -741,13 +744,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
    </tr>
    <tr>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Второ Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Второ Тримесечие', 'Second Quarter', 'Zweite Vierteljahr', 'Вторая Четверть');?></div>
        </td>
        <td style="vertical-align: top;">
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Четвърти</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Четвърти', 'Fourth Month', 'Vierten Monat', 'Четвёртый Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -808,7 +811,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
        <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Пети</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Пети', 'Fifth Month', 'Fünften Monat', 'Пятый Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -869,7 +872,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
        <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Шести</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Шести', 'Sixth Month', 'Sechsten Monat', 'Шестой Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -932,7 +935,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 ?>
 <?php if ( isset($subperiods[5]) && $subperiods[5]->getTotalLengthIndays()>= 31) : ?>
            <tr class="calendartable">
-       <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>" colspan="7">Ден Бехти</td><?php $wday%=7?>
+       <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>" colspan="7"><?php tr('Ден Бехти', 'Day Behti', 'Tag Behti', 'День Бехти');?></td><?php $wday%=7?>
            </tr>
 <?php endif ?>
        </table>
@@ -941,16 +944,16 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
    </tr>
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
-        <div class="calendarvertical yearperiod">Второ Полугодие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Второ Полугодие', 'Second half of the year', 'Zweite Halbjahr', 'Второе Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Трето Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Трето Тримесечие', 'Third Quarter', 'Dritte Vierteljahr', 'Третая Четверть');?></div>
        </td>
        <td>
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Седми</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Седми', 'Seventh Month', 'Siebten Monat', 'Седьмой Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -1011,7 +1014,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Осми</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Осми', 'Eighth Month', 'Achten Monat', 'Восьмой Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -1072,7 +1075,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;">Месец Девети</td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Девети', 'Ninth Month', 'Neunten Monat', 'Девятый Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -1134,7 +1137,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
    </tr>
    <tr>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Четвърто Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Четвърто Тримесечие', 'Fifth Quarter', 'Vierte Vierteljahr', 'Четвёртая Четверть');?></div>
        </td>
        <td style="vertical-align: top"> 
          <div class="month">
@@ -1207,7 +1210,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                 Месец Единайсти
+                 <?php tr('Месец Единайсти', 'Eleventh Month', 'Elfte Monat', 'Одиннадцатый Месяц');?>
                </td>
          </tr>
            <tr class="calendartable">
@@ -1269,7 +1272,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <div class="month">
            <table class="calendartable">
         <tr class="calendartable">
-          <td class="calendartable" colspan="7" style="text-align: center;"> Месец Дванайсти </td>
+          <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Дванайсти', 'Twelfth Month', 'Zwölfte Monat', 'Двенадцатый Месяц');?> </td>
         </tr>
         <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
@@ -1326,7 +1329,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>">30</td><?php $wday%=7?>
         </tr>
         <tr class="calendartable">
-       <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>" colspan="7">Ден Ени</td><?php $wday%=7?>
+       <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>" colspan="7"><?php tr('Ден Ени', 'Day Eni', 'Tag Eni', 'День Ени');?></td><?php $wday%=7?>
         </tr>
        </table>
        </div>
@@ -1346,13 +1349,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 </a>
 <center>
 <div class="calendartypetitle">
-   Съвременен Грегориански Календар
+   <?php tr('Съвременен Грегориански Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?>
 </div>
 </center>
 <div>
-<nobr>Ден: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr>
-<nobr>Месец: <?php echo $periodsgr[1]->getStructure()->getName();?>,</nobr> 
-<nobr>Година: <?php echo formatMinimumDigits($yeargr, 4);?></nobr>
+<nobr><?php tr('Ден', 'Day', 'Tag', 'День');?>: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr>
+<nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>: <?php echo $periodsgr[1]->getStructure()->getName($lang);?>,</nobr> 
+<nobr><?php tr('Година', 'Year', 'Jahr', 'Год');?>: <?php echo formatMinimumDigits($yeargr, 4);?></nobr>
 &nbsp; &nbsp;
 <nobr>
 [
@@ -1365,56 +1368,73 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 </nobr>
 &nbsp; &nbsp;
 
-<a class="details" onclick="javascript:showhidedetails('detailsgr');">Детайли</a></div>
+<a class="details" onclick="javascript:showhidedetails('detailsgr');"><?php tr('Детайли', 'Details', 'Details', 'Подробности');?></a></div>
 <div class="details" id="detailsgr">
    <table>
        <tr>
-           <td class="details bold">Ден:</td>
+           <td class="details bold"><?php tr('Ден', 'Day', 'Tag', 'День');?>:</td>
            <td class="details bold">
                <a class="up" href="?dg=<?php echo $daysgr + 1;?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - 1; ?>">&#x25BC;</a>
            </td>
            <td class="details"><?php echo seqPrefixM($periodsgr[0]->getNumber() + 1);?></td>
            <td class="details">
-               <?php $weekdaygr = $WEEKDAYS[bcmod($daysgrFromStartOfCalendar, '7')];?>
-               Ден от седмицата: <?php echo $weekdaygr;?> 
+               <?php
+                  $wee = bcmod($daysgrFromStartOfCalendar, '7'); 
+                  tr('Ден от седмицата', 'Day of week', 'Wochentag', 'День недели'); 
+                  echo ': '; 
+                  tr($WEEKDAYS[$wee], $WEEKDAYS_EN[$wee], $WEEKDAYS_DE[$wee], $WEEKDAYS_RU[$wee]);
+               ?> 
            </td>
        </tr>
        <tr>
-           <td class="details bold">Месец:</td>
+           <td class="details bold"><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>:</td>
            <td class="details bold">
                <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsgr[1]->getNumber() + 1) . " (" . $periodsgr[1]->getStructure()->getName() . ")";?></td>
+           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsgr[1]->getNumber() + 1) . " (" . $periodsgr[1]->getStructure()->getName($lang) . ")";?></td>
        </tr>
        <tr>
-           <td class="details bold">Година:</td>
+           <td class="details bold"><?php tr('Година', 'Year', 'Jahr', 'Год');?>:</td>
            <td class="details bold">
                <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
            <td class="details nobr"><?php echo seqPrefixF($periodsgr[2]->getAbsoluteNumber() + 1);?></td>
            <td class="details">
-                <?php echo seqPrefixF($periodsgr[2]->getNumber()+1);?> от началото на Четиригодие<br/>
-                <?php $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1; ?>
-                <?php echo seqPrefixF($yeargrincentury);?> от началото на Столетие (Век) 
+                <?php 
+                     echo seqPrefixF($periodsgr[2]->getNumber()+1); 
+                     tr(' от началото на Четиригодие', ' from the beginning of four year period', ' bis den Anfang dem Vierteljahr', ' с начала четиригодием');
+                ?><br/>
+                <?php 
+                     $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1;
+                     echo seqPrefixF($yeargrincentury);
+                     tr(' от началото на Столетие (Век)', ' from the beginning of a Century', ' bis den Anfang dem Jahrhundert', ' с начала веком'); 
+                ?>
            </td>
        </tr>
        <tr>
-            <td class="details bold">Четиригодие:</td>
+            <td class="details bold"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?>:</td>
             <td class="details nobr"><?php echo seqPrefixN($periodsgr[3]->getNumber()+1);?></td>
 
-            <td class="details" colspan="2"> от началото на столетието/века</td>
+            <td class="details" colspan="2"><?php tr(' от началото на столетието/века', ' from the beginning of the Century', ' bis den Anfang dem Jahrhundert', ' с начала веком');?></td>
        </tr>
        <tr>
-            <td class="details bold">Столетие/Век:</td>
+            <td class="details bold"><?php tr('Столетие/Век', 'Century', 'Jahrhundert', 'Век');?>:</td>
             <td class="details nobr"><?php echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1);?></td>
 
             <td class="details" colspan="2">
-               <?php echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1);?> от началото на календара и 
-               <br/><?php echo seqPrefixM($periodsgr[4]->getNumber()+1);?> от началото на 400г. период.
+               <?php 
+                   echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1); 
+                   tr(' от началото на календара и', ' from the beginning of the calendar', ' bis den Anfang dem Kalender', ' с началом календаря');
+               ?> 
+               <br/>
+               <?php 
+                   echo seqPrefixM($periodsgr[4]->getNumber()+1); 
+                   tr(' от началото на 400г. период.', ' from the beginning of the 400y. period', ' bis den Anfang dem 400 Jahre Abschnitt', ' с началом 400 летном периодом');
+               ?>
             </td>
        </tr>
        <tr>
-            <td class="details bold">400г. период:</td>
+            <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 лет период');?>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefixM($periodsgr[5]->getAbsoluteNumber()+1);?></td>
 
             <td class="details bold detailsright"></td>
@@ -1435,9 +1455,23 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 <?php 
 
 function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr) {
-    static $WEEKDAYS_SHORT = array(
+    global $lang;
+    global $WEEKDAYS_SHORT_EN;
+    global $WEEKDAYS_SHORT_DE;
+    global $WEEKDAYS_SHORT_RU;
+    $WEEKDAYS_SHORT = array(
         "пн", "вт", "ср", "чт", "пт", "сб", "не"
     );
+    if ($lang == 'bg' || $lang == null) {
+       $WEEKDAYS_SHORT = $WEEKDAYS_SHORT;
+    } elseif ($lang == 'en') {
+       $WEEKDAYS_SHORT = $WEEKDAYS_SHORT_EN;
+    } elseif ($lang == 'de') {
+       $WEEKDAYS_SHORT = $WEEKDAYS_SHORT_DE;
+    } elseif ($lang == 'ru') {
+       $WEEKDAYS_SHORT = $WEEKDAYS_SHORT_RU;
+    } 
+
     $sb = "";
     if ($startAtDayOfWeek >=7 ) {
         throw new RuntimeException("Starting day of week cannot be " . $startAtDayOfWeek
@@ -1520,15 +1554,15 @@ $wday = bcmod($igr, 7);
    -->
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
-        <div class="calendarvertical yearperiod">Първо Полугодие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Първо Полугодие', 'First half of the year', 'Erste Halbjahr', 'Первое Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Първо Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Първо Тримесечие', 'First Quarter', 'Erste Vierteljahr', 'Первая Четверть');?></div>
        </td>
        <td style="vertical-align: top">
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Януари", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Януари', 'January', 'Januar', 'Январь'), 31, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php
@@ -1541,71 +1575,71 @@ $wday = bcmod($igr, 7);
                $februarydays = $subperiods[1]->getTotalLengthIndays();
             }
             ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Февруари", $februarydays, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Февруари', 'February', 'Februar', 'Февраль'), $februarydays, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Март", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Март', 'March', 'März', 'Март'),31, $wday, $igr, $tgr);?>
          </div>
        </td>
    </tr>
    <tr>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Второ Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Второ Тримесечие', 'Second Quarter', 'Zweite Vierteljahr', 'Вторая Четверть');?></div>
        </td>
        <td style="vertical-align: top;">
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Април", 30, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Април', 'April', 'April', 'Апрель'), 30, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Май", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Май', 'May', 'Mai', 'Май'), 31, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Юни", 30, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юни', 'June', 'Juni', 'Июнь'), 30, $wday, $igr, $tgr);?>
          </div>
        </td>
    </tr>
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
-        <div class="calendarvertical yearperiod">Второ Полугодие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Второ Полугодие', 'Second half of the year', 'Zweite Halbjahr', 'Второе Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Трето Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Трето Тримесечие', 'Third Quarter', 'Dritte Vierteljahr', 'Третая Четверть');?></div>
        </td>
        <td style="vertical-align: top">
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Юли", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юли', 'July', 'Juli', 'Июль'), 31, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Август", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Август', 'August', 'August', 'Август'), 31, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Септември", 30, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Септември', 'September', 'September', 'Сентябрь'), 30, $wday, $igr, $tgr);?>
          </div>
        </td>
    </tr>
    <tr>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod">Четвърто Тримесечие</div>
+        <div class="calendarvertical yearperiod"><?php tr('Четвърто Тримесечие', 'Fourth Quarter', 'Vierte Vierteljahr', 'Четвёртая Четверть');?></div>
        </td>
        <td style="vertical-align: top">
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Октомври", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Октомври', 'October', 'Oktober', 'Октябрь'), 31, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Ноември", 30, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Ноември', 'November', 'November', 'Ноябрь'), 30, $wday, $igr, $tgr);?>
          </div>
          <div class="month">
            <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, "Декември", 31, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Декември', 'December', 'Dezember', 'Декабрь'), 31, $wday, $igr, $tgr);?>
          </div>
        </td>
    </tr>
@@ -1614,24 +1648,24 @@ $wday = bcmod($igr, 7);
 
 <div class="footer">
 <div class="footerfloat">
- <span class="footer bold">Карта на сайта</span>
+ <span class="footer bold"><?php tr('Карта на сайта', 'Site Map', 'Seitenübersicht', 'Карта сайта');?></span>
  <ul>
-     <li><a class="footer" href="."><span class="footer">Главна страница</span></a></li>
-     <li><a class="footer" href="kalendar.html"><span class="footer">Принципи на Българския Календар</span></a></li>
-     <li><a class="footer" href="imennik.html"><span class="footer">Именник на Българските Канове</span></a></li>
-     <li><a class="footer" href="imennik.html"><span class="forum">Дискусии</span></a></li>
+     <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
+     <li><a class="footer" href="kalendar.html"><span class="footer"><?php tr('Принципи на Българския Календар', 'Bulgarian Calendar Principles', 'Grundsätze der bulgarischen Kalender', 'Принципы болгарского календаря');?></span></a></li>
+     <li><a class="footer" href="imennik.html"><span class="footer"><?php tr('Именник на Българските Канове', 'Name List of Bulgarian Khans', 'Namensliste der bulgarischen Khane', 'Именник болгарских канов');?></span></a></li>
+     <li><a class="footer" href="imennik.html"><span class="forum"><?php tr('Дискусии', 'Phorum', 'Forum', 'Форум');?></span></a></li>
  </ul>
 </div>
 <div class="footerfloat">
- <span class="footer bold">Контакт</span></b>
+ <span class="footer bold"><?php tr('Контакт', 'Contacts', 'Kontakte', 'Контакт');?></span></b>
  <ul>
      <li><a class="footer" href="mailto:admin@bgkalendar.com"><span class="footer">admin@bgkalendar.com</span></a></li>
  </ul>
 </div>
 <div class="footerfloat">
- <span class="footer bold">Разработка</span>
+ <span class="footer bold"><?php tr('Разработка', 'Development', 'Entwicklung', 'Разработка');?></span>
  <ul>
-     <li><a class="footer" href="https://github.com/ynedelchev/bgkalendar/"><span class="footer">Изходен код</span></a></li>
+     <li><a class="footer" href="https://github.com/ynedelchev/bgkalendar/"><span class="footer"><?php tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');?></span></a></li>
  </ul>
 </div>
 <div class="footerfloat">
