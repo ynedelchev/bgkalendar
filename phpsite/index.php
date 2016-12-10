@@ -447,13 +447,21 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <nobr><?php tr('Година','Year',  'Jahr',  'Год');    echo ": "; echo $yearbgformatted;?></nobr>
 &nbsp; &nbsp;
 <nobr>
-[
-<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>
-&nbsp; &nbsp;
+<!--
+<form method="GET">
+-->
+<input type="text" name="cb" value="<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>" size="10" class="changedate" />
+<!--
+<button type="submit" style="background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22…%206.723l2.882-2.88-1.85-1.852z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E);"/>
+</button>
+</form>
+-->
 <?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
+&nbsp; &nbsp;
+[
   <?php echo formatMinimumDigits($hour, 2);?>:<?php echo formatMinimumDigits($minute, 2);?>:<?php echo formatMinimumDigits($secund, 2);?>
-<?php } ?>
 ]
+<?php } ?>
 </nobr>
 &nbsp; &nbsp;
 
