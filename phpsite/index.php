@@ -462,7 +462,10 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
    <table>
        <tr>
            <td class="details bold"><?php tr('Ден',   'Day',   'Tag',   'День');?>:</td>
-           <td class="details bold"><a class="up" href="?db=<?php echo $daysbg + 1;?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - 1; ?>">&#x25BC;</a></td>
+           <td class="details bold">
+               <a class="up" href="?db=<?php echo $daysbg + 1;?>">&#x25B2;</a>
+               <a class="down" href="?db=<?php echo $daysbg - 1; ?>">&#x25BC;</a>
+           </td>
            <td class="details"><?php echo seqPrefixM($periodsbg[0]->getNumber() + 1);?></td>
            <td class="details">
                <?php 
@@ -473,60 +476,88 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                } else {
                     echo '&nbsp;';
                }
+               $weekdaybg = getBulgarianWeekDay($monthbg+1, $daybg+1);
+               if ($weekdaybg != 0) {
+                   tr('ден', 'day', 'Tag', 'день'); 
+                   echo ' '; 
+                   echo seqPrefixM($weekdaybg); 
+                   tr('от българската седмица', 'from the Bulgarian week', 'von bulgarischen Woche', 'болгарской недели');
+               }
                ?>
-               <?php $weekdaybg = getBulgarianWeekDay($monthbg+1, $daybg+1);?>
-               <?php if ($weekdaybg != 0) : ?>
-                    <?php tr('ден', 'day', 'Tag', 'день'); echo ' '; echo seqPrefixM($weekdaybg); tr('от българската седмица', 'from the Bulgarian week', 'von bulgarischen Woche', 'болгарской недели'); ?>
-               <?php endif; ?>
            </td>
        </tr>
        <tr>
            <td class="details bold"><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>:</td>
            <td class="details bold">
-               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
+               <a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
            <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsbg[1]->getNumber() + 1) . " (" . $periodsbg[1]->getStructure()->getName() . ")";?></td>
        </tr>
        <tr>
            <td class="details bold"><?php tr('Година','Year',  'Jahr',  'Год');?>:</td>
            <td class="details bold">
-               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
+               <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
            <td class="details nobr"><?php echo seqPrefixF($periodsbg[2]->getAbsoluteNumber() + 1);?></td>
            <td class="details">
                 <a class="period" href="kalendar.html#12g">
                   <?php 
-                     $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
-                     tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
+                  $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
+                  tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
                   ?>
                 </a>
                 (<?php tr($YEAR_ANIMALS_BG[$anim], $YEAR_ANIMALS_BG_EN[$anim], $YEAR_ANIMALS_BG_DE[$anim], $YEAR_ANIMALS_BG_RU[$anim]);?>)<br/>
-                <?php echo seqPrefixF($periodsbg[2]->getNumber()+1); tr(' от началото на Четиригодие', ' from the beginning of four year period', ' von dem Anfang als vier Jahre lange Abschnitt', ' с начала четырёх летном периоде');?><br/>
-                <?php $yearbginstaryear = ( ( $periodsbg[2]->getAbsoluteNumber() ) % 60 ) + 1; ?>
-                <?php echo seqPrefixF($yearbginstaryear); tr(' от началото на 60 годишния Звезден Ден', ' from the beginning of the 60 year long Star Day', ' von dem Anfang als 60 Jahre lange Sternwoche', ' с начала 60 летний Звездный День');?>
+                <?php 
+                echo seqPrefixF($periodsbg[2]->getNumber()+1); 
+                tr(' от началото на Четиригодие', 
+                   ' from the beginning of four year period', 
+                   ' von dem Anfang als vier Jahre lange Abschnitt', 
+                   ' с начала четырёх летном периоде');
+                ?>
+                <br/>
+                <?php 
+                $yearbginstaryear = ( ( $periodsbg[2]->getAbsoluteNumber() ) % 60 ) + 1; 
+                echo seqPrefixF($yearbginstaryear); 
+                tr(' от началото на 60 годишния Звезден Ден', 
+                   ' from the beginning of the 60 year long Star Day', 
+                   ' von dem Anfang als 60 Jahre lange Sternwoche', 
+                   ' с начала 60 летний Звездный День');
+                ?>
            </td>
        </tr>
    </table>
    <table>
        <tr>
-            <td class="details bold"><a href="kalendar.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:</td>
+            <td class="details bold">
+                <a href="kalendar.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:
+            </td>
             <td class="details detailsleft nobr"><?php echo seqPrefixN($periodsbg[3]->getNumber()+1);?></td>
 
-            <td class="details bold detailsright"><a class="period" href="kalendar.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:</td>
+            <td class="details bold detailsright">
+                <a class="period" href="kalendar.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
+            </td>
             <td class="details nobr"><?php echo seqPrefixM($periodsbg[6]->getNumber()+1);?></td>
        </tr>
        <tr>
             <td class="details bold"><a class="period" href="kalendar.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefixM($periodsbg[4]->getNumber()+1);?></td>
 
-            <td class="details bold detailsright"><a class="period" href="kalendar.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:</td>
+            <td class="details bold detailsright">
+                <a class="period" href="kalendar.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
+            </td>
             <td class="details nobr"><?php echo seqPrefixF($periodsbg[7]->getNumber()+1);?></td>
        </tr>
        <tr>
-            <td class="details bold"><a class="period" href="kalendar.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:</td>
+            <td class="details bold">
+                <a class="period" href="kalendar.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+            </td>
             <td class="details detailsleft nobr"><?php echo seqPrefixF($periodsbg[5]->getNumber()+1);?></td>
 
-            <td class="details bold detailsright"><a class="period" href="kalendar.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:</td>
+            <td class="details bold detailsright">
+                <a class="period" href="kalendar.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
+            </td>
             <td class="details nobr"><?php echo seqPrefixF($periodsbg[8]->getNumber()+1);?></td>
        </tr>
        <?php if (file_exists(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php')) { ?>
@@ -1389,25 +1420,35 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <tr>
            <td class="details bold"><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>:</td>
            <td class="details bold">
-               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
+               <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsgr[1]->getNumber() + 1) . " (" . $periodsgr[1]->getStructure()->getName($lang) . ")";?></td>
+           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsgr[1]->getNumber() + 1) . " (" . $periodsgr[1]->getStructure()->getName($lang) . ")";?>
+           </td>
        </tr>
        <tr>
            <td class="details bold"><?php tr('Година', 'Year', 'Jahr', 'Год');?>:</td>
            <td class="details bold">
-               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
+               <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
            <td class="details nobr"><?php echo seqPrefixF($periodsgr[2]->getAbsoluteNumber() + 1);?></td>
            <td class="details">
                 <?php 
-                     echo seqPrefixF($periodsgr[2]->getNumber()+1); 
-                     tr(' от началото на Четиригодие', ' from the beginning of four year period', ' bis den Anfang dem Vierteljahr', ' с начала четиригодием');
-                ?><br/>
+                echo seqPrefixF($periodsgr[2]->getNumber()+1); 
+                tr(' от началото на Четиригодие', 
+                   ' from the beginning of four year period', 
+                   ' bis den Anfang dem Vierteljahr', 
+                   ' с начала четиригодием');
+                ?>
+                <br/>
                 <?php 
-                     $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1;
-                     echo seqPrefixF($yeargrincentury);
-                     tr(' от началото на Столетие (Век)', ' from the beginning of a Century', ' bis den Anfang dem Jahrhundert', ' с начала веком'); 
+                $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1;
+                echo seqPrefixF($yeargrincentury);
+                tr(' от началото на Столетие (Век)', 
+                   ' from the beginning of a Century', 
+                   ' bis den Anfang dem Jahrhundert', 
+                   ' с начала веком'); 
                 ?>
            </td>
        </tr>
@@ -1415,7 +1456,14 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
             <td class="details bold"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?>:</td>
             <td class="details nobr"><?php echo seqPrefixN($periodsgr[3]->getNumber()+1);?></td>
 
-            <td class="details" colspan="2"><?php tr(' от началото на столетието/века', ' from the beginning of the Century', ' bis den Anfang dem Jahrhundert', ' с начала веком');?></td>
+            <td class="details" colspan="2">
+                <?php 
+                tr(' от началото на столетието/века', 
+                   ' from the beginning of the Century', 
+                   ' bis den Anfang dem Jahrhundert', 
+                   ' с начала веком');
+                ?>
+            </td>
        </tr>
        <tr>
             <td class="details bold"><?php tr('Столетие/Век', 'Century', 'Jahrhundert', 'Век');?>:</td>
@@ -1423,13 +1471,19 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 
             <td class="details" colspan="2">
                <?php 
-                   echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1); 
-                   tr(' от началото на календара и', ' from the beginning of the calendar', ' bis den Anfang dem Kalender', ' с началом календаря');
+               echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1); 
+               tr(' от началото на календара и', 
+                  ' from the beginning of the calendar', 
+                  ' bis den Anfang dem Kalender', 
+                  ' с началом календаря');
                ?> 
                <br/>
                <?php 
-                   echo seqPrefixM($periodsgr[4]->getNumber()+1); 
-                   tr(' от началото на 400г. период.', ' from the beginning of the 400y. period', ' bis den Anfang dem 400 Jahre Abschnitt', ' с началом 400 летном периодом');
+               echo seqPrefixM($periodsgr[4]->getNumber()+1); 
+               tr(' от началото на 400г. период.', 
+                  ' from the beginning of the 400y. period', 
+                  ' bis den Anfang dem 400 Jahre Abschnitt', 
+                  ' с началом 400 летном периодом');
                ?>
             </td>
        </tr>
@@ -1651,9 +1705,39 @@ $wday = bcmod($igr, 7);
  <span class="footer bold"><?php tr('Карта на сайта', 'Site Map', 'Seitenübersicht', 'Карта сайта');?></span>
  <ul>
      <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
-     <li><a class="footer" href="kalendar.html"><span class="footer"><?php tr('Принципи на Българския Календар', 'Bulgarian Calendar Principles', 'Grundsätze der bulgarischen Kalender', 'Принципы болгарского календаря');?></span></a></li>
-     <li><a class="footer" href="imennik.html"><span class="footer"><?php tr('Именник на Българските Канове', 'Name List of Bulgarian Khans', 'Namensliste der bulgarischen Khane', 'Именник болгарских канов');?></span></a></li>
-     <li><a class="footer" href="imennik.html"><span class="forum"><?php tr('Дискусии', 'Phorum', 'Forum', 'Форум');?></span></a></li>
+     <li>
+         <a class="footer" href="kalendar.html">
+             <span class="footer">
+                 <?php 
+                 tr('Принципи на Българския Календар', 
+                    'Bulgarian Calendar Principles', 
+                    'Grundsätze der bulgarischen Kalender', 
+                    'Принципы болгарского календаря');
+                 ?>
+             </span>
+         </a>
+     </li>
+     <li>
+         <a class="footer" href="imennik.html">
+             <span class="footer">
+                 <?php 
+                 tr('Именник на Българските Канове', 
+                    'Name List of Bulgarian Khans', 
+                    'Namensliste der bulgarischen Khane', 
+                    'Именник болгарских канов');
+                 ?>
+             </span>
+         </a>
+     </li>
+     <li>
+         <a class="footer" href="imennik.html">
+             <span class="forum">
+                 <?php 
+                 tr('Дискусии', 'Phorum', 'Forum', 'Форум');
+                 ?>
+             </span>
+         </a>
+     </li>
  </ul>
 </div>
 <div class="footerfloat">
@@ -1665,7 +1749,15 @@ $wday = bcmod($igr, 7);
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Разработка', 'Development', 'Entwicklung', 'Разработка');?></span>
  <ul>
-     <li><a class="footer" href="https://github.com/ynedelchev/bgkalendar/"><span class="footer"><?php tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');?></span></a></li>
+     <li>
+         <a class="footer" href="https://github.com/ynedelchev/bgkalendar/">
+             <span class="footer">
+                 <?php 
+                 tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');
+                 ?>
+             </span>
+          </a>
+     </li>
  </ul>
 </div>
 <div class="footerfloat">
