@@ -7,6 +7,7 @@ import bg.util.leto.api.Leto;
 import bg.util.leto.api.LetoException;
 import bg.util.leto.api.LetoPeriod;
 import bg.util.leto.api.LetoPeriodType;
+import bg.util.leto.impl.gregorian.LetoGregorian;
 import bg.util.leto.api.LetoPeriodStructure;
 
 /**
@@ -136,6 +137,136 @@ public abstract class LetoBase implements Leto {
             reslt[i] = bean;
         }
         return reslt;
+    }
+    
+    
+    /**
+     * This method is the reverse of the prevuos method (calculateCalendarPeriods).
+     * It would get year, month and a day and will try to get how many days have passes since
+     * the start of the calendar.
+     * That is a convenient method. Please note that the value of the year an absolute value
+     * from the beginning of the calendar. It is not the year for the current
+     * (upper level period such as a century).
+     * On the other side the month is the manth iside the given year (day from the beginning of the year)
+     * and day is the day inside the given month (day from the begining of the month).
+     * @return Number of days since the begining of the calendar.
+     */
+    public long calculateDaysFronStartOfCalendar(long year, long month, long day) throws LetoException {
+    	year  = year  > 0 ? year -1 : 0;
+    	month = month > 0 ? month-1 : 0;
+    	
+    	LetoPeriodType[] types = getCalendarPeriodTypes();
+        if (types == null || types.length <= 0) {
+            throw new LetoException("This calendar does not define any periods.");
+        }
+    	if (types.length < 3) {
+    		throw new LetoException("Calendar does not support years. Year \"" + year + "\" is invalid for this calendar.");
+    	}
+    	
+    	int MONTH_INDEX = 1;  LetoPeriodType monthType = types[MONTH_INDEX];
+    	int YEAR_INDEX = 2;   LetoPeriodType yearType  = types[YEAR_INDEX];
+        
+        LetoPeriodType currentType = types[types.length - 1];
+        LetoPeriodStructure[] structures = currentType.getPossibleStructures();
+        if (structures == null || structures.length <= 0) {
+            throw new LetoException("This calendar does not define any structure for the period type \"" 
+                  + currentType.getName() + ", so it is not defined how long in days this period could be.");
+        }
+        if (structures.length > 1) {
+            throw new LetoException("The biggest possible period type \"" + currentType.getName() 
+                  + "\" in this calendar has " + structures.length 
+                  + " possible structures, but just one was expected. It is not defined which one should be used.");
+        }
+        
+        long daysElapsed = 0;
+                
+        LetoPeriodStructure structure = structures[0];
+        
+        long yearsInPeriod = structure.getTotalLengthInPeriodTypes(yearType);
+        long daysInPeriod = structure.getTotalLengthInDays();
+        long periods = year / yearsInPeriod;
+        daysElapsed += (periods * daysInPeriod);
+        year = year % yearsInPeriod;
+        
+        loopYears:
+        while ((structures = structure.getSubPeriods() ) != null && structures.length > 0 && year > 0) {
+            for (int i = 0; i < structures.length; i++) {
+                structure = structures[i];
+                if (year <= 0) {
+                	break loopYears;
+                }
+
+                yearsInPeriod = structure.getTotalLengthInPeriodTypes(yearType);
+                daysInPeriod = structure.getTotalLengthInDays();
+                if (yearsInPeriod <= year) {
+                	daysElapsed += daysInPeriod;
+                	year = year - yearsInPeriod;
+                } else {
+                	break;
+                }
+            }
+        }
+        
+        if (year > 0) {
+        	throw new LetoException("Internal error while calculating years in date.");
+        }
+        
+        loopMonths:
+        while ((structures = structure.getSubPeriods() ) != null && structures.length > 0 && month > 0) {
+            for (int i = 0; i < structures.length; i++) {
+                structure = structures[i];
+                if (month <= 0) {
+                	break loopMonths;
+                }
+
+                long monthsInPeriod = structure.getTotalLengthInPeriodTypes(monthType);
+                daysInPeriod = structure.getTotalLengthInDays();
+                if (monthsInPeriod <= month) {
+                	daysElapsed += daysInPeriod;
+                	month = month - monthsInPeriod;
+                } else {
+                	break;
+                }
+            }
+        }
+        
+        if (month > 0) {
+        	throw new LetoException("Internal error while calculating months in date.");
+        }
+        
+        loopDays:
+        while ((structures = structure.getSubPeriods() ) != null && structures.length > 0 && day > 0) {
+            for (int i = 0; i < structures.length; i++) {
+                structure = structures[i];
+                if (day <= 0) {
+                	break loopDays;
+                }
+                daysInPeriod = structure.getTotalLengthInDays();
+                if (daysInPeriod <= day) {
+                	daysElapsed += daysInPeriod;
+                	day = day - daysInPeriod;
+                } else {
+                	break;
+                }
+            }
+        }
+        
+        if (day > 0) {
+        	throw new LetoException("Internal error while calculating days in date.");
+        }
+        return daysElapsed;
+    	
+    }
+    
+    public static void main(String[] args) throws Throwable {
+    	LetoGregorian gr = new LetoGregorian();
+    	long days = gr.calculateDaysFronStartOfCalendar(2016, 12, 10);
+    	LetoPeriod[] types = gr.calculateCalendarPeriods(days);
+    	for (int i =0; i < types.length; i++) {
+    		System.out.print(types[i].getType().getName() + ": ");
+    		System.out.print(types[i].getNumber() + "; ");
+    		System.out.println();
+    	}
     }
     
     private void increaseCount(Map<LetoPeriodType, Long> periods, LetoPeriodStructure structure, long value) {

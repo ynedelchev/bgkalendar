@@ -18,10 +18,12 @@ public class LetoGregorianMonth extends LetoPeriodStructureBean {
     
     static {
         
-        String[] BULGARIAN=new String[] {"Януари",  "Февруари", "Март",      "Април",    "Май",      "Юни", 
-                                         "Юли",     "Август",   "Септември", "Октомври", "Ноември",  "Декември"};
+        String[] BULGARIAN=new String[] {"Януари",  "Февруари", "Март",      "Април",     "Май",      "Юни", 
+                                         "Юли",     "Август",   "Септември", "Октомври",  "Ноември",  "Декември"};
         String[] RUSSIAN = new String[] {"Январь",  "Февраль",  "Март",      "Апрель",    "Май",      "Июнь", 
-                                         "Июль",    "Август",   "Сентябрь",  "Октябрь",   "Ноябрь",  "Декабрь"};
+                                         "Июль",    "Август",   "Сентябрь",  "Октябрь",   "Ноябрь",   "Декабрь"};
+        String[] DEUTSCH = new String[] {"Januar",  "Februar",  "März",      "April",     "Mai",      "Juni",
+                                         "Juli",    "August",   "September", "Oktober",   "November", "Dezember"};
         String[] POLISH  = new String[] {"Stycznia","Lutego",   "Marca",     "Kwietnia",  "Maja",    "Czerwca", 
                                          "Lipca",   "Sierpnia", "Września",  "Października","Listopada", "Grudnia"};
         String[] CZECH  = new String[] {"Leden",    "Únor",     "Březen",    "Duben",     "Květen",  "Červen", 
@@ -68,6 +70,7 @@ public class LetoGregorianMonth extends LetoPeriodStructureBean {
         sLanguageMonthNames.put("bg", BULGARIAN);   sLanguageMonthNames.put("bul", BULGARIAN);
         sLanguageMonthNames.put("бг", BULGARIAN);   sLanguageMonthNames.put("бъл", BULGARIAN);
         sLanguageMonthNames.put("ru", RUSSIAN);     sLanguageMonthNames.put("rus",  RUSSIAN);
+        sLanguageMonthNames.put("de", DEUTSCH);     sLanguageMonthNames.put("ge",   DEUTSCH);
         sLanguageMonthNames.put("pl", POLISH);      sLanguageMonthNames.put("pol",  POLISH);
         sLanguageMonthNames.put("cs", CZECH);       sLanguageMonthNames.put("cze",  CZECH);
         sLanguageMonthNames.put("ces", CZECH);   

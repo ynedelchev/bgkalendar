@@ -17,85 +17,43 @@ public class LetoBulgarianMonth extends LetoPeriodStructureBean {
     private static Map<String, String[]> sLanguageMonthNames = new HashMap<String, String[]>();
     
     static {
+    	
+    	
         
-        String[] BULGARIAN=new String[] {"Първи",  "Втори", "Трети",      "Четвърти",    "Пети",      "Шести", 
-                                         "Седми",  "Осми",  "Девети",     "Десети",      "Единайсти",  "Дванайсти"};
-        String[] RUSSIAN = new String[] {"First",    "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh",  "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] POLISH  = new String[] {"First",    "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh",  "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] CZECH  = new String[] {"First",    "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                        "Seventh",  "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] SLOVAK = new String[] {"First",    "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                        "Seventh",  "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] SLOVENIAN=new String[]{"First",    "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                        "Seventh",  "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] UKRAIN   = new String[]{"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] ROMANIAN = new String[]{"Firsth",  "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] SPANISH = new String[] {"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] GREEK   = new String[] {"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] TURKISH = new String[] {"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] DUTCH   = new String[] {"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] ESTONIAN= new String[] {"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] FINNISH = new String[] {"First",   "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-
-        String[] ENGLISH = new String[] {"First",  "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] FRENCH  = new String[] {"First",  "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] GERMAN  = new String[] {"First",  "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
-        String[] ITALIAN = new String[] {"First",  "Second",   "Third",     "Fourth",    "Fifth",    "Sixth", 
-                                         "Seventh", "Eight",    "Ninth",     "Tenth",     "Eleventh", "Twelvth"};
+        String[] BULGARIAN=new String[] {"Първи",   "Втори",   "Трети",   "Четвърти",  "Пети",         "Шести", 
+                                         "Седми",   "Осми",    "Девети",  "Десети",    "Единайсти",    "Дванайсти"};
+        String[] ENGLISH  =new String[] {"First",   "Second",  "Third",   "Fourth",    "Fifth",        "Sixth",
+                                         "Seventh", "Eight",   "Ninth",   "Tenth",     "Eleventh",     "Twelvth"};
+        String[] DEUTSCH  =new String[] {"Zuerst",  "Zweiter", "Dritter", "Vierter",   "Fünfter",      "Sechster",
+                                         "Siebter", "Achter",  "Neunter", "Zehntel",   "Elfter",       "Zwölfter"};
+        String[] RUSSIAN  =new String[] {"Первый",  "Второй",  "Третий",  "Четвёртый", "Пятый",        "Шестой",
+                                         "Седьмой", "Восьмой", "Девятый", "Десятый",   "Одиннадцатый", "Двенадцатый"};
         String[] JAPANESE= new String[] {"1 月",     "2 月",     "3 月",      "4 月",     "5 月",     "6 月", 
                                          "7 月",     "8 月",     "9 月",      "10 月",    "11 月",    "12 月"};
         String[] KOREAN  = new String[] {"1 월",  "2 월",  "3 월",  "4 월",  "5 월",     "6 월", 
-                                                                                                            "7 월",  "8 월",   "9 월", "10 월", "11 월", "12 월"};
+                                         "7 월",  "8 월",   "9 월", "10 월", "11 월", "12 월"};
         String[] CHINESE = new String[] {"1 月", "2 月", "3 月",     "4 月",  "5 月",   "6 月", 
                         "7 月",  "8 月",   "9 月", "10 月", "11 月", "12 月"};
         
+        String[] DEFAULT = BULGARIAN;
         
-        sLanguageMonthNames.put("bg", BULGARIAN);   sLanguageMonthNames.put("bul", BULGARIAN);
-        sLanguageMonthNames.put("бг", BULGARIAN);   sLanguageMonthNames.put("бъл", BULGARIAN);
-        sLanguageMonthNames.put("ru", RUSSIAN);     sLanguageMonthNames.put("rus",  RUSSIAN);
-        sLanguageMonthNames.put("pl", POLISH);      sLanguageMonthNames.put("pol",  POLISH);
-        sLanguageMonthNames.put("cs", CZECH);       sLanguageMonthNames.put("cze",  CZECH);
-        sLanguageMonthNames.put("ces", CZECH);   
-        sLanguageMonthNames.put("sk", SLOVAK);      sLanguageMonthNames.put("slo",  SLOVAK);
-        sLanguageMonthNames.put("slk", SLOVAK);   
-        sLanguageMonthNames.put("sl", SLOVENIAN);   sLanguageMonthNames.put("slv", SLOVENIAN);
-        sLanguageMonthNames.put("uk", UKRAIN);      sLanguageMonthNames.put("ukr", UKRAIN);
-        sLanguageMonthNames.put("ro", ROMANIAN);    sLanguageMonthNames.put("ron", ROMANIAN);
-        sLanguageMonthNames.put("rum", ROMANIAN); 
-        sLanguageMonthNames.put("es", SPANISH);     sLanguageMonthNames.put("spa", SPANISH);
-        sLanguageMonthNames.put("el", GREEK);       sLanguageMonthNames.put("ell", GREEK);
-        sLanguageMonthNames.put("gre", GREEK);      sLanguageMonthNames.put("grc", GREEK);
-        sLanguageMonthNames.put("tr", TURKISH);     sLanguageMonthNames.put("tur", TURKISH);
-        sLanguageMonthNames.put("nl", DUTCH);       sLanguageMonthNames.put("dut", DUTCH);
-        sLanguageMonthNames.put("nld", DUTCH);
-        sLanguageMonthNames.put("et", ESTONIAN);    sLanguageMonthNames.put("est", ESTONIAN);
-        sLanguageMonthNames.put("fi", FINNISH);     sLanguageMonthNames.put("fin", FINNISH);
-        
+        sLanguageMonthNames.put("bg", BULGARIAN);   sLanguageMonthNames.put("bul",  BULGARIAN);
+        sLanguageMonthNames.put("бг", BULGARIAN);   sLanguageMonthNames.put("бъл",  BULGARIAN);
+        sLanguageMonthNames.put("ru", RUSSIAN);     sLanguageMonthNames.put("rus",  RUSSIAN);    
+        sLanguageMonthNames.put("de", DEUTSCH);     sLanguageMonthNames.put("ge",   DEUTSCH);
+        sLanguageMonthNames.put("en", ENGLISH);     sLanguageMonthNames.put("deu",  ENGLISH);
         sLocaleMonthNames.put(Locale.ENGLISH,      ENGLISH);
         sLocaleMonthNames.put(Locale.CANADA,       ENGLISH);
         sLocaleMonthNames.put(Locale.UK,           ENGLISH);
         sLocaleMonthNames.put(Locale.US,           ENGLISH);
         sLocaleMonthNames.put(Locale.getDefault(), ENGLISH);
-        sLocaleMonthNames.put(Locale.FRENCH,  FRENCH);
-        sLocaleMonthNames.put(Locale.FRANCE,  FRENCH);
-        sLocaleMonthNames.put(Locale.CANADA_FRENCH, FRENCH);
-        sLocaleMonthNames.put(Locale.GERMAN,        GERMAN);
-        sLocaleMonthNames.put(Locale.GERMANY,       GERMAN);
-        sLocaleMonthNames.put(Locale.ITALIAN,       ITALIAN);
-        sLocaleMonthNames.put(Locale.ITALY,         ITALIAN);
+        sLocaleMonthNames.put(Locale.FRENCH,  DEFAULT);
+        sLocaleMonthNames.put(Locale.FRANCE,  DEFAULT);
+        sLocaleMonthNames.put(Locale.CANADA_FRENCH, ENGLISH);
+        sLocaleMonthNames.put(Locale.GERMAN,        DEUTSCH);
+        sLocaleMonthNames.put(Locale.GERMANY,       DEUTSCH);
+        sLocaleMonthNames.put(Locale.ITALIAN,       DEFAULT);
+        sLocaleMonthNames.put(Locale.ITALY,         DEFAULT);
         sLocaleMonthNames.put(Locale.JAPANESE,      JAPANESE);
         sLocaleMonthNames.put(Locale.JAPAN,         JAPANESE);
         sLocaleMonthNames.put(Locale.KOREAN,        KOREAN);
