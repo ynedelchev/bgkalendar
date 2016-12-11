@@ -152,8 +152,9 @@ public abstract class LetoBase implements Leto {
      * @return Number of days since the begining of the calendar.
      */
     public long calculateDaysFronStartOfCalendar(long year, long month, long day) throws LetoException {
-    	year  = year  > 0 ? year -1 : 0;
-    	month = month > 0 ? month-1 : 0;
+    	year  = year  > 0 ? year  - 1 : 0;
+    	month = month > 0 ? month - 1 : 0;
+    	day   = day   > 0 ? day   - 1 : 0;
     	
     	LetoPeriodType[] types = getCalendarPeriodTypes();
         if (types == null || types.length <= 0) {
@@ -260,7 +261,7 @@ public abstract class LetoBase implements Leto {
     
     public static void main(String[] args) throws Throwable {
     	LetoGregorian gr = new LetoGregorian();
-    	long days = gr.calculateDaysFronStartOfCalendar(2016, 12, 10);
+    	long days = gr.calculateDaysFronStartOfCalendar(2018, 12, 10);
     	LetoPeriod[] types = gr.calculateCalendarPeriods(days);
     	for (int i =0; i < types.length; i++) {
     		System.out.print(types[i].getType().getName() + ": ");
