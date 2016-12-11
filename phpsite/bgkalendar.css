@@ -1,3 +1,7 @@
+.changedate {
+  text-align: right;
+  font-weight: bold;
+}
 .calendarbody {
   background-color: rgb(230, 230, 230);
   background-image: url(http://bgkalendar.com/backgrnd.png); 
