@@ -535,7 +535,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsbg[1]->getNumber() + 1) . " (" . $periodsbg[1]->getStructure()->getName() . ")";?></td>
+           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsbg[1]->getNumber() + 1) . " (" . $periodsbg[1]->getStructure()->getName($lang) . ")";?></td>
        </tr>
        <tr>
            <td class="details bold"><?php tr('Година','Year',  'Jahr',  'Год');?>:</td>
