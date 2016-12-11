@@ -111,6 +111,37 @@ function getBckGrnd($indexbg, $daysbgFromStartOfCalendar, $wday) {
     return ($indexbg == $daysbgFromStartOfCalendar) ? " today" :   ( ($wday==5)? " subota":(($wday==6)?" nedelya":"") );
 }
 
+function parseDate($date, $type) {
+ list($day, $month, $year) = split('[/.-]', $date);
+ $day   = intval($day);
+ $month = intval($month);
+ $year  = intval($year);
+ if ($type == "bg") {
+   if ($month <=  0) { $month = 1;  }
+   if ($month >  12) { $month = 12; }
+   if ($year  <=  0) { $year  = 1;  }
+   if ($day   <=  0) { $day   = 1;  }
+   if ($month ==  1 || $month == 4 || $month == 6 || $month == 7 || $month == 10 || $month == 12) {
+      if ($day > 31) { $day   = 31; }  
+   } else {
+      if ($day > 30) { $day   = 30; }
+   }    
+ } else if ($type == "gr") {
+   if ($month <=  0) { $month = 1;  }
+   if ($month >  12) { $month = 12; }
+   if ($year  <=  0) { $year  = 1;  }
+   if ($day   <=  0) { $day   = 1;  }
+   if ($month ==  1 || $month == 3 || $month == 5 || $month == 7 || $month == 8 || $month == 10 || $month == 12) {
+      if ($day > 31) { $day   = 31; }  
+   } else if ($day == 2) {
+      if ($day > 29) { $day   = 29; }
+   } else {
+      if ($day > 30) { $day   = 30; }
+   }    
+ }  
+ return array($year, $month, $day);  
+}
+
 
 $WEEKDAYS          = array ( 'Понеделник', 'Вторник',  'Сряда',     'Четвъртък',  'Петък',   'Събота',   'Неделя'      );
 $WEEKDAYS_EN       = array ( 'Monday',     'Tuesday',  'Wednesday', 'Thursday',   'Friday',  'Saturday', 'Sunday'      );
@@ -144,6 +175,8 @@ $locale = "bg";
 $areDetailsVisible = isset($_REQUEST[$DETAILS_URL_PARAMETER]) ? $_REQUEST[$DETAILS_URL_PARAMETER] : null; // details
 $daysbgFromStartOfCalendar = isset($_REQUEST[$DAYS_BG_URL_PARAMETER]) ? $_REQUEST[$DAYS_BG_URL_PARAMETER] : null;
 $daysgrFromStartOfCalendar = isset($_REQUEST[$DAYS_GR_URL_PARAMETER]) ? $_REQUEST[$DAYS_GR_URL_PARAMETER] : null;
+$dateBg = isset($_REQUEST["cb"]) ? $_REQUEST["cb"] : null;
+$dateGr = isset($_REQUEST["cg"]) ? $_REQUEST["cg"] : null;
 $weekdayCorrection = -2;
 $hour    = -1;
 $minute  = -1;
@@ -155,11 +188,18 @@ $bg = new LetoBulgarian();
 $daysbgFromStartOfCalendarTillJavaEpoch = $bg->startOfCalendarInDaysBeforeJavaEpoch();
 $daysgrFromStartOfCalendarTillJavaEpoch = $gr->startOfCalendarInDaysBeforeJavaEpoch();
 
+if ($dateBg != null) {
+  list($year, $month, $day) = parseDate($dateBg, "bg");
+  $daysbgFromStartOfCalendar = $bg->calculateDaysFronStartOfCalendar($year, $month, $day);
+} else if ($dateGr != null) {
+  list($year, $month, $day) = parseDate($dateGr, "gr");
+  $daysgrFromStartOfCalendar = $gr->calculateDaysFronStartOfCalendar($year, $month, $day);
+}   
 if ($daysbgFromStartOfCalendar != null) {
   $daysgrFromStartOfCalendar = $daysbgFromStartOfCalendar - $daysbgFromStartOfCalendarTillJavaEpoch + $daysgrFromStartOfCalendarTillJavaEpoch;
-} else if ($daysgrFromStartOfCalendar != null) {
+} else if ($daysgrFromStartOfCalendar != null) { 
   $daysbgFromStartOfCalendar = $daysgrFromStartOfCalendar - $daysgrFromStartOfCalendarTillJavaEpoch + $daysbgFromStartOfCalendarTillJavaEpoch;
-}  
+} 
 
 $periodsbg = null;
 $periodsgr = null;
@@ -447,15 +487,10 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <nobr><?php tr('Година','Year',  'Jahr',  'Год');    echo ": "; echo $yearbgformatted;?></nobr>
 &nbsp; &nbsp;
 <nobr>
-<!--
-<form method="GET">
--->
-<input type="text" name="cb" value="<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>" size="10" class="changedate" />
-<!--
-<button type="submit" style="background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22…%206.723l2.882-2.88-1.85-1.852z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E);"/>
-</button>
+<form method="GET" style="display: inline;">
+<input type="text" name="cb" value="<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>" size="10" style="text-align: right; font-weight: bold; font-family: Times; "/>
+<input type="image" src="images/submit.svg" border="0" alt="Submit" />
 </form>
--->
 <?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
 &nbsp; &nbsp;
 [
@@ -1397,13 +1432,16 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 <nobr><?php tr('Година', 'Year', 'Jahr', 'Год');?>: <?php echo formatMinimumDigits($yeargr, 4);?></nobr>
 &nbsp; &nbsp;
 <nobr>
-[
-<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargrformatted;?>
-&nbsp; 
+<form method="GET" style="display: inline;">
+<input type="text" name="cg" value="<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargr;?>" size="10" style="text-align: right; font-weight: bold; font-family: Times; "/>
+<input type="image" src="images/submit.svg" border="0" alt="Submit" />
+</form>
 <?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
+&nbsp; 
+[
   <?php echo formatMinimumDigits($hour, 2);?>:<?php echo formatMinimumDigits($minute, 2);?>:<?php echo formatMinimumDigits($secund, 2);?>
-<?php } ?>
 ]
+<?php } ?>
 </nobr>
 &nbsp; &nbsp;
 

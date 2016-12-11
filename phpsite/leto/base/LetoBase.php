@@ -142,9 +142,11 @@ abstract class LetoBase implements Leto {
     public function calculateDaysFronStartOfCalendar($year, $month, $day) {
     	$year  = $year  > 0 ? $year -1 : 0;
     	$month = $month > 0 ? $month-1 : 0;
+    	$day   = $day   > 0 ? $day  -1 : 0;
+
     	
-    	$types = getCalendarPeriodTypes();
-        if ($types == null || count($type) <= 0) {
+    	$types = $this->getCalendarPeriodTypes();
+        if ($types == null || count($types) <= 0) {
             throw new LetoException("This calendar does not define any periods.");
         }
     	if (count($types) < 3) {
@@ -172,12 +174,13 @@ abstract class LetoBase implements Leto {
         
         $yearsInPeriod = $structure->getTotalLengthInPeriodTypes($yearType);
         $daysInPeriod  = $structure->getTotalLengthInDays();
-        $periods       = $year / $yearsInPeriod;
+        $reminder      = $year % $yearsInPeriod;
+        $periods       = ($year - $reminder) / $yearsInPeriod;
         $daysElapsed  += ($periods * $daysInPeriod);
-        $year          = $year % $yearsInPeriod;
+        $year          = $reminder;
        
         $j = 0; // Just to prevent unfortunate endless loops. 
-        $limit = 2*count(types); // Usually that would be just count($types), but just in case.
+        $limit = 2*count($types); // Usually that would be just count($types), but just in case.
         while (($structures = $structure->getSubPeriods() ) != null && count($structures) > 0 && $year > 0 && $j++ < $limit) {
             for ($i = 0; $i < count($structures); $i++) {
                 $structure = $structures[$i];
