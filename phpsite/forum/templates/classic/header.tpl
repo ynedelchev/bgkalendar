@@ -44,6 +44,7 @@ if ($PHORUM['DATA']['CHARSET']) {
 <ul class="topmenu">
     <li class="topmenu"><a class="topmenu" href=".."><span class="topmenu">Главна</span></a></li>
     <li class="topmenucurrent"><span class="topmenu">Дискусии</span></li>
+    <li class="topmenu"><a class="topmenu" href="../papercalendar/"><span class="topmenu">Хартиен Календар</span></a></li>
 </ul>
 </nav>
 
