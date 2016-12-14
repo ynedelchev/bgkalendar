@@ -455,6 +455,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 <ul class="topmenu">
     <li class="topmenucurrent"><span class="topmenu"><?php tr('Главна', 'Home', 'Grundseite', 'Главная страница');?></span></li>
     <li class="topmenu"><a class="topmenu" href="forum"><span class="topmenu"><?php tr('Дискусии', 'Phorum', 'Forum', 'Форум');?></span></a></li>
+    <li class="topmenu"><a class="topmenu" href="papercalendar"><span class="topmenu"><?php tr('Хартиен Календар', 'Wall Calendar', 'Wandkalender', 'Стенный Календарь');?></span></a></li>
 </ul>
 </nav>
    
