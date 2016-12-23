@@ -264,9 +264,9 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <title><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></title>
    <link rel="stylesheet" type="text/css" href="css/flags.css" /> 
+   <link rel="stylesheet" type="text/css" href="navigation.css" /> 
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
    <link rel="stylesheet" type="text/css" href="forum.css" /> 
-   <link rel="stylesheet" type="text/css" href="navigation.css" /> 
    <!-- extreme_yordan_0601ace132628511a2a71ae3a980c736 -->
    <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="bgcalendar-ie.css" /> 

@@ -13,6 +13,6 @@ header("Location: ".$redirectPage, true, 303);
   </head>
   <body onload="javascript:redirectFunction();">
     If you do not get automatically redirected, please click 
-    <a href="<?php echo $redirectpage;?>">here</a>.
+    <a href="<?php echo $redirectPage;?>">here</a>.
   </body>
 </html>

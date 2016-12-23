@@ -5,7 +5,7 @@ body.body {
   margin:8px;
   padding: 0px;
   font-size: initial;
-  font-family: Times;
+#  font-family: Times;
 }
 
 div.toptitle {
@@ -23,7 +23,7 @@ span.toptitle {
    white-space: normal;
    font-weight: bold;
    font-size: xx-large;
-   font-family: Times;
+#   font-family: Times;
 }
 div.lang {
    border-style: none;
@@ -70,7 +70,7 @@ span.topmenu {
    width: 200px;
    min-width: 200px;
    color: blue;
-   font-family: Times;
+#   font-family: Times;
    font-size: 14px;
    font-weight: bold;
 }
