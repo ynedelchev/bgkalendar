@@ -1,44 +1,4 @@
 
-@font-face {
-   font-family: bgcyrillic;
-   src: url(fonts/ossem-rounded.otf);
-}
-@font-face {
-  font-family: 'ModeratoA5L';
-  src: url('fonts/moderatoa5_l.eot');
-  src: url('fonts/moderatoa5_l.eot') format('embedded-opentype'),
-       url('fonts/moderatoa5_l.woff') format('woff'),
-       url('fonts/moderatoa5_l.ttf') format('truetype'),
-       url('fonts/moderatoa5_l.svg#ModeratoA5LRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ModeratoA5L';
-  src: url('fonts/moderatoa5_l_i.eot');
-  src: url('fonts/moderatoa5_l_i.eot') format('embedded-opentype'),
-       url('fonts/moderatoa5_l_i.woff') format('woff'),
-       url('fonts/moderatoa5_l_i.ttf') format('truetype'),
-       url('fonts/moderatoa5_l_i.svg#ModeratoA5LItalic') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'ModeratoG7LRegular';
-  src: url('fonts/moderatog7_l.eot');
-  src: url('fonts/moderatog7_l.eot') format('embedded-opentype'),
-       url('fonts/moderatog7_l.woff') format('woff'),
-       url('fonts/moderatog7_l.ttf') format('truetype'),
-       url('fonts/moderatog7_l.svg#ModeratoG7LRegular') format('svg');
-}
-
-* {
-#   font-family: bgcyrillic;
-#   font-family: 'ModeratoA5L';
-#  font-family: 'ModeratoG7LRegular';
-  font: 18px/130% "ModeratoA5L", Helvetica, Arial, sans-serif;
-}
-
 .changedate {
   text-align: right;
   font-weight: bold;

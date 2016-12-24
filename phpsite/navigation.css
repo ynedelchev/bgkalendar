@@ -1,11 +1,17 @@
 
+@font-face {
+   font-family: notoserif;
+   src: url(fonts/notoserif-regular.ttf);
+}
+
+* {
+   font-family: notoserif, Times;
+}
 body.body {
   background-color: rgb(230, 230, 230);
   background-image: url(http://bgkalendar.com/backgrnd.png); 
   margin:8px;
   padding: 0px;
-  font-size: initial;
-#  font-family: Times;
 }
 
 div.toptitle {
@@ -23,7 +29,6 @@ span.toptitle {
    white-space: normal;
    font-weight: bold;
    font-size: xx-large;
-#   font-family: Times;
 }
 div.lang {
    border-style: none;
@@ -70,8 +75,6 @@ span.topmenu {
    width: 200px;
    min-width: 200px;
    color: blue;
-#   font-family: Times;
-   font-size: 14px;
    font-weight: bold;
 }
 a.topmenu {

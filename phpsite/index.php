@@ -467,6 +467,8 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 'This page is an attempt for a computer model of <a href="kalendar.html">the ancient Bulgarian calendar</a> and its comparison with the modern Gregorian calendar.',
 'Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.',
 'Этот сайт есть попытка компюторного моделя <a href="kalendar.html">древном болгарско календаря</a> и его сравнение современном грегорианском календаря.'); ?>
+<?php tr('<br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a.html">тук</a>.',
+'', '', ''); ?>
 <br/>
 <br/>
 
@@ -1781,6 +1783,15 @@ $wday = bcmod($igr, 7);
              <span class="forum">
                  <?php 
                  tr('Дискусии', 'Phorum', 'Forum', 'Форум');
+                 ?>
+             </span>
+         </a>
+     </li>
+     <li>
+         <a class="footer" href="kupu%D0%BBu%D1%86a.html">
+             <span class="forum">
+                 <?php 
+                 tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');
                  ?>
              </span>
          </a>
