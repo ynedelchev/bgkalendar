@@ -38,57 +38,128 @@ function formatMinimumDigits($display, $minimumLetters) {
      return str_pad($display, $minimumLetters, '0', STR_PAD_LEFT);
 }
 
-function seqPrefixN($year) {
-    if (bccomp($year, '10') >= 0 && bccomp($year, '20')  <= 0) {
-        return $year . "-то";
+function seqPrefix($number, $genders) {
+  global $lang;
+  $genders = str_split($genders);
+  if ($lang == 'bg' || $lang == null) {
+    $gen = 0;
+    if (!isset($genders[0]) || $genders[0] == null || $genders[0] == 'm') {
+      $gen = 0;
+    } else if ($genders[0] == 'f') {
+      $gen = 1;
+    } else if ($genders[0] == 'n') {
+      $gen = 2;
+    } 
+    $bccomp10 = bccomp($day, '10');
+    $bccomp20 = bccomp($day, '20');
+    if ($bccomp10 >= 0 && $bccomp20  <= 0) {
+        switch ($gen) {
+          default:
+          case 0: return ''.$number . '-ти';
+          case 1: return ''.$number . '-та';
+          case 2: return ''.$number . '-то';
+        }
     }
     $rem = bcmod($year, '10');
     switch ($rem) {
-        case '1':
-            return "" . $year . "-во";
-        case '2':
-            return "" . $year . "-ро";
+        case '1': switch ($gen) {
+                     default:
+                     case 0: return ''.$number . '-ви';
+                     case 1: return ''.$number . '-ва';
+                     case 2: return ''.$number . '-во';
+                  }
+        case '2': switch ($gen) {
+                     default:
+                     case 0: return ''.$number . '-ри';
+                     case 1: return ''.$number . '-ра';
+                     case 2: return ''.$number . '-ро';
+                  }
         case '7':
-        case '8':
-            return "" . $year . "-мо";
-        default:
-            return "" . $year . "-то";
+        case '8': switch ($gen) {
+                     default:
+                     case 0: return ''.$number . '-ми';
+                     case 1: return ''.$number . '-ма';
+                     case 2: return ''.$number . '-мо';
+                  }
+        default: switch ($gen) {
+                     default:
+                     case 0: return ''. $number . '-ти';
+                     case 1: return ''.$number . '-та';
+                     case 2: return ''.$number . '-то';
+                  }
     }
-}
-function seqPrefixF($year) {
-    if (bccomp($year, '10') >= 0 && bccomp($year, '20')  <= 0) {
-        return $year . "-та";
+    return ''.$number . '-ти';
+  } else if ($lang == 'en') {
+    $bccomp10 = bccomp($day, '10');
+    $bccomp20 = bccomp($day, '20');
+    if ($bccomp10 >= 0 && $bccomp20  <= 0) {
+      return ''.$number . '-th';
     }
     $rem = bcmod($year, '10');
     switch ($rem) {
-        case '1':
-            return "" . $year . "-ва";
-        case '2':
-            return "" . $year . "-ра";
-        case '7':
-        case '8':
-            return "" . $year . "-ма";
-        default:
-            return "" . $year . "-та";
+        case '1': case 0: return ''.$number . '-st';
+        case '2': case 0: return ''.$number . '-nd';
+        case '3': case 0: return ''.$number . '-rd';
+        default:  case 0: return ''.$number . '-th';
     }
-}
-function seqPrefixM($day) {
-    if (bccomp($day, '10') >= 0 && bccomp($day, '20')  <= 0) {
-        return $day . "-ти";
+    return ''.$number . '-th';
+  } else if ($lang == 'de') {
+    $bccomp20 = bccomp($day, '20');
+    if ($bccomp20  >= 0) {
+      return ''.$number . '-ste';
     }
-    $rem = bcmod($day, '10');
+    return ''.$number . '-te';
+  } else if ($lang == 'ru') {
+    $gen = 0;
+    if (!isset($genders[3]) || $genders[3] == null || $genders[0] == 'm') {
+      $gen = 0;
+    } else if ($genders[3] == 'f') {
+      $gen = 1;
+    } else if ($genders[3] == 'n') {
+      $gen = 2;
+    } 
+    $bccomp10 = bccomp($day, '10');
+    $bccomp20 = bccomp($day, '20');
+    if ($bccomp10 >= 0 && $bccomp20  <= 0) {
+        switch ($gen) {
+          default:
+          case 0: return ''.$number . '-ый';
+          case 1: return ''.$number . '-тая';
+          case 2: return ''.$number . '-тое';
+        }
+    }
+    $rem = bcmod($year, '10');
     switch ($rem) {
-        case '1':
-            return "" . $day . "-ви";
-        case '2':
-            return "" . $day . "-ри";
+        case '1': switch ($gen) {
+                     default:
+                     case 0: return ''.$number . '-вый';
+                     case 1: return ''.$number . '-вая';
+                     case 2: return ''.$number . '-вое';
+                  }
+        case '2': switch ($gen) {
+                     default:
+                     case 0: return ''.$number . '-ой';
+                     case 1: return ''.$number . '-рая';
+                     case 2: return ''.$number . '-рое';
+                  }
         case '7':
-        case '8':
-            return "" . $day . "-ми";
-        default:
-            return "" . $day . "-ти";
+        case '8': switch ($gen) {
+                     default:
+                     case 0: return ''.$number . '-ой';
+                     case 1: return ''.$number . '-мая';
+                     case 2: return ''.$number . '-мое';
+                  }
+        default: switch ($gen) {
+                     default:
+                     case 0: return ''. $number . '-ый';
+                     case 1: return ''.$number . '-тая';
+                     case 2: return ''.$number . '-тое';
+                  }
     }
+    return ''.$number . '-ый';
+  } 
 }
+
 /**
  * This function assumes that months are 1 - 12 and days 1 - 31.
  */
@@ -512,7 +583,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <a class="up" href="?db=<?php echo $daysbg + 1;?>">&#x25B2;</a>
                <a class="down" href="?db=<?php echo $daysbg - 1; ?>">&#x25BC;</a>
            </td>
-           <td class="details"><?php echo seqPrefixM($periodsbg[0]->getNumber() + 1);?></td>
+           <td class="details"><?php echo seqPrefix($periodsbg[0]->getNumber() + 1, 'mnmm');?></td>
            <td class="details">
                <?php 
                if ($daybg == 31 && $monthbg == 12) { 
@@ -526,7 +597,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                if ($weekdaybg != 0) {
                    tr('ден', 'day', 'Tag', 'день'); 
                    echo ' '; 
-                   echo seqPrefixM($weekdaybg); 
+                   echo seqPrefix($weekdaybg, 'fnff'); 
                    tr('от българската седмица', 'from the Bulgarian week', 'von bulgarischen Woche', 'болгарской недели');
                }
                ?>
@@ -538,7 +609,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsbg[1]->getNumber() + 1) . " (" . $periodsbg[1]->getStructure()->getName($lang) . ")";?></td>
+           <td class="details" colspan="2"><?php echo "" . seqPrefix($periodsbg[1]->getNumber() + 1, 'mnmm') . " (" . $periodsbg[1]->getStructure()->getName($lang) . ")";?></td>
        </tr>
        <tr>
            <td class="details bold"><?php tr('Година','Year',  'Jahr',  'Год');?>:</td>
@@ -546,7 +617,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details nobr"><?php echo seqPrefixF($periodsbg[2]->getAbsoluteNumber() + 1);?></td>
+           <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></td>
            <td class="details">
                 <a class="period" href="kalendar.html#12g">
                   <?php 
@@ -556,7 +627,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                 </a>
                 (<?php tr($YEAR_ANIMALS_BG[$anim], $YEAR_ANIMALS_BG_EN[$anim], $YEAR_ANIMALS_BG_DE[$anim], $YEAR_ANIMALS_BG_RU[$anim]);?>)<br/>
                 <?php 
-                echo seqPrefixF($periodsbg[2]->getNumber()+1); 
+                echo seqPrefix($periodsbg[2]->getNumber()+1, 'fnnm'); 
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' von dem Anfang als vier Jahre lange Abschnitt', 
@@ -565,7 +636,7 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                 <br/>
                 <?php 
                 $yearbginstaryear = ( ( $periodsbg[2]->getAbsoluteNumber() ) % 60 ) + 1; 
-                echo seqPrefixF($yearbginstaryear); 
+                echo seqPrefix($yearbginstaryear, 'fnnm'); 
                 tr(' от началото на 60 годишния Звезден Ден', 
                    ' from the beginning of the 60 year long Star Day', 
                    ' von dem Anfang als 60 Jahre lange Sternwoche', 
@@ -579,32 +650,32 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
             <td class="details bold">
                 <a href="kalendar.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:
             </td>
-            <td class="details detailsleft nobr"><?php echo seqPrefixN($periodsbg[3]->getNumber()+1);?></td>
+            <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[3]->getNumber()+1, 'nnmm');?></td>
 
             <td class="details bold detailsright">
                 <a class="period" href="kalendar.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
             </td>
-            <td class="details nobr"><?php echo seqPrefixM($periodsbg[6]->getNumber()+1);?></td>
+            <td class="details nobr"><?php echo seqPrefix($periodsbg[6]->getNumber()+1, 'mnmm');?></td>
        </tr>
        <tr>
             <td class="details bold"><a class="period" href="kalendar.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
-            <td class="details detailsleft nobr"><?php echo seqPrefixM($periodsbg[4]->getNumber()+1);?></td>
+            <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[4]->getNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright">
                 <a class="period" href="kalendar.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
             </td>
-            <td class="details nobr"><?php echo seqPrefixF($periodsbg[7]->getNumber()+1);?></td>
+            <td class="details nobr"><?php echo seqPrefix($periodsbg[7]->getNumber()+1,'fnnm');?></td>
        </tr>
        <tr>
             <td class="details bold">
                 <a class="period" href="kalendar.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
-            <td class="details detailsleft nobr"><?php echo seqPrefixF($periodsbg[5]->getNumber()+1);?></td>
+            <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 
             <td class="details bold detailsright">
                 <a class="period" href="kalendar.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
             </td>
-            <td class="details nobr"><?php echo seqPrefixF($periodsbg[8]->getNumber()+1);?></td>
+            <td class="details nobr"><?php echo seqPrefix($periodsbg[8]->getNumber()+1, 'fnff');?></td>
        </tr>
        <?php if (file_exists(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php')) { ?>
        <tr>
@@ -640,13 +711,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Първи', 'First Month', 'Ersten Monat', 'Первый Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>">1</td><?php $wday%=7?>
@@ -701,13 +772,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Втори', 'Second Month', 'Zweiten Monat', 'Второй Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable"></td>
@@ -762,13 +833,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Трети', 'Tird Month', 'Dritten Monat', 'Третий Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable"></td>
@@ -830,13 +901,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Четвърти', 'Fourth Month', 'Vierten Monat', 'Четвёртый Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>">1</td><?php $wday%=7?>
@@ -891,13 +962,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Пети', 'Fifth Month', 'Fünften Monat', 'Пятый Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable"></td>
@@ -952,13 +1023,13 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Шести', 'Sixth Month', 'Sechsten Monat', 'Шестой Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable"></td>
@@ -1033,13 +1104,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Седми', 'Seventh Month', 'Siebten Monat', 'Седьмой Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>">1</td><?php $wday%=7?>
@@ -1094,13 +1165,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Осми', 'Eighth Month', 'Achten Monat', 'Восьмой Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable"></td>
@@ -1155,13 +1226,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Девети', 'Ninth Month', 'Neunten Monat', 'Девятый Месяц');?></td>
            </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
            <tr class="calendartable">
        <td class="calendartable"></td>
@@ -1226,13 +1297,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                </td>
          </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
          <tr class="calendartable">
        <td class="calendartable<?php echo getBckGrnd($ibg,$tbg,$wday++)?>" id="daybg<?php echo $ibg++?>">1</td><?php $wday%=7?>
@@ -1291,13 +1362,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                </td>
          </tr>
            <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
            </tr>
          <tr class="calendartable">
        <td class="calendartable"></td>
@@ -1352,13 +1423,13 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
           <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Дванайсти', 'Twelfth Month', 'Zwölfte Monat', 'Двенадцатый Месяц');?> </td>
         </tr>
         <tr class="calendartable">
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">2<sup><?php tr('-ри','-nd','-te','-ой');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">3<sup><?php tr('-ти','-rd','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">4<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">5<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">6<sup><?php tr('-ти','-th','-te','-ый');?></sup></div></td>
+               <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">7<sup><?php tr('-ми','-th','-te','-ой');?></sup></div></td>
         </tr>
         <tr class="calendartable">
        <td class="calendartable"></td>
@@ -1456,7 +1527,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="details bold">
                <a class="up" href="?dg=<?php echo $daysgr + 1;?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - 1; ?>">&#x25BC;</a>
            </td>
-           <td class="details"><?php echo seqPrefixM($periodsgr[0]->getNumber() + 1);?></td>
+           <td class="details"><?php echo seqPrefix($periodsgr[0]->getNumber() + 1, 'mnmm');?></td>
            <td class="details">
                <?php
                   $wee = bcmod($daysgrFromStartOfCalendar, '7'); 
@@ -1472,7 +1543,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details" colspan="2"><?php echo "" . seqPrefixM($periodsgr[1]->getNumber() + 1) . " (" . $periodsgr[1]->getStructure()->getName($lang) . ")";?>
+           <td class="details" colspan="2"><?php echo "" . seqPrefix($periodsgr[1]->getNumber() + 1, 'mnmm') . " (" . $periodsgr[1]->getStructure()->getName($lang) . ")";?>
            </td>
        </tr>
        <tr>
@@ -1481,10 +1552,10 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details nobr"><?php echo seqPrefixF($periodsgr[2]->getAbsoluteNumber() + 1);?></td>
+           <td class="details nobr"><?php echo seqPrefix($periodsgr[2]->getAbsoluteNumber() + 1,'fnnm');?></td>
            <td class="details">
                 <?php 
-                echo seqPrefixF($periodsgr[2]->getNumber()+1); 
+                echo seqPrefix($periodsgr[2]->getNumber()+1, 'fnnm'); 
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' bis den Anfang dem Vierteljahr', 
@@ -1493,7 +1564,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                 <br/>
                 <?php 
                 $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1;
-                echo seqPrefixF($yeargrincentury);
+                echo seqPrefix($yeargrincentury, 'fnnm');
                 tr(' от началото на Столетие (Век)', 
                    ' from the beginning of a Century', 
                    ' bis den Anfang dem Jahrhundert', 
@@ -1503,7 +1574,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        </tr>
        <tr>
             <td class="details bold"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?>:</td>
-            <td class="details nobr"><?php echo seqPrefixN($periodsgr[3]->getNumber()+1);?></td>
+            <td class="details nobr"><?php echo seqPrefix($periodsgr[3]->getNumber()+1, 'nnmm');?></td>
 
             <td class="details" colspan="2">
                 <?php 
@@ -1516,11 +1587,11 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        </tr>
        <tr>
             <td class="details bold"><?php tr('Столетие/Век', 'Century', 'Jahrhundert', 'Век');?>:</td>
-            <td class="details nobr"><?php echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1);?></td>
+            <td class="details nobr"><?php echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'mnnm');?></td>
 
             <td class="details" colspan="2">
                <?php 
-               echo seqPrefixM($periodsgr[4]->getAbsoluteNumber()+1); 
+               echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'mnnm'); 
                tr(' от началото на календара и', 
                   ' from the beginning of the calendar', 
                   ' bis den Anfang dem Kalender', 
@@ -1528,7 +1599,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                ?> 
                <br/>
                <?php 
-               echo seqPrefixM($periodsgr[4]->getNumber()+1); 
+               echo seqPrefix($periodsgr[4]->getNumber()+1, 'mnnm'); 
                tr(' от началото на 400г. период.', 
                   ' from the beginning of the 400y. period', 
                   ' bis den Anfang dem 400 Jahre Abschnitt', 
@@ -1538,7 +1609,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        </tr>
        <tr>
             <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 лет период');?>:</td>
-            <td class="details detailsleft nobr"><?php echo seqPrefixM($periodsgr[5]->getAbsoluteNumber()+1);?></td>
+            <td class="details detailsleft nobr"><?php echo seqPrefix($periodsgr[5]->getAbsoluteNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright"></td>
             <td class="details"></td>
