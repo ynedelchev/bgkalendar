@@ -50,8 +50,8 @@ function seqPrefix($number, $genders) {
     } else if ($genders[0] == 'n') {
       $gen = 2;
     } 
-    $bccomp10 = bccomp($day, '10');
-    $bccomp20 = bccomp($day, '20');
+    $bccomp10 = bccomp($number, '10');
+    $bccomp20 = bccomp($number, '20');
     if ($bccomp10 >= 0 && $bccomp20  <= 0) {
         switch ($gen) {
           default:
@@ -60,7 +60,7 @@ function seqPrefix($number, $genders) {
           case 2: return ''.$number . '-то';
         }
     }
-    $rem = bcmod($year, '10');
+    $rem = bcmod($number, '10');
     switch ($rem) {
         case '1': switch ($gen) {
                      default:
@@ -90,12 +90,12 @@ function seqPrefix($number, $genders) {
     }
     return ''.$number . '-ти';
   } else if ($lang == 'en') {
-    $bccomp10 = bccomp($day, '10');
-    $bccomp20 = bccomp($day, '20');
+    $bccomp10 = bccomp($number, '10');
+    $bccomp20 = bccomp($number, '20');
     if ($bccomp10 >= 0 && $bccomp20  <= 0) {
       return ''.$number . '-th';
     }
-    $rem = bcmod($year, '10');
+    $rem = bcmod($number, '10');
     switch ($rem) {
         case '1': case 0: return ''.$number . '-st';
         case '2': case 0: return ''.$number . '-nd';
@@ -104,7 +104,7 @@ function seqPrefix($number, $genders) {
     }
     return ''.$number . '-th';
   } else if ($lang == 'de') {
-    $bccomp20 = bccomp($day, '20');
+    $bccomp20 = bccomp($number, '20');
     if ($bccomp20  >= 0) {
       return ''.$number . '-ste';
     }
@@ -118,42 +118,42 @@ function seqPrefix($number, $genders) {
     } else if ($genders[3] == 'n') {
       $gen = 2;
     } 
-    $bccomp10 = bccomp($day, '10');
-    $bccomp20 = bccomp($day, '20');
+    $bccomp10 = bccomp($number, '10');
+    $bccomp20 = bccomp($number, '20');
     if ($bccomp10 >= 0 && $bccomp20  <= 0) {
         switch ($gen) {
           default:
           case 0: return ''.$number . '-ый';
-          case 1: return ''.$number . '-тая';
-          case 2: return ''.$number . '-тое';
+          case 1: return ''.$number . '-ая';
+          case 2: return ''.$number . '-ое';
         }
     }
-    $rem = bcmod($year, '10');
+    $rem = bcmod($number, '10');
     switch ($rem) {
         case '1': switch ($gen) {
                      default:
-                     case 0: return ''.$number . '-вый';
-                     case 1: return ''.$number . '-вая';
-                     case 2: return ''.$number . '-вое';
+                     case 0: return ''.$number . '-ый';
+                     case 1: return ''.$number . '-ая';
+                     case 2: return ''.$number . '-ое';
                   }
         case '2': switch ($gen) {
                      default:
                      case 0: return ''.$number . '-ой';
-                     case 1: return ''.$number . '-рая';
-                     case 2: return ''.$number . '-рое';
+                     case 1: return ''.$number . '-ая';
+                     case 2: return ''.$number . '-ое';
                   }
         case '7':
         case '8': switch ($gen) {
                      default:
                      case 0: return ''.$number . '-ой';
-                     case 1: return ''.$number . '-мая';
-                     case 2: return ''.$number . '-мое';
+                     case 1: return ''.$number . '-ая';
+                     case 2: return ''.$number . '-ое';
                   }
         default: switch ($gen) {
                      default:
                      case 0: return ''. $number . '-ый';
-                     case 1: return ''.$number . '-тая';
-                     case 2: return ''.$number . '-тое';
+                     case 1: return ''.$number . '-ая';
+                     case 2: return ''.$number . '-ое';
                   }
     }
     return ''.$number . '-ый';
@@ -533,13 +533,42 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 
 <br/>
 <br/>
-
-<?php tr('Тази страница представлява опит за компютърен модел на <a href="kalendar.html">древният български календар</a> и сравнението му със съвременния грегориански календар.',
-'This page is an attempt for a computer model of <a href="kalendar.html">the ancient Bulgarian calendar</a> and its comparison with the modern Gregorian calendar.',
-'Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.',
-'Этот сайт есть попытка компюторного моделя <a href="kalendar.html">древном болгарско календаря</a> и его сравнение современном грегорианском календаря.'); ?>
-<?php tr('<br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a.html">тук</a>.',
-'', '', ''); ?>
+<?php if ($lang == 'bg') : ?>
+   Древните българи, живели по нашите земи, създали собствен календар. Българският календар е 
+   възстановен по писмени исторически данни (<a href="imennik.html">Именник на Българските Владетели</a>) и по народни
+   предания и легенди. Безспорен успех за него е официалното признание на ЮНЕСКО, с което той е 
+   признат за най-съвършенния в света. За начална точка на летоброенето е приет денят на зимното 
+   слънцестоене (21-ви декември) през 5505 година преди Хр.<br/>
+   Тази страница представлява опит за компютърен модел на <a href="kalendar.html">древният български календар</a> 
+   и сравнението му със съвременния грегориански календар.
+   <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a.html">тук</a>.
+<?php elseif ($lang == 'en') : ?>
+   Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
+   reconstrucuted basedon on writen historical artefacts (<a href="imennik.html">Namelist of Bulgarian Rulers</a>), 
+   Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO, that this is 
+   the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
+   winter solstice (21-st of December) 5505 years before Christ.<br/>
+   This page is an attempt for a computer model of <a href="kalendar.html">the ancient Bulgarian calendar</a> and its 
+   comparison with the modern Gregorian calendar.
+   <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
+   For more information, see <a href="kupu%D0%BBu%D1%86a.html">here</a>.
+<?php elseif ($lang == 'de') : ?>
+   Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
+   uber geschrieben historischen Daten (<a href="imennik.html">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
+   Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO, die er als die vollkommenste in der Welt anerkannt.
+   Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
+   Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
+   <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
+   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a.html">hier</a>.
+<?php elseif ($lang == 'ru') : ?>
+   Древние болгары жили на болгарском земле, создали собственный календарь. Болгарский календарь перестроен писменные исторические данные 
+   (<a href="imennik.html">Именник Болгарских Канов</a>) и леганды. Бесспорный успех эго является официальное признание ЮНЕСКО, в которой он признан самым 
+   совершенным в мире. Отправной точки летоизчисления принимается день зимном солнцестояния (21 декабря) 5505 годах до нашей эры.
+   Этот сайт есть попытка компюторного моделя <a href="kalendar.html">древном болгарско календаря</a> и его 
+   сравнение современном грегорианском календаря. 
+   <br/><br/>Сайт "Болгарский Календарь", поддерживает инициативу  «За Болгарский стиль шрифта кириллицы». 
+   Для дополнительной информации, смотрите <a href="kupu%D0%BBu%D1%86a.html">здесь</a>.
+<?php endif ?>
 <br/>
 <br/>
 
