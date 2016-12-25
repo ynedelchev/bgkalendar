@@ -15,7 +15,7 @@
 <html>
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
    <title><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></title>
    <link rel="stylesheet" type="text/css" href="css/flags.css" /> 
    <link rel="stylesheet" type="text/css" href="navigation.css" /> 
@@ -36,10 +36,6 @@
       Thanks to 
       http://www.useragentman.com/blog/2010/03/09/cross-browser-css-transforms-even-in-ie/
    -->
-   <script type="text/javascript" src="js/EventHelpers.js"></script>
-   <script type="text/javascript" src="js/cssQuery-p.js"></script>
-   <script type="text/javascript" src="js/jcoglan.com/sylvester.js"></script>
-   <script type="text/javascript" src="js/cssSandpaper.js"></script>
    <script type="text/javascript">
      function initialize() {
          windowResized();

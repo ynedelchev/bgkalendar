@@ -106,7 +106,23 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    <script type="text/javascript" src="../bgkalendar.js"></script>
    <script type="text/javascript">
      function initialize() {
-
+          
+          <?php 
+          $anchor = '';
+          if (isset($_GET['anchor'])) {
+             if ($_GET['anchor'] == 'chgd') {
+                $anchor = 'changeddate';
+             } else if ($_GET['anchor'] == 'chgdbg') {
+                $anchor = 'changeddatebg';
+             } else if ($_GET['anchor'] == 'chgdgr') {
+                $anchor = 'changeddategr';
+             }  
+          } 
+          ?>
+          var anchor = "<?php echo $anchor;?>";
+          if (anchor != null && anchor != '') {
+             location.hash = '#' + anchor;
+          }
           // Initialize Bulgarian Kalendar....
 
           var indexbg = <?php echo $prevBgMonthStart;?>;
@@ -265,6 +281,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 
 <br/>
 
+<a name="changeddate"/>
 <table border="0">
   <tr>
     <td valign="top">
@@ -287,6 +304,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
          &nbsp; &nbsp;
       <nobr>
         <form method="GET" style="display: inline;">
+        <input type="hidden" name="anchor" value="chgd"/>
         <input type="text" name="cb" value="<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>" size="10" style="text-align: right; font-weight: bold; "/>
         <input type="image" src="../images/submit.svg" border="0" alt="Submit" />
         </form>
@@ -308,6 +326,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
         &nbsp; &nbsp;
       <nobr>
         <form method="GET" style="display: inline;">
+        <input type="hidden" name="anchor" value="chgd"/>
           <input type="text" name="cg" value="<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargr;?>" size="10" style="text-align: right; font-weight: bold;"/>
           <input type="image" src="../images/submit.svg" border="0" alt="Submit" />
         </form>
@@ -408,6 +427,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 <?php endif ?>
 <br/><br/>
 
+<a name="changeddatebg"/>
 <div class="calendartypetitle">
    <?php tr('Древен Български Календар', 'Ancient Bulgarian Calendar', 'Der uralt Bulgarish Kalender', 'Древний Болгарский Календарь'); ?>
 </div>
@@ -418,6 +438,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    &nbsp; &nbsp;
 <nobr>
   <form method="GET" style="display: inline;">
+    <input type="hidden" name="anchor" value="chgdbg"/>
     <input type="text" name="cb" value="<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>" size="10" style="text-align: right; font-weight: bold; "/>
     <input type="image" src="../images/submit.svg" border="0" alt="Submit" />
   </form>
@@ -435,8 +456,8 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
        <tr>
            <td class="details bold"><?php tr('Ден',   'Day',   'Tag',   'День');?>:</td>
            <td class="details bold">
-               <a class="up" href="?db=<?php echo $daysbg + 1;?>">&#x25B2;</a>
-               <a class="down" href="?db=<?php echo $daysbg - 1; ?>">&#x25BC;</a>
+               <a class="up" href="?db=<?php echo $daysbg + 1;?>&anchor=chgdbg">&#x25B2;</a>
+               <a class="down" href="?db=<?php echo $daysbg - 1; ?>&anchor=chgdbg">&#x25BC;</a>
            </td>
            <td class="details"><?php echo seqPrefix($periodsbg[0]->getNumber() + 1, 'mnmm');?>
                <?php 
@@ -460,19 +481,19 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
        <tr>
            <td class="details bold"><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>:</td>
            <td class="details bold">
-               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
-               <a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[1]->getStructure()->getTotalLengthInDays();?>&anchor=chgdbg">&#x25B2;</a>
+               <a class="down" href="?db=<?php echo $daysbg - $periodsbg[1]->getStructure()->getTotalLengthInDays(); ?>&anchor=chgdbg">&#x25BC;</a>
            </td>
            <td class="details" colspan="2"><?php echo "" . seqPrefix($periodsbg[1]->getNumber() + 1, 'mnmm') . " (" . $periodsbg[1]->getStructure()->getName($lang) . ")";?></td>
        </tr>
        <tr>
            <td class="details bold"><?php tr('Година','Year',  'Jahr',  'Год');?>:</td>
            <td class="details bold">
-               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
-               <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>&anchor=chgdbg">&#x25B2;</a>
+               <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>&anchor=chgdbg">&#x25BC;</a>
            </td>
            <td class="details"><nobr><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></nobr>
-                <a class="period" href="kalendar.html#12g">
+                <a class="period" href="../kalendar.html#12g">
                   <?php 
                   $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
                   tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
@@ -547,6 +568,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 <br/>
 <br/>
 
+<a name="changeddategr"/>
 <div class="calendartypetitle">
    <?php tr('Съвременен Грегориански Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?>
 </div>
@@ -557,6 +579,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 &nbsp; &nbsp;
 <nobr>
 <form method="GET" style="display: inline;">
+<input type="hidden" name="anchor" value="chgdgr"/>
 <input type="text" name="cg" value="<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargr;?>" size="10" style="text-align: right; font-weight: bold; font-family: Times; "/>
 <input type="image" src="../images/submit.svg" border="0" alt="Submit" />
 </form>
@@ -574,7 +597,8 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
        <tr>
            <td class="details bold"><?php tr('Ден', 'Day', 'Tag', 'День');?>:</td>
            <td class="details bold">
-               <a class="up" href="?dg=<?php echo $daysgr + 1;?>">&#x25B2;</a><a class="down" href="?dg=<?php echo $daysgr - 1; ?>">&#x25BC;</a>
+               <a class="up" href="?dg=<?php echo $daysgr + 1;?>&anchor=chgdgr">&#x25B2;</a>
+               <a class="down" href="?dg=<?php echo $daysgr - 1; ?>&anchor=chgdgr">&#x25BC;</a>
            </td>
            <td class="details"><?php echo seqPrefix($periodsgr[0]->getNumber() + 1, 'mnmm');?>
                <?php
@@ -588,8 +612,8 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
        <tr>
            <td class="details bold"><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>:</td>
            <td class="details bold">
-               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
-               <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[1]->getStructure()->getTotalLengthInDays();?>&anchor=chgdgr">&#x25B2;</a>
+               <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[1]->getStructure()->getTotalLengthInDays(); ?>&anchor=chgdgr">&#x25BC;</a>
            </td>
            <td class="details" colspan="2"><?php echo "" . seqPrefix($periodsgr[1]->getNumber() + 1, 'mnmm') . " (" . $periodsgr[1]->getStructure()->getName($lang) . ")";?>
            </td>
@@ -597,8 +621,8 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
        <tr>
            <td class="details bold"><?php tr('Година', 'Year', 'Jahr', 'Год');?>:</td>
            <td class="details bold">
-               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
-               <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
+               <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>&anchor=chgdgr">&#x25B2;</a>
+               <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>&anchor=chgdgr">&#x25BC;</a>
            </td>
            <td class="details"><nobr><?php echo seqPrefix($periodsgr[2]->getAbsoluteNumber() + 1,'fnnm');?></nobr>
                 <?php 
