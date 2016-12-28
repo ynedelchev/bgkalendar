@@ -318,6 +318,10 @@ function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tg
     global $WEEKDAYS_SHORT_DE;
     global $WEEKDAYS_SHORT_RU;
 
+    if ($startAtDayOfWeek <0 ) {
+      $startAtDayOfWeek = 0 - $startAtDayOfWeek;
+    } 
+
     $WEEKDAYS_SHORT = array(
         "пн", "вт", "ср", "чт", "пт", "сб", "не"
     );
@@ -426,7 +430,7 @@ $daysbgFromStartOfCalendar = isset($_REQUEST[$DAYS_BG_URL_PARAMETER]) ? $_REQUES
 $daysgrFromStartOfCalendar = isset($_REQUEST[$DAYS_GR_URL_PARAMETER]) ? $_REQUEST[$DAYS_GR_URL_PARAMETER] : null;
 $dateBg = isset($_REQUEST["cb"]) ? $_REQUEST["cb"] : null;
 $dateGr = isset($_REQUEST["cg"]) ? $_REQUEST["cg"] : null;
-$weekdayCorrection = -2;
+$weekdayCorrection = 5;
 $hour    = -1;
 $minute  = -1;
 $secund  = -1;

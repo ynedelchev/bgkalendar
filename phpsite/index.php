@@ -1,11 +1,8 @@
 <?php
   if (!isset($_REQUEST['dt']) || $_REQUEST['dt'] != 'true') {
-    if(!$_SESSION['isMobile']){
-      require_once('mobile/Mobile_Detect.php'); 
-      $detect = new Mobile_Detect();
-      $_SESSION['isMobile'] = $detect->isMobile();
-    } 
-    if ($_SESSION['isMobile']) {
+    require_once('mobile/Mobile_Detect.php'); 
+    $detect = new Mobile_Detect();
+    if ($detect->isMobile()) {
       header('Location: mobile/', true, 301);
       die();
     }
@@ -1349,20 +1346,10 @@ $ibg = bcadd($igr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromSta
 
 $jepochindex = bcsub($igr, $daysgrFromStartOfCalendarTillJavaEpoch);
 $tgr = $daysgrFromStartOfCalendar;
-$igr = bcsub($igr, '31');
 $wday = bcmod($igr, 7);
 ?>
 
 <table border="0" style="float: left; margin: 10px; border: 10px;">
-   <!--
-   <tr>
-       <td colspan="3" style="vertical-align: top;">
-         <div class="month">
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber(), "Декември", 31, $wday, $igr, $tgr);?>
-         </div>
-       </td>
-   </tr>
-   -->
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
         <div class="calendarvertical yearperiod"><?php tr('Първо Полугодие', 'First half of the year', 'Erste Halbjahr', 'Первое Полугодие');?></div>
