@@ -1299,11 +1299,11 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        </tr>
        <tr>
             <td class="details bold"><?php tr('Столетие/Век', 'Century', 'Jahrhundert', 'Век');?>:</td>
-            <td class="details nobr"><?php echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'mnnm');?></td>
+            <td class="details nobr"><?php echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'nnnm');?></td>
 
             <td class="details" colspan="2">
                <?php 
-               echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'mnnm'); 
+               echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'nnnm'); 
                tr(' от началото на календара и', 
                   ' from the beginning of the calendar', 
                   ' bis den Anfang dem Kalender', 
