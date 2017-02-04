@@ -231,7 +231,7 @@
    Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO, that this is 
    the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
    winter solstice (21-st of December) 5505 years before Christ.<br/>
-   This page is an attempt for a computer model of <a href="kalendar.html">the ancient Bulgarian calendar</a> and its 
+   This page is an attempt for a computer model of <a href="kalendar-en.html">the ancient Bulgarian calendar</a> and its 
    comparison with the modern Gregorian calendar.
    <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
    For more information, see <a href="kupu%D0%BBu%D1%86a.html">here</a>.

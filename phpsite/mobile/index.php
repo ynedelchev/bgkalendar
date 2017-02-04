@@ -551,11 +551,11 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[8]->getNumber()+1, 'fnff');?></td>
        </tr>
-       <?php if (file_exists(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php')) { ?>
+       <?php if (file_exists(dirname(__DIR__) . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php')) { ?>
        <tr>
             <td colspan="4">
                <div class="info">
-               <?php include(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php'); ?> 
+               <?php include(dirname(__DIR__) . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php'); ?> 
                </div>
             </td>
        </tr>
@@ -685,11 +685,11 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
             <td class="details bold detailsright"></td>
             <td class="details"></td>
        </tr>
-       <?php if (file_exists(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php')) { ?>
+       <?php if (file_exists(dirname(__DIR__) . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php')) { ?>
        <tr>
             <td colspan="4">
                <div class="info">
-               <?php include(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php'); ?> 
+               <?php include(dirname(__DIR__) . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php'); ?> 
                </div>
             </td>
        </tr>
