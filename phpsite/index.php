@@ -1450,7 +1450,7 @@ $wday = bcmod($igr, 7);
  <ul>
      <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
      <li>
-         <a class="footer" href="kalendar.html">
+         <a class="footer" href="kalendar<?php tr('', '-en', '', '');?>.html">
              <span class="footer">
                  <?php 
                  tr('Принципи на Българския Календар', 
