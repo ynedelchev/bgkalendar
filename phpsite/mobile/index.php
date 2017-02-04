@@ -395,7 +395,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO, that this is 
    the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
    winter solstice (21-st of December) 5505 years before Christ.<br/>
-   This page is an attempt for a computer model of <a href="../kalendar.html">the ancient Bulgarian calendar</a> and its 
+   This page is an attempt for a computer model of <a href="../kalendar-en.html">the ancient Bulgarian calendar</a> and its 
    comparison with the modern Gregorian calendar.
 <?php elseif ($lang == 'de') : ?>
    Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
@@ -493,7 +493,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>&anchor=chgdbg">&#x25BC;</a>
            </td>
            <td class="details"><nobr><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></nobr>
-                <a class="period" href="../kalendar.html#12g">
+                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#12g">
                   <?php 
                   $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
                   tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
@@ -522,32 +522,32 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    <table>
        <tr>
             <td class="details bold">
-                <a href="../kalendar.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', '4-рёхлетный период');?></a>:
+                <a href="../kalendar<?php tr('','-en','','');?>.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', '4-рёхлетный период');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[3]->getNumber()+1, 'nnmm');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="../kalendar.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
+                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[6]->getNumber()+1, 'mnmm');?></td>
        </tr>
        <tr>
-            <td class="details bold"><a class="period" href="../kalendar.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
+            <td class="details bold"><a class="period" href="../kalendar<?php tr('','-en','','');?>.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[4]->getNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="../kalendar.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
+                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[7]->getNumber()+1,'fnnm');?></td>
        </tr>
        <tr>
             <td class="details bold">
-                <a class="period" href="../kalendar.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="../kalendar.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
+                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[8]->getNumber()+1, 'fnff');?></td>
        </tr>
@@ -708,7 +708,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
  <ul>
      <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
      <li>
-         <a class="footer" href="../kalendar.html">
+         <a class="footer" href="../kalendar<?php tr('','-en','','');?>.html">
              <span class="footer">
                  <?php 
                  tr('Принципи на Българския Календар', 
