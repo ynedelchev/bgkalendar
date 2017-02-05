@@ -234,7 +234,7 @@
    This page is an attempt for a computer model of <a href="kalendar-en.html">the ancient Bulgarian calendar</a> and its 
    comparison with the modern Gregorian calendar.
    <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
-   For more information, see <a href="kupu%D0%BBu%D1%86a.html">here</a>.
+   For more information, see <a href="kupu%D0%BBu%D1%86a-en.html">here</a>.
 <?php elseif ($lang == 'de') : ?>
    Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
    uber geschrieben historischen Daten (<a href="imennik.html">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
@@ -242,7 +242,7 @@
    Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
    Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
-   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-en.html">hier</a>.
+   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a.html">hier</a>.
 <?php elseif ($lang == 'ru') : ?>
    Древние болгары жили на болгарском земле, создали собственный календарь. Болгарский календарь перестроен писменные исторические данные 
    (<a href="imennik.html">Именник Болгарских Канов</a>) и леганды. Бесспорный успех эго является официальное признание ЮНЕСКО, в которой он признан самым 
