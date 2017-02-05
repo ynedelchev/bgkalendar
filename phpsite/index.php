@@ -242,7 +242,7 @@
    Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
    Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
-   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a.html">hier</a>.
+   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-en.html">hier</a>.
 <?php elseif ($lang == 'ru') : ?>
    Древние болгары жили на болгарском земле, создали собственный календарь. Болгарский календарь перестроен писменные исторические данные 
    (<a href="imennik.html">Именник Болгарских Канов</a>) и леганды. Бесспорный успех эго является официальное признание ЮНЕСКО, в которой он признан самым 
@@ -1483,7 +1483,7 @@ $wday = bcmod($igr, 7);
          </a>
      </li>
      <li>
-         <a class="footer" href="kupu%D0%BBu%D1%86a.html">
+         <a class="footer" href="kupu%D0%BBu%D1%86a<?php tr('','-en', '', '');?>.html">
              <span class="forum">
                  <?php 
                  tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');

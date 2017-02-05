@@ -417,7 +417,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="../kupu%D0%BBu%D1%86a.html">тук</a>.
 <?php elseif ($lang == 'en') : ?>
    <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
-   For more information, see <a href="../kupu%D0%BBu%D1%86a.html">here</a>.
+   For more information, see <a href="../kupu%D0%BBu%D1%86a-en.html">here</a>.
 <?php elseif ($lang == 'de') : ?>
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
    Weitere Informationen finden Sie <a href="../kupu%D0%BBu%D1%86a.html">hier</a>.
@@ -741,7 +741,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
          </a>
      </li>
      <li>
-         <a class="footer" href="../kupu%D0%BBu%D1%86a.html">
+         <a class="footer" href="../kupu%D0%BBu%D1%86a<?php tr('', '-en', '', '');?>.html">
              <span class="forum">
                  <?php 
                  tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');
