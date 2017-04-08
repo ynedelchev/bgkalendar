@@ -250,7 +250,7 @@
    Этот сайт есть попытка компюторного моделя <a href="kalendar.html">древном болгарско календаря</a> и его 
    сравнение современном грегорианском календаря. 
    <br/><br/>Сайт "Болгарский Календарь", поддерживает инициативу  «За Болгарский стиль шрифта кириллицы». 
-   Для дополнительной информации, смотрите <a href="kupu%D0%BBu%D1%86a.html">здесь</a>.
+   Для дополнительной информации, смотрите <a href="kupu%D0%BBu%D1%86a-ru.html">здесь</a>.
 <?php endif ?>
 <br/>
 <br/>
@@ -1483,7 +1483,7 @@ $wday = bcmod($igr, 7);
          </a>
      </li>
      <li>
-         <a class="footer" href="kupu%D0%BBu%D1%86a<?php tr('','-en', '-de', '');?>.html">
+         <a class="footer" href="kupu%D0%BBu%D1%86a<?php tr('','-en', '-de', '-ru');?>.html">
              <span class="forum">
                  <?php 
                  tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');
