@@ -240,9 +240,9 @@
    uber geschrieben historischen Daten (<a href="imennik.html">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
    Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO, die er als die vollkommenste in der Welt anerkannt.
    Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
-   Diese Seite ist ein Computermodelanlauf von <a href="kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
+   Diese Seite ist ein Computermodelanlauf von <a href="kalendar-de.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
-   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a.html">hier</a>.
+   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-de.html">hier</a>.
 <?php elseif ($lang == 'ru') : ?>
    Древние болгары жили на болгарском земле, создали собственный календарь. Болгарский календарь перестроен писменные исторические данные 
    (<a href="imennik.html">Именник Болгарских Канов</a>) и леганды. Бесспорный успех эго является официальное признание ЮНЕСКО, в которой он признан самым 
@@ -331,7 +331,7 @@
            </td>
            <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></td>
            <td class="details">
-                <a class="period" href="kalendar<?php tr('','-en','','');?>.html#12g">
+                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#12g">
                   <?php 
                   $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
                   tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
@@ -360,32 +360,32 @@
    <table>
        <tr>
             <td class="details bold">
-                <a href="kalendar<?php tr('','-en','','');?>.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:
+                <a href="kalendar<?php tr('','-en','-de','');?>.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[3]->getNumber()+1, 'nnmm');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="kalendar<?php tr('','-en','','');?>.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
+                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[6]->getNumber()+1, 'mnmm');?></td>
        </tr>
        <tr>
-            <td class="details bold"><a class="period" href="kalendar<?php tr('','-en','','');?>.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
+            <td class="details bold"><a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[4]->getNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="kalendar<?php tr('','-en','','');?>.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
+                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[7]->getNumber()+1,'fnnm');?></td>
        </tr>
        <tr>
             <td class="details bold">
-                <a class="period" href="kalendar<?php tr('','-en','','');?>.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="kalendar<?php tr('','-en','','');?>.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
+                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[8]->getNumber()+1, 'fnff');?></td>
        </tr>
@@ -1450,7 +1450,7 @@ $wday = bcmod($igr, 7);
  <ul>
      <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
      <li>
-         <a class="footer" href="kalendar<?php tr('', '-en', '', '');?>.html">
+         <a class="footer" href="kalendar<?php tr('', '-en', '-de', '');?>.html">
              <span class="footer">
                  <?php 
                  tr('Принципи на Българския Календар', 
@@ -1483,7 +1483,7 @@ $wday = bcmod($igr, 7);
          </a>
      </li>
      <li>
-         <a class="footer" href="kupu%D0%BBu%D1%86a<?php tr('','-en', '', '');?>.html">
+         <a class="footer" href="kupu%D0%BBu%D1%86a<?php tr('','-en', '-de', '');?>.html">
              <span class="forum">
                  <?php 
                  tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');
