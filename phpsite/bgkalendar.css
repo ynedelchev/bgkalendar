@@ -236,6 +236,26 @@ img.calendarimage {
  font-family: "Izhitsa", "Times New Roman", "Times", "serif";
  #font-family: "Times New Roman", "Times", "serif";
 }
+td.name
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+}
+td.transl
+{
+ vertical-align: top;
+ border-collapse: collapse;
+ border-width: 1px;
+ border-color: blue;
+ border-style: solid;
+ vertical-align: top;
+ text-align: right;
+}
 
 div.month {
  float: left;
