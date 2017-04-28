@@ -244,13 +244,15 @@
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
    Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-de.html">hier</a>.
 <?php elseif ($lang == 'ru') : ?>
-   Древние болгары жили на болгарском земле, создали собственный календарь. Болгарский календарь перестроен писменные исторические данные 
-   (<a href="imennik.html">Именник Болгарских Канов</a>) и леганды. Бесспорный успех эго является официальное признание ЮНЕСКО, в которой он признан самым 
-   совершенным в мире. Отправной точки летоизчисления принимается день зимном солнцестояния (21 декабря) 5505 годах до нашей эры.
-   Этот сайт есть попытка компюторного моделя <a href="kalendar.html">древном болгарско календаря</a> и его 
-   сравнение современном грегорианском календаря. 
-   <br/><br/>Сайт "Болгарский Календарь", поддерживает инициативу  «За Болгарский стиль шрифта кириллицы». 
-   Для дополнительной информации, смотрите <a href="kupu%D0%BBu%D1%86a-ru.html">здесь</a>.
+   Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.  
+   Мы восстановили здесь календарь на основании письменных исторических источников как 
+   (<a href="imennik.html">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.   
+   Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.  
+   Наш сайт дает представлление о <a href="kalendar.html">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет 
+   возможность сравнить его с современным Грегорианским календарём.  
+   <br/><br/>
+   Сайт "Болгарский Календарь", поддерживает инициативу «За Болгарский стиль шрифта Кириллицы». Для дополнительной информации, 
+   смотрите <a href="kupu%D0%BBu%D1%86a-ru.html">здесь</a>.  
 <?php endif ?>
 <br/>
 <br/>
@@ -309,8 +311,8 @@
                if ($weekdaybg != 0) {
                    tr('ден', 'day', 'Tag', 'день'); 
                    echo ' '; 
-                   echo seqPrefix($weekdaybg, 'fnff'); 
-                   tr('от българската седмица', 'from the Bulgarian week', 'von bulgarischen Woche', 'болгарской недели');
+                   echo seqPrefix($weekdaybg, 'mnfm'); 
+                   tr(' от българската седмица', ' from the Bulgarian week', ' von bulgarischen Woche', ' болгарской недели');
                }
                ?>
            </td>
@@ -343,7 +345,7 @@
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' von dem Anfang als vier Jahre lange Abschnitt', 
-                   ' с начала четырёх летном периоде');
+                   ' с начала четырёхлетнего периода');
                 ?>
                 <br/>
                 <?php 
@@ -352,7 +354,7 @@
                 tr(' от началото на 60 годишния Звезден Ден', 
                    ' from the beginning of the 60 year long Star Day', 
                    ' von dem Anfang als 60 Jahre lange Sternwoche', 
-                   ' с начала 60 летний Звездный День');
+                   ' с начала очередного 60-летнего Звездного Дня');
                 ?>
            </td>
        </tr>
@@ -807,7 +809,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
         <div class="calendarvertical yearperiod"><?php tr('Второ Полугодие', 'Second half of the year', 'Zweite Halbjahr', 'Второе Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod"><?php tr('Трето Тримесечие', 'Third Quarter', 'Dritte Vierteljahr', 'Третая Четверть');?></div>
+        <div class="calendarvertical yearperiod"><?php tr('Трето Тримесечие', 'Third Quarter', 'Dritte Vierteljahr', 'Третья Четверть');?></div>
        </td>
        <td>
            <div class="month">
@@ -1271,7 +1273,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' bis den Anfang dem Vierteljahr', 
-                   ' с начала четиригодием');
+                   ' с начала четырехлетнего периода  ');
                 ?>
                 <br/>
                 <?php 
@@ -1280,7 +1282,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                 tr(' от началото на Столетие (Век)', 
                    ' from the beginning of a Century', 
                    ' bis den Anfang dem Jahrhundert', 
-                   ' с начала веком'); 
+                   ' с начала века'); 
                 ?>
            </td>
        </tr>
@@ -1293,7 +1295,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                 tr(' от началото на столетието/века', 
                    ' from the beginning of the Century', 
                    ' bis den Anfang dem Jahrhundert', 
-                   ' с начала веком');
+                   ' с начала века');
                 ?>
             </td>
        </tr>
@@ -1307,7 +1309,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                tr(' от началото на календара и', 
                   ' from the beginning of the calendar', 
                   ' bis den Anfang dem Kalender', 
-                  ' с началом календаря');
+                  ' с начала календаря');
                ?> 
                <br/>
                <?php 
@@ -1315,12 +1317,12 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                tr(' от началото на 400г. период.', 
                   ' from the beginning of the 400y. period', 
                   ' bis den Anfang dem 400 Jahre Abschnitt', 
-                  ' с началом 400 летном периодом');
+                  ' с начала 400 летнего периода');
                ?>
             </td>
        </tr>
        <tr>
-            <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 лет период');?>:</td>
+            <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 летний период');?>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsgr[5]->getAbsoluteNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright"></td>
@@ -1405,7 +1407,7 @@ $wday = bcmod($igr, 7);
         <div class="calendarvertical yearperiod"><?php tr('Второ Полугодие', 'Second half of the year', 'Zweite Halbjahr', 'Второе Полугодие');?></div>
        </td>
        <td class="calendartable yearperiod">
-        <div class="calendarvertical yearperiod"><?php tr('Трето Тримесечие', 'Third Quarter', 'Dritte Vierteljahr', 'Третая Четверть');?></div>
+        <div class="calendarvertical yearperiod"><?php tr('Трето Тримесечие', 'Third Quarter', 'Dritte Vierteljahr', 'Третья Четверть');?></div>
        </td>
        <td style="vertical-align: top">
          <div class="month">
