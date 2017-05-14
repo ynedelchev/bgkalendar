@@ -6,6 +6,7 @@ require_once(dirname(__DIR__).'/calendar_util.php');
 function get() {
     
   global $json_encode_props;
+  header('Content-Type: application/json');
   handle_version(basename(dirname(dirname(__DIR__))));
 
   $calendar = new LetoBulgarian();

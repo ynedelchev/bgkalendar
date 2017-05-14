@@ -7,6 +7,7 @@ require dirname(dirname(__DIR__)) . "/include/" . "imageutils.php";
 function get() {
     
   global $json_encode_props;
+  header('Content-Type: application/json');
   handle_version(basename(dirname(__DIR__)));
 
   $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'    )?'s':'' );

@@ -26,6 +26,7 @@ require_once($PHP_HOME.'/includes.php');
 function get() {
     
   global $json_encode_props, $YEAR_ANIMALS_EN;
+  header('Content-Type: application/json');
   handle_version(basename(dirname(dirname(__DIR__))));
 
   $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'    )?'s':'' );
