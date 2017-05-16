@@ -246,12 +246,22 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
   </div>
   <?php echo '</a>';?> 
 
-  <div class="flag-box" style="margin-left: 20px;">
+  <div class="flag-box" style="margin-left: 20px; margin-right: 45px;">
 
     </div>
   </div>
 </div>
 </nav>
+
+<!-- Fork Me On Github -->
+<a href="https://github.com/ynedelchev/bgkalendar">
+<img style="position: absolute; top: 0; right: 0; border: 0;"
+     src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
+     alt="Fork me on GitHub"
+     data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+</a>
+<!-- Fork Me On Github End -->
+
 <a href="../?dt=true"><?php tr('Към Десктоп версия', 'To Desktop Version', 'Desktop Version', 'Настольная версия'); ?></a><br/><br/>
 <!-- Facebook Button Start -->
 <div style="height: 64px;" class="fb-like" data-href="http://bgkalendar.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
