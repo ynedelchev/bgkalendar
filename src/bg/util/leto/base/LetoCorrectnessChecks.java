@@ -2,12 +2,14 @@ package bg.util.leto.base;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
 import bg.util.leto.api.Leto;
 import bg.util.leto.api.LetoPeriodStructure;
 import bg.util.leto.api.LetoPeriodType;
+import bg.util.leto.impl.LocaleStrings;
 
 public class LetoCorrectnessChecks {
 
@@ -36,8 +38,8 @@ public class LetoCorrectnessChecks {
             if (substructure.getTotalLengthInDays() > periodStructure.getTotalLengthInDays()) {
                 throw new RuntimeException("Illegal state. The Period Type structure which has " 
                       + periodStructure.getTotalLengthInDays() 
-                      + " days has been declared to contain a substructure " + subtype.getName() + " with " 
-                      + substructure.getTotalLengthInDays() + " days.");
+                      + " days has been declared to contain a substructure " + subtype.getName(LocaleStrings.ENGLISH) 
+                      + " with " + substructure.getTotalLengthInDays() + " days.");
             }
             
             Map<LetoPeriodType, Long> subLengths = calcuateLengthInPeriodTypes(substructure);
@@ -118,13 +120,15 @@ public class LetoCorrectnessChecks {
     public static String checkCorrectness(LetoPeriodType type) {
         LetoPeriodStructure[] structures = type.getPossibleStructures();
         if (structures == null) {
-            return "No possible structures defined for period " + type.getName() + " (" + type.getDescription() + ").";
+            return "No possible structures defined for period " + type.getName(LocaleStrings.ENGLISH) + " (" 
+                     + type.getDescription(Locale.ENGLISH) + ").";
         }
         StringBuffer errors = new StringBuffer();
         for (int structureIndex = 0; structureIndex < structures.length; structureIndex ++) {
             LetoPeriodStructure structure = structures[structureIndex];
             if (structure == null) {
-                errors.append(" *** Period named \"" + type.getName() + "\" (" + type.getDescription() 
+                errors.append(" *** Period named \"" + type.getName(LocaleStrings.ENGLISH) + "\" (" 
+                        + type.getDescription(Locale.ENGLISH) 
                         + ") has been declared to support " + structures.length 
                         + "types of internal structures. However the format of internal structure with index " 
                         + structureIndex + " has not been declared (indexes start from 0).");
@@ -133,13 +137,15 @@ public class LetoCorrectnessChecks {
             long totalLengthInDays = structure.getTotalLengthInDays();
             long calculatedTotalLength = calculateTotalLengthInDaysOfPeriodType(structure);
             if (totalLengthInDays <= 0) {
-                errors.append(" *** Period named \"" + type.getName() + "\" (" + type.getDescription() 
+                errors.append(" *** Period named \"" + type.getName(LocaleStrings.ENGLISH) + "\" (" 
+                        + type.getDescription(Locale.ENGLISH) 
                         + ") has been declared to last for " + totalLengthInDays 
                         + "days, which is non possitive number.");
                 continue;
             }
             if (calculatedTotalLength <=0 ) {
-                errors.append(" *** Period named \"" + type.getName() + "\" (" + type.getDescription() 
+                errors.append(" *** Period named \"" + type.getName(LocaleStrings.ENGLISH) + "\" (" 
+                        + type.getDescription(Locale.ENGLISH) 
                         + ") has been declared to last for " + totalLengthInDays 
                         + " days, but has been calculated to actually be " + calculatedTotalLength 
                         + " days, which is a non positive number.");
@@ -161,7 +167,7 @@ public class LetoCorrectnessChecks {
                             } catch (Throwable t) {
                             }
                             subPeriodsString.append("\"");
-                            subPeriodsString.append(subPeriodType.getName());
+                            subPeriodsString.append(subPeriodType.getName(LocaleStrings.ENGLISH));
                             subPeriodsString.append("\" (");
                             subPeriodsString.append(subPeriodLength);
                             subPeriodsString.append(" days); ");
@@ -171,7 +177,8 @@ public class LetoCorrectnessChecks {
                         }
                     }
                 }
-                errors.append(" *** Period named \"" + type.getName() + "\" (" + type.getDescription() 
+                errors.append(" *** Period named \"" + type.getName(LocaleStrings.ENGLISH) + "\" (" 
+                        + type.getDescription(Locale.ENGLISH) 
                         + "), has defined " + structures.length 
                         + " possible structures. The structure with index " + structureIndex 
                         + " has been declared to take up " + totalLengthInDays 
@@ -208,14 +215,15 @@ public class LetoCorrectnessChecks {
                         + " has " + types.length + " period type definitions. However period type definition with index "
                         + typeIndex + " is invalid (null) (indexes start from 0).");
             } else {
-System.out.println("Checking type: " + type.getName());
+System.out.println("Checking type: " + type.getName(LocaleStrings.ENGLISH));
                 if (type instanceof LetoPeriodTypeBase) {
                     String error = checkCorrectness(type);
                     if (error != null && error.length() > 0) {
                         errors.append(" ### Calendar Instance " + leto.getClass().getName() + " : " 
                                 + leto.toString() + " has " + types.length 
                                 + " period type definitions. However period type definition with index "
-                                + typeIndex + " (" + type.getName() + " : " + type.getDescription() 
+                                + typeIndex + " (" + type.getName(LocaleStrings.ENGLISH) + " : " 
+                                + type.getDescription(Locale.ENGLISH) 
                                 + ") has some errors (indexes start at 0). Errors are: " + error + ".");
                     }
                 }

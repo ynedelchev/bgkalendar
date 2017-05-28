@@ -2,6 +2,7 @@ package bg.util.leto.impl.bulgarian;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,6 +12,8 @@ import bg.util.leto.base.LetoBase;
 import bg.util.leto.base.LetoCorrectnessChecks;
 import bg.util.leto.base.LetoPeriodTypeBase;
 import bg.util.leto.base.LetoPeriodTypeBean;
+import bg.util.leto.impl.LocaleStringId;
+import bg.util.leto.impl.LocaleStrings;
 import bg.util.leto.base.LetoPeriodStructureBean;
 
 public class LetoBulgarian extends LetoBase {
@@ -31,14 +34,14 @@ public class LetoBulgarian extends LetoBase {
     
     
     private static final LetoPeriodStructureBean DAY = 
-                    new LetoPeriodStructureBean(1, null);
+                    new LetoPeriodStructureBean(LocaleStrings._day_, 1, null);
 
     // -------------------------------------------------------------------------------------------//
     //                                 S T R U C T U R E S                                        //
     // -------------------------------------------------------------------------------------------//
     
     private static final LetoPeriodStructureBean MONTH_30_DAYS = 
-        new LetoPeriodStructureBean(30, 
+        new LetoPeriodStructureBean(LocaleStrings._month_30_, 30, 
             new LetoPeriodStructureBean[] {
                 DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY,  
                 DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY,
@@ -46,7 +49,7 @@ public class LetoBulgarian extends LetoBase {
             }
         );
     private static final LetoPeriodStructureBean MONTH_31_DAYS = 
-        new LetoPeriodStructureBean(31, 
+        new LetoPeriodStructureBean(LocaleStrings._month_31_, 31, 
             new LetoPeriodStructureBean[] {
                 DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY,  
                 DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY, DAY,
@@ -55,23 +58,23 @@ public class LetoBulgarian extends LetoBase {
             }
         ); 
     
-    private static  LetoPeriodStructureBean FIRST_31    = new LetoBulgarianMonth(MONTH_31_DAYS, 0);
-    private static  LetoPeriodStructureBean SECOND_30   = new LetoBulgarianMonth(MONTH_30_DAYS, 1);
-    private static  LetoPeriodStructureBean THIRD_30    = new LetoBulgarianMonth(MONTH_30_DAYS, 2);
-    private static  LetoPeriodStructureBean FOURTH_31   = new LetoBulgarianMonth(MONTH_31_DAYS, 3);
-    private static  LetoPeriodStructureBean FIFTH_30    = new LetoBulgarianMonth(MONTH_30_DAYS, 4);
-    private static  LetoPeriodStructureBean SIXTH_30    = new LetoBulgarianMonth(MONTH_30_DAYS, 5);
-    private static  LetoPeriodStructureBean SIXTH_31    = new LetoBulgarianMonth(MONTH_31_DAYS, 5);
-    private static  LetoPeriodStructureBean SEVENTH_31  = new LetoBulgarianMonth(MONTH_31_DAYS, 6);
-    private static  LetoPeriodStructureBean EIGHTH_30   = new LetoBulgarianMonth(MONTH_30_DAYS, 7);
-    private static  LetoPeriodStructureBean NINTH_30    = new LetoBulgarianMonth(MONTH_30_DAYS, 8);
-    private static  LetoPeriodStructureBean TENTH_31    = new LetoBulgarianMonth(MONTH_31_DAYS, 9);
-    private static  LetoPeriodStructureBean ELEVENTH_30 = new LetoBulgarianMonth(MONTH_30_DAYS, 10);
-    private static  LetoPeriodStructureBean TWELVTH_31  = new LetoBulgarianMonth(MONTH_31_DAYS, 11);
+    private static  LetoBulgarianMonth FIRST_31    = new LetoBulgarianMonth(MONTH_31_DAYS, LocaleStrings._m_first_);
+    private static  LetoBulgarianMonth SECOND_30   = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_second_);
+    private static  LetoBulgarianMonth THIRD_30    = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_third_);
+    private static  LetoBulgarianMonth FOURTH_31   = new LetoBulgarianMonth(MONTH_31_DAYS, LocaleStrings._m_fourth_);
+    private static  LetoBulgarianMonth FIFTH_30    = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_fifth_);
+    private static  LetoBulgarianMonth SIXTH_30    = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_sixth_30_);
+    private static  LetoBulgarianMonth SIXTH_31    = new LetoBulgarianMonth(MONTH_31_DAYS, LocaleStrings._m_sixth_31_);
+    private static  LetoBulgarianMonth SEVENTH_31  = new LetoBulgarianMonth(MONTH_31_DAYS, LocaleStrings._m_seventh_);
+    private static  LetoBulgarianMonth EIGHTH_30   = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_eight_);
+    private static  LetoBulgarianMonth NINTH_30    = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_nineth_);
+    private static  LetoBulgarianMonth TENTH_31    = new LetoBulgarianMonth(MONTH_31_DAYS, LocaleStrings._m_tenth_);
+    private static  LetoBulgarianMonth ELEVENTH_30 = new LetoBulgarianMonth(MONTH_30_DAYS, LocaleStrings._m_eleventh_);
+    private static  LetoBulgarianMonth TWELVTH_31  = new LetoBulgarianMonth(MONTH_31_DAYS, LocaleStrings._m_twelveth_);
 
         
     private static final LetoPeriodStructureBean YEAR = 
-        new LetoPeriodStructureBean(365, 
+        new LetoPeriodStructureBean(LocaleStrings._year_non_leap_, 365, 
             new LetoPeriodStructure[] { 
                 FIRST_31,   SECOND_30,   THIRD_30,
                 FOURTH_31,  FIFTH_30,    SIXTH_30,
@@ -83,7 +86,7 @@ public class LetoBulgarian extends LetoBase {
     //           1 YEAR
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean YEAR_LEAP = 
-        new LetoPeriodStructureBean(366, 
+        new LetoPeriodStructureBean(LocaleStrings._year_leap_, 366, 
             new LetoPeriodStructure[] { 
                 FIRST_31,   SECOND_30,   THIRD_30,
                 FOURTH_31,  FIFTH_30,    SIXTH_31,
@@ -96,13 +99,13 @@ public class LetoBulgarian extends LetoBase {
     //           4 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean YEARS_4 = 
-        new LetoPeriodStructureBean(1460, 
+        new LetoPeriodStructureBean(LocaleStrings._years4_non_leap_, 1460, 
             new LetoPeriodStructureBean[] {
                 YEAR, YEAR, YEAR, YEAR
             }
         );
     private static final LetoPeriodStructureBean YEARS_4_LEAP = 
-        new LetoPeriodStructureBean(1461, 
+        new LetoPeriodStructureBean(LocaleStrings._years4_leap_, 1461, 
             new LetoPeriodStructureBean[] {
                 YEAR, YEAR, YEAR, YEAR_LEAP
             }
@@ -112,7 +115,7 @@ public class LetoBulgarian extends LetoBase {
     //           60 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean STAR_DAY = 
-        new LetoPeriodStructureBean(21914, 
+        new LetoPeriodStructureBean(LocaleStrings._star_day_non_leap_, 21914, 
             new LetoPeriodStructureBean[] {
                   YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP,
                   YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP,
@@ -120,7 +123,7 @@ public class LetoBulgarian extends LetoBase {
             }
         );
     private static final LetoPeriodStructureBean STAR_DAY_LEAP = 
-        new LetoPeriodStructureBean(21915, 
+        new LetoPeriodStructureBean(LocaleStrings._star_day_leap_, 21915, 
             new LetoPeriodStructureBean[] {
                   YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP,
                   YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP, YEARS_4_LEAP,
@@ -132,7 +135,7 @@ public class LetoBulgarian extends LetoBase {
     //           420 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean STAR_WEEK = 
-        new LetoPeriodStructureBean(153401, 
+        new LetoPeriodStructureBean(LocaleStrings._star_week_non_leap_, 153401, 
             new LetoPeriodStructureBean[] {
                 STAR_DAY, 
                 STAR_DAY_LEAP, 
@@ -144,7 +147,7 @@ public class LetoBulgarian extends LetoBase {
             }
         );
     private static final LetoPeriodStructureBean STAR_WEEK_LEAP = 
-        new LetoPeriodStructureBean(153402, 
+        new LetoPeriodStructureBean(LocaleStrings._star_week_leap_, 153402, 
             new LetoPeriodStructureBean[] {
                 STAR_DAY, 
                 STAR_DAY_LEAP, 
@@ -160,13 +163,13 @@ public class LetoBulgarian extends LetoBase {
     //           1 680 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean STAR_MONTH = 
-        new LetoPeriodStructureBean(613606, 
+        new LetoPeriodStructureBean(LocaleStrings._star_month_non_leap_, 613606, 
             new LetoPeriodStructureBean[] {
                 STAR_WEEK_LEAP, STAR_WEEK, STAR_WEEK_LEAP, STAR_WEEK
             }
         );
     private static final LetoPeriodStructureBean STAR_MONTH_LEAP = 
-        new LetoPeriodStructureBean(613607, 
+        new LetoPeriodStructureBean(LocaleStrings._star_month_leap_, 613607, 
             new LetoPeriodStructureBean[] {
                 STAR_WEEK_LEAP, STAR_WEEK, STAR_WEEK_LEAP, STAR_WEEK_LEAP
             }
@@ -176,7 +179,7 @@ public class LetoBulgarian extends LetoBase {
     //           20 160 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean STAR_YEAR = 
-        new LetoPeriodStructureBean(7363282, 
+        new LetoPeriodStructureBean(LocaleStrings._star_year_non_leap_, 7363282, 
             new LetoPeriodStructureBean[] {
                 STAR_MONTH_LEAP, STAR_MONTH_LEAP, STAR_MONTH_LEAP,
                 STAR_MONTH_LEAP, STAR_MONTH_LEAP, STAR_MONTH,
@@ -185,7 +188,7 @@ public class LetoBulgarian extends LetoBase {
             }
         );
     private static final LetoPeriodStructureBean STAR_YEAR_LEAP = 
-        new LetoPeriodStructureBean(7363283, 
+        new LetoPeriodStructureBean(LocaleStrings._star_year_leap_, 7363283, 
             new LetoPeriodStructureBean[] {
                 STAR_MONTH_LEAP, STAR_MONTH_LEAP, STAR_MONTH_LEAP,
                 STAR_MONTH_LEAP, STAR_MONTH_LEAP, STAR_MONTH,
@@ -198,13 +201,13 @@ public class LetoBulgarian extends LetoBase {
     //           80 640 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean STAR_YEARS_4 = 
-        new LetoPeriodStructureBean(29453131, 
+        new LetoPeriodStructureBean(LocaleStrings._star_years4_non_leap_, 29453131, 
             new LetoPeriodStructureBean[] {
                 STAR_YEAR_LEAP, STAR_YEAR, STAR_YEAR_LEAP, STAR_YEAR_LEAP
             }
         );
     private static final LetoPeriodStructureBean STAR_YEARS_4_LEAP = 
-        new LetoPeriodStructureBean(29453132, 
+        new LetoPeriodStructureBean(LocaleStrings._star_years4_leap_, 29453132, 
             new LetoPeriodStructureBean[] {
                 STAR_YEAR_LEAP, STAR_YEAR_LEAP, STAR_YEAR_LEAP, STAR_YEAR_LEAP
             }
@@ -214,7 +217,7 @@ public class LetoBulgarian extends LetoBase {
     //           10 080 000 YEARS
     //-----------------------------------------------------------
     private static final LetoPeriodStructureBean STAR_YEARS_4x125 = 
-        new LetoPeriodStructureBean(3681641376L, 
+        new LetoPeriodStructureBean(LocaleStrings._star_year4x125_, 3681641376L, 
             new LetoPeriodStructureBean[] {
                 STAR_YEARS_4, STAR_YEARS_4, STAR_YEARS_4, STAR_YEARS_4, STAR_YEARS_4,
                 STAR_YEARS_4, STAR_YEARS_4, STAR_YEARS_4, STAR_YEARS_4, STAR_YEARS_4,
@@ -264,12 +267,12 @@ public class LetoBulgarian extends LetoBase {
     // -------------------------------------------------------------------------------------------//
     
     private static final LetoPeriodType DAY_PERIOD_TYPE = 
-        new LetoPeriodTypeBean("Day", "1 day period",
+        new LetoPeriodTypeBean(LocaleStrings._day_, LocaleStrings._day_description_, // Day - 1 day period
             new LetoPeriodStructureBean[] { DAY }
         ); 
         
     private static final LetoPeriodTypeBase MONTH_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Month", "1 or 30 or 31 days period", 
+        new LetoPeriodTypeBean(LocaleStrings._month_, LocaleStrings._monthbg_description_, // Month - 1 or 30 or 31 days period 
             new LetoPeriodStructure[] { 
                         FIRST_31,
                         SECOND_30,
@@ -288,42 +291,42 @@ public class LetoBulgarian extends LetoBase {
         );
         
     private static final LetoPeriodTypeBase YEAR_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Year", "Year", 
+        new LetoPeriodTypeBean(LocaleStrings._year_, LocaleStrings._year_, 
             new LetoPeriodStructureBean[] { YEAR, YEAR_LEAP }
         );
             
     private static final LetoPeriodTypeBase YEARS_4_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("4 years", "4 Years", 
+        new LetoPeriodTypeBean(LocaleStrings._years4_, LocaleStrings._years4_, 
             new LetoPeriodStructureBean[] { YEARS_4, YEARS_4_LEAP }
         );
         
     private static final LetoPeriodTypeBase STAR_DAY_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Star Day", "60 years", 
+        new LetoPeriodTypeBean(LocaleStrings._star_day_, LocaleStrings._star_day_description_, // Star Day - 60 years" 
             new LetoPeriodStructureBean[] { STAR_DAY, STAR_DAY_LEAP }
         );
             
     private static final LetoPeriodTypeBase STAR_WEEK_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Star Week", "420 years", 
+        new LetoPeriodTypeBean(LocaleStrings._star_week_, LocaleStrings._star_week_description_, // Star Week - 420 years 
             new LetoPeriodStructureBean[] { STAR_WEEK, STAR_WEEK_LEAP }
         );
             
     private static final LetoPeriodTypeBase STAR_MONTH_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Star Month", "1680 years", 
+        new LetoPeriodTypeBean(LocaleStrings._star_month_, LocaleStrings._star_month_description_, // Star Month - 1680 years 
             new LetoPeriodStructureBean[] { STAR_MONTH, STAR_MONTH_LEAP }
         );
         
     private static final LetoPeriodTypeBase STAR_YEAR_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Star Year", "2160 years", 
+        new LetoPeriodTypeBean(LocaleStrings._star_year_, LocaleStrings._star_year_description_, // Star Year - 2160 years 
             new LetoPeriodStructureBean[] { STAR_YEAR, STAR_YEAR_LEAP }
         );
             
     private static final LetoPeriodTypeBase STAR_YEAR_4_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Star 4 Years Period", "80640 years", 
+        new LetoPeriodTypeBean(LocaleStrings._star_years4_, LocaleStrings._star_years4_description_, // Four Star Years - 80640 years 
             new LetoPeriodStructureBean[] {STAR_YEARS_4_LEAP, STAR_YEARS_4}
         );
         
     private static final LetoPeriodTypeBase STAR_YEAR_4x125_PERIOD_TYPE =         
-        new LetoPeriodTypeBean("Star 125 Years Period", "10 080 000 years", 
+        new LetoPeriodTypeBean(LocaleStrings._star_year4x125_, LocaleStrings._star_year4x125_description_, // Star Epoch - 10 080 000 years 
             new LetoPeriodStructureBean[] { STAR_YEARS_4x125 }
         );
 
@@ -630,7 +633,7 @@ public class LetoBulgarian extends LetoBase {
         } else if (type == LetoBulgarian.STAR_YEARS_4x125) {
             typeStr = "LetoBulgarian.STAR_YEARS_4x125";
         } else {
-            typeStr = "ERROR (" + type + ", " + type.getPeriodType().getName() + ") ";
+            typeStr = "ERROR (" + type + ", " + type.getPeriodType().getName(Locale.ENGLISH) + ") ";
         }
         return typeStr;
     }
@@ -658,14 +661,14 @@ public class LetoBulgarian extends LetoBase {
         } else if (type == LetoBulgarian.STAR_YEAR_4x125_PERIOD_TYPE) {
             typeStr = "LetoBulgarian.STAR_YEAR_4x125_PERIOD_TYPE";
         } else {
-            typeStr = "ERROR (" + type + ", " + type.getName() + ") ";
+            typeStr = "ERROR (" + type + ", " + type.getName(Locale.ENGLISH) + ") ";
         }
         return typeStr;
     }
     
     public static void testPeriod(LetoPeriodStructure structure) {
         System.out.println("//----------------------------");
-        System.out.println("//" + structure.getPeriodType().getName());
+        System.out.println("//" + structure.getPeriodType().getName(Locale.ENGLISH));
         Map<LetoPeriodType, Long> lengths = LetoCorrectnessChecks.calcuateLengthInPeriodTypes(structure);
         Set<LetoPeriodType> keySet = lengths.keySet();
         Iterator<LetoPeriodType> iterator = keySet.iterator();
@@ -721,6 +724,21 @@ public class LetoBulgarian extends LetoBase {
         
         LetoBulgarian bg = new LetoBulgarian();
         bg.checkCorrectness();
+    }
+    
+    @Override
+    protected LocaleStringId getNameTranslationIndex() {
+        return LocaleStrings._bulgarian_;
+    }
+    
+    @Override
+    protected LocaleStringId getDescriptionTranslationIndex() {
+        return LocaleStrings._bulgarian_;
+    }
+
+    @Override
+    public long getStartOfCalendarBeforeUnixEpoch() {
+        return START_OF_CALENDAR_BEFORE_JAVA_EPOCH;
     }
     
 }

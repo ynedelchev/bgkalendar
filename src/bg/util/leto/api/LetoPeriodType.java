@@ -1,5 +1,8 @@
 package bg.util.leto.api;
 
+import java.util.Locale;
+import java.util.Map;
+
 /**
  * An interface to define an abstract period type, such as day, month, year, century and so on...
  * <br/><br/>
@@ -38,17 +41,42 @@ package bg.util.leto.api;
  */
 public interface LetoPeriodType {
 
-     /**
-      * The name of the period type. For example: "day", "month", "year", "century" and so on...
-      * @return The name of this period type.
-      */
-     public String getName();
-     
-     /**
-      * Longer human readable description of the period type.  
-      * @return Longer human readable description of the given period type.
-      */
-     public String getDescription();
+    
+    /**
+     * Get the name of this period type in the default locale.
+     * @return The name of this period type in the default locale.
+     */
+    String getName();
+    
+    /**
+     * The name of the period type. For example: "day", "month", "year", "century" and so on...
+     * @return The name of this period type.
+     */
+    public String getName(Locale locale);
+    
+    /**
+     * Get the available translations of the name of this period type in different human spoken languages.
+     * @return The available translations of the name of this period type in different human spoken languages.
+     */
+    Map<Locale, String> getNameTranslations();
+    
+    /**
+     * Get the human readable description of this period type in the default locale.
+     * @return The human readable long description of this period type using the default locale.
+     */
+    String getDescription();
+    
+    /**
+     * Longer human readable description of the period type.  
+     * @return Longer human readable description of the given period type.
+     */
+    public String getDescription(Locale locale);
+    
+    /**
+     * Get the available translations in human spoken languages of this period type description.
+     * @return The available translations to human spoken languages of this period type description.
+     */
+    Map<Locale, String> getDescriptionTranslations();
      
      /**
       * Return the possible structures for this period type. Each possible structure is defined as an element 

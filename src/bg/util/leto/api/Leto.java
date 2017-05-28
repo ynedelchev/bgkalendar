@@ -1,13 +1,60 @@
 package bg.util.leto.api;
 
-
+import java.util.Locale;
+import java.util.Map;
 
 /**
  * This is the interface each Leto (Calendar) has to define. 
  */
 public interface Leto { 
 
+    /**
+     * Get the name of this calendar in the default locale.
+     * @return The name of this calendar in the default locale.
+     */
+    String getName();
     
+    /**
+     * Short name of this calendar system.
+     * @return Short name of that calendar system.
+     */
+    String getName(Locale locale);
+    
+    /**
+     * Get the available translations of the name of this calendar in different human spoken languages.
+     * @return The available translations of the name of this calendar in different human spoken languages.
+     */
+    Map<Locale, String> getNameTranslations();
+    
+    /**
+     * Get the human readable description of this calendar in the default locale.
+     * @return The human readable long description of this calendar using the default locale.
+     */
+    String getDescription();
+    
+    /**
+     * Long description of this calendar system.
+     * @return The long humand readable description of this calendar system.
+     */
+    String getDescription(Locale locale);
+    
+    /**
+     * Get the available translations in human spoken languages of this calendar descripton.
+     * @return The available translations to human spoken languages of this calendar description.
+     */
+    Map<Locale, String> getDescriptionTranslations();
+    
+    /**
+     * Get the start of the calendar before unix epoch in days. In other words how many days have 
+     * passed since the start of the calendar till t he Unix Epoch (1-st January 1970).
+     * @return The number of days after the start of the calendar and beofre Unix Epoch.
+     */
+    long getStartOfCalendarBeforeUnixEpoch();
+    
+    /**
+     * 
+     * @return
+     */
     LetoPeriodType[] getCalendarPeriodTypes();
     
     /**

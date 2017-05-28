@@ -1,12 +1,20 @@
 package bg.util.leto.base;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 import bg.util.leto.api.Leto;
 import bg.util.leto.api.LetoException;
 import bg.util.leto.api.LetoPeriod;
 import bg.util.leto.api.LetoPeriodType;
+import bg.util.leto.impl.LocaleStringId;
+import bg.util.leto.impl.LocaleStrings;
 import bg.util.leto.impl.gregorian.LetoGregorian;
 import bg.util.leto.api.LetoPeriodStructure;
 
@@ -18,6 +26,51 @@ import bg.util.leto.api.LetoPeriodStructure;
  * In fact each instance of a class that inherits from LetoBase, is a representation of a given date.
  */
 public abstract class LetoBase implements Leto {
+    
+    
+    abstract protected LocaleStringId getNameTranslationIndex();
+    
+    abstract protected LocaleStringId getDescriptionTranslationIndex();
+    
+    /**
+     * Get the 
+     */
+    @Override
+    public String getName() {
+        return getName(Locale.ENGLISH);
+    }
+    
+    @Override
+    public String getName(Locale locale) {
+        LocaleStringId nameTranslationIndex = getNameTranslationIndex();
+        return LocaleStrings.get(nameTranslationIndex, locale, null);
+    }
+
+    @Override
+    public String getDescription() {
+        return getDescription(Locale.ENGLISH);
+    }
+    
+
+    @Override
+    public String getDescription(Locale locale) {
+        LocaleStringId descriptionTranslations = getDescriptionTranslationIndex();
+        return LocaleStrings.get(descriptionTranslations, locale, null);
+    }
+    
+    @Override
+    public Map<Locale, String> getNameTranslations() {
+        LocaleStringId nameTranslationIndex = getNameTranslationIndex();
+        Map<Locale, String> translations = LocaleStrings.get(nameTranslationIndex);
+        return translations;
+    }
+    
+    @Override
+    public Map<Locale, String> getDescriptionTranslations() {
+        LocaleStringId descriptionTranslations = getDescriptionTranslationIndex();
+        Map<Locale, String> translations = LocaleStrings.get(descriptionTranslations);
+        return translations;
+    }
     
     
     /**
@@ -80,10 +133,11 @@ public abstract class LetoBase implements Leto {
         LetoPeriodStructure[] structures = currentType.getPossibleStructures();
         if (structures == null || structures.length <= 0) {
             throw new LetoException("This calendar does not define any structure for the period type \"" 
-                  + currentType.getName() + ", so it is not defined how long in days this period could be.");
+                  + currentType.getName(LocaleStrings.ENGLISH) 
+                  + ", so it is not defined how long in days this period could be.");
         }
         if (structures.length > 1) {
-            throw new LetoException("The biggest possible period type \"" + currentType.getName() 
+            throw new LetoException("The biggest possible period type \"" + currentType.getName(LocaleStrings.ENGLISH) 
                   + "\" in this calendar has " + structures.length 
                   + " possible structures, but just one was expected. It is not defined which one should be used.");
         }
@@ -171,10 +225,10 @@ public abstract class LetoBase implements Leto {
         LetoPeriodStructure[] structures = currentType.getPossibleStructures();
         if (structures == null || structures.length <= 0) {
             throw new LetoException("This calendar does not define any structure for the period type \"" 
-                  + currentType.getName() + ", so it is not defined how long in days this period could be.");
+                  + currentType.getName(LocaleStrings.ENGLISH) + ", so it is not defined how long in days this period could be.");
         }
         if (structures.length > 1) {
-            throw new LetoException("The biggest possible period type \"" + currentType.getName() 
+            throw new LetoException("The biggest possible period type \"" + currentType.getName(LocaleStrings.ENGLISH) 
                   + "\" in this calendar has " + structures.length 
                   + " possible structures, but just one was expected. It is not defined which one should be used.");
         }
@@ -264,7 +318,7 @@ public abstract class LetoBase implements Leto {
     	long days = gr.calculateDaysFronStartOfCalendar(2018, 12, 10);
     	LetoPeriod[] types = gr.calculateCalendarPeriods(days);
     	for (int i =0; i < types.length; i++) {
-    		System.out.print(types[i].getType().getName() + ": ");
+    		System.out.print(types[i].getType().getName(LocaleStrings.ENGLISH) + ": ");
     		System.out.print(types[i].getNumber() + "; ");
     		System.out.println();
     	}
@@ -323,5 +377,227 @@ public abstract class LetoBase implements Leto {
     
     public String checkCorrectness() {
         return LetoCorrectnessChecks.checkCorrectness(getCalendarPeriodTypes(), this);
+    }
+    
+    public Map<String, Object> toMap() {
+        Map<String, Object> map = new LinkedHashMap<String, Object>();
+        handleNameDescriptionAndTramslations(map, getName(), getDescription(), getNameTranslations(), getDescriptionTranslations());
+        
+        long startInDaysBeforeUnixEpoch = getStartOfCalendarBeforeUnixEpoch();
+        map.put("start-in-days-before-unix-epoch", startInDaysBeforeUnixEpoch);
+        
+        LetoPeriodType[] periodTypes = getCalendarPeriodTypes();
+        if (periodTypes == null) {
+            return map;
+        }
+        List<Map<String, Object>> periodTypesResource = new ArrayList<Map<String, Object>>(periodTypes.length);
+        map.put("period-types", periodTypesResource);
+        
+        for (LetoPeriodType periodType : periodTypes) {
+            Map<String, Object> periodTypeResource = new LinkedHashMap<String, Object>();
+            periodTypesResource.add(periodTypeResource);
+            
+            handleNameDescriptionAndTramslations(periodTypeResource, periodType.getName(), periodType.getDescription(), 
+                    periodType.getNameTranslations(), periodType.getDescriptionTranslations());
+            
+            LetoPeriodStructure[] possibleStructures = periodType.getPossibleStructures();
+            List<Map<String, Object>> possibleStructuresResource = new ArrayList<Map<String, Object>>(possibleStructures.length);
+            periodTypeResource.put("possible-structures", possibleStructuresResource);
+            
+            for (LetoPeriodStructure possibleStructure : possibleStructures) {
+                Map<String, Object> possibleStructureResource = new LinkedHashMap<String, Object>();
+                possibleStructuresResource.add(possibleStructureResource);
+                
+                handleNameDescriptionAndTramslations(possibleStructureResource, possibleStructure.getName(), null, possibleStructure.getNameTranslations(), null);
+                
+                long days = possibleStructure.getTotalLengthInDays();
+                possibleStructureResource.put("length-days", new Long(days));
+                
+                Map<String, Long> length = new LinkedHashMap<String, Long>();
+                possibleStructureResource.put("length", length);
+                LetoPeriodType[] types = getCalendarPeriodTypes();
+                for (LetoPeriodType type : types) {
+                    String lengthTypeName = type.getName();
+                    long lengthInPeriodType = possibleStructure.getTotalLengthInPeriodTypes(type);
+                    if (lengthInPeriodType > 0) {
+                        length.put(lengthTypeName, new Long(lengthInPeriodType));
+                    }
+                }
+                
+                LetoPeriodStructure[] subStructures = possibleStructure.getSubPeriods();
+                if (subStructures == null || subStructures.length <= 0) {
+                    possibleStructureResource.put("sub-structure", new ArrayList<Map<String, Object>>(0));
+                } else {
+                    List<Map<String, Object>> subStructuresResource = new ArrayList<Map<String, Object>>(subStructures.length);
+                    possibleStructureResource.put("sub-structure", subStructuresResource);
+                    
+                    for (LetoPeriodStructure subStructure : subStructures) {
+                        Map<String, Object> subStructureResource = new LinkedHashMap<String, Object>();
+                        subStructuresResource.add(subStructureResource);
+                        
+                        subStructureResource.put("period-type-name", subStructure.getPeriodType().getName());
+                        subStructureResource.put("structure-name",  subStructure.getName());
+                        subStructureResource.put("length-days",           subStructure.getTotalLengthInDays());
+                    }
+                }
+            }
+        }
+        return map;
+    }
+    
+    public String toJson(boolean indent) {
+        Map<String, Object> map = toMap();
+        StringBuffer sb = new StringBuffer();
+        toJsonMap(map, sb, indent ? 0 : -1, indent ? 2 : 0);
+        return sb.toString();
+    }
+    
+    private String jsonEscape(String str) {
+        StringBuffer sb = new StringBuffer(str.length());
+        for (int i = 0; i < str.length(); i++) {
+            char chr = str.charAt(i);
+            switch (chr) {
+                case '\\': 
+                case '"':  sb.append('\\'); sb.append(chr); break;
+                case '\r': sb.append('\\'); sb.append('r'); break;
+                case '\n': sb.append('\\'); sb.append('n'); break;
+                case '\t': sb.append('\\'); sb.append('t'); break;
+                case '\b': sb.append('\\'); sb.append('b'); break;
+                default: sb.append(chr);
+            }
+        }
+        return sb.toString();
+    }
+    
+    private void toJsonMap(Map<String, ?> map, StringBuffer sb, int identation, int step) {
+        sb.append('{'); 
+        if (identation >= 0) { sb.append('\n');}
+        
+        Set<String> keySet = map.keySet();
+        Iterator<String> iterator = keySet.iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            if (identation >= 0) { for (int i = 0; i < identation + step; i++) { sb.append(' ');}   }
+            sb.append('"');
+            sb.append(jsonEscape(key));
+            sb.append("\": ");
+            toJson(map.get(key), sb, identation + step, step);
+            if (iterator.hasNext()) {
+                sb.append(',');
+            }
+            if (identation >= 0) { sb.append('\n');}
+        }
+        
+        if (identation >= 0) { for (int i = 0; i < identation; i++) { sb.append(' ');}   }        
+        sb.append('}');
+    }
+    
+    private void toJsonArray(Iterable<?> list, StringBuffer sb, int identation, int step) {
+        sb.append('['); 
+        if (identation >= 0) { sb.append('\n');}
+        
+        Iterator<?> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            Object value = iterator.next();
+            if (identation >= 0) { for (int i = 0; i < identation + step; i++) { sb.append(' ');}   }
+            toJson(value, sb, identation + step, step);
+            if (iterator.hasNext()) {
+                sb.append(',');
+            }
+            if (identation >= 0) { sb.append('\n');}
+        }
+        
+        if (identation >= 0) { for (int i = 0; i < identation; i++) { sb.append(' ');}   }        
+        sb.append(']');
+    }
+    
+    private void toJsonNumber(Number num, StringBuffer sb, int identation, int step) {
+        sb.append("" + num);
+    }
+    
+    private void toJsonString(String str, StringBuffer sb, int identation, int step) {
+        sb.append('"');
+        sb.append(jsonEscape(str));
+        sb.append('"');
+    }
+    
+    private void toJsonBoolean(boolean b, StringBuffer sb, int identation, int step) {
+        sb.append(b?"true": "false");
+    }
+    
+    @SuppressWarnings("unchecked")
+    private void toJson(Object o, StringBuffer sb, int identation, int step) {
+        if (o == null) {
+            sb.append("null");
+        } else if (o instanceof String) {
+            toJsonString((String)o, sb, identation, step);
+        } else if (o instanceof Character) {
+            toJsonString("" + o, sb, identation, step);
+        } else if (o instanceof CharSequence) {
+            toJsonString(o.toString(), sb, identation, step);
+        } else if (o instanceof Boolean) {
+            toJsonBoolean((boolean)o, sb, identation, step);
+        } else if (o instanceof Number) {
+            toJsonNumber((Number)o, sb, identation, step);
+        } else if (o instanceof Iterable) {
+            toJsonArray((Iterable<?>)o, sb, identation, step);
+        } else if (o instanceof Map) {
+            Set<?> set = ((Map<?, ?>) o).keySet();
+            Iterator<?> iterator = set.iterator();
+            boolean ok = true;
+            if (iterator.hasNext()) {
+                Object k = iterator.next();
+                if (! (k instanceof String)) {
+                    sb.append("/* Cannot convert object to Json. Unsupported type. Maps with keys of type : " + k.getClass().getSimpleName() 
+                            + " are not supported. Keys can only be strings */");
+                    ok = false;
+                }
+            }
+            if (ok) { 
+               toJsonMap((Map<String, ?>)o, sb, identation, step);
+            }
+        } else {
+            sb.append("/* Cannot convert object to Json. Unsupported type. Object is of type: " + o.getClass().getSimpleName() + " */");
+        }
+    }
+
+
+    
+    
+    
+    
+    
+    private void handleNameDescriptionAndTramslations(Map<String, Object> map, String name, String description, Map<Locale, String> nameTranslations, Map<Locale, 
+            String> descriptionTranslations) 
+    {
+        if (name != null) { 
+           map.put("name", name);
+        }
+        if (description != null) { 
+           map.put("descrition", description);
+        }
+        Map<String, String> nameTranslationsResource        = null;
+        Map<String, String> descriptionTranslationsResource = null;
+        Map<String, Map<String, String>> translations = new LinkedHashMap<String, Map<String, String>>(2);
+        boolean translated = false;
+        if (nameTranslations != null) { 
+          nameTranslationsResource        = new LinkedHashMap<String, String>(nameTranslations.size());
+          for (Locale locale : nameTranslations.keySet()) {
+            nameTranslationsResource.put(locale.getLanguage(), nameTranslations.get(locale));
+            translated = true;
+          }
+          translations.put("name", nameTranslationsResource);
+        }
+        if (descriptionTranslations != null) { 
+          descriptionTranslationsResource = new LinkedHashMap<String, String>(descriptionTranslations.size());
+          for (Locale locale : descriptionTranslations.keySet()) {
+            descriptionTranslationsResource.put(locale.getLanguage(), descriptionTranslations.get(locale));
+            translated = true;
+          }
+          translations.put("description", descriptionTranslationsResource);
+        }
+        if (translated) { 
+          map.put("translations", translations);
+        }
     }
 }

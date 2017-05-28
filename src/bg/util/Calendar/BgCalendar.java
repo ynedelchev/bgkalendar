@@ -96,10 +96,10 @@ public class BgCalendar extends Calendar {
 	};
 	
 	public static String[] YEAR_NAMES_BG = new String[] {
-	    "Сомор", 		"Шегор", 	"Тигър", 
-	    "Дванш", 		"Верени", 	"Дилом", 	"Теку Именшегор", 
-	    "Текучитем", 	"Маймуна", 	"Тох", 		"Етх", 
-	    "Дохс"
+	    "Ð¡Ð¾Ð¼Ð¾Ñ€", 		"Ð¨ÐµÐ³Ð¾Ñ€", 	"Ð¢Ð¸Ð³ÑŠÑ€", 
+	    "Ð”Ð²Ð°Ð½Ñˆ", 		"Ð’ÐµÑ€ÐµÐ½Ð¸", 	"Ð”Ð¸Ð»Ð¾Ð¼", 	"Ð¢ÐµÐºÑƒ Ð˜Ð¼ÐµÐ½ÑˆÐµÐ³Ð¾Ñ€", 
+	    "Ð¢ÐµÐºÑƒÑ‡Ð¸Ñ‚ÐµÐ¼", 	"ÐœÐ°Ð¹Ð¼ÑƒÐ½Ð°", 	"Ð¢Ð¾Ñ…", 		"Ð•Ñ‚Ñ…", 
+	    "Ð”Ð¾Ñ…Ñ�"
 	};
 	
 	public static String[] YEAR_ANIMALS_EN = new String[] {
@@ -110,8 +110,8 @@ public class BgCalendar extends Calendar {
 	};
 	
 	public static String[] YEAR_ANIMALS_BG = new String[] {
-	    "Мишка", "Вол", "Тигър", "Заек", "Дракон", "Змия", 
-	    "Кон", "Овен", "Маймуна", "Кокошка", "Куче", "Свиня"
+	    "ÐœÐ¸ÑˆÐºÐ°", "Ð’Ð¾Ð»", "Ð¢Ð¸Ð³ÑŠÑ€", "Ð—Ð°ÐµÐº", "Ð”Ñ€Ð°ÐºÐ¾Ð½", "Ð—Ð¼Ð¸Ñ�", 
+	    "ÐšÐ¾Ð½", "ÐžÐ²ÐµÐ½", "ÐœÐ°Ð¹Ð¼ÑƒÐ½Ð°", "ÐšÐ¾ÐºÐ¾ÑˆÐºÐ°", "ÐšÑƒÑ‡Ðµ", "Ð¡Ð²Ð¸Ð½Ñ�"
 	};   
 	
 	public static String[] MONTHS_NAMES_EN = new String[] {
@@ -125,12 +125,12 @@ public class BgCalendar extends Calendar {
 	};
 	
 	public static String[] MONTHS_NAMES_BG = new String[] {
-		"Игнажден",
-		"Алем", 	"Тутом", 	"Читем", 
-		"Твирем", 	"Вечем", 	"Шехтем",
-		"Бехти",
-		"Сетем",	"Есем", 	"Девем",
-		"Елем", 	"Елнем", 	"Алтом" 
+		"Ð˜Ð³Ð½Ð°Ð¶Ð´ÐµÐ½",
+		"Ð�Ð»ÐµÐ¼", 	"Ð¢ÑƒÑ‚Ð¾Ð¼", 	"Ð§Ð¸Ñ‚ÐµÐ¼", 
+		"Ð¢Ð²Ð¸Ñ€ÐµÐ¼", 	"Ð’ÐµÑ‡ÐµÐ¼", 	"Ð¨ÐµÑ…Ñ‚ÐµÐ¼",
+		"Ð‘ÐµÑ…Ñ‚Ð¸",
+		"Ð¡ÐµÑ‚ÐµÐ¼",	"Ð•Ñ�ÐµÐ¼", 	"Ð”ÐµÐ²ÐµÐ¼",
+		"Ð•Ð»ÐµÐ¼", 	"Ð•Ð»Ð½ÐµÐ¼", 	"Ð�Ð»Ñ‚Ð¾Ð¼" 
 	};
 	
 
@@ -153,12 +153,12 @@ public class BgCalendar extends Calendar {
 	};
 	
 	// --------------------------------------------------------------------------------------
-	protected static final int DAYS_IN_LEAP_YEАR = 366;
+	protected static final int DAYS_IN_LEAP_YEAR = 366;
 	
 	protected static final int DAYS_IN_NON_LEAP_YEAR = 365;
 	
 	protected static final int[] P4_YEAR_PERIOD_DAYS_LEAP = new int[] {
-		DAYS_IN_NON_LEAP_YEAR, DAYS_IN_NON_LEAP_YEAR, DAYS_IN_NON_LEAP_YEAR, DAYS_IN_LEAP_YEАR  
+		DAYS_IN_NON_LEAP_YEAR, DAYS_IN_NON_LEAP_YEAR, DAYS_IN_NON_LEAP_YEAR, DAYS_IN_LEAP_YEAR  
 	};
 
 	protected static final int[] P4_YEAR_PERIOD_DAYS_NON_LEAP = new int[] {

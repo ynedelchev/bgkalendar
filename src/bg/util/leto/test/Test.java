@@ -3,6 +3,7 @@ package bg.util.leto.test;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 
@@ -89,7 +90,7 @@ public class Test extends LetoGregorian {
         
         if (periods.length < 6) {
             for (int i =0; i < periods.length; i++) {
-                sb.append(periods[i].getType().getName());
+                sb.append(periods[i].getType().getName(Locale.ENGLISH));
                 sb.append(" ");
                 sb.append(periods[i].getActualName());
                 sb.append(" ");
@@ -137,9 +138,13 @@ public class Test extends LetoGregorian {
         
     }
     
+    public static void main(String[] argv) throws Exception {
+        LetoBulgarian bg = new LetoBulgarian();
+        System.out.println(bg.toJson(true));
+    }
     
 //    public static void mainPrintGregorian(String[] argv) throws Exception {
-    public static void main(String[] argv) throws Exception {
+    public static void mainTimeZones(String[] argv) throws Exception {
         
         
          // get the supported ids for GMT-08:00 (Pacific Standard Time)
@@ -216,7 +221,8 @@ public class Test extends LetoGregorian {
         for (int pi = 0; pi < periods.length; pi++) {
             LetoPeriod period = periods[pi];
             LetoPeriodType type = period.getType();
-            System.out.println("Period: " + type.getName() + ": \t " + period.getNumber() + "\t\t" + type.getDescription());
+            System.out.println("Period: " + type.getName(Locale.ENGLISH) + ": \t " + period.getNumber() 
+                 + "\t\t" + type.getDescription(Locale.ENGLISH));
         }
     }
     
@@ -282,7 +288,7 @@ public class Test extends LetoGregorian {
         }
         for (int i =0; i < periods.length; i++) {
             LetoPeriod period = periods[i];
-            System.out.println(period.getType().getName() + ": " + period.getNumber() 
+            System.out.println(period.getType().getName(Locale.ENGLISH) + ": " + period.getNumber() 
                             + "(" + period.getActualName() + ")\t\t" + period.getAbsoluteNumber());
         }
     }

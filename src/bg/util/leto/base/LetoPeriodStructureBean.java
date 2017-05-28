@@ -5,22 +5,27 @@ import java.util.Map;
 
 import bg.util.leto.api.LetoExceptionUnrecoverable;
 import bg.util.leto.api.LetoPeriodType;
+import bg.util.leto.impl.LocaleStringId;
+import bg.util.leto.impl.LocaleStrings;
 import bg.util.leto.api.LetoPeriodStructure;
 
 public class LetoPeriodStructureBean implements LetoPeriodStructure {
 
+    private LocaleStringId mNameTranslationIndex = null;
     private LetoPeriodStructure[] mSubPeriods = null;
-    
     private LetoPeriodType mPeriodType = null;
     private long mTotalLengthInDays = 0;
     private Map<LetoPeriodType, Long> mTotalLengthInPeriodTyps = null;
     
     
-    public LetoPeriodStructureBean(long totalLengthInDays, LetoPeriodStructure[] subPeriods) 
+    public LetoPeriodStructureBean(LocaleStringId translatedName, long totalLengthInDays, LetoPeriodStructure[] subPeriods) 
     {
+        mNameTranslationIndex = translatedName;
         mSubPeriods = subPeriods;
         mTotalLengthInDays = totalLengthInDays;
     }
+    
+    
     
     @Override
     public LetoPeriodType getPeriodType() {
@@ -31,7 +36,8 @@ public class LetoPeriodStructureBean implements LetoPeriodStructure {
     public void setPeriodType(LetoPeriodType period) throws LetoExceptionUnrecoverable {
         if (mPeriodType != null && period != null) {
             throw new LetoExceptionUnrecoverable("Period Type for " + mTotalLengthInDays + " day period is already set to \"" 
-                  + period.getName() + "\". Cannot reset it to \"" + period.getName() + "\".");
+                  + period.getName(LocaleStrings.ENGLISH) + "\". Cannot reset it to \"" + period.getName(LocaleStrings.ENGLISH) 
+                  + "\".");
         }
         mPeriodType = period;
     }
@@ -77,11 +83,21 @@ public class LetoPeriodStructureBean implements LetoPeriodStructure {
     public String toString() {
         return getPeriodType() + " of " + getTotalLengthInDays() + " days";
     }
-
+    
+    @Override
+    public String getName() {
+        return getName(Locale.ENGLISH);
+    }
+    
     @Override
     public String getName(Locale locale) {
-        return getPeriodType().getName();
+        return LocaleStrings.get(mNameTranslationIndex, locale, getPeriodType() == null ? null : getPeriodType().getName(locale));
     }
-
+    
+    @Override
+    public Map<Locale, String> getNameTranslations() {
+        Map<Locale, String> translations = LocaleStrings.get(mNameTranslationIndex);
+        return translations;
+    }
 
 }

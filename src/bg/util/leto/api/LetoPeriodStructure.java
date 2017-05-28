@@ -1,13 +1,14 @@
 package bg.util.leto.api;
 
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * This interface defines a possible internal structure within a given calendar period type. 
  * 
  *
  */
-public interface LetoPeriodStructure {  
+public interface LetoPeriodStructure {
     
     /**
      * Return a reference to the abstract period type, this strucutre describes. For example, if this structure 
@@ -82,4 +83,8 @@ public interface LetoPeriodStructure {
      *         specific name in the current calendar instance.
      */
     public String getName(Locale locale);
+    
+    public String getName();
+    
+    public Map<Locale, String> getNameTranslations();
 }

@@ -1,21 +1,27 @@
 package bg.util.leto.base;
 
+import java.util.Locale;
+import java.util.Map;
+
 import bg.util.leto.api.LetoExceptionUnrecoverable;
 import bg.util.leto.api.LetoPeriodStructure;
+import bg.util.leto.impl.LocaleStringId;
+import bg.util.leto.impl.LocaleStrings;
 
 public class LetoPeriodTypeBean extends LetoPeriodTypeBase {
 
-    private String mName = null;
+    private LocaleStringId mNameTranslationIndex = null;
     
-    private String mDescription = null;
+    private LocaleStringId mDescriptionTranslationIndex = null;
     
     private LetoPeriodStructure[] mPossibleStructures = null;
     
-    public LetoPeriodTypeBean(String name, String description, LetoPeriodStructure[] structures) 
+    public LetoPeriodTypeBean(LocaleStringId nameTranslationIndex, LocaleStringId descriptionTranslationIndex, 
+                              LetoPeriodStructure[] structures) 
     throws LetoExceptionUnrecoverable
     {
-        setName(name);
-        setDescription(description);
+        setName(nameTranslationIndex);
+        setDescription(descriptionTranslationIndex);
         setPossibleStructures(structures);
         if (structures != null) {
             for (int i = 0; i < structures.length; i++) {
@@ -24,22 +30,45 @@ public class LetoPeriodTypeBean extends LetoPeriodTypeBase {
         }
     }
 
-    public void setDescription(String description) {
-        mDescription = description;
+    public void setDescription(LocaleStringId descriptionTranslationIndex) {
+        mDescriptionTranslationIndex = descriptionTranslationIndex;
     }
     
-    @Override
-    public String getDescription() {
-        return mDescription;
-    }
-
-    public void setName(String name) {
-        mName = name;
+    public void setName(LocaleStringId nameTranslationIndex) {
+        mNameTranslationIndex = nameTranslationIndex;
     }
     
     @Override
     public String getName() {
-        return mName;
+        return getName(Locale.ENGLISH);
+    }
+    
+    @Override
+    public String getName(Locale locale) {
+        return LocaleStrings.get(mNameTranslationIndex, locale, null);
+    }
+
+    @Override
+    public String getDescription() {
+        return getDescription(Locale.ENGLISH);
+    }
+    
+
+    @Override
+    public String getDescription(Locale locale) {
+        return LocaleStrings.get(mDescriptionTranslationIndex, locale, null);
+    }
+    
+    @Override
+    public Map<Locale, String> getNameTranslations() {
+        Map<Locale, String> translations = LocaleStrings.get(mNameTranslationIndex);
+        return translations;
+    }
+    
+    @Override
+    public Map<Locale, String> getDescriptionTranslations() {
+        Map<Locale, String> translations = LocaleStrings.get(mDescriptionTranslationIndex);
+        return translations;
     }
 
     public void setPossibleStructures(LetoPeriodStructure[] structures) {
@@ -53,7 +82,7 @@ public class LetoPeriodTypeBean extends LetoPeriodTypeBase {
     
     @Override
     public String toString() {
-        return getName();
+        return getName(LocaleStrings.ENGLISH);
     }
 
 }

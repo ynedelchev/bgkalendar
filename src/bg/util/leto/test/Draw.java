@@ -81,7 +81,7 @@ public class Draw {
             month[0][index] = monthNameFull.charAt(i);
             index++;
         }
-        String daysString = " пн вт ср чт пт сб нд";
+        String daysString = " Ð¿Ð½ Ð²Ñ‚ Ñ�Ñ€ Ñ‡Ñ‚ Ð¿Ñ‚ Ñ�Ð± Ð½Ð´";
         for (int i = 0; i < daysString.length(); i++) {
             month[1][i] = daysString.charAt(i);
         }
@@ -180,18 +180,18 @@ public class Draw {
     }
     
     public static void mainGrigorian(String[] argv) {
-        char[][] january  = drawMonth(-1, "Януари",    31, 6, -1);
-        char[][] february = drawMonth(-1, "Февруари",  29, 2, -1);
-        char[][] march    = drawMonth(-1, "Март",      31, 3, -1);
-        char[][] april    = drawMonth(-1, "Април",     30, 6, -1);
-        char[][] may      = drawMonth(-1, "Май",       31, 1, -1);
-        char[][] june     = drawMonth(-1, "Юни",       30, 4, 22);
-        char[][] july     = drawMonth(-1, "Юли",       31, 6, -1);
-        char[][] august   = drawMonth(-1, "Август",    31, 2, -1);
-        char[][] september= drawMonth(-1, "Септември", 30, 5, -1);
-        char[][] october  = drawMonth(-1, "Октомври",  31, 0, -1);
-        char[][] november = drawMonth(-1, "Ноември",   30, 3, -1);
-        char[][] december = drawMonth(-1, "Декември",  31, 5, -1);
+        char[][] january  = drawMonth(-1, "Ð¯Ð½ÑƒÐ°Ñ€Ð¸",    31, 6, -1);
+        char[][] february = drawMonth(-1, "Ð¤ÐµÐ²Ñ€ÑƒÐ°Ñ€Ð¸",  29, 2, -1);
+        char[][] march    = drawMonth(-1, "ÐœÐ°Ñ€Ñ‚",      31, 3, -1);
+        char[][] april    = drawMonth(-1, "Ð�Ð¿Ñ€Ð¸Ð»",     30, 6, -1);
+        char[][] may      = drawMonth(-1, "ÐœÐ°Ð¹",       31, 1, -1);
+        char[][] june     = drawMonth(-1, "Ð®Ð½Ð¸",       30, 4, 22);
+        char[][] july     = drawMonth(-1, "Ð®Ð»Ð¸",       31, 6, -1);
+        char[][] august   = drawMonth(-1, "Ð�Ð²Ð³ÑƒÑ�Ñ‚",    31, 2, -1);
+        char[][] september= drawMonth(-1, "Ð¡ÐµÐ¿Ñ‚ÐµÐ¼Ð²Ñ€Ð¸", 30, 5, -1);
+        char[][] october  = drawMonth(-1, "ÐžÐºÑ‚Ð¾Ð¼Ð²Ñ€Ð¸",  31, 0, -1);
+        char[][] november = drawMonth(-1, "Ð�Ð¾ÐµÐ¼Ð²Ñ€Ð¸",   30, 3, -1);
+        char[][] december = drawMonth(-1, "Ð”ÐµÐºÐµÐ¼Ð²Ñ€Ð¸",  31, 5, -1);
         ArrayList<char[][]> year = new ArrayList<char[][]>(1);
         year.add(january);
         year.add(february);
@@ -211,20 +211,20 @@ public class Draw {
     }
     
     public static void mainBulgarian(String[] argv) {
-        char[][] january  = drawMonth(-1, "Първи",      31, 6, -1);
-        char[][] february = drawMonth(-1, "Втори",      30, 2, -1);
-        char[][] march    = drawMonth(-1, "Трети",      30, 3, -1);
-        char[][] april    = drawMonth(-1, "Четвърти",   31, 6, -1);
-        char[][] may      = drawMonth(-1, "Пети",       30, 1, -1);
-        char[][] june     = drawMonth(-1, "Шести",      30, 4, 22);
-        char[][] eni      = drawMonth(-1, "Ени-Джитем", 1,  1, -1);
-        char[][] july     = drawMonth(-1, "Седми",      31, 6, -1);
-        char[][] august   = drawMonth(-1, "Осми",       30, 2, -1);
-        char[][] september= drawMonth(-1, "Девети",     30, 5, -1);
-        char[][] october  = drawMonth(-1, "Десети",     31, 0, -1);
-        char[][] november = drawMonth(-1, "Единайсти",  30, 3, -1);
-        char[][] december = drawMonth(-1, "Дванайсти",  30, 5, -1);
-        char[][] ani      = drawMonth(-1, "Ани-Алем",   1,  1, -1);
+        char[][] january  = drawMonth(-1, "ÐŸÑŠÑ€Ð²Ð¸",      31, 6, -1);
+        char[][] february = drawMonth(-1, "Ð’Ñ‚Ð¾Ñ€Ð¸",      30, 2, -1);
+        char[][] march    = drawMonth(-1, "Ð¢Ñ€ÐµÑ‚Ð¸",      30, 3, -1);
+        char[][] april    = drawMonth(-1, "Ð§ÐµÑ‚Ð²ÑŠÑ€Ñ‚Ð¸",   31, 6, -1);
+        char[][] may      = drawMonth(-1, "ÐŸÐµÑ‚Ð¸",       30, 1, -1);
+        char[][] june     = drawMonth(-1, "Ð¨ÐµÑ�Ñ‚Ð¸",      30, 4, 22);
+        char[][] eni      = drawMonth(-1, "Ð•Ð½Ð¸-Ð”Ð¶Ð¸Ñ‚ÐµÐ¼", 1,  1, -1);
+        char[][] july     = drawMonth(-1, "Ð¡ÐµÐ´Ð¼Ð¸",      31, 6, -1);
+        char[][] august   = drawMonth(-1, "ÐžÑ�Ð¼Ð¸",       30, 2, -1);
+        char[][] september= drawMonth(-1, "Ð”ÐµÐ²ÐµÑ‚Ð¸",     30, 5, -1);
+        char[][] october  = drawMonth(-1, "Ð”ÐµÑ�ÐµÑ‚Ð¸",     31, 0, -1);
+        char[][] november = drawMonth(-1, "Ð•Ð´Ð¸Ð½Ð°Ð¹Ñ�Ñ‚Ð¸",  30, 3, -1);
+        char[][] december = drawMonth(-1, "Ð”Ð²Ð°Ð½Ð°Ð¹Ñ�Ñ‚Ð¸",  30, 5, -1);
+        char[][] ani      = drawMonth(-1, "Ð�Ð½Ð¸-Ð�Ð»ÐµÐ¼",   1,  1, -1);
         ArrayList<char[][]> year = new ArrayList<char[][]>(1);
         year.add(january);
         year.add(february);
@@ -265,7 +265,7 @@ public class Draw {
         
         
         
-        System.out.println("   " + (year.getAbsoluteNumber() + 1) + " " + year.getType().getName());
+        System.out.println("   " + (year.getAbsoluteNumber() + 1) + " " + year.getType().getName(Locale.ENGLISH));
         LetoPeriodStructure structure = year.getStructure();
         LetoPeriodStructure[] months = structure.getSubPeriods();
         
