@@ -141,6 +141,7 @@ function seqPrefix($number, $genders) {
                      case 1: return ''.$number . '-ая';
                      case 2: return ''.$number . '-ое';
                   }
+        case '6':
         case '7':
         case '8': switch ($gen) {
                      default:
@@ -404,7 +405,7 @@ $WEEKDAYS_RU       = array ( 'Понедельник', 'Вторник',  'Ср�
 $WEEKDAYS_SHORT    = array ( 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'не' );
 $WEEKDAYS_SHORT_EN = array ( 'mo', 'tu', 'we', 'th', 'fr', 'sa', 'su' );
 $WEEKDAYS_SHORT_DE = array ( 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So' );
-$WEEKDAYS_SHORT_RU = array ( 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'не' );
+$WEEKDAYS_SHORT_RU = array ( 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс' );
 
 $PERIOD_NAMES      = array ( 'Ден',  'Месец', 'Година', 'Четиригодие', 'Звезден Ден',  'Звездна Седмица','Звезден месец', 'Звездна Година','Звездна Епоха'  );
 $PERIOD_NAMES_EN   = array ( 'Day',  'Month', 'Year',   'Four Years',  'Star Day',     'Star Week',      'Star Month' ,   'Star Year',     'Star Epoch'     );

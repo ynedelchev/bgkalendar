@@ -1,0 +1,70 @@
+# In order this to work you need to disable modules mod_dir and mod_autoindex 
+# or somehow temp switch them off for this directory
+# To disable them just go the /etc/apache2/mods-enabled and delete the symlinks 
+# corresponding to them. 
+
+<IfModule mod_dir.c>
+    RewriteOptions AllowNoSlash
+    DirectorySlash Off
+</IfModule>
+
+RewriteEngine On
+
+# Purpose of L flag is not to exist out of mod_rewrite processing. 
+# mod_rewrite rules are run in a loop and L acts as continue in 
+# programming parallels.
+# To fix this you can do:Purpose of L flag is not to exist out of 
+# mod_rewrite processing. mod_rewrite rules are run in a loop and 
+# L acts as continue in programming parallels.
+# Apparently Apache also passes the rewritten URL through these rules
+# To fix this you can do:
+
+RewriteCond %{ENV:REDIRECT_STATUS} .
+RewriteRule ^ - [L]
+
+RewriteCond %{ENV:ELEMENT} .
+RewriteRule ^ - [L]
+
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule "^(.+)$" "$1/index.php" [L,QSA,END]
+##RewriteRule "images$" "/images/images.php" [L]
+#
+
+RewriteCond %{REQUEST_URI} ^(.*)/?$
+RewriteCond %{DOCUMENT_ROOT}/%1 -d
+RewriteRule "^(.*)/?$" $1/index.php [L,QSA,END] 
+
+RewriteCond %{REQUEST_URI} ^(.*)/([^/]+)/?$
+RewriteCond %{DOCUMENT_ROOT}/%1/$2 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1 -d
+RewriteRule "^(.*)/([^/]+)/?$" $1/elements.php [E=ELEMENT:$2,L,QSA,END] 
+
+RewriteCond %{REQUEST_URI} ^(.*)/([^/]+)/([^/]+)/?$
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1/$3 -d
+RewriteRule "^(.*)/([^/]+)/([^/]+)/?$" $1/$3/index.php?path=%1/$2/$3 [E=ELEMENT:$2,L,QSA,END] 
+
+RewriteCond %{REQUEST_URI} ^(.*)/([^/]+)/([^/]+)/([^/]+)/?$
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3/$4 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3/$4 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1/$3 -d
+RewriteRule "^(.*)/([^/]+)/([^/]+)/([^/]+)/?$" $1/$3/elements.php?path=%1/$2/$3 [E=ELEMENT:$2,E=SUBELEMENT:$4,L,QSA,END] 
+
+RewriteCond %{REQUEST_URI} ^(.*)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3/$4 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3/$4 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3/$4/$5 !-f
+RewriteCond %{DOCUMENT_ROOT}/%1/$2/$3/$4/$5 !-d
+RewriteCond %{DOCUMENT_ROOT}/%1/$3 -d
+RewriteRule "^(.*)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$" $1/$3/elements.php?path=%1/$2/$3 [E=ELEMENT:$2,E=SUBELEMENT:$4,E=PARAM:$5,L,QSA,END] 
+
+<IfModule mod_headers.c>
+   Header add Access-Control-Allow-Origin *
+</IfModule>
+

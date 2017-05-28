@@ -53,8 +53,8 @@ class LetoPeriodBean implements LetoPeriod {
     }
 
     /** @param type LetoPeriodType */
-    public function setType(&$type) {
-        $this->mType = &$type;
+    public function setType($type) {
+        $this->mType = $type;
     }
     
     /** @return LetoPeriodType */

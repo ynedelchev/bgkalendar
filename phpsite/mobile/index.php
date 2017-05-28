@@ -246,12 +246,22 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
   </div>
   <?php echo '</a>';?> 
 
-  <div class="flag-box" style="margin-left: 20px;">
+  <div class="flag-box" style="margin-left: 20px; margin-right: 45px;">
 
     </div>
   </div>
 </div>
 </nav>
+
+<!-- Fork Me On Github -->
+<a href="https://github.com/ynedelchev/bgkalendar">
+<img style="position: absolute; top: 0; right: 0; border: 0;"
+     src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
+     alt="Fork me on GitHub"
+     data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+</a>
+<!-- Fork Me On Github End -->
+
 <a href="../?dt=true"><?php tr('Към Десктоп версия', 'To Desktop Version', 'Desktop Version', 'Настольная версия'); ?></a><br/><br/>
 <!-- Facebook Button Start -->
 <div style="height: 64px;" class="fb-like" data-href="http://bgkalendar.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
@@ -404,11 +414,11 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
    Diese Seite ist ein Computermodelanlauf von <a href="../kalendar.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
 <?php elseif ($lang == 'ru') : ?>
-   Древние болгары жили на болгарском земле, создали собственный календарь. Болгарский календарь перестроен писменные исторические данные 
-   (<a href="../imennik.html">Именник Болгарских Канов</a>) и леганды. Бесспорный успех эго является официальное признание ЮНЕСКО, в которой он признан самым 
-   совершенным в мире. Отправной точки летоизчисления принимается день зимном солнцестояния (21 декабря) 5505 годах до нашей эры.
-   Этот сайт есть попытка компюторного моделя <a href="../kalendar.html">древном болгарско календаря</a> и его 
-   сравнение современном грегорианском календаря. 
+
+   Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.
+   Мы восстановили здесь календарь на основании письменных исторических источников как (<a href="../imennik.html">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.
+Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.
+   Наш сайт дает представлление о <a href="../kalendar.html">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет возможность сравнить его с современным Грегорианским календарём.
 <?php endif ?>
 <br/>
 
@@ -422,8 +432,9 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
    Weitere Informationen finden Sie <a href="../kupu%D0%BBu%D1%86a-de.html">hier</a>.
 <?php elseif ($lang == 'ru') : ?>
-   <br/><br/>Сайт "Болгарский Календарь", поддерживает инициативу  «За Болгарский стиль шрифта кириллицы». 
-   Для дополнительной информации, смотрите <a href="../kupu%D0%BBu%D1%86a-ru.html">здесь</a>.
+   <br/><br/>
+   Сайт &#xab;Болгарский Календарь&#xbb;, поддерживает инициативу &#xab;За Болгарский стиль шрифта Кириллицы&#xbb;. Для дополнительной информации,
+   смотрите <a href="../kupu%D0%BBu%D1%86a-ru.html">здесь</a>.
 <?php endif ?>
 <br/><br/>
 
@@ -505,7 +516,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' von dem Anfang als vier Jahre lange Abschnitt', 
-                   ' с начала четырёх летном периоде');
+                   ' с начала четырёхлетнего периода');
                 ?>
                 <br/>
                 <?php 
@@ -514,7 +525,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                 tr(' от началото на 60 годишния Звезден Ден', 
                    ' from the beginning of the 60 year long Star Day', 
                    ' von dem Anfang als 60 Jahre lange Sternwoche', 
-                   ' с начала 60 летний Звездный День');
+                   ' с начала очередного 60-летнего Звездного Дня');
                 ?>
            </td>
        </tr>
@@ -630,7 +641,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' bis den Anfang dem Vierteljahr', 
-                   ' с начала четиригодием');
+                   ' с начала четырёхлетнего периода');
                 ?>
                 <br/>
                 <?php 
@@ -639,7 +650,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                 tr(' от началото на Столетие (Век)', 
                    ' from the beginning of a Century', 
                    ' bis den Anfang dem Jahrhundert', 
-                   ' с начала веком'); 
+                   ' с начала века'); 
                 ?>
            </td>
        </tr>
@@ -652,7 +663,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                 tr(' от началото на столетието/века', 
                    ' from the beginning of the Century', 
                    ' bis den Anfang dem Jahrhundert', 
-                   ' с начала веком');
+                   ' с начала века');
                 ?>
             </td>
        </tr>
@@ -666,7 +677,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                tr(' от началото на календара и', 
                   ' from the beginning of the calendar', 
                   ' bis den Anfang dem Kalender', 
-                  ' с началом календаря');
+                  ' с начала календаря');
                ?> 
                <br/>
                <?php 
@@ -674,12 +685,12 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
                tr(' от началото на 400г. период.', 
                   ' from the beginning of the 400y. period', 
                   ' bis den Anfang dem 400 Jahre Abschnitt', 
-                  ' с началом 400 летном периодом');
+                  ' с начала 400 летнего периода');
                ?>
             </td>
        </tr>
        <tr>
-            <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 лет период');?>:</td>
+            <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 летний период');?>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsgr[5]->getAbsoluteNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright"></td>
