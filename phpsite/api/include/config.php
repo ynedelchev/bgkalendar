@@ -98,8 +98,68 @@ function applyMatchMode($where, $what, $value, $matchMode, $matchModeParam) {
    } 
 }
 
+$users = array(
+  'yordan' => '7910!'
+);
 
+function handle_security_and_version($version) {
+  global $json_encode_props;
+  
+  $isSecure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off');
+  $proto = 'http'.($isSecure?'s':'' );
+  $baselink = $proto.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  $basepath = $_SERVER['REQUEST_URI'];
+ 
+  if (! $isSecure) {
+    $result = array(
+       'errorCode' => 403,
+       'errorMessage' => 'Cannot access this endpoing using method POST via plain connection. You need to use https.',
+       'link' => $basepath
+    );
+    http_response_code(403);
+    header('Content-Type: application/json');
+    handle_version($version);
+    header('Loction: '.$basepath);
+    echo json_encode($result, $json_encode_props)."\n";
+    exit;
+  } 
+  if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    $result = array(
+       'errorCode' => 401,
+       'errorMessage' => 'Cannot create new calendar definitions without beiing logged in. Registering a new account is free - just send an E-mail to admin@bgkalendar.com.',
+       'link' => 'mailto:admin@bgkalendar.com'
+    );
+    http_response_code(401);
+    header('Content-Type: application/json');
+    handle_version($version);
+    header('WWW-Authenticate: Basic realm="bgkalendar"');
+    echo json_encode($result, $json_encode_props)."\n";
+    exit;
+  } else {
+    $user = $_SERVER['PHP_AUTH_USER'];
+    $pass = isset($_SERVER['PHP_AUTH_PW']) ? $_SERVER['PHP_AUTH_PW'] : '';
+  
+    if (file_exists(__DIR__.'/users.php')) {
+       include __DIR__.'/users.php';
+    }
 
-
+    $stored = isset($users) && isset($users[$user]) && isset($users[$user]['pass']) ? $users[$user]['pass'] : '';
+    if ($stored != $pass) {
+       $result = array(
+         'errorCode' => 403,
+         'errorMessage' => 'Wrong user "'.$user.'" or wrong password. Registering a new account is free - just send an E-mail to admin@bgkalendar.com.',
+         'link' => 'mailto:admin@bgkalendar.com'
+       );
+       http_response_code(403);
+       header('Content-Type: application/json');
+       handle_version($version);
+       header('Loction: mailto:admin@bgkalendar.com');
+       echo json_encode($result, $json_encode_props)."\n";
+       exit;
+    } else {
+       return $user;
+    }
+  }
+}
 
 ?>

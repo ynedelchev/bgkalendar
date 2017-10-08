@@ -17,6 +17,7 @@ require_once($PHP_HOME.'/leto/impl/bulgarian/LetoBulgarian.php');
 require_once($PHP_HOME.'/leto/impl/gregorian/LetoGregorianMonth.php');
 require_once($PHP_HOME.'/leto/impl/gregorian/LetoGregorian.php');
 require_once($PHP_HOME.'/leto/impl/julian/LetoJulian.php');
+require_once($PHP_HOME.'/leto/impl/generic/LetoGeneric.php');
 
 function calendar_to_json($calendar, $name, $description) {
     

@@ -12,7 +12,7 @@ if ($element == null) {
     header('Content-Type: application/json');
     header('X-Result-Size: 0');
     echo "{\n";
-    echo "  \"size\": 0,\n";
+    echo "  \"size1\": 0,\n";
     echo "  \"code\": 0,\n";
     echo "  \"message\": \"elements\"\n";
     echo "  \"element\": \"" . $element . "\"\n";
