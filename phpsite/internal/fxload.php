@@ -9,6 +9,7 @@ getenv('REMOTE_ADDR');
 $json_encode_props = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR;
 if ($ip != 'localhost' && $ip != '127.0.0.1') {
   http_response_code(404);
+  error_log('Trying to access '.__FILE__.' from IP '.$ip.'. That is not allowed. Only calls from localhost or 127.0.0.1 are allowed.');
   exit(1);
 }
 $access_key = '';
