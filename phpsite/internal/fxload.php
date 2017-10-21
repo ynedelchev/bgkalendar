@@ -60,7 +60,7 @@ $endpoint = 'live';
 $headers = [];
 
 // Initialize CURL:
-$ch = curl_init('http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD');
+$ch = curl_init('http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'&currencies=BGN,BTC,GBP,EUR,CAD,RUB');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HEADERFUNCTION, "HandleHeaderLine");
 // this function is called by curl for each header received
@@ -140,16 +140,18 @@ $usdbgn = $exchangeRates['quotes']['USDBGN'];
 $usdgbp = $exchangeRates['quotes']['USDGBP'];
 $usdeur = $exchangeRates['quotes']['USDEUR'];
 $usdcad = $exchangeRates['quotes']['USDCAD'];
+$usdrub = $exchangeRates['quotes']['USDRUB'];
 
 $btcusd = 1.0 / $usdbtc;
 $btcbgn = $btcusd * $usdbgn;
 $btcgbp = $btcusd * $usdgbp;
 $btceur = $btcusd * $usdeur;
 $btccad = $btcusd * $usdcad;
+$btcrub = $btcusd * $usdrub;
 
 $newrates = $rates == 'a' ? 'b' : 'a';
 
-$fh = fopen(__DIR__.'/fxrates-'.$newrates.'.php', 'w');
+$fh = fopen(__DIR__.'/fxrates-current.php', 'w');
 fwrite($fh, "<?php\n");
 fwrite($fh, "\$etag='".$etag."';\n");
 fwrite($fh, "\$date='".$date."';\n");
@@ -158,12 +160,13 @@ fwrite($fh, "\$btcbgn=".$btcbgn.";\n");
 fwrite($fh, "\$btcgbp=".$btcgbp.";\n");
 fwrite($fh, "\$btceur=".$btceur.";\n");
 fwrite($fh, "\$btccad=".$btccad.";\n");
+fwrite($fh, "\$btcrub=".$btcrub.";\n");
 fwrite($fh, "?>\n");
 fflush($fh);
 fclose($fh);
 
+rename(__DIR__.'/fxrates-current.php', __DIR__.'/fxrates-'.$newrates.'.php');
 unlink(__DIR__.'/fxrates-'.$rates.'.php');
-
 
 http_response_code(200);
 $obj = array('status'=>'success',
@@ -175,7 +178,8 @@ $obj = array('status'=>'success',
                'BTC-BGN'=> $btcbgn,
                'BTC-GBP'=> $btcgbp,
                'BTC-EUR'=> $btceur,
-               'BTC-CAD'=> $btccad
+               'BTC-CAD'=> $btccad,
+               'BTC-RUB'=> $btcrub
              ),
       'etag'=>$etag,
       'date'=>$date,

@@ -710,6 +710,11 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 </div>
 <br/>
 <br/>
+<span style="clear: both; float: left;">
+<a name="donate-button" href="../gapu.php<?php tr('', '?lang=en', '?lang=de','?lang=ru');?>" style="clear:both;"><img src="../images/gapu<?php tr('', '-en', '-de', '-ru')?>.png"/></a>
+</span>
+<br/>
+<br/>
 <a href="../?dt=true"><?php tr('Към Десктоп версия', 'To Desktop Version', 'Desktop Version', 'Настольная версия'); ?></a><br/>
 <br/>
 

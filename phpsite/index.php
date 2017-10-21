@@ -1455,6 +1455,10 @@ $wday = bcmod($igr, 7);
 </table>
 </div>
 
+<span style="clear: both; float: left;">
+<a name="donate-button" href="gapu.php<?php tr('', '?lang=en', '?lang=de','?lang=ru');?>" style="clear:both;"><img src="images/gapu<?php tr('', '-en', '-de', '-ru')?>.png"/></a>
+</span>
+
 <div class="footer">
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Карта на сайта', 'Site Map', 'Seitenübersicht', 'Карта сайта');?></span>
