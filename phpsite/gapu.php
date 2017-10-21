@@ -1,13 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
 "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
 <?php 
-<?php 
    if (!file_exists(__DIR__.'/bitcoinwallet.php')) {
       http_response_code(500);
       error_log('ERROR: Cannot find wallet address. No file "'.__DIR__.'/bitcoinwallet.php'.'" found. Please create such file containing your bitcoin address for donations.');
       exit(1);
    }
-?>
 $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg';
 if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
   $lang = 'bg';
