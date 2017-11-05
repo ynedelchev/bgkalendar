@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Harlow Solid Italic";
+  src: url(fonts/harlow.ttf);
+}
 
 .changedate {
   text-align: right;
