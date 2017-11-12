@@ -127,7 +127,7 @@
 
 
 <nav>
-<div class="toptitle"><span class="toptitle"><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></span> 
+<?php include('navigation.php');?>
 
 <div class="lang"> 
   <?php if ($lang != 'bg') echo '<a href="?lang=bg">'; ?> 
@@ -207,11 +207,13 @@
     </div>
   </div>
 </div>
+<!--
 <ul class="topmenu">
     <li class="topmenucurrent"><span class="topmenu"><?php tr('Главна', 'Home', 'Grundseite', 'Главная страница');?></span></li>
     <li class="topmenu"><a class="topmenu" href="forum"><span class="topmenu"><?php tr('Дискусии', 'Phorum', 'Forum', 'Форум');?></span></a></li>
     <li class="topmenu"><a class="topmenu" href="papercalendar"><span class="topmenu"><?php tr('Хартиен Календар', 'Wall Calendar', 'Wandkalender', 'Стенный Календарь');?></span></a></li>
 </ul>
+-->
 </nav>
 <!-- Fork Me On Github -->
 <a href="https://github.com/ynedelchev/bgkalendar">
@@ -1456,103 +1458,24 @@ $wday = bcmod($igr, 7);
 </div>
 
 <span style="clear: both; float: left;">
+
+<div class="docs-section" id="cyrcle-bgkalendar">
+  <a name="cyrcle-bgkalendar"/><h6>Кръгов Календар</h6>
+  <p>Кръговият календар е подобен на часовник, само че по циферблата не са нанесени часове и минути, а вместо това са нанесени дните от годината.
+     От външната страна са изписани датите по Грегорианския календар, а от вътрешната съответстващите им дати от Древния Български Календар.
+     Единствената стрелка посочва текущият ден. 
+     Този календар може да свалите и под формата на векторна графика оттук: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">виж</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">свали</a>.
+  </p>
+  <div style="display: flex;">
+    <?php $setfonts = true; include(__DIR__ . '/cyrcle-bgkalendar.php'); ?> 
+  </div>
+</div>
+
 <a name="donate-button" href="gapu.php<?php tr('', '?lang=en', '?lang=de','?lang=ru');?>" style="clear:both;"><img src="images/gapu<?php tr('', '-en', '-de', '-ru')?>.png"/></a>
 </span>
 
-<div class="footer">
-<div class="footerfloat">
- <span class="footer bold"><?php tr('Карта на сайта', 'Site Map', 'Seitenübersicht', 'Карта сайта');?></span>
- <ul>
-     <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
-     <li>
-         <a class="footer" href="kalendar<?php tr('', '-en', '-de', '');?>.html">
-             <span class="footer">
-                 <?php 
-                 tr('Принципи на Българския Календар', 
-                    'Bulgarian Calendar Principles', 
-                    'Grundsätze der bulgarischen Kalender', 
-                    'Принципы болгарского календаря');
-                 ?>
-             </span>
-         </a>
-     </li>
-     <li>
-         <a class="footer" href="imennik.html">
-             <span class="footer">
-                 <?php 
-                 tr('Именник на Българските Канове', 
-                    'Name List of Bulgarian Khans', 
-                    'Namensliste der bulgarischen Khane', 
-                    'Именник болгарских канов');
-                 ?>
-             </span>
-         </a>
-     </li>
-     <li>
-         <a class="footer" href="imennik.html">
-             <span class="forum">
-                 <?php 
-                 tr('Дискусии', 'Phorum', 'Forum', 'Форум');
-                 ?>
-             </span>
-         </a>
-     </li>
-     <li>
-         <a class="footer" href="kupu%D0%BBu%D1%86a<?php tr('','-en', '-de', '-ru');?>.html">
-             <span class="forum">
-                 <?php 
-                 tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');
-                 ?>
-             </span>
-         </a>
-     </li>
- </ul>
-</div>
-<div class="footerfloat">
- <span class="footer bold"><?php tr('Контакт', 'Contacts', 'Kontakte', 'Контакт');?></span></b>
- <ul>
-     <li><a class="footer" href="mailto:admin@bgkalendar.com"><span class="footer">admin@bgkalendar.com</span></a></li>
- </ul>
-</div>
-<div class="footerfloat">
- <span class="footer bold"><?php tr('Разработка', 'Development', 'Entwicklung', 'Разработка');?></span>
- <ul>
-     <li>
-         <a class="footer" href="https://github.com/ynedelchev/bgkalendar/">
-             <span class="footer">
-                 <?php 
-                 tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');
-                 ?>
-             </span>
-          </a>
-     </li>
- </ul>
-</div>
-<div class="footerfloat">
-<!-- Tracker code start -->
-<div id="eXTReMe"><a href="http://extremetracking.com/open?login=yordan">
-<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
-height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
-<script type="text/javascript"><!--
-EXref="";top.document.referrer?EXref=top.document.referrer:EXref=document.referrer;//-->
-</script><script type="text/javascript"><!--
-var EXlogin='yordan' // Login
-var EXvsrv='s9' // VServer
-EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
-EXb=EXs.colorDepth:EXb=EXs.pixelDepth;EXsrc="src";
-navigator.javaEnabled()==1?EXjv="y":EXjv="n";
-EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
-EXref?EXref=EXref:EXref=EXd.referrer;
-EXd.write("<img "+EXsrc+"=http://e0.extreme-dm.com",
-"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
-"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
-"l="+escape(EXref)+" height=1 width=1>");//-->
-</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
-src="http://e0.extreme-dm.com/s9.g?login=yordan&amp;j=n&amp;jv=n" />
-</div></noscript></div>
-<!-- Tracker code end-->
-</div>
-</div>
+<?php include('footer.php');?>
+
 
 </body>
 </html>

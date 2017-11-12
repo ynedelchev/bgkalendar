@@ -19,21 +19,26 @@
    </style>
 </head>
 <body class="calendarbody">
-The Bulgarian calendar is the calendar of the ancient Bulgarians 
-restored from written historical data 
-<a href="imennik.html">Nominalia of the Bulgarian khans</a> 
-and the folk tales and legends. There are studies of various 
-scholars who sometimes quite differ in
-conclusions reached.
-
-<h3><a name="nachalo">Beginning of the Calendar</a></h3>
-Most researchers accept the starting point on the 
-22<sup>-nd</sup> day of the winter solstice 
-(December 21) during the year 5505 Before Christ – in other words, 
-we can assume that the first year of the Bulgarian 
-calendar coincides almost completely with 
-5504 Before Christ in the Gregorian calendar.<br/>
+<nav>
+<?php include('navigation.php');?>
+</nav>
 <br/>
+<p>
+Българският календар е календарът на древните българи 
+възстановен по писмени исторически данни 
+(<a href="imennik.html">Именник на 
+Българските Владетели</a>) и по народни предания и легенди. <br/>
+Съществуват изследвания на различни учени, които понякога доста 
+се различават по направените изводи.
+</p>
+
+<h3><a name="nachalo">Начало</a></h3>
+Повечето изследователи приемат за начална точка на летоброенето 
+денят на зимното слънцестоене (21<sup>-ви</sup> Декември) през 
+5505 година преди Христа - с други думи можем да приемем, 
+че първата година от българското летоброене съвпада почти 
+напълно със 5504 година преди Христа по грегорианския 
+календар<br/>
 <br/>
 <table>
    <tr>
@@ -77,10 +82,12 @@ calendar coincides almost completely with
    </tr>
    <tr>
         <td class="calendartable"  colspan="18" align="right" 
-            bgcolor="lightgray">December 5505 yr. Before Christ
+            bgcolor="lightgray">Декември 5505<sup>-та</sup> 
+            година преди Христа
         </td>
         <td class="calendartable" bgcolor="lightblue" 
-      colspan="18">January 5504 yr. Before Christ
+      colspan="18">
+      Януари 5504<sup>-та</sup> година преди Христа
   </td>
    </tr>
    <tr>
@@ -124,7 +131,8 @@ calendar coincides almost completely with
        <td colspan="7">&nbsp;</td>
        <td class="calendartable" bgcolor="yellow" 
            colspan="29">
-     First Month of the First year of the Old Bulgarian Calendar
+     Първи месец от година 1<sup>-ва</sup> от българското 
+     летоброене
        </td>
    </tr>
    <tr>
@@ -135,18 +143,17 @@ calendar coincides almost completely with
         <td colspan="7">&nbsp;</td>
         <td colspan="29"class="calendartdleftseparator">
       <font color="darkblue">
-      Winter Solar solstice
+      Зимно слънцестоене (най-къс ден, най-дълга нощ)
       </font>
   </td>
    </tr>
 </table>
 <br/>
-When doing calculations and comparison with the Gregorian 
-and/or Julian calendar, please bare in mind that in both 
-Julian and Gregorian calendars there is no zero year - 
-that is to say, that 1<sup>-st</sup> year Before Christ is immediately 
-followed by the 1<sup>-st</sup> year after Christ.<br/>
-
+При изчисления и съпоставка с Грегорианския и/или Юлианския 
+календар трябва да се има предвид че и при двата календара 
+не съществува нулева година - тоест 1<sup>-ва</sup> година 
+преди Христа е непосредствено следвана от 
+1<sup>-ва</sup> година след Христа.<br/>
 <br/>
 <table>
    <tr>
@@ -191,69 +198,49 @@ followed by the 1<sup>-st</sup> year after Christ.<br/>
    <tr>
         <td class="calendartable" class="calendartable" 
       colspan="18" align="right" bgcolor="lightgray">
-      December 1<sup>-st</sup> year Before Christ
+      Декември 1<sup>-ва</sup> година преди Христа
   </td>
-  <td class="calendartable" bgcolor="lightblue" colspan="18">
-      January 1 year After Christ
-  </td>
+        <td class="calendartable" bgcolor="lightblue" colspan="18">Януари 1<sup>-ва</sup> година след Христа</td>
 
    </tr>
 </table>
 <br/>
-In our calendar model, we have adopted for the start of the calendar 
-to be a year earlier. So 21<sup>-st</sup> of December 5506 Before Christ 
-(Monday according to the Grigorian calendar) was adopted as the first 
-day of the Bulgarian calendar.
+В нашият календарен модел датата която е приета за начало на календара е една година по-рано, а именно 21-ви Декември 5506 година преди Христа (понеделник според Григориянския календар) е приет за ден първи от българския календар.
 
-<h3><a name="godina">Structure of the year</a></h3>
-According to researchers, the year has been divided into 12 months 
-+ one or two (in leap years) business days, which were beyond the 
-months. Months were grouped in quarters of 3 months. First month 
-of each quarter always had 31 days <a href="#poyasnenie1">*</a> , 
-and the remaining two months had 30 days. So each quarter, there 
-are exactly 91 days or 364 days that makes for four quarters. At 
-the end of the year (or at the beginning according to some researchers) 
-there has been one additional day that is outside months and was 
-called Eni. The analogue of the day Eni is today's Ignazhden 
-(St. Ignatius day), also called ednazhden. Counting the day Eni, 
-the year had already 365 days. <br/>
-Similar to the Julian and Gregorian 
-calendar once on every 4 years additional leap day (midsummer day) 
-was added based on some rules, which we would reviw further on. 
-The leap day (midsummer day), just like the day Eni was beyond any 
-month. It was put after the end of the 6<sup>-th</sup> month, before the start 
-of the 7<sup>-th</sup> month. The leap day was called Behti. The 
-analogue of the Midsummer day is today's Enyovden.<br/>
+<h3><a name="godina">Структура на годината</a></h3>
+Според изследователите годината се е деляла на 12 месеца + един или два (при високосна година) служебни дена които са били извън рамките 
+на месеците. Месеците били групирани на тримесечия от по 3 месеца. В рамките на всяко всяко тримесечие първият месец имал 31 дена, а останалите два месеца по 30 дена<a href="#poyasnenie1">*</a>. Така всяко тримесечие има 91 дена или това прави 364 дена за 4-те тримесечия. В края на годината (а според някои в началото) е добавян един допълнителен ден който е извън рамките на месец и се е наричал Ени. 
+Аналог на денят Ени е днешният Игнажден, наричан също и еднажден.
+Считано заедно с денят Ени, годината има вече 365 дена. <br/>
+Подобно на Юлиянския и Грегориянския календар, веднъж на 4 години по определени правила се добавя високосен ден. Високосният ден, подобно на 
+денят Ени е извън рамките на месец и се постава след края на 6-ти месец и преди началото на 7-мия месец. Високосният ден се е наричал Бехти.
+Аналог на денят Бехти е днешният Еньовден.<br/>
 <br/>
-In our model the conditional Behti is represented as the last 
-31<sup>-st</sup> day in the 6<sup>-th</sup> month only on leap years, 
-Eni is represented as the last 31<sup>-st</sup> day in the 
-12<sup>-th</sup> month.
-
+В нашият модел изобразяваме условно ден Бехти като последен 31<sup>-ви</sup> ден в Шести месец само при високосна година, а ден Ени като последен 31<sup>-ви</sup> ден в Дванайсти месец.
 <br/>
 <br/>
 
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td class="calendartable" style="vertical-align: bottom;" rowspan="2">
-        <div class="calendarvertical yearperiod bottomspace">First half of the year</div>
+        <div class="calendarvertical yearperiod bottomspace">Първо Полугодие</div>
        </td>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">First Quarter</div>
+        <div class="calendarvertical yearperiod bottomspace">Първо Тримесечие</div>
        </td>
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">First Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Първи</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable">1</td>
@@ -305,16 +292,16 @@ Eni is represented as the last 31<sup>-st</sup> day in the
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Second Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Втори</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -366,16 +353,16 @@ Eni is represented as the last 31<sup>-st</sup> day in the
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Third Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Трети</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -427,21 +414,21 @@ Eni is represented as the last 31<sup>-st</sup> day in the
    </tr>
    <tr>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Second Quarter</div>
+        <div class="calendarvertical yearperiod bottomspace">Второ Тримесечие</div>
        </td>
        <td style="vertical-align: top;">
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Fourth Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Четвърти</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable">1</td>
@@ -493,16 +480,16 @@ Eni is represented as the last 31<sup>-st</sup> day in the
        <td style="vertical-align: top;">
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Fifth Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Пети</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -554,16 +541,16 @@ Eni is represented as the last 31<sup>-st</sup> day in the
        <td style="vertical-align: top;">
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Sixth Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Шести</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -611,31 +598,31 @@ Eni is represented as the last 31<sup>-st</sup> day in the
              <td class="calendartable">30</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendartable" colspan="7">Day Behti</td>
+             <td class="calendartable" colspan="7">Ден Бехти</td>
          </tr>
      </table>
        </td>
    </tr>
    <tr>
        <td class="calendartable" style="vertical-align: bottom;" rowspan="2">
-        <div class="calendarvertical yearperiod bottomspace">Second half of the year</div>
+        <div class="calendarvertical yearperiod bottomspace">Второ Полугодие</div>
        </td>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Third Quarter</div>
+        <div class="calendarvertical yearperiod bottomspace">Трето Тримесечие</div>
        </td>
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Seventh Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Седми</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable">1</td>
@@ -687,16 +674,16 @@ Eni is represented as the last 31<sup>-st</sup> day in the
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Eight Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Осми</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -748,16 +735,16 @@ Eni is represented as the last 31<sup>-st</sup> day in the
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Nineth Month</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Месец Девети</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -809,7 +796,7 @@ Eni is represented as the last 31<sup>-st</sup> day in the
    </tr>
    <tr>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Fourth Month</div>
+        <div class="calendarvertical yearperiod bottomspace">Четвърто Тримесечие</div>
        </td>
        <td style="vertical-align: top">
            <table class="calendartable">
@@ -817,17 +804,17 @@ Eni is represented as the last 31<sup>-st</sup> day in the
          <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                  Tenth Month
+                  Месец Десети
                </td>
        </tr>
        <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
        </tr>
        <tr class="calendartable">
          <td class="calendartable">1</td>
@@ -882,17 +869,17 @@ Eni is represented as the last 31<sup>-st</sup> day in the
          <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                 Eleventh Month
+                 Месец Единайсти
                </td>
        </tr>
        <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
        </tr>
        <tr class="calendartable">
          <td class="calendartable"></td>
@@ -947,17 +934,17 @@ Eni is represented as the last 31<sup>-st</sup> day in the
         <td class="calendartable" 
                   colspan="7" 
                   style="text-align: center;">
-               Twelvth Month
+               Месец Дванайсти
               </td>
       </tr>
       <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-st</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-nd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-rd</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-th</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-th</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
       </tr>
       <tr class="calendartable">
         <td class="calendartable"></td>
@@ -1005,267 +992,257 @@ Eni is represented as the last 31<sup>-st</sup> day in the
         <td class="calendartable">30</td>
       </tr>
       <tr class="calendartable">
-        <td class="calendartable" colspan="7">Day Eni</td>
+        <td class="calendartable" colspan="7">Ден Ени</td>
       </tr>
      </table>
        </td>
    </tr>
 </table>
-It is assumed that the days Eni and Behti, are not counted as 
-days of a week. These are the so-called days which are 
-&#xab;not counted&#xbb;. Without them, the rest of the days that 
-count, form exactly 52 weeks. So if the year begins on Monday, 
-the next year will also begin on Monday and each calendar date 
-remains fixed forever in a specific day of the week.
-<br/><br/>
-Some researchers suggest that Bulgarian week began with Sunday. 
-Basis for such an assumption is the name of a day Wednesday - 
-sryada - that means in Bulgarian 'middle' (of the week).<br/> 
-An alternative assumption is that Monday was widely adopted as the 
-first day of the week. The grounds for such an alternative 
-assumption are the names of the following days: Tuesday 
-(<code>vtornik</code>), Thursday (<code>chetvartak</code>) and 
-Friday (<code>petak</code>) - meaning, respectively, second, 
-fourth and fifth (day of the week) - in bulgarian sekond - 
-<code>vtori</code>, fourth - <code>chetvarti</code>, 
-fifth - <code>peti</code>. That is to say if Tuesday is the second day,
- then Monday is supposed to be the first. <br/>
-In our model, we accept 
-contingent names of days of the week - 1<sup>-st</sup>, 2<sup>-nd</sup>, 
-3<sup>-rd</sup>, 4<sup>-th</sup>, 5<sup>-th</sup>, 6<sup>-th</sup> and 
-7<sup>-th</sup>.
-<br/><br/>
 
-In any case, the days of the week do not match to the days of the week 
-that we know from the modern Gregorian calendar. This is because in 
-the modern calendar, there are no days that are not counted and are 
-not included in the composition of the week. As we said in the 
-Bulgarian calendar, such days are Eni and Behti.
+Предполага се, че дните Ени и Бехти, не влизат и в рамките на седмица.
+Това са така наречените - дни които не се &#xab;броят&#xbb;. Без тях, останалите дни, които се броят, образуват точно кръгло 52 седмици. 
+Така че ако годината започва в понеделник, следващата година 
+ще започва също в понеделник.
+Всяка календарна дата остава фиксирана завинаги в точно 
+определен ден от седмицата. 
 <br/><br/>
-<a name="poyasnenie1">*: There are also hypotheses, that the first 
-and second month of each quarter had 30 days, but the third had 31 days. 
-Common across all hypotheses is that the year is divided into 
-quarters of 91 days.</a>
+Някои изследователи предполагат, че българската седмица е 
+започвала с неделя. Основание за такова предположение е името на 
+ден сряда - със значение среда (на седмицата).<br/>
+Алтернативно предположение е че понеделник е бил считан за 
+първи ден. Основанията за подобно алтернативно предположение са 
+имената на дните 
+вторник, четвъртък и петък - със значение съответно - втори, 
+четвърти и пети. Тоест ако вторник е втори ден, то понеделник би 
+трябвало да 
+е първи.<br/>
+В нашия модел, приемаме условни имена на дните от седмицата - 
+1<sup>-ви</sup>, 2<sup>-ри</sup>, 3<sup>-ти</sup>, 
+4<sup>-ти</sup>, 5<sup>-ти</sup>, 6<sup>-ти</sup> и 
+7<sup>-ми</sup>.
+<br/><br/>
+При всички положения дните от седмицата са се разминавали с дните 
+от седмицата които отчитаме по съвременния Грегориянски 
+календар. 
+Това е така защото при съвременния календар, няма дни които не 
+се броят и не влизат в състава на седмицата. Както казахме 
+в българският календар, такива дни са Ени и Бехти.
+<br/><br/>
+В нашият модел на българският календар сме показали дните от седмицата така както те са валидни за съвременния григориянски календар.
+
+
+
+<br/>
+<br/>
+<a name="poyasnenie1">* - Съществуват също хипотези че в рамките 
+на тримесечие първият и вторият месец са били с по 30 дена 
+а третият месец е имал 31 дена. Общото при всички хипотези е 
+че годината се разделя на тримесечия от по 91 дена.</a>
+
 <br/>
 <br/>
 <br/>
-<h3><a name="cikli">Cycles for correction of the calendar</a></h3>
-Tropical Earth year - that is the time for which the Earth makes 
-one complete lap around the Sun, equals 190 419 365.242 
-Earth days - that is to say 365 days, 5 hours, 48 minutes 
-and 45.5 seconds. So in a calendar year of 365 days, it goes 
-faster with a quarter day (5 hours, 48 minutes and seconds 45.5) 
-each year. After four years, the calendar year is starting 
-approximately 1 day before completing the astronomical round 
-of the Earth around the Sun.
+<h3><a name="cikli">Цикли за корекция на календара</a></h3>
+Тропическата земна година - тоест времето за което Земята прави 
+една пълна обиколка около слънцето се равнява на 365,242 190 419 
+земни дена - 
+тоест 365 дни, 5 часа, 48 минути и 45,5 секунди. Така при 
+календарна година от 365 дена, календарната година избързва с 
+около четвърт ден 
+(5 часа, 48 минути и 45,5 секунди) всяка година. За 4 години 
+календарната година вече започва с приблизително 1 ден по преди 
+да е завършила обиколката на Земята около слънцето. 
 <br/><br/>
-To stay in sync, the calendar year need to be corrected by adding 
-a leap day every four years - the so-called day Behti that is 
-added at the end of the 6<sup>-th</sup> month. This adjustment, 
-however, is not sufficient because the high gain of the calendar 
-was not exactly a day (24 hours). It is 23 hours, 15 minutes 
-and 2 seconds. So after adding the leap day the calendar begins to lag.
+Това несъответствие налага корекция на календара с добавяне на 
+високосен ден веднъж на четири години- така нареченият ден Бехти, 
+който се добавя 
+в края на 6<sup>-тия</sup> месец. Тази корекция обаче не е 
+достатъчна защото избързването на календара не е точно с един ден 
+(24 часа), а 
+с 23 часа, 15 минути и 2 секунди. Така след добавянето на 
+високосният ден календарът започва да изостава. 
 <br/><br/>
-This requires a system of additional adjustments. This system divides the calendar into periods, as shown below.
-<br/>
-<h4><a name="4g">Four year period</a></h4>
-Every forth year has an additional leap day named Behti at the 
-end of the 6<sup>-th</sup> month. A year with a leap day would 
-be called a leap year. An year without a leap day would be called 
-a non-leap year.
-<br/><br/>
+Това налага система от допълнителни корекции. Тази система разделя 
+календара на периоди, както е показано по долу.<br/>
+<h4><a name="4g">Четиригодишeн период</a></h4>
+Веднъж на четири години в календарната година се добавя 
+допълнителният ден Бехти в края на 6-тия месец.
+Годините в които имаме добавен високосен ден Бехти, ще наричаме 
+високосни години, а тези при които нямаме високосен ден - 
+невисокосни.<br/><br/>
 <table>
    <tr>
     <td class="calendartable" style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-          First Non Leap<br/>Year
+          Първа Невисокосна<br/>година
     </td>
     <td class="calendartable" style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-          Second Non Leap<br/>Year
+          Втора Невисокосна<br/>година
     </td>
     <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-          Third Non Leap<br/>Year
+          Трета Невисокосна<br/>година
     </td>
     <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-          Fourth LEAP<br/>Year
+          Четвърта ВИСОКОСНА<br/>година
     </td>
    </tr>
 </table>
-<h4><a name="12g">Twelve year period</a></h4>
-Three four - year periods form one 12 year period. This period 
-is not characterized by a calendar adjustment, but what makes it 
-special is that each year from the 12 year cycle has an animal 
-assigned to it - that is why this 12 year cycle is also called 
-animalian cycle. Various researchers adopt different order of animals, 
-as well as different starting animal. The names of the animals 
-are also controversial. Here are some examples:
-
+<h4><a name="12g">Дванайсет годишен период</a></h4>
+Три четиригодишни периода образуват един 12 годишен период. 
+Този период не се характеризира с календарна корекция но е 
+особен с това че на всяка година от 12 годишният цикъл е 
+съпоставено животно - затова и цикълът се нарича животински. 
+Различните изследователи приемат различен ред на животните, както и различно начално 
+животно. Спорни са също и имената на животните. Ето някои примери:
 <br/>
 <br/>
 <table style="border-collapse: collapse">
   <tr>
      <!-- <td class="calendartdrightseparator" rowspan="3">&nbsp;</td> -->
-     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
-     <td class="calendartable" colspan="6" style="text-align: center">According To</td>
+     <td class="calendartable" colspan="6" style="text-align: center">Според</td>
   </tr>
   <tr>
-     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
-     <td class="calendartable" style="text-align: center; background-color: rgba(255, 70, 70, 0.4);" colspan="2">Georgi Krustev</td>
-     <td class="calendartable" style="text-align: center; background-color: rgba(200, 200, 200, 0.5)" colspan="2">Yordan Vulchev</td>
-     <td class="calendartable" style="text-align: center; background-color: rgba(70, 70, 255, 0.4);" colspan="2">Petur Dobrev</td>
+     <td class="calendartable" style="text-align: center; background-color: rgba(255, 70, 70, 0.4);" colspan="2">Георги Кръстев</td>
+     <td class="calendartable" style="text-align: center; background-color: rgba(200, 200, 200, 0.5)" colspan="2">Йордан Вълчев</td>
+     <td class="calendartable" style="text-align: center; background-color: rgba(70, 70, 255, 0.4);" colspan="2">Петър Добрев</td>
   </tr>
   <tr>
-     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">animal</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">name(s)</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">animal</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">name(s)</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">animal</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">name(s)</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">животно</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">имена</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">животно</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">имена</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">животно</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">имена</td>
   </tr>
   <tr>
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&nbsp;<!-- Pig --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pig</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dox</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Pig</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">dox, dok, prase</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Свиня</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Докс</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Свиня</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">докс, док, прасе</td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#81;<!-- Maus --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Mouse</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Karan</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Mouse</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">somor, shushi</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Mouse</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Somor</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Мишка</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Каран</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Мишка</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">сомор, шъши</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Мишка</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Сомор</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#89;<!-- Caw  --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Ox</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Shegor</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Ox</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">shegor, kuvrat, buza, busman</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Ox</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Shegor</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Вол</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Шегор</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Вол</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">шегор, куврат, буза, бусман</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Вол</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Шегор</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#121;<!-- Bars --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Snow Leopard</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Barus</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Tiger</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">bars, parus, barus</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Барс</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Баръс</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Тигър</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">барс, паръс, баръс</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#114;<!-- Rabbit --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Rabbit</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dvan</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Rabbit</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">dvansh</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Rabbit</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dvan</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Заек</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Дван</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Заек</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">дванш</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Заек</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дван</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#71;<!-- Dragon --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dragon</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hala</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Dragon-Snake</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">ver, dragun, kala, slav</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dragon</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Ver</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Дракон</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Хала</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Змей</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">вер, драгун, кала, слав</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дракон</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Вер</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#119;<!--Snake--></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Snake</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Змия</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Snake</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">dilom, delyan, attilla</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Snake</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dilom</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Змия</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">дилом, делян, аттила</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Змия</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дилом</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#104;<!-- Horse--></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Horse</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Tag</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Horse</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">tek, tag, tih, alasha</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Horse</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Teku</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Кон</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Таг</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Кон</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">тек, таг, тих, алаша</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Кон</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Теку</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#113;<!-- Monkey --></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Monkey</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pisin</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Monkey</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">pesin, pisin</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Маймуна</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Писин</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Маймуна</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">песин, писин</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#88;<!-- Ram--></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Ram</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Овен</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Ram</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">suruh, sever, rasate</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Коч</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">суръх, север, расате</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#117;<!-- Cock--></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Cock</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Tox</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Cock</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">toh, tah</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Cock</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Toh</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Петел</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Тох</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Петел</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">тох, тах</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Петел</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Тох</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#73;<!-- Dog--></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dog</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Et-h</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Dog</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">et-h</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dog</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Et-h</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Куче</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Етх</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Куче</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">етх</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Куче</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Етх</td>
   </tr>
   <tr>
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&nbsp;<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Boar</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dohs</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Глиган</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дохс</td>
   </tr>
 </table>
 <br/>
-Each 12-year period has been either male or female. 
-In a male period - all years within this period were male - 
-the corresponding animals have been male. In a female period - 
-all years within the period comply with the animals of 
-the female sex. After each male 12 year period, a female 
-one follows. After that a mail period again and so on...
+Всеки 12 годишен период е бил или мъжки или женски. При мъжки период - 
+всички години в рамките на този период са били мъжки - 
+съответствали са на животни от мъжки пол. При женски период - 
+годините в рамките на периода са съответствали на животни от 
+женски пол.
+Дванадесетгодишните периоди са се редували последователно - мъжки 
+и женски.
 <br/><br/> 
-<h4><a name="60g">Sixty year period (star day)</a></h4>
-A period of 60 years equals exactly to 5 twelve-year cycles 
-or 15 four-year cycles. It was conventially called &#xab;star day&#xbb; 
-by Yordan Vulchev. Since the 60-year cycle is multiple of 
-4 year periods, then it, generally, ends in a leap year. 
-Such a star day would be called - a leap star day.<br/>
+<h4><a name="60g">Шейсет годишен период (звезден ден)</a></h4>
+Периодът от 60 години или 5 дванайсетгодишни цикъла или 15 четиригодишни 
+цикъла е условно наречен от Йордан Вълчев - звезден ден.
+Тъй като 60 годишният цикъл е кратен на 4, то той по принцип завършва на високосна 
+година. Такъв звезден ден ще наричаме високосен звезден ден. <br/>
 <br/>
-In certain cases, for the correction of the calendar, the leap 
-day of the last year in the 60 year period need to be taken away. 
-In such case, we will call the star day a non leap star day.
-<br/><br/>
+В определени случаи, заради корекцията на календара, се налага високосният ден на 
+последната година от 60 годишния звезден ден да бъде отнета - в такъв случай ще 
+наричаме звездният ден - невисокосен звезден ден.<br/><br/>
 <table>
 <tr>
   <td style="text-align: center;">
-      Leap Star Day 
+      ВИСОКОСЕН ЗВЕЗДЕН ДЕН
   </td>
   <td style="text-align: center;">
-      NON Leap Star Day
+      НЕВИСОКОСЕН ЗВЕЗДЕН ДЕН
   </td>
 </tr>
 <tr>
@@ -1273,19 +1250,19 @@ In such case, we will call the star day a non leap star day.
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical coloryears" style="color: white">B L A C K</div>
+                <div class="calendarvertical coloryears" style="color: white">Ч Е Р Н О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical l2years" style="color: white">12 years cycle &#x2116; 1.</div>
+                <div class="calendarvertical l2years" style="color: white">12 годишен цикъл 1.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years  &#x2116; 1</div>
+                <div class="calendarvertical fouryears">4 год. 1</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 1. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1293,7 +1270,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 2. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1301,7 +1278,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 3. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1311,18 +1288,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 2</div>
+                <div class="calendarvertical fouryears">4 год. 2</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 5.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1330,7 +1307,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 6.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1338,7 +1315,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 7.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1348,18 +1325,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 3</div>
+                <div class="calendarvertical fouryears">4 год. 3</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 9.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1367,7 +1344,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 10;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1375,7 +1352,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 11;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1385,24 +1362,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical coloryears">R E D</div>
+                <div class="calendarvertical coloryears">Ч Е Р В Е Н О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 2.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 2.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 4</div>
+                <div class="calendarvertical fouryears">4 год. 4</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 13.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1410,7 +1387,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 14.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1418,7 +1395,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 15.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1428,18 +1405,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 5</div>
+                <div class="calendarvertical fouryears">4 год. 5</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 17.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1447,7 +1424,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 18.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1455,7 +1432,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 19.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1465,18 +1442,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 6</div>
+                <div class="calendarvertical fouryears">4 год. 6</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 21.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1484,7 +1461,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 22.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1492,7 +1469,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 23.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1502,24 +1479,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical coloryears">Y E L L O W</div>
+                <div class="calendarvertical coloryears">Ж Ъ Л Т О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 3.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 3.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 7</div>
+                <div class="calendarvertical fouryears">4 год. 7</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 25.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1527,7 +1504,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 26.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1535,7 +1512,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 27.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1545,18 +1522,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 8</div>
+                <div class="calendarvertical fouryears">4 год. 8</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 29.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1564,7 +1541,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 30.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1572,7 +1549,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 31.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1582,18 +1559,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 9</div>
+                <div class="calendarvertical fouryears">4 год. 9</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 33.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1601,7 +1578,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 34.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1609,7 +1586,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 35.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1619,24 +1596,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical coloryears">B L U E</div>
+                <div class="calendarvertical coloryears">С И Н Ь О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 4.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 4.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 10</div>
+                <div class="calendarvertical fouryears">4 год. 10</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 37.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1644,7 +1621,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 38.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1652,7 +1629,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 39.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1662,18 +1639,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 11</div>
+                <div class="calendarvertical fouryears">4 год. 11</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 41.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1681,7 +1658,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 42.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1689,7 +1666,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 43.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1699,18 +1676,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 12</div>
+                <div class="calendarvertical fouryears">4 год. 12</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 45.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1718,7 +1695,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 46.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1726,7 +1703,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 47.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1736,24 +1713,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical coloryears">W H I T E</div>
+                <div class="calendarvertical coloryears">Б Я Л О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 5.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 5.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 13</div>
+                <div class="calendarvertical fouryears">4 год. 13</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
                 &#x2116; 49.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1761,7 +1738,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 50.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1769,7 +1746,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 51.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1779,18 +1756,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 14</div>
+                <div class="calendarvertical fouryears">4 год. 14</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 53.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1798,7 +1775,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 54.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1806,7 +1783,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 55.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1816,18 +1793,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 15</div>
+                <div class="calendarvertical fouryears">4 год. 15</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 57.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1835,7 +1812,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 58.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1843,7 +1820,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 59.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1853,7 +1830,7 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
      </table>
@@ -1863,19 +1840,19 @@ In such case, we will call the star day a non leap star day.
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical coloryears" style="color: white">B L A C K</div>
+                <div class="calendarvertical coloryears" style="color: white">Ч Е Р Н О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical l2years" style="color: white">12 years cycle &#x2116; 1.</div>
+                <div class="calendarvertical l2years" style="color: white">12 годишен цикъл 1.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 1</div>
+                <div class="calendarvertical fouryears">4 год. 1</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 1. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1883,7 +1860,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 2. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1891,7 +1868,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 3. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1901,18 +1878,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 2</div>
+                <div class="calendarvertical fouryears">4 год. 2</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 5.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1920,7 +1897,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 6.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1928,7 +1905,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 7.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1938,18 +1915,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 3</div>
+                <div class="calendarvertical fouryears">4 год. 3</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 9.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1957,7 +1934,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 10;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1965,7 +1942,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 11;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -1975,24 +1952,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical coloryears">R E D</div>
+                <div class="calendarvertical coloryears">Ч Е Р В Е Н О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 2.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 2.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 4</div>
+                <div class="calendarvertical fouryears">4 год. 4</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 13.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2000,7 +1977,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 14.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2008,7 +1985,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 15.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2018,18 +1995,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 5</div>
+                <div class="calendarvertical fouryears">4 год. 5</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 17.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2037,7 +2014,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 18.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2045,7 +2022,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 19.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2055,18 +2032,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 6</div>
+                <div class="calendarvertical fouryears">4 год. 6</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 21.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2074,7 +2051,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 22.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2082,7 +2059,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 23.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2092,24 +2069,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical coloryears">Y E L L O W</div>
+                <div class="calendarvertical coloryears">Ж Ъ Л Т О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 3.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 3.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 7</div>
+                <div class="calendarvertical fouryears">4 год. 7</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 25.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2117,7 +2094,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 26.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2125,7 +2102,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 27.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2135,18 +2112,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 8</div>
+                <div class="calendarvertical fouryears">4 год. 8</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 29.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2154,7 +2131,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 30.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2162,7 +2139,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 31.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2172,18 +2149,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 9</div>
+                <div class="calendarvertical fouryears">4 год. 9</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 33.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2191,7 +2168,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 34.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2199,7 +2176,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 35.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2209,24 +2186,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical coloryears">B L U E</div>
+                <div class="calendarvertical coloryears">С И Н Ь О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 4.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 4.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 10</div>
+                <div class="calendarvertical fouryears">4 год. 10</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 37.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2234,7 +2211,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 38.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2242,7 +2219,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 39.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2252,18 +2229,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 11</div>
+                <div class="calendarvertical fouryears">4 год. 11</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 41.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2271,7 +2248,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 42.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2279,7 +2256,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 43.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2289,18 +2266,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 12</div>
+                <div class="calendarvertical fouryears">4 год. 12</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 45.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2308,7 +2285,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 46.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2316,7 +2293,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 47.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2326,24 +2303,24 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical coloryears">W H I T E</div>
+                <div class="calendarvertical coloryears">Б Я Л О</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical l2years">12 years cycle &#x2116; 5.</div>
+                <div class="calendarvertical l2years">12 годишен цикъл 5.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 13</div>
+                <div class="calendarvertical fouryears">4 год. 13</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
                 &#x2116; 49.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2351,7 +2328,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 50.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2359,7 +2336,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 51.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2369,18 +2346,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 14</div>
+                <div class="calendarvertical fouryears">4 год. 14</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 53.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2388,7 +2365,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 54.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2396,7 +2373,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 55.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2406,18 +2383,18 @@ In such case, we will call the star day a non leap star day.
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Leap year
+                Високосна година
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 years &#x2116; 15</div>
+                <div class="calendarvertical fouryears">4 год. 15</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 57.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2425,7 +2402,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 58.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2433,7 +2410,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 59.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
           <tr>
@@ -2441,7 +2418,7 @@ In such case, we will call the star day a non leap star day.
                 &#x2116; 60.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Non leap year
+                Невисокосна година
              </td>
           </tr>
      </table>
@@ -2449,77 +2426,70 @@ In such case, we will call the star day a non leap star day.
 </tr>
 </table>
 <br/>
-Actually the only difference between the leap star day and non-leap 
-star day is in the last year - the 60<sup>-th</sup> year. In the leap star 
-day it is a leap year. In the non-leap star day it is not. <br/>
-Each star 
-day is split into 5 12-year periods. Each of these periods has been 
-assigned an element, a corresponding color and direction. The five 
-elements/colors/directions are:
+Единствената разлика между високосният звезден ден и невисокосният 
+звезден ден е в последната 60<sup>-та</sup> година. При високосния звезден ден - 
+тя е високосна, а при невисокосния, не е. <br/>
+На всеки от 12 годишните периоди е присвоен по един елемент и съответните му цвят и посока. Петте елемента са: 
 <br/><br/>
 <table style="border-collapse: collapse; margin-left: 20px;">
   <tr>
      <td class="calendartdrightseparator">&nbsp;</td>
-     <td class="calendartable" style="text-align: center">ELEMENT</td>
-     <td class="calendartable" style="text-align: center">COLOR</td>
-     <td class="calendartable" style="text-align: center">DIRECTION</td>
+     <td class="calendartable" style="text-align: center">ЕЛЕМЕНТ</td>
+     <td class="calendartable" style="text-align: center">ЦВЯТ</td>
+     <td class="calendartable" style="text-align: center">ПОСОКА</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: black; color: white;">1.</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WATER</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">BLACK</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">CENTER</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ВОДА</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ЧЕРНО</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ЦЕНТЪР</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: red;">2.</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">FIRE</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">RED</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">SOUTH</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ОГЪН</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ЧЕРВЕНО</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ЮГ</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: yellow;">3.</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">EARTH</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">YELLOW</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">SOUTH</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЖЪЛТО</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЮГ</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: blue;">4.</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">TREE</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">BLUE</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">NORTH</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">ДЪРВО</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">СИНЬО</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">СЕВЕР</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: white;">5.</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">METAL</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">WHITE</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">EAST</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">МЕТАЛ</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">БЯЛО</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">ИЗТОК</td>
   </tr>
 </table>
 <br/>
-Each of the 5 12-year periods, is considered either male or female in an 
-alternating sequence. <br/>
-Star day, which begins with the male 12-year period, 
-will be called male, and one that begins with the female 12-year period 
-would be called female. Within two consecutive star days (120 years), 
-we can find all of the possible combinations of element, sex and animal. 
-So the combination of element, sex and animal can be used to identify a 
-date within a 120-year period.
+Всеки от 5-те 12-годишни периода, които изграждат звездния ден е или мъжки или женски, като се редуват последователно. <br/> 
+Звезден ден, който започва с мъжки 12-годишен период ще наричаме мъжки, а такъв, който започва с женски 12-годишен период ще наричаме женски. 
+В рамките на два последователни звездни дена (120 години) се срещат всички възможни комбинации на елемент, пол и животно. 
+Така комбинацията от елемент, пол и животно може да се използва за датировка в рамките на 120 годишен период. 
 <br/><br/>
 <table style="border-collapse: collapse; margin-left: 20px;">
   <tr>
      <td class="calendartdrightseparator">&nbsp;</td>
      <td class="calendartdrightseparator">&nbsp;</td>
-     <td class="calendartable" style="text-align: left;">ELEMENT</td>
-     <td class="calendartable" style="text-align: left;">SEX</td>
-     <td class="calendartable" style="text-align: left;" colspan="12">YEARS</td>
+     <td class="calendartable" style="text-align: left;">ЕЛЕМЕНТ</td>
+     <td class="calendartable" style="text-align: left;">ПОЛ</td>
+     <td class="calendartable" style="text-align: left;" colspan="12">ГОДИНИ</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="vertical-align: bottom;" rowspan="5">
-        <div class="calendarvertical starday">Male Star Day</div>
+        <div class="calendarvertical starday">М. Зв. Ден</div>
      </td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">I.</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WATER</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">MALE</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ВОДА</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">МЪЖКИ</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">1</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">2</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">3</td>
@@ -2535,8 +2505,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: red;">II.</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">FIRE</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">FEMALE</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ОГЪН</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ЖЕНСКИ</td>
      <td class="calendartable" style="text-align: right; background-color: red;">13</td>
      <td class="calendartable" style="text-align: right; background-color: red;">14</td>
      <td class="calendartable" style="text-align: right; background-color: red;">15</td>
@@ -2552,8 +2522,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: yellow;">III.</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">EARTH</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">MALE</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">МЪЖКИ</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">25</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">26</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">27</td>
@@ -2569,8 +2539,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: blue;">IV.</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">TREE</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">FEMALE</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">ДЪРВО</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">ЖЕНСКИ</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">37</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">38</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">39</td>
@@ -2586,8 +2556,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: white;">V.</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">METAL</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">MALE</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">МЕТАЛ</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">МЪЖКИ</td>
      <td class="calendartable" style="text-align: right; background-color: white;">49</td>
      <td class="calendartable" style="text-align: right; background-color: white;">50</td>
      <td class="calendartable" style="text-align: right; background-color: white;">51</td>
@@ -2603,11 +2573,11 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="vertical-align: bottom;" rowspan="5">
-        <div class="calendarvertical starday">Female Star Day</div>
+        <div class="calendarvertical starday">Ж. Зв. Ден</div>
      </td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">VI.</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WATER</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">FEMALE</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ВОДА</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ЖЕНСКИ</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">61</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">62</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">63</td>
@@ -2623,8 +2593,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: red;">VII.</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">FIRE</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">MALE</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ОГЪН</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">МЪЖКИ</td>
      <td class="calendartable" style="text-align: right; background-color: red;">73</td>
      <td class="calendartable" style="text-align: right; background-color: red;">74</td>
      <td class="calendartable" style="text-align: right; background-color: red;">75</td>
@@ -2640,8 +2610,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: yellow;">VIII.</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">EARTH</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">FEMALE</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЖЕНСКИ</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">85</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">86</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">87</td>
@@ -2657,8 +2627,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: blue;">IX.</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">TREE</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">MALE</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">ДЪРВО</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">МЪЖКИ</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">97</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">98</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">99</td>
@@ -2674,8 +2644,8 @@ date within a 120-year period.
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: white;">X.</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">METAL</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">FEMALE</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">МЕТАЛ</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">ЖЕНСКИ</td>
      <td class="calendartable" style="text-align: right; background-color: white;">109</td>
      <td class="calendartable" style="text-align: right; background-color: white;">110</td>
      <td class="calendartable" style="text-align: right; background-color: white;">111</td>
@@ -2692,17 +2662,11 @@ date within a 120-year period.
 </table>
 <br/>
 <br/>
-<h4><a name="420">Four hundred and twenty year period (STAR WEEK)</a></h4>
-When we group 7 star days (each consisting of 60 years), 
-we receive an amount of 420 years, which we call a star week.
-The first, third and fifth star days in each star week are always 
-non-leap star days. The second, fourth and sixth are always leap. 
-The seventh Star day in general is also leap, but when there is 
-a need for further correction in the calendar, it is replaced by 
-a non-leap one. A star week in which the last star day is 
-non-leap, will be called - non-leap. Similarly if the last star 
-day is leap, the whole star week would be called - leap.
-<br/><br/>
+<h4><a name="420">Четиристотин и двайсет годишен период (звездна седмица)</a></h4>
+Като групираме 7 звездни дена (всеки от по 60 земни години) получаваме един период от 420 години, който наричаме звездна седмица.
+Във всяка седмица - първият, третият и петият звезден ден са невисокосни, а втори, четвърти и шести са високосни.
+Седмият звезден ден по принцип е също високосен, но при нужда от допълнителна корекция на календара се заменя с невисокосен.
+Звездна седмица при която последният звезден ден е невисокосен, ще наричаме невисокосна звездна седмица, а такава при която последният звезден ден е високосен, ще наричаме високосна:<br/><br/>
 
 <table>
 <tr>
@@ -2713,27 +2677,27 @@ day is leap, the whole star week would be called - leap.
                &nbsp;
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="god">
-                    <b>years</b> 
+                 <div class="calendarvertical god">
+                    год. 
                  </div>
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="dni">
-                    <b>days</b>
+                 <div class="calendarvertical dni">
+                    дни 
                  </div>
              </td>
           </tr>
           <tr>
              <td class="calendartable" style="vertical-align: bottom; border-width: 0px; padding-right: 12px;" rowspan="7">
                  <div class="calendarvertical starweek">
-                    LEAP STAR WEEK
+                    Високос. Зв. Седмица
                  </div>
              </td>
              <td class="calendartable">
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2747,7 +2711,7 @@ day is leap, the whole star week would be called - leap.
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2761,7 +2725,7 @@ day is leap, the whole star week would be called - leap.
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2775,7 +2739,7 @@ day is leap, the whole star week would be called - leap.
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2789,7 +2753,7 @@ day is leap, the whole star week would be called - leap.
                 5. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2803,7 +2767,7 @@ day is leap, the whole star week would be called - leap.
                 6. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2817,7 +2781,7 @@ day is leap, the whole star week would be called - leap.
                 7. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2828,7 +2792,7 @@ day is leap, the whole star week would be called - leap.
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="3">
-                total: 
+                общо: 
              </td>
              <td class="calendartable">
                 420 
@@ -2846,27 +2810,27 @@ day is leap, the whole star week would be called - leap.
                &nbsp;
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="god">
-                    <b>years</b> 
+                 <div class="calendarvertical god">
+                    год. 
                  </div>
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="dni">
-                    <b>days</b> 
+                 <div class="calendarvertical dni">
+                    дни 
                  </div>
              </td>
           </tr>
           <tr>
              <td class="calendartable" style="vertical-align: bottom; border-width: 0px; padding-left: 12px; padding-right: 12px;" rowspan="7">
                  <div class="calendarvertical starweek">
-                    NON-LEAP STAR WEEK
+                    Невисок. Зв. Седмица
                  </div>
              </td>
              <td class="calendartable">
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2880,7 +2844,7 @@ day is leap, the whole star week would be called - leap.
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2894,7 +2858,7 @@ day is leap, the whole star week would be called - leap.
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2908,7 +2872,7 @@ day is leap, the whole star week would be called - leap.
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2922,7 +2886,7 @@ day is leap, the whole star week would be called - leap.
                 5. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2936,7 +2900,7 @@ day is leap, the whole star week would be called - leap.
                 6. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star day
+                Високосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2950,7 +2914,7 @@ day is leap, the whole star week would be called - leap.
                 7. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star day
+                Невисокосен звезден ден
              </td>
              <td class="calendartable">
                 60 
@@ -2961,7 +2925,7 @@ day is leap, the whole star week would be called - leap.
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="3">
-                total: 
+                общо: 
              </td>
              <td class="calendartable">
                 420 
@@ -2975,30 +2939,21 @@ day is leap, the whole star week would be called - leap.
 </tr>
 </table>
 <br/>
-Some researchers call the first star day - &#xab;Star Monday&#xbb;, 
-the second - &#xab;Star Tuesday&#xbb; etc..., while others are 
-starting from &#xab;Star Sunday&#xbb;. In our research that is 
-unimportant and in the table above we have indicated them just with 
-the numbers from 1 to 7. <br/>
-Each star week consists of 420 Earth years. The difference between 
-a non leap and a leap star week is only in the last start day. 
-The leap star week ends on a leap star day, which in its turn means 
-that this star day (60 years) ends on a leap year. Conversely, the 
-non-leap star week ends on non-leap star day, which in turn means 
-that this star day (60 years) ends on a non-leap year.
+Някои изследователи наричат първият звезден ден - &#xab;звезден понеделник&#xbb;, вторият - &#xab;звезден вторник&#xbb; и т.н., а други започват от &#xab;звездна неделя&#xbb;. 
+При всички положения обаче всяко подобно наименование има условен характер. В таблицата по-горе сме ги означили просто с номерата от 1 до 7.<br/>
+Всяка звездна седмица се състои от 420 земни години. Разликата между високосна и невисокосна звездна седмица е само в това, че високосната седмица завършва на високосен звезден ден, което от своя страна означава че 60 годишният звезден ден завършва на високосна година.
+Обратно, невисокосната звездна седмица завършва на невисокосен звезден ден, което от своя страна означава, че 60 годишният звезден ден завършва на невисокосна година. 
 <br/>
 <br/>
-<h4><a name="1680g">Star month</a></h4>
-Like the weeks on Earth are grouped in a month, the same way 
-every 4 star weeks are grouped in a star month. So one star month 
-equals 1 680 Earth years. Star month could also be &#xab;leap&#xbb; 
-or &#xab;non leap&#xbb;. Here is its structure in both cases.
+<h4><a name="1680g">Звезден месец</a></h4>
+Подобно на земните седмици, всеки четири звездни седмици са групирани в един звезден месец. Така един звезден месец се равнява на 1 680 земни 
+години. Звездният месец също може да е &#xab;високосен&#xbb; или &#xab;невисокосен&#xbb;. Ето каква е неговата структура в двата случая.
 <br/>
 <br/>
 <table>
   <tr>
-  <td style="text-align: center;">LEAP STAR MONTH</td>
-  <td style="text-align: center;">NON LEAP STAR MONTH</td>
+  <td style="text-align: center;">ВИСОКОСЕН ЗВЕЗДЕН МЕСЕЦ</td>
+  <td style="text-align: center;">НЕВИСОКОСЕН ЗВЕЗДЕН МЕСЕЦ</td>
   </tr>
   <td style="text-align: center;">
      <table border="0" style="margin: 10px; border: 10px; border-collapse: collapse;">
@@ -3006,22 +2961,22 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
             <td class="calendartdrightseparator">&nbsp;
             </td>
             <td class="calendartable" style="text-align: center; vertical-align: middle;" colspan="7">
-                 Sequential &#x2116; of Star Day 
+                 Пореден &#x2116; на зв. ден от зв. месец
             </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="god">
-                    <b>years</b> 
+                 <div class="calendarvertical god">
+                    год. 
                  </div>
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="dni">
-                    <b>days</b>
+                 <div class="calendarvertical dni">
+                    дни 
                  </div>
              </td>
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Leap star week
+                Високосна зв. седмица
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 1 
@@ -3053,7 +3008,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr class="calendartable">
              <td class="calendartable" style="background-color: yellow;">
-                <nobr>Non-Leap star week</nobr>
+                <nobr>Невисокосна зв. седмица</nobr>
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 8 
@@ -3085,7 +3040,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Leap star week
+                Високосна зв. седмица
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 15 
@@ -3117,7 +3072,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Leap star week
+                Високосна зв. седмица
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                22 
@@ -3149,7 +3104,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr>
              <td class="calendartdrightseparator" style="text-align: right;" colspan="8">
-                total: 
+                общо: 
              </td>
              <td class="calendartable" style="padding-left: 12px;">
                 <nobr>1 680</nobr> 
@@ -3166,22 +3121,22 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
             <td class="calendartdrightseparator">&nbsp;
             </td>
             <td class="calendartable" style="text-align: center; vertical-align: middle;" colspan="7">
-                 Sequential &#x2116; of Star Day 
+                 Пореден &#x2116; на зв. ден от зв. месец
             </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="god">
-                    <b>years</b>
+                 <div class="calendarvertical god">
+                    год. 
                  </div>
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="dni">
-                    <b>days</b>
+                 <div class="calendarvertical dni">
+                    дни 
                  </div>
              </td>
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Leap star week
+                Високосна зв. седмица
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 1 
@@ -3213,7 +3168,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr class="calendartable">
              <td class="calendartable" style="background-color: yellow;">
-                <nobr>Non-Leap star week</nobr>
+                <nobr>Невисокосна зв. седмица</nobr>
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 8 
@@ -3245,7 +3200,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Leap star week
+                Високосна зв. седмица
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 15 
@@ -3277,7 +3232,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr class="calendartable">
              <td class="calendartable" style="background-color: yellow;">
-                <nobr>Non-Leap star week</nobr>
+                <nobr>Невисокосна зв. седмица</nobr>
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                22 
@@ -3309,7 +3264,7 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
           </tr>
           <tr>
              <td class="calendartdrightseparator" style="text-align: right;" colspan="8">
-                total: 
+                общо: 
              </td>
              <td class="calendartable" style="padding-left: 12px;">
                 <nobr>1 680</nobr> 
@@ -3324,34 +3279,29 @@ or &#xab;non leap&#xbb;. Here is its structure in both cases.
 </table>
 <br/>
 <br/>
-<h4><a name="20160g">Star year</a></h4>
-Twelve star months form a so-called star year. Star year 
-consists of exactly <nobr>20 160</nobr> Earth years. Sixth star month 
-of the star year is always non leap. The other star months 
-except the last month are always leap. The last star month 
-is generally leap but can be non leap if further adjustment 
-to the calendar is needed. To understand when such 
-correction happens, see the description of <a href="#10080000g">star epoch</a>.
+<h4><a name="20160g">Звездна година</a></h4>
+Дванайсет звездни месеца образуват една така наречена звездна година. Звездната година се състои от точно <nobr>20 160</nobr> земни години.
+Месец шести от звездната година е винаги невисокосен. Останалите звездни месеци без последния са винаги високосни. Последния звезден месец е по принцип високосен но може да бъде невисокосен ако е нужна допълнителна корекция на календара. Кога се случва това виж в описанието на звездна епоха.
+
 <br/>
 <br/>
 
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td colspan="3" style="text-align: center; font-weight: bold;">
-            STRUCTURE OF LEAP STAR YEAR<br/><br/>
+            СТРУКТУРА НА ВИСОКОСНАТА ЗВЕЗДНА ГОДИНА<br/><br/>
        </td>
    </tr>
    <tr>
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 1.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 1.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3395,12 +3345,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 2.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 2.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3444,12 +3394,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 3.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 3.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3495,12 +3445,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 4.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 4.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3544,12 +3494,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 5.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 5.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3594,16 +3544,16 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
            <table class="calendartable">
          <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: yellow;" rowspan="6">
-                       <div class="calendarvertical starmonth">Non-Leap</div></td>
+                       <div class="calendarvertical starmonth">Невисокосен</div></td>
              <td class="calendartable" 
                               colspan="7" 
                               style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Star Month &#x2116; 6.
+                       Звезден Месец 6.
                    </td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3649,12 +3599,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 7.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 7.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3698,12 +3648,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 8.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 8.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3747,12 +3697,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 9.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 9.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3798,12 +3748,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 10.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 10.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3847,12 +3797,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 11.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 11.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3896,12 +3846,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 12.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 12.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3950,19 +3900,19 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td colspan="3" style="text-align: center; font-weight: bold;">
-            STRUCTURE OF NON-LEAP STAR YEAR<br/><br/>
+            СТРУКТУРА НА НЕВИСОКОСНАТА ЗВЕЗДНА ГОДИНА<br/><br/>
        </td>
    </tr>
    <tr>
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 1.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 1.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4006,12 +3956,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 2.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 2.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4055,12 +4005,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 3.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 3.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4106,12 +4056,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 4.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 4.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4155,12 +4105,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 5.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 5.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4205,16 +4155,16 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
            <table class="calendartable">
          <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: yellow;" rowspan="6">
-                       <div class="calendarvertical starmonth">Non-Leap</div></td>
+                       <div class="calendarvertical starmonth">Невисокосен</div></td>
              <td class="calendartable" 
                               colspan="7" 
                               style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Star Month &#x2116; 6.
+                       Звезден Месец 6.
                    </td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4260,12 +4210,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 7.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 7.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4309,12 +4259,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 8.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 8.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4358,12 +4308,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 9.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 9.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4409,12 +4359,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 10.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 10.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4458,12 +4408,12 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Leap</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Star Month &#x2116; 11.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 11.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4508,16 +4458,16 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
            <table class="calendartable">
          <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: yellow;" rowspan="6">
-                       <div class="calendarvertical starmonth">Non-Leap</div></td>
+                       <div class="calendarvertical starmonth">Невисокосен</div></td>
              <td class="calendartable" 
                               colspan="7" 
                               style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Star Month &#x2116; 12.
+                       Звезден Месец 12.
                    </td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Sequential &#x2116; of Star Day
+                       Пореден &#x2116; на зв. ден
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4561,32 +4511,24 @@ correction happens, see the description of <a href="#10080000g">star epoch</a>.
    </tr>
 </table>
 <br/><br/>
-Each star year consists of 48 weeks star. That equals exactly 
-336 star days (every star day consisting of 60 Earth years). 
-Thus, each star year consists of <nobr>20 160</nobr> Earth years. 
-Within a leap star year there are always exactly <nobr>7 363 283</nobr> 
-(seven million, three hundred and sixty-three thousand, 
-two hundred eighty-three) Earth days.
-Within a non leap star year there are always exactly <nobr>7 363 282</nobr> earth days.
+Всяка звездна година се състои от 48 звездни седмици. Това се равнява точно на 336 звездни дена (всеки звезден ден от по 60 земни години). 
+Така всяка звездна година се състои от <nobr>20 160</nobr> земни години. В рамките на една високосна звездна година винаги има точно 
+<nobr>7 363 283</nobr> (седем милиона, триста шейсет и три хиляди, двеста осемдесет и три) земни дена, а в рамките на една невисокосна звездна година винаги има точно <nobr>7 363 282</nobr> земни дена. 
 <br/>
 <br/>
-<h4><a name="80640g">Period of 4 star years</a></h4>
-Star years just like earth years are grouped in fours. In general, only the second star year is a non leap year.
-From the rest  - the first, the third and the fourth are leap. 
-However when there is a need of correction to he calendar, all the four star years are leap. 
-To understand when that happens, please see section for <a href="#10080000g">star epoch</a>. 
-Every period of 4 star years consists of just <nobr>80 640</nobr> Earth years.
-The usual non-leap period of 4 star years (when the second star year is non-leap, 
-and the other star years are leap) consists of <nobr>29 453 131</nobr> 
-earth days.
-The leap period of 4 star years (when all the four star years are leap due to the need for correction) 
-consists of <nobr>29 453 132</nobr> earth days.
+<h4><a name="80640g">Период от четири звездни години</a></h4>
+Звездните години подобно на земните години са групирани в четворки. По принцип само втората звездна година е невисокосна, а останалите - първа, трета и четвърта са високосни. При нужда от корекция на календара обаче, и четирите години са високосни. 
+Кога се случва това вижте в раздела за звездна епоха.
+Всяка четворка от звездни години се състои точно от <nobr>80 640</nobr> земни години. <br/>
+Обичайната невисокосна четворка (когато втората звездна година е невисокосна, а останалите звездни години са високосни) се състои от 
+<nobr>29 453 131</nobr>
+земни дена, а високосната (когато и четирите звездни години са високосни, поради нужда от корекция) се състои от <nobr>29 453 132</nobr> земни дена.
 <br/>
 <br/>
 <table>
 <tr>
-  <td style="text-align: center;">NON-LEAP PERIOD OF<br/>4 STAR YEARS<br/>(80 640 EARTH YEARS)</td>
-  <td style="text-align: center;">LEAP PERIOD OF<br/>4 STAR YEARS<br/>(80 640 EARTH YEARS)</td>
+  <td style="text-align: center;">НЕВИСОКОСЕН ПЕРИОД ОТ <br/>4 ЗВЕЗДНИ ГОДИНИ <br/>(80 640 ЗЕМНИ ГОД.)</td>
+  <td style="text-align: center;">ВИСОКОСЕН ПЕРИОД ОТ <br/>4 ЗВЕЗДНИ ГОДИНИ <br/>(80 640 ЗЕМНИ ГОД.)</td>
 </tr>
 <tr>
   <td style="text-align: center;">
@@ -4596,13 +4538,13 @@ consists of <nobr>29 453 132</nobr> earth days.
                &nbsp;
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="god">
-                    <b>years</b>
+                 <div class="calendarvertical god">
+                    год. 
                  </div>
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="dni">
-                    <b>days</b>
+                 <div class="calendarvertical dni">
+                    дни 
                  </div>
              </td>
           </tr>
@@ -4611,7 +4553,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4625,7 +4567,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Non-Leap star year
+                Невисокосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4639,7 +4581,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4653,7 +4595,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4664,7 +4606,7 @@ consists of <nobr>29 453 132</nobr> earth days.
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="2">
-                total: 
+                общо: 
              </td>
              <td class="calendartable">
                 <nobr>80 640</nobr> 
@@ -4682,13 +4624,13 @@ consists of <nobr>29 453 132</nobr> earth days.
                &nbsp;
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="god">
-                    <b>years</b>
+                 <div class="calendarvertical god">
+                    год. 
                  </div>
              </td>
              <td class="calendartable" style="vertical-align: bottom;">
-                 <div class="dni">
-                    <b>days</b> 
+                 <div class="calendarvertical dni">
+                    дни 
                  </div>
              </td>
           </tr>
@@ -4697,7 +4639,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4711,7 +4653,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4725,7 +4667,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4739,7 +4681,7 @@ consists of <nobr>29 453 132</nobr> earth days.
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Leap star year
+                Високосна звездна година
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4750,7 +4692,7 @@ consists of <nobr>29 453 132</nobr> earth days.
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="2">
-                total: 
+                общо: 
              </td>
              <td class="calendartable">
                 <nobr>80 640</nobr> 
@@ -4765,22 +4707,17 @@ consists of <nobr>29 453 132</nobr> earth days.
 </table>
 <br/>
 <br/>
-<h4><a name="10080000g">Star Epoch</a></h4>
-Star epoch is the last and greatest period in the Bulgarian calendar. 
-That period completes the correction of the calendar, so this period 
-does not have a leap and non-leap variants. 
-It consists of 125 periods of 4 star years, or exactly 500 star years.
+<h4><a name="10080000g">Звездна Епоха</a></h4>
+Звездната епоха е последният и най-голям период в българския календар. При него корекцията на календара е окончателно завършена, затова този 
+период няма високосен и невисокосен вариянт. Състои се от 125 периода от по 4 звездни години, или точно 500 звездни години. 
 <br/>
-All the periods of 4 star years are non leap (which means that the second star year is non leap and the first, the third and the fourth star years are leap),
-with the exception of the 63<sup>-rd</sup> period of 4 star years.
-It is leap, which means, that all its 4 star years are leap.<br/><br/>
-
-That is to say that star year with number 250 is leap.<br/><br/>
-
-Each star epoch consists of <nobr>10 080 000</nobr> (ten million and 
-eighty thousand) Earth years, or exactly <nobr>3 681 641 376</nobr> 
-(three billion, six hundred eighty-one million, six hundred Forty-one thousand, three hundred seventy-six) 
-Earth days.
+Всички периоди от по 4 звездни години са невисокосни (което означава че втора звездна година е невисокосна, а първа, трета и четвърта звездни 
+години са високосни), <br/>
+освен<br/>
+63<sup>-тия</sup> период от 4 звездни години.
+Той е високосен, което означава, че при него и 4<sup>-те</sup> звездни години са високосни.<br/><br/>
+Тоест звездна година с номер 250 е високосна.<br/><br/>
+Звездната епоха се състои от <nobr>10 080 000</nobr> (десет милиона и осемдесет хиляди) земни години или точно <nobr>3 681 641 376</nobr> (три милиарда, шестстотин осемдесет и един милиона, шестстотин четирсет и една хиляди, триста седемдесет и шест) земни дена.
 <br/><br/>
 <table class="calendartable" style="margin-right: 10px; padding-right: 10px;">
    <tr>
@@ -4940,7 +4877,7 @@ Earth days.
    <tr>
       <td class="e4syl_2" colspan="4">63</td>    
       <td colspan="46" rowspan="2" style="text-align: left; padding-left: 12px;">
-63<sup>-rd</sup> period of 4 star years is the only in the star epoch when all its star years are leap star years.  
+63<sup>-то</sup> звездно четиригодие е единственото в звездната ера при което и четирите звездни години са високосни звездни години.  
        </td>    
    </tr>
    <tr>
@@ -5105,6 +5042,7 @@ Earth days.
 <br/>
 <br/>
 
+<?php include('footer.php');?>
 </body>
 </html>
 

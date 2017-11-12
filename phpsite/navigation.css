@@ -10,7 +10,7 @@
 }
 body.body {
   background-color: rgb(230, 230, 230);
-  background-image: url(http://bgkalendar.com/backgrnd.png); 
+  background-image: url(backgrnd.png); 
   margin:8px;
   padding: 0px;
 }

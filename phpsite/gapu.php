@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
 "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
 <?php 
+   require_once('includes.php');
    if (!file_exists(__DIR__.'/bitcoinwallet.php')) {
       http_response_code(500);
       error_log('ERROR: Cannot find wallet address. No file "'.__DIR__.'/bitcoinwallet.php'.'" found. Please create such file containing your bitcoin address for donations.');
@@ -9,21 +10,6 @@
 $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg';
 if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
   $lang = 'bg';
-}
-function tri($bg, $en, $de, $ru) {
-  global $lang;
-  if ($lang == 'bg' || $lang == null) {
-    return $bg;
-  } else if ($lang == 'en') {
-    return $en;
-  } else if ($lang == 'de') {
-    return $de;
-  } else if ($lang == 'ru') {
-    return $ru;
-  }
-}
-function tr($bg, $en, $de, $ru) {
-  echo tri($bg, $en, $de, $ru);
 }
 
 $date='';
@@ -131,6 +117,10 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
    </script>
 </head>
 <body class="calendarbody" onload="javascript:qrcodegenerate();">
+<nav>
+<?php include('navigation.php');?>
+</nav>
+<br/>
 <h2><?php tr('Дарения', 'Donation', 'Spenden', 'Пожертвования');?></h2>
 
 <h3><?php tr('Направете дарение', 'Make a donation', 'Etwas spenden', 'Сделайте пожертвование');?></h3>
@@ -251,5 +241,8 @@ Nach <a href="https://currencylayer.com">https://currencylayer.com</a> der aktue
 
 
 
+<br/>
+<br/>
+<?php include('footer.php');?>
 </body>
 </html>

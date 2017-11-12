@@ -87,6 +87,10 @@
    <title>Welcher kyrillisch Schriftart nennen wir typisch Bulgarisch</title>
 </head>
 <body class="calendarbody">
+<nav>
+<?php include('navigation.php');?>
+</nav>
+<br/>
 <h3>Welcher kyrillisch Schriftart nennen wir typisch Bulgarisch</h3>
 
 Die Seite <a href="http://bgkalendar.com/?lang=de">"Der Bulgarisch Kalender"</a> unterstützt die Initiative für Verbreitung auf den typisch bulgarisch kyrillisch Schriftarten. 
@@ -311,5 +315,7 @@ Fügen Sie bitte die folgenden im Abschnitt &lt;header&gt; Ihrer Webseite ein.
   <li><a href="http://npoekmu.me/">«Die Projekte»</a></li>
   <li><a href="https://stefanpeev.wordpress.com/">Stefan Peew</a></li>
 </ul>
+<br/>
+<?php include('footer.php');?>
 </body>
 </html>

@@ -88,6 +88,10 @@
 
 </head>
 <body class="calendarbody">
+<nav>
+<?php include('navigation.php');?>
+</nav>
+<br/>
 <h3>Какие шрифты кириллицы называем типичными болгарскими</h3>
 Веб-страница <a href="http://bgkalendar.com/?lang=ru">&#xab;Болгарский Календарь&#xbb;</a> включена в инициативу распространения типичного болгарского начертания кириллических шрифтов.  <br/><br/>
 
@@ -325,5 +329,7 @@
   <li><a href="http://npoekmu.me/">«Проектите»</a></li>
   <li><a href="https://stefanpeev.wordpress.com/">Стефан Пеев</a></li>
 </ul>
+<br/>
+<?php include('footer.php');?>
 </body>
 </html>

@@ -10,7 +10,7 @@
    --> 
    <link rel="stylesheet" type="text/css" href="navigation.css" /> 
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
-   <title>Българският календар</title>
+   <title>Der Bulgarisch Kalender</title>
    <style>
    @font-face {
      font-family: animals;
@@ -19,20 +19,24 @@
    </style>
 </head>
 <body class="calendarbody">
-Българският календар е календарът на древните българи 
-възстановен по писмени исторически данни 
-(<a href="imennik.html">Именник на 
-Българските Владетели</a>) и по народни предания и легенди. <br/>
-Съществуват изследвания на различни учени, които понякога доста 
-се различават по направените изводи.
+<nav>
+<?php include('navigation.php');?>
+</nav>
+<br/>
+<p>
+Die Bulgarischen Kalender ist der Kalender der alten Bulgaren restauriert geschriebenen historischen Daten
+(<a href="imennik.html">Namensliste der bulgarischen Khane</a>) 
+und den Märchen und Legenden.<br/>
+Es gibt Studien von verschiedenen Gelehrten, die manchmal ganz anderen Schlussfolgerungen.
+</p>
 
-<h3><a name="nachalo">Начало</a></h3>
-Повечето изследователи приемат за начална точка на летоброенето 
-денят на зимното слънцестоене (21<sup>-ви</sup> Декември) през 
-5505 година преди Христа - с други думи можем да приемем, 
-че първата година от българското летоброене съвпада почти 
-напълно със 5504 година преди Христа по грегорианския 
-календар<br/>
+<h3><a name="nachalo">Anfang</a></h3>
+Die meisten Forscher akzeptieren den Ausgangspunkt auf dem Tag der Wintersonnenwende
+(21<sup>-sten</sup> Dezember)
+im Laufe des Jahres 5505 BC-das heißt, wir können davon ausgehen, 
+dass das erste Jahr des Bulgarischen Kalenders fällt fast vollständig mit 5504 
+v. Chr. im gregorianischen Kalender.
+<br/>
 <br/>
 <table>
    <tr>
@@ -76,12 +80,10 @@
    </tr>
    <tr>
         <td class="calendartable"  colspan="18" align="right" 
-            bgcolor="lightgray">Декември 5505<sup>-та</sup> 
-            година преди Христа
+            bgcolor="lightgray">Dezember des Jahres 5505 BC
         </td>
         <td class="calendartable" bgcolor="lightblue" 
-      colspan="18">
-      Януари 5504<sup>-та</sup> година преди Христа
+      colspan="18">Januar-5504 BC
   </td>
    </tr>
    <tr>
@@ -124,9 +126,7 @@
    <tr>
        <td colspan="7">&nbsp;</td>
        <td class="calendartable" bgcolor="yellow" 
-           colspan="29">
-     Първи месец от година 1<sup>-ва</sup> от българското 
-     летоброене
+           colspan="29">Der erste Monat des Jahres im bulgarischen Kalender
        </td>
    </tr>
    <tr>
@@ -136,18 +136,15 @@
    <tr>
         <td colspan="7">&nbsp;</td>
         <td colspan="29"class="calendartdleftseparator">
-      <font color="darkblue">
-      Зимно слънцестоене (най-къс ден, най-дълга нощ)
-      </font>
+      <font color="darkblue">Winter-Sonnenwende (der kürzeste Tag, die längste Nacht)</font>
   </td>
    </tr>
 </table>
 <br/>
-При изчисления и съпоставка с Грегорианския и/или Юлианския 
-календар трябва да се има предвид че и при двата календара 
-не съществува нулева година - тоест 1<sup>-ва</sup> година 
-преди Христа е непосредствено следвана от 
-1<sup>-ва</sup> година след Христа.<br/>
+In Berechnungen und Vergleich mit dem gregorianischen und/oder dem Julianischen Kalender 
+sollte berücksichtigt werden, die im Kalender gibt es kein Jahr Null - das heißt, 
+das 1<sup>-sten</sup> Jahr, die BC das 1<sup>-sten</sup> Jahr nach Christus sofort gefolgt ist.
+<br/>
 <br/>
 <table>
    <tr>
@@ -191,50 +188,57 @@
    </tr>
    <tr>
         <td class="calendartable" class="calendartable" 
-      colspan="18" align="right" bgcolor="lightgray">
-      Декември 1<sup>-ва</sup> година преди Христа
-  </td>
-        <td class="calendartable" bgcolor="lightblue" colspan="18">Януари 1<sup>-ва</sup> година след Христа</td>
+            colspan="18" align="right" bgcolor="lightgray">
+            Dezember 1<sup>-sten</sup> Jahr v. Chr. 
+        </td>
+        <td class="calendartable" bgcolor="lightblue" colspan="18">
+            1<sup>-sten</sup> Januar Jahr A.d.
+        </td>
 
    </tr>
 </table>
 <br/>
-В нашият календарен модел датата която е приета за начало на календара е една година по-рано, а именно 21-ви Декември 5506 година преди Христа (понеделник според Григориянския календар) е приет за ден първи от българския календар.
+In unserem Kalenderdatum Modell für den Start des Kalenders angenommen hat ein Jahr zuvor, nämlich 21<sup>-sten</sup> Dezember 5506 (Montag nach dem Grigoriânskiâ-Kalender) für den ersten Tag der Bulgarischen Kalender angenommen wurde.
 
-<h3><a name="godina">Структура на годината</a></h3>
-Според изследователите годината се е деляла на 12 месеца + един или два (при високосна година) служебни дена които са били извън рамките 
-на месеците. Месеците били групирани на тримесечия от по 3 месеца. В рамките на всяко всяко тримесечие първият месец имал 31 дена, а останалите два месеца по 30 дена<a href="#poyasnenie1">*</a>. Така всяко тримесечие има 91 дена или това прави 364 дена за 4-те тримесечия. В края на годината (а според някои в началото) е добавян един допълнителен ден който е извън рамките на месец и се е наричал Ени. 
-Аналог на денят Ени е днешният Игнажден, наричан също и еднажден.
-Считано заедно с денят Ени, годината има вече 365 дена. <br/>
-Подобно на Юлиянския и Грегориянския календар, веднъж на 4 години по определени правила се добавя високосен ден. Високосният ден, подобно на 
-денят Ени е извън рамките на месец и се постава след края на 6-ти месец и преди началото на 7-мия месец. Високосният ден се е наричал Бехти.
-Аналог на денят Бехти е днешният Еньовден.<br/>
+<h3><a name="godina">Struktur des Jahres</a></h3>
+Nach Ansicht der Forscher gliedert sich das Jahr in 12 Monate + ein oder zwei (im Schaltjahr) Werktage, 
+die außerhalb des Rahmens der Monate waren. Die Monate wurden in den Quartalen 3 Monate zusammengefasst. 
+Innerhalb des ersten Monats eines jeden Quartals, jeder hatte 31 Tage und die restlichen zwei Monate 
+von 30 Tagen<a href="#poyasnenie1">*</a>. Jedes Quartal, gibt es also 91 oder 364 Tage, die für 
+vier Quartale macht. Am Ende des Jahres (und nach einigen am Anfang) hat einen Extratag hinzugefügt, 
+die außerhalb des Rahmens des Monats ist und hieß Eni. 
+Das Analogon des Tages ist Eni heutigen St. Ignatius, auch genannt Ednazhden. Beginnen den Tag mit Eni, 
+hat bereits im Jahr 365 Tage. <br/>
+Ähnlich wie bei den Julianischen Kalender und Gregorianischen Kalender nach die 4 Jahren auf bestimmte 
+Regeln Schalttag hinzufügen. Der Schaltag, wie Tag Eni war jenseits des Monats und ich zeigen eine 
+nach dem Ende des 6<sup>-sten</sup> Monats und vor dem Start des 7<sup>-ten</sup>. Monats. 
+Der Schaltag hieß Bechti. Das analoge des Tages Bechti ist die heutige Hochsommer (Enyovden).<br/>
 <br/>
-В нашият модел изобразяваме условно ден Бехти като последен 31<sup>-ви</sup> ден в Шести месец само при високосна година, а ден Ени като последен 31<sup>-ви</sup> ден в Дванайсти месец.
+In unserem Modell der bedingten Bechti Imaging Tag als letzte Tag 31<sup>-sten</sup> im sechsten Monate nur am Schaltjahr Tag, Eni wie die letzten 31<sup>-sten</sup> Tage in 12 Monaten.
 <br/>
 <br/>
 
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td class="calendartable" style="vertical-align: bottom;" rowspan="2">
-        <div class="calendarvertical yearperiod bottomspace">Първо Полугодие</div>
+        <div class="calendarvertical yearperiod bottomspace">Erst Halbjahr</div>
        </td>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Първо Тримесечие</div>
+        <div class="calendarvertical yearperiod bottomspace">Erst Vierteljah</div>
        </td>
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Първи</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Ersten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable">1</td>
@@ -286,16 +290,16 @@
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Втори</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Zweiten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -347,16 +351,16 @@
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Трети</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Dritt Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -408,21 +412,21 @@
    </tr>
    <tr>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Второ Тримесечие</div>
+        <div class="calendarvertical yearperiod bottomspace">Zweit Vierteljahr</div>
        </td>
        <td style="vertical-align: top;">
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Четвърти</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Vierten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable">1</td>
@@ -474,16 +478,16 @@
        <td style="vertical-align: top;">
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Пети</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Fünften Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -535,16 +539,16 @@
        <td style="vertical-align: top;">
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Шести</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Sechsten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -592,31 +596,31 @@
              <td class="calendartable">30</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendartable" colspan="7">Ден Бехти</td>
+             <td class="calendartable" colspan="7">Tag Bechti</td>
          </tr>
      </table>
        </td>
    </tr>
    <tr>
        <td class="calendartable" style="vertical-align: bottom;" rowspan="2">
-        <div class="calendarvertical yearperiod bottomspace">Второ Полугодие</div>
+        <div class="calendarvertical yearperiod bottomspace">Zweit Halbjahr</div>
        </td>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Трето Тримесечие</div>
+        <div class="calendarvertical yearperiod bottomspace">Dritt Vierteljahr</div>
        </td>
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Седми</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Siebten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable">1</td>
@@ -668,16 +672,16 @@
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Осми</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Achten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -729,16 +733,16 @@
        <td>
            <table class="calendartable">
          <tr class="calendartable">
-             <td class="calendartable" colspan="7" style="text-align: center;">Месец Девети</td>
+             <td class="calendartable" colspan="7" style="text-align: center;">Neuten Monat</td>
          </tr>
          <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
          </tr>
          <tr class="calendartable">
              <td class="calendartable"></td>
@@ -790,7 +794,7 @@
    </tr>
    <tr>
        <td class="calendartable" style="vertical-align: bottom;">
-        <div class="calendarvertical yearperiod bottomspace">Четвърто Тримесечие</div>
+        <div class="calendarvertical yearperiod bottomspace">Viert Vierteljahr</div>
        </td>
        <td style="vertical-align: top">
            <table class="calendartable">
@@ -798,17 +802,17 @@
          <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                  Месец Десети
+                  Zehnten Monat
                </td>
        </tr>
        <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
        </tr>
        <tr class="calendartable">
          <td class="calendartable">1</td>
@@ -863,17 +867,17 @@
          <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                 Месец Единайсти
+                 Elften Monat
                </td>
        </tr>
        <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
        </tr>
        <tr class="calendartable">
          <td class="calendartable"></td>
@@ -928,17 +932,17 @@
         <td class="calendartable" 
                   colspan="7" 
                   style="text-align: center;">
-               Месец Дванайсти
+               Zwölften Monat 
               </td>
       </tr>
       <tr class="calendartable">
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-ви</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-ри</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-ти</sup></div></td>
-             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-ми</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">1<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">2<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">3<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">4<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">5<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">6<sup>-te</sup></div></td>
+             <td class="calendarweekrow"><div class="calendarvertical dayofweek">7<sup>-te</sup></div></td>
       </tr>
       <tr class="calendartable">
         <td class="calendartable"></td>
@@ -986,107 +990,86 @@
         <td class="calendartable">30</td>
       </tr>
       <tr class="calendartable">
-        <td class="calendartable" colspan="7">Ден Ени</td>
+        <td class="calendartable" colspan="7">Tag Eni</td>
       </tr>
      </table>
        </td>
    </tr>
 </table>
 
-Предполага се, че дните Ени и Бехти, не влизат и в рамките на седмица.
-Това са така наречените - дни които не се &#xab;броят&#xbb;. Без тях, останалите дни, които се броят, образуват точно кръгло 52 седмици. 
-Така че ако годината започва в понеделник, следващата година 
-ще започва също в понеделник.
-Всяка календарна дата остава фиксирана завинаги в точно 
-определен ден от седмицата. 
+Es wird davon ausgegangen, dass die Tage Eni und Bechti, geben Sie nicht und innerhalb einer Woche. 
+Dies sind die so-genannte-Tage, die nicht &#xab;die Zahl&#xbb; sind. Ohne sie, bilden Sie den Rest der Tage, 
+die zählen, eine recht Runde 52 Wochen. Also wenn das Jahr am Montag beginnt, wird auch nächstes Jahr 
+am Montag beginnen. Jedem Kalendertag bleibt fest für immer an einem bestimmten Tag der Woche.
 <br/><br/>
-Някои изследователи предполагат, че българската седмица е 
-започвала с неделя. Основание за такова предположение е името на 
-ден сряда - със значение среда (на седмицата).<br/>
-Алтернативно предположение е че понеделник е бил считан за 
-първи ден. Основанията за подобно алтернативно предположение са 
-имената на дните 
-вторник, четвъртък и петък - със значение съответно - втори, 
-четвърти и пети. Тоест ако вторник е втори ден, то понеделник би 
-трябвало да 
-е първи.<br/>
-В нашия модел, приемаме условни имена на дните от седмицата - 
-1<sup>-ви</sup>, 2<sup>-ри</sup>, 3<sup>-ти</sup>, 
-4<sup>-ти</sup>, 5<sup>-ти</sup>, 6<sup>-ти</sup> и 
-7<sup>-ми</sup>.
+Einige Forscher vermuten, dass Bulgarische Woche mit Sonntag begann. Grundlage für eine solche Annahme 
+ist der Name eines Tages Mittwoch-Bedeutung (Wochentag).<br/>
+Eine alternative Hypothese ist, dass Montag weithin als am ersten Tag galt. Die Gründe für eine solche 
+alternative Annahme sind die Namen der folgenden Tage: Dienstag, Donnerstag und Freitag-Bedeutung, 
+bzw. zweiten, vierten und fünften. Das ist zu sagen, ob Dienstag den zweiten Tag, Montag soll um ein erster zu sein.<br/>
+Wir akzeptieren in unserem Modell Kontingent Namen der Tage der Woche - 
+1<sup>-sten</sup>, 2<sup>-sten</sup>, 3<sup>-sten</sup>, 
+4<sup>-sten</sup>, 5<sup>-sten</sup>, 6<sup>-sten</sup> und 
+7<sup>-sten</sup>.
 <br/><br/>
-При всички положения дните от седмицата са се разминавали с дните 
-от седмицата които отчитаме по съвременния Грегориянски 
-календар. 
-Това е така защото при съвременния календар, няма дни които не 
-се броят и не влизат в състава на седмицата. Както казахме 
-в българският календар, такива дни са Ени и Бехти.
-<br/><br/>
-В нашият модел на българският календар сме показали дните от седмицата така както те са валидни за съвременния григориянски календар.
 
-
+Auf jeden Fall die Tage der Woche sind bei cross-Zwecke mit den Tagen der Woche, die Berücksichtigung moderner 
+Gregorianischen Kalender. Und zwar deshalb, weil in dem modernen Kalender gibt es keine Tage, die werden 
+nicht gezählt und sind nicht in der Zusammensetzung der Woche enthalten. Wie in der Bulgarischen Kalender 
+gesagt sind Tage wie Eni und Bechti.
+<br/><br/>
+In unserem Modell des Bulgarischen Kalenders haben wir die Tage in der Woche gezeigt, 
+wie sie für den modernen Gregorianischen Kalender gültig sind.
 
 <br/>
 <br/>
-<a name="poyasnenie1">* - Съществуват също хипотези че в рамките 
-на тримесечие първият и вторият месец са били с по 30 дена 
-а третият месец е имал 31 дена. Общото при всички хипотези е 
-че годината се разделя на тримесечия от по 91 дена.</a>
+<a name="poyasnenie1">* - Es gibt auch Annahmen, die im Rahmen der ersten und zweiten Quartal Monat mit 30 Tagen waren und im dritte Monat 
+31 Tage hat. Alle Hypothesen ist, dass das Jahr gliedert sich in die Viertel der 91 Tage.
+</a>
 
 <br/>
 <br/>
 <br/>
-<h3><a name="cikli">Цикли за корекция на календара</a></h3>
-Тропическата земна година - тоест времето за което Земята прави 
-една пълна обиколка около слънцето се равнява на 365,242 190 419 
-земни дена - 
-тоест 365 дни, 5 часа, 48 минути и 45,5 секунди. Така при 
-календарна година от 365 дена, календарната година избързва с 
-около четвърт ден 
-(5 часа, 48 минути и 45,5 секунди) всяка година. За 4 години 
-календарната година вече започва с приблизително 1 ден по преди 
-да е завършила обиколката на Земята около слънцето. 
+<h3><a name="cikli">Zyklen für die Korrektur des Kalenders</a></h3>
+Tropischen Erdenjahres -, die Zeit für die Erde eine komplette Runde um die Sonne macht 
+entspricht 365,242 190 419 Erdentage - d. h. 365 Tage, 5 Stunden, 48 Minuten und 45,5 Sekunden. 
+So schnell das Kalenderjahr Viertel Tag im Kalenderjahr von 365 Tagen (5 Stunden, 48 Minuten und Sekunden 45,5) 
+jedes Jahr. Seit vier Jahren ist das Kalenderjahr beginnend mit ca. 1 Tag bevor ich studierte an der 
+Umfang der Erde um die Sonne.
 <br/><br/>
-Това несъответствие налага корекция на календара с добавяне на 
-високосен ден веднъж на четири години- така нареченият ден Бехти, 
-който се добавя 
-в края на 6<sup>-тия</sup> месец. Тази корекция обаче не е 
-достатъчна защото избързването на календара не е точно с един ден 
-(24 часа), а 
-с 23 часа, 15 минути и 2 секунди. Така след добавянето на 
-високосният ден календарът започва да изостава. 
+Diese Diskrepanz brauchen Korrektur des Kalenders durch Zugabe von Sprung jeden Tag vier Jahre - 
+die so genannte Bechti, der am Ende des 6<sup>-sten</sup>. Monats hinzugefügt wird. Diese Einstellung ist jedoch nicht 
+ausreichend, weil die hohe Verstärkung des Kalenders nicht gerade ein Tag (24 Stunden) und 23 Stunden, 
+15 Minuten und 2 Sekunden war. So nach dem Hinzufügen des Visokosniât Tages im Kalender beginnt zu hinken.
 <br/><br/>
-Това налага система от допълнителни корекции. Тази система разделя 
-календара на периоди, както е показано по долу.<br/>
-<h4><a name="4g">Четиригодишeн период</a></h4>
-Веднъж на четири години в календарната година се добавя 
-допълнителният ден Бехти в края на 6-тия месец.
-Годините в които имаме добавен високосен ден Бехти, ще наричаме 
-високосни години, а тези при които нямаме високосен ден - 
-невисокосни.<br/><br/>
+Dies erfordert eine zusätzliche Anpassungen. Dieses System teilt die Kalenderperioden wie unten gezeigt.
+<br/>
+<h4><a name="4g">Vier Jahre Abschnitt</a></h4>
+Alle vier Jahre im Kalenderjahr wird hinzugefügt, der zusätzliche Tag Bechti am Ende des 6. Monats. 
+Die Jahre, in denen wir einen Schalttag Bechti hinzugefügt haben, würde Schaltjahr nennen, vor Jahren, 
+und diejenigen, in denen wir kein Schalttag haben - würde Nichtschaltjahr nennen.
+<br/><br/>
 <table>
    <tr>
     <td class="calendartable" style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-          Първа Невисокосна<br/>година
+          <br/>Erst Nichtschaltjahr<br/><br/>
     </td>
     <td class="calendartable" style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-          Втора Невисокосна<br/>година
+          <br/>Zweit Nichtschaltjahr<br/><br/>
     </td>
     <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-          Трета Невисокосна<br/>година
+          <br/>Drit Nichtschaltjahr<br/><br/>
     </td>
     <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-          Четвърта ВИСОКОСНА<br/>година
+          <br/>Viert SCHALTJAHR<br/><br/>
     </td>
    </tr>
 </table>
-<h4><a name="12g">Дванайсет годишен период</a></h4>
-Три четиригодишни периода образуват един 12 годишен период. 
-Този период не се характеризира с календарна корекция но е 
-особен с това че на всяка година от 12 годишният цикъл е 
-съпоставено животно - затова и цикълът се нарича животински. 
-Различните изследователи приемат различен ред на животните, както и различно начално 
-животно. Спорни са също и имената на животните. Ето някои примери:
+<h4><a name="12g">Zwölf Jahre Abschnitt</a></h4>
+Bilden Sie drei vier-Jahres-Abschnitt einen Zeitraum von 12 Jahren. Dieser Zeit zeichnet sich durch die 
+Anpassung der Kalender aber, das ist etwas Besonderes für jedes Jahr des Zyklus ist 12-Year-Old Tier- und daher 
+im Vergleich ist der Zyklus Tier genannt. Verschiedene Forscher nehmen unterschiedlichen Reihenfolge der 
+Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier sind einige Beispiele:
 <br/>
 <br/>
 <table style="border-collapse: collapse">
@@ -1095,148 +1078,148 @@
      <td class="calendartable" colspan="6" style="text-align: center">Според</td>
   </tr>
   <tr>
-     <td class="calendartable" style="text-align: center; background-color: rgba(255, 70, 70, 0.4);" colspan="2">Георги Кръстев</td>
-     <td class="calendartable" style="text-align: center; background-color: rgba(200, 200, 200, 0.5)" colspan="2">Йордан Вълчев</td>
-     <td class="calendartable" style="text-align: center; background-color: rgba(70, 70, 255, 0.4);" colspan="2">Петър Добрев</td>
+     <td class="calendartable" style="text-align: center; background-color: rgba(255, 70, 70, 0.4);" colspan="2">Georgi Krustew</td>
+     <td class="calendartable" style="text-align: center; background-color: rgba(200, 200, 200, 0.5)" colspan="2">Jordan Wultschew</td>
+     <td class="calendartable" style="text-align: center; background-color: rgba(70, 70, 255, 0.4);" colspan="2">Peter Dobrew</td>
   </tr>
   <tr>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">животно</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">имена</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">животно</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">имена</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">животно</td>
-     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">имена</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">Tier</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">Namen</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">Tier</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">Namen</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">Tier</td>
+     <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">Namen</td>
   </tr>
   <tr>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Свиня</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Докс</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Свиня</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">докс, док, прасе</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Wildschwein</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Doks</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Wildschwein</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">doks, dok, prase</td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Мишка</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Каран</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Мишка</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">сомор, шъши</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Мишка</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Сомор</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Maus</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Karan</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Maus</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">somor, shushi</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Maus</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Somor</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Вол</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Шегор</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Вол</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">шегор, куврат, буза, бусман</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Вол</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Шегор</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Ochse</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Schegor</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Ochse</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">schegor, kuwrat, busa, busman</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Ochse</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Schegor</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Барс</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Баръс</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Тигър</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">барс, паръс, баръс</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Schneeleopard</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Barus</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Tiger</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">bars, parus, barus</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Заек</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Дван</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Заек</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">дванш</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Заек</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дван</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hase</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dwan</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Hase</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">dwansch</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Hase</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dwan</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Дракон</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Хала</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Змей</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">вер, драгун, кала, слав</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дракон</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Вер</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Drache</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Chala</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Dragon</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">wer, dragun, kala, slaw</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Drache</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Wer</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Змия</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Schlange</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Змия</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">дилом, делян, аттила</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Змия</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дилом</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Schlange</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">dilom, deljan, attila</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Schlange</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dilom</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Кон</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Таг</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Кон</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">тек, таг, тих, алаша</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Кон</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Теку</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pferd</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Tag</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Pferd</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">tek, tag, tich, alascha</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Pferd</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Teku</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Маймуна</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Писин</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Маймуна</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">песин, писин</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Widder</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pisin</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Widder</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">pesin, pisin</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Овен</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Affe</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Коч</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">суръх, север, расате</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Ramme</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">suruch, sewer, rasate</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Петел</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Тох</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Петел</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">тох, тах</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Петел</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Тох</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hahn</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Toch</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Hahn</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">toch, tach</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Hahn</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Toch</td>
   </tr>
   <tr class="calendartable">
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Куче</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Етх</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Куче</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">етх</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Куче</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Етх</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hund</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Etch</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Hund</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">etch</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Hund</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Etch</td>
   </tr>
   <tr>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Глиган</td>
-     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дохс</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Wildschwein</td>
+     <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dochs</td>
   </tr>
 </table>
 <br/>
-Всеки 12 годишен период е бил или мъжки или женски. При мъжки период - 
-всички години в рамките на този период са били мъжки - 
-съответствали са на животни от мъжки пол. При женски период - 
-годините в рамките на периода са съответствали на животни от 
-женски пол.
-Дванадесетгодишните периоди са се редували последователно - мъжки 
-и женски.
+Jeder 12-Jahres-Periode war entweder männlich oder weiblich. 
+In männlich Zeit-alle Jahre innerhalb dieses Zeitraums waren männlich-Pendants sind Männer. 
+In weiblichen Periode-Jahren innerhalb der Frist zu erfüllen, mit den Tieren des weiblichen 
+Geschlechts. Zwölfjährlichen Perioden entsprechen anderen fuhren Kurzurlaub - männlich und weiblich.
+
 <br/><br/> 
-<h4><a name="60g">Шейсет годишен период (звезден ден)</a></h4>
-Периодът от 60 години или 5 дванайсетгодишни цикъла или 15 четиригодишни 
-цикъла е условно наречен от Йордан Вълчев - звезден ден.
-Тъй като 60 годишният цикъл е кратен на 4, то той по принцип завършва на високосна 
-година. Такъв звезден ден ще наричаме високосен звезден ден. <br/>
+<h4><a name="60g">Sechzig Jahre Abschnitt (Sterntag)</a></h4>
+Zeitraum von 60 Jahren oder 5 zwölf Jahre Zyklus oder 15 vier Jahres Zyklus 
+der Zyklus wird konventionell von Jordan Wultschew - Sterntag genannt.
+Seit der 60-Jahres-Zyklus ein Vielfaches von 4 ist, endet es in der Regel Sprung
+Jahr. Ein solcher Stern Tag star Schaltsterntag genannt.
 <br/>
-В определени случаи, заради корекцията на календара, се налага високосният ден на 
-последната година от 60 годишния звезден ден да бъде отнета - в такъв случай ще 
-наричаме звездният ден - невисокосен звезден ден.<br/><br/>
+<br/>
+In bestimmten Fällen aufgrund der Korrektur des Kalenders hat Schalttag
+im letzten Jahr auf des 60 Jahre Sterntag wird weggebracht - in diesem Fall wird
+das Sterntag - Nichtschaltsterntag genant.<br/>
+<br/>
 <table>
 <tr>
   <td style="text-align: center;">
-      ВИСОКОСЕН ЗВЕЗДЕН ДЕН
+      SCHALT STERN TAG
   </td>
   <td style="text-align: center;">
-      НЕВИСОКОСЕН ЗВЕЗДЕН ДЕН
+      NICHT SCHALT STERN TAG
   </td>
 </tr>
 <tr>
@@ -1244,19 +1227,19 @@
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical coloryears" style="color: white">Ч Е Р Н О</div>
+                <div class="calendarvertical coloryears" style="color: white">S C H W A R T Z</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical l2years" style="color: white">12 годишен цикъл 1.</div>
+                <div class="calendarvertical l2years" style="color: white">12 Jahre Zyklus 1.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 1</div>
+                <div class="calendarvertical fouryears">4 Jahre 1</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 1. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1264,7 +1247,7 @@
                 &#x2116; 2. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1272,7 +1255,7 @@
                 &#x2116; 3. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1282,18 +1265,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 2</div>
+                <div class="calendarvertical fouryears">4 Jahre 2</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 5.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1301,7 +1284,7 @@
                 &#x2116; 6.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1309,7 +1292,7 @@
                 &#x2116; 7.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1319,18 +1302,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 3</div>
+                <div class="calendarvertical fouryears">4 Jahre 3</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 9.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1338,7 +1321,7 @@
                 &#x2116; 10;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1346,7 +1329,7 @@
                 &#x2116; 11;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1356,24 +1339,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical coloryears">Ч Е Р В Е Н О</div>
+                <div class="calendarvertical coloryears">R O T</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 2.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 2.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 4</div>
+                <div class="calendarvertical fouryears">4 Jahre 4</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 13.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1381,7 +1364,7 @@
                 &#x2116; 14.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1389,7 +1372,7 @@
                 &#x2116; 15.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1399,18 +1382,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 5</div>
+                <div class="calendarvertical fouryears">4 Jahre 5</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 17.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1418,7 +1401,7 @@
                 &#x2116; 18.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1426,7 +1409,7 @@
                 &#x2116; 19.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1436,18 +1419,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 6</div>
+                <div class="calendarvertical fouryears">4 Jahre 6</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 21.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1455,7 +1438,7 @@
                 &#x2116; 22.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1463,7 +1446,7 @@
                 &#x2116; 23.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1473,24 +1456,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical coloryears">Ж Ъ Л Т О</div>
+                <div class="calendarvertical coloryears">G E L B</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 3.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 3.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 7</div>
+                <div class="calendarvertical fouryears">4 Jahre 7</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 25.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1498,7 +1481,7 @@
                 &#x2116; 26.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1506,7 +1489,7 @@
                 &#x2116; 27.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1516,18 +1499,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 8</div>
+                <div class="calendarvertical fouryears">4 Jahre 8</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 29.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1535,7 +1518,7 @@
                 &#x2116; 30.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1543,7 +1526,7 @@
                 &#x2116; 31.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1553,18 +1536,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 9</div>
+                <div class="calendarvertical fouryears">4 Jahre 9</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 33.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1572,7 +1555,7 @@
                 &#x2116; 34.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1580,7 +1563,7 @@
                 &#x2116; 35.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1590,24 +1573,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical coloryears">С И Н Ь О</div>
+                <div class="calendarvertical coloryears">B L A U</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 4.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 4.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 10</div>
+                <div class="calendarvertical fouryears">4 Jahre 10</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 37.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1615,7 +1598,7 @@
                 &#x2116; 38.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1623,7 +1606,7 @@
                 &#x2116; 39.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1633,18 +1616,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 11</div>
+                <div class="calendarvertical fouryears">4 Jahre 11</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 41.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1652,7 +1635,7 @@
                 &#x2116; 42.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1660,7 +1643,7 @@
                 &#x2116; 43.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1670,18 +1653,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 12</div>
+                <div class="calendarvertical fouryears">4 Jahre 12</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 45.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1689,7 +1672,7 @@
                 &#x2116; 46.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1697,7 +1680,7 @@
                 &#x2116; 47.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1707,24 +1690,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical coloryears">Б Я Л О</div>
+                <div class="calendarvertical coloryears">W E I ß</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 5.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 5.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 13</div>
+                <div class="calendarvertical fouryears">4 Jahre 13</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
                 &#x2116; 49.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1732,7 +1715,7 @@
                 &#x2116; 50.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1740,7 +1723,7 @@
                 &#x2116; 51.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1750,18 +1733,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 14</div>
+                <div class="calendarvertical fouryears">4 Jahre 14</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 53.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1769,7 +1752,7 @@
                 &#x2116; 54.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1777,7 +1760,7 @@
                 &#x2116; 55.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1787,18 +1770,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 15</div>
+                <div class="calendarvertical fouryears">4 Jahre 15</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 57.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1806,7 +1789,7 @@
                 &#x2116; 58.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1814,7 +1797,7 @@
                 &#x2116; 59.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1824,7 +1807,7 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
      </table>
@@ -1834,19 +1817,19 @@
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical coloryears" style="color: white">Ч Е Р Н О</div>
+                <div class="calendarvertical coloryears" style="color: white">S C H W A R T Z</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="12">
-                <div class="calendarvertical l2years" style="color: white">12 годишен цикъл 1.</div>
+                <div class="calendarvertical l2years" style="color: white">12 Jahre Zyklus 1.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 1</div>
+                <div class="calendarvertical fouryears">4 Jahre 1</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 1. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1854,7 +1837,7 @@
                 &#x2116; 2. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1862,7 +1845,7 @@
                 &#x2116; 3. 
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1872,18 +1855,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 2</div>
+                <div class="calendarvertical fouryears">4 Jahre 2</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 5.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1891,7 +1874,7 @@
                 &#x2116; 6.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1899,7 +1882,7 @@
                 &#x2116; 7.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1909,18 +1892,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #333333; color: white;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 3</div>
+                <div class="calendarvertical fouryears">4 Jahre 3</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
                 &#x2116; 9.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1928,7 +1911,7 @@
                 &#x2116; 10;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1936,7 +1919,7 @@
                 &#x2116; 11;
              </td>
              <td class="calendartable" style="text-align: center; background-color: #333333; color: white;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1946,24 +1929,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: black; color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical coloryears">Ч Е Р В Е Н О</div>
+                <div class="calendarvertical coloryears">R O T</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 2.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 2.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 4</div>
+                <div class="calendarvertical fouryears">4 Jahre 4</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 13.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1971,7 +1954,7 @@
                 &#x2116; 14.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1979,7 +1962,7 @@
                 &#x2116; 15.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -1989,18 +1972,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 5</div>
+                <div class="calendarvertical fouryears">4 Jahre 5</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 17.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2008,7 +1991,7 @@
                 &#x2116; 18.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2016,7 +1999,7 @@
                 &#x2116; 19.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2026,18 +2009,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FF7777;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 6</div>
+                <div class="calendarvertical fouryears">4 Jahre 6</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
                 &#x2116; 21.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2045,7 +2028,7 @@
                 &#x2116; 22.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2053,7 +2036,7 @@
                 &#x2116; 23.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FF7777;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2063,24 +2046,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: red; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical coloryears">Ж Ъ Л Т О</div>
+                <div class="calendarvertical coloryears">G E L B</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 3.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 3.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 7</div>
+                <div class="calendarvertical fouryears">4 Jahre 7</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 25.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2088,7 +2071,7 @@
                 &#x2116; 26.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2096,7 +2079,7 @@
                 &#x2116; 27.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2106,18 +2089,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 8</div>
+                <div class="calendarvertical fouryears">4 Jahre 8</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 29.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2125,7 +2108,7 @@
                 &#x2116; 30.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2133,7 +2116,7 @@
                 &#x2116; 31.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2143,18 +2126,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #FFFF77;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 9</div>
+                <div class="calendarvertical fouryears">4 Jahre 9</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
                 &#x2116; 33.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2162,7 +2145,7 @@
                 &#x2116; 34.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2170,7 +2153,7 @@
                 &#x2116; 35.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #FFFF77;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2180,24 +2163,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: yellow; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical coloryears">С И Н Ь О</div>
+                <div class="calendarvertical coloryears">B L A U</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 4.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 4.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 10</div>
+                <div class="calendarvertical fouryears">4 Jahre 10</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 37.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2205,7 +2188,7 @@
                 &#x2116; 38.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2213,7 +2196,7 @@
                 &#x2116; 39.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2223,18 +2206,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 11</div>
+                <div class="calendarvertical fouryears">4 Jahre 11</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 41.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2242,7 +2225,7 @@
                 &#x2116; 42.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2250,7 +2233,7 @@
                 &#x2116; 43.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2260,18 +2243,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: lightblue;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 12</div>
+                <div class="calendarvertical fouryears">4 Jahre 12</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
                 &#x2116; 45.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2279,7 +2262,7 @@
                 &#x2116; 46.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2287,7 +2270,7 @@
                 &#x2116; 47.
              </td>
              <td class="calendartable" style="text-align: center; background-color: lightblue;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2297,24 +2280,24 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: blue; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical coloryears">Б Я Л О</div>
+                <div class="calendarvertical coloryears">W E I ß</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="12">
-                <div class="calendarvertical l2years">12 годишен цикъл 5.</div>
+                <div class="calendarvertical l2years">12 Jahre Zyklus 5.</div>
              </td>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 13</div>
+                <div class="calendarvertical fouryears">4 Jahre 13</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
                 &#x2116; 49.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2322,7 +2305,7 @@
                 &#x2116; 50.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2330,7 +2313,7 @@
                 &#x2116; 51.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2340,18 +2323,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 14</div>
+                <div class="calendarvertical fouryears">4 Jahre 14</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 53.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2359,7 +2342,7 @@
                 &#x2116; 54.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2367,7 +2350,7 @@
                 &#x2116; 55.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2377,18 +2360,18 @@
              </td>
              <td class="calendartable" 
                  style="text-align: center; background-color: white; font-weight: bold;">
-                Високосна година
+                Schaltjahr
              </td>
           </tr>
           <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: #DDDDDD;" rowspan="4">
-                <div class="calendarvertical fouryears">4 год. 15</div>
+                <div class="calendarvertical fouryears">4 Jahre 15</div>
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
                 &#x2116; 57.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2396,7 +2379,7 @@
                 &#x2116; 58.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2404,7 +2387,7 @@
                 &#x2116; 59.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
           <tr>
@@ -2412,7 +2395,7 @@
                 &#x2116; 60.
              </td>
              <td class="calendartable" style="text-align: center; background-color: #DDDDDD;">
-                Невисокосна година
+                Nichtschaltjahr
              </td>
           </tr>
      </table>
@@ -2420,70 +2403,72 @@
 </tr>
 </table>
 <br/>
-Единствената разлика между високосният звезден ден и невисокосният 
-звезден ден е в последната 60<sup>-та</sup> година. При високосния звезден ден - 
-тя е високосна, а при невисокосния, не е. <br/>
-На всеки от 12 годишните периоди е присвоен по един елемент и съответните му цвят и посока. Петте елемента са: 
+Der einzige Unterschied zwischen dem Schaltsterntag und Nichtschaltsterntag ist 
+in den letzten 60<sup>sten</sup> Jahr. In Schaltsterntag -
+es ist ein Schaltjahr, während Nichtschaltsterntag nicht ist.<br/>
+Jedes der 12 Jahre Zyklus ist ein Element und der entsprechenden Farbe und Richtung zugeordnet. Die fünf Elemente sind:
 <br/><br/>
 <table style="border-collapse: collapse; margin-left: 20px;">
   <tr>
      <td class="calendartdrightseparator">&nbsp;</td>
-     <td class="calendartable" style="text-align: center">ЕЛЕМЕНТ</td>
-     <td class="calendartable" style="text-align: center">ЦВЯТ</td>
-     <td class="calendartable" style="text-align: center">ПОСОКА</td>
+     <td class="calendartable" style="text-align: center">ELEMENTE</td>
+     <td class="calendartable" style="text-align: center">FARBE</td>
+     <td class="calendartable" style="text-align: center">RICHTUNG</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: black; color: white;">1.</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ВОДА</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ЧЕРНО</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ЦЕНТЪР</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WASSER</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">SCHWARZ</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ZENTRUM</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: red;">2.</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">ОГЪН</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">ЧЕРВЕНО</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">ЮГ</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">FEUER</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">ROT</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">SÜDEN</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: yellow;">3.</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЖЪЛТО</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЮГ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ERDE</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">GELB</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">SÜDEN</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: blue;">4.</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">ДЪРВО</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">СИНЬО</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">СЕВЕР</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">BAUM</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">BLAU</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">NORDEN</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: white;">5.</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">МЕТАЛ</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">БЯЛО</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">ИЗТОК</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">METALL</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">WEIß</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">OSTEN</td>
   </tr>
 </table>
 <br/>
-Всеки от 5-те 12-годишни периода, които изграждат звездния ден е или мъжки или женски, като се редуват последователно. <br/> 
-Звезден ден, който започва с мъжки 12-годишен период ще наричаме мъжки, а такъв, който започва с женски 12-годишен период ще наричаме женски. 
-В рамките на два последователни звездни дена (120 години) се срещат всички възможни комбинации на елемент, пол и животно. 
-Така комбинацията от елемент, пол и животно може да се използва за датировка в рамките на 120 годишен период. 
+
+Jede der 5 zwölf Jahres Perioden, die den Sterntag machen ist entweder männlich oder weiblich, hintereinander abwechseln. <br/>
+Sterntag, der mit männlichen zwölf Jahres Perioden beginnt, wir nennen männlich.
+Sterntag, der mit weiblich zwölf Jahres Perioden beginnt, wir nennen weiblich. 
+Innerhalb von zwei folgenden Sterntage (120 Jahre) treffen alle möglichen Kombinationen von Elementen, Geschlecht und Tier.
+So kann die Kombination von Element, Geschlecht und Tier für Termine innerhalb einer 120-Jahres-Frist verwendet werden.
 <br/><br/>
 <table style="border-collapse: collapse; margin-left: 20px;">
   <tr>
      <td class="calendartdrightseparator">&nbsp;</td>
      <td class="calendartdrightseparator">&nbsp;</td>
-     <td class="calendartable" style="text-align: left;">ЕЛЕМЕНТ</td>
-     <td class="calendartable" style="text-align: left;">ПОЛ</td>
-     <td class="calendartable" style="text-align: left;" colspan="12">ГОДИНИ</td>
+     <td class="calendartable" style="text-align: left;">ELEMENTE</td>
+     <td class="calendartable" style="text-align: left;">GESCHLECHT</td>
+     <td class="calendartable" style="text-align: left;" colspan="12">JAHRE</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="vertical-align: bottom;" rowspan="5">
-        <div class="calendarvertical starday">М. Зв. Ден</div>
+        <div class="calendarvertical starday">Männlich Sterntag</div>
      </td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">I.</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ВОДА</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">МЪЖКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WASSER</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">MÄNNLICH</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">1</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">2</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">3</td>
@@ -2499,8 +2484,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: red;">II.</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">ОГЪН</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">ЖЕНСКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">FEUER</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">WEIBLICH</td>
      <td class="calendartable" style="text-align: right; background-color: red;">13</td>
      <td class="calendartable" style="text-align: right; background-color: red;">14</td>
      <td class="calendartable" style="text-align: right; background-color: red;">15</td>
@@ -2516,8 +2501,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: yellow;">III.</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">МЪЖКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ERDE</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">MÄNNLICH</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">25</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">26</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">27</td>
@@ -2533,8 +2518,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: blue;">IV.</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">ДЪРВО</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">ЖЕНСКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">BAUM</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">WEIBLICH</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">37</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">38</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">39</td>
@@ -2550,8 +2535,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: white;">V.</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">МЕТАЛ</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">МЪЖКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">METALL</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">MÄNNLICH</td>
      <td class="calendartable" style="text-align: right; background-color: white;">49</td>
      <td class="calendartable" style="text-align: right; background-color: white;">50</td>
      <td class="calendartable" style="text-align: right; background-color: white;">51</td>
@@ -2567,11 +2552,11 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="vertical-align: bottom;" rowspan="5">
-        <div class="calendarvertical starday">Ж. Зв. Ден</div>
+        <div class="calendarvertical starday">Weiblich Sterntag</div>
      </td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">VI.</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ВОДА</td>
-     <td class="calendartable" style="text-align: left; background-color: black; color: white;">ЖЕНСКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WASSER</td>
+     <td class="calendartable" style="text-align: left; background-color: black; color: white;">WEIBLICH</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">61</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">62</td>
      <td class="calendartable" style="text-align: right; background-color: black; color: white;">63</td>
@@ -2587,8 +2572,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: red;">VII.</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">ОГЪН</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">МЪЖКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">FEUER</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">MÄNNLICH</td>
      <td class="calendartable" style="text-align: right; background-color: red;">73</td>
      <td class="calendartable" style="text-align: right; background-color: red;">74</td>
      <td class="calendartable" style="text-align: right; background-color: red;">75</td>
@@ -2604,8 +2589,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: yellow;">VIII.</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЖЕНСКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ERDE</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">WEIBLICH</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">85</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">86</td>
      <td class="calendartable" style="text-align: right; background-color: yellow;">87</td>
@@ -2621,8 +2606,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: blue;">IX.</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">ДЪРВО</td>
-     <td class="calendartable" style="text-align: left; background-color: blue;">МЪЖКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">BAUM</td>
+     <td class="calendartable" style="text-align: left; background-color: blue;">MÄNNLICH</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">97</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">98</td>
      <td class="calendartable" style="text-align: right; background-color: blue;">99</td>
@@ -2638,8 +2623,8 @@
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: right; background-color: white;">X.</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">МЕТАЛ</td>
-     <td class="calendartable" style="text-align: left; background-color: white;">ЖЕНСКИ</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">METALL</td>
+     <td class="calendartable" style="text-align: left; background-color: white;">WEIBLICH</td>
      <td class="calendartable" style="text-align: right; background-color: white;">109</td>
      <td class="calendartable" style="text-align: right; background-color: white;">110</td>
      <td class="calendartable" style="text-align: right; background-color: white;">111</td>
@@ -2656,11 +2641,15 @@
 </table>
 <br/>
 <br/>
-<h4><a name="420">Четиристотин и двайсет годишен период (звездна седмица)</a></h4>
-Като групираме 7 звездни дена (всеки от по 60 земни години) получаваме един период от 420 години, който наричаме звездна седмица.
-Във всяка седмица - първият, третият и петият звезден ден са невисокосни, а втори, четвърти и шести са високосни.
-Седмият звезден ден по принцип е също високосен, но при нужда от допълнителна корекция на календара се заменя с невисокосен.
-Звездна седмица при която последният звезден ден е невисокосен, ще наричаме невисокосна звездна седмица, а такава при която последният звезден ден е високосен, ще наричаме високосна:<br/><br/>
+<h4><a name="420">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></h4>
+Als Gruppe erhalten die 7 Sterntage (jeweils 60 Erdjahren) wir über einen Zeitraum von 420 Jahren, die wir eine Sternwoche nennen.
+In jeder Sternwoche die ersten dritten und fünften Sterntag sind nicht schalt (Nichtschaltsterntag) 
+und die zweite, vierte und sechste sind schalt (Schaltsterntag).
+Siebten Sterntag im Allgemeinen ist auch ein Schaltsterntag, aber benötigen weitere Korrektur des Kalenders wird durch Nichtschaltsterntag ersetzt.
+
+Sternwoche in dem der letzte Sterntag ist nicht schalt, 
+wird einen Nichtschaltsternwoche so aufzurufen, 
+dass der letzte Sterntag ist ein schalt, ein Schaltsternwoche nennen würde:<br/><br/>
 
 <table>
 <tr>
@@ -2668,30 +2657,30 @@
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="3">
-               &nbsp;
+               &nbsp;<br/><br/>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical god">
-                    год. 
+                    Jahre 
                  </div>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical dni">
-                    дни 
+                    Tage
                  </div>
              </td>
           </tr>
           <tr>
              <td class="calendartable" style="vertical-align: bottom; border-width: 0px; padding-right: 12px;" rowspan="7">
                  <div class="calendarvertical starweek">
-                    Високос. Зв. Седмица
+                    Schaltsternwoche
                  </div>
              </td>
              <td class="calendartable">
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2705,7 +2694,7 @@
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2719,7 +2708,7 @@
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2733,7 +2722,7 @@
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2747,7 +2736,7 @@
                 5. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2761,7 +2750,7 @@
                 6. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2775,7 +2764,7 @@
                 7. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2786,7 +2775,7 @@
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="3">
-                общо: 
+                insgesamt: 
              </td>
              <td class="calendartable">
                 420 
@@ -2801,30 +2790,30 @@
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="3">
-               &nbsp;
+               &nbsp;<br/><br/>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical god">
-                    год. 
+                    Jahre 
                  </div>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical dni">
-                    дни 
+                    Tage 
                  </div>
              </td>
           </tr>
           <tr>
              <td class="calendartable" style="vertical-align: bottom; border-width: 0px; padding-left: 12px; padding-right: 12px;" rowspan="7">
                  <div class="calendarvertical starweek">
-                    Невисок. Зв. Седмица
+                    Nichtschaltsternwoche
                  </div>
              </td>
              <td class="calendartable">
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2838,7 +2827,7 @@
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2852,7 +2841,7 @@
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2866,7 +2855,7 @@
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2880,7 +2869,7 @@
                 5. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2894,7 +2883,7 @@
                 6. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосен звезден ден
+                Schaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2908,7 +2897,7 @@
                 7. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосен звезден ден
+                Nichtschaltsterntag
              </td>
              <td class="calendartable">
                 60 
@@ -2919,7 +2908,7 @@
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="3">
-                общо: 
+                insgesamt: 
              </td>
              <td class="calendartable">
                 420 
@@ -2933,44 +2922,51 @@
 </tr>
 </table>
 <br/>
-Някои изследователи наричат първият звезден ден - &#xab;звезден понеделник&#xbb;, вторият - &#xab;звезден вторник&#xbb; и т.н., а други започват от &#xab;звездна неделя&#xbb;. 
-При всички положения обаче всяко подобно наименование има условен характер. В таблицата по-горе сме ги означили просто с номерата от 1 до 7.<br/>
-Всяка звездна седмица се състои от 420 земни години. Разликата между високосна и невисокосна звездна седмица е само в това, че високосната седмица завършва на високосен звезден ден, което от своя страна означава че 60 годишният звезден ден завършва на високосна година.
-Обратно, невисокосната звездна седмица завършва на невисокосен звезден ден, което от своя страна означава, че 60 годишният звезден ден завършва на невисокосна година. 
+Einige Forscher namens der ersten Sterntag - &#xab;Sterne Montag&#xbb;, die zweite - &#xab;Sterne Dienstag&#xbb; und so weiter ...,
+andere beginnen aus der &#xab;Sterne Sonntag&#xbb;.
+In jedem Fall jedoch hat eine solche Bezeichnung bedingten Charakter.
+Wir hatten sie in der obigen Tabelle nur mit den Zahlen von 1 bis 7.<br/>
+Die Sternwoche besteht aus 420 Erdjahren. Der Unterschied zwischen einem Nichtschalt- und Schalt-sternwoche 
+ist nur, dass die Schaltsternwoche am Schaltsterntag endete
+was wiederum bedeutet, dass 60 Jahre Sterntag  auf ein Schaltjahr endet.
+Im Gegensatz dazu endet Nichtschaltsternwoche am Nichtschaltsterntag endet, was wiederum bedeutet
+60 Jahre Sterntag endet auf einem nicht-Schaltjahr. 
 <br/>
 <br/>
-<h4><a name="1680g">Звезден месец</a></h4>
-Подобно на земните седмици, всеки четири звездни седмици са групирани в един звезден месец. Така един звезден месец се равнява на 1 680 земни 
-години. Звездният месец също може да е &#xab;високосен&#xbb; или &#xab;невисокосен&#xbb;. Ето каква е неговата структура в двата случая.
+<h4><a name="1680g">Sternmonat</a></h4>
+Ähnlich wie bei Erde Wochen, jede vier Sternwochen sind zusammengefasst in einem Sternmonat.
+So ein Sternmonat entspricht 1 680 Erde Jahren.
+Der Sternmonat kann auch &#xab; Schalt-&#xbb; oder &#xab; nicht schalt-&#xbb; sein.
+Hier ist seine Struktur in beiden Fällen.
 <br/>
 <br/>
 <table>
   <tr>
-  <td style="text-align: center;">ВИСОКОСЕН ЗВЕЗДЕН МЕСЕЦ</td>
-  <td style="text-align: center;">НЕВИСОКОСЕН ЗВЕЗДЕН МЕСЕЦ</td>
+  <td style="text-align: center;">Schaltsternmonat</td>
+  <td style="text-align: center;">Nichtschaltsternmonat</td>
   </tr>
   <td style="text-align: center;">
      <table border="0" style="margin: 10px; border: 10px; border-collapse: collapse;">
           <tr>
             <td class="calendartdrightseparator">&nbsp;
             </td>
-            <td class="calendartable" style="text-align: center; vertical-align: middle;" colspan="7">
-                 Пореден &#x2116; на зв. ден от зв. месец
+            <td class="calendartable" style="text-align: center; vertical-align: middle; height: 3em;" colspan="7">
+                 Sterntag &numero; des Sternmonat.
             </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical god">
-                    год. 
+                    Jahre 
                  </div>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical dni">
-                    дни 
+                    Tage 
                  </div>
              </td>
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Високосна зв. седмица
+                Schaltsternwoche
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 1 
@@ -3002,7 +2998,7 @@
           </tr>
           <tr class="calendartable">
              <td class="calendartable" style="background-color: yellow;">
-                <nobr>Невисокосна зв. седмица</nobr>
+                <nobr>Nichtschaltsternwoche</nobr>
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 8 
@@ -3034,7 +3030,7 @@
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Високосна зв. седмица
+                Schaltsternwoche
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 15 
@@ -3066,7 +3062,7 @@
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Високосна зв. седмица
+                Schaltsternwoche
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                22 
@@ -3098,7 +3094,7 @@
           </tr>
           <tr>
              <td class="calendartdrightseparator" style="text-align: right;" colspan="8">
-                общо: 
+                insgesamt: 
              </td>
              <td class="calendartable" style="padding-left: 12px;">
                 <nobr>1 680</nobr> 
@@ -3114,23 +3110,23 @@
           <tr>
             <td class="calendartdrightseparator">&nbsp;
             </td>
-            <td class="calendartable" style="text-align: center; vertical-align: middle;" colspan="7">
-                 Пореден &#x2116; на зв. ден от зв. месец
+            <td class="calendartable" style="text-align: center; vertical-align: middle; height: 3em;" colspan="7">
+                 Sterntag &numero; des Sternmonat.
             </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical god">
-                    год. 
+                    Jahre 
                  </div>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical dni">
-                    дни 
+                    Tage 
                  </div>
              </td>
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Високосна зв. седмица
+                Schaltsternwoche
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 1 
@@ -3162,7 +3158,7 @@
           </tr>
           <tr class="calendartable">
              <td class="calendartable" style="background-color: yellow;">
-                <nobr>Невисокосна зв. седмица</nobr>
+                <nobr>Nichtschaltsternwoche</nobr>
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 8 
@@ -3194,7 +3190,7 @@
           </tr>
           <tr class="calendartable">
              <td class="calendartable">
-                Високосна зв. седмица
+                Schaltsternwoche
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                 15 
@@ -3226,7 +3222,7 @@
           </tr>
           <tr class="calendartable">
              <td class="calendartable" style="background-color: yellow;">
-                <nobr>Невисокосна зв. седмица</nobr>
+                <nobr>Nichtschaltsternwoche</nobr>
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: right; font-weight: normal">
                22 
@@ -3258,7 +3254,7 @@
           </tr>
           <tr>
              <td class="calendartdrightseparator" style="text-align: right;" colspan="8">
-                общо: 
+                insgesamt: 
              </td>
              <td class="calendartable" style="padding-left: 12px;">
                 <nobr>1 680</nobr> 
@@ -3273,9 +3269,15 @@
 </table>
 <br/>
 <br/>
-<h4><a name="20160g">Звездна година</a></h4>
-Дванайсет звездни месеца образуват една така наречена звездна година. Звездната година се състои от точно <nobr>20 160</nobr> земни години.
-Месец шести от звездната година е винаги невисокосен. Останалите звездни месеци без последния са винаги високосни. Последния звезден месец е по принцип високосен но може да бъде невисокосен ако е нужна допълнителна корекция на календара. Кога се случва това виж в описанието на звездна епоха.
+<h4><a name="20160g">Sternjahr</a></h4>
+Zwölf Sternemponate bilden eine so genannte Sternjahr.
+Ein Sternjahr besteht aus genau <nobr>20 160</nobr> Erdjahren.
+Der sechste Sternmonat des Sternjahres ist immer Nichtschaltsternmonat.
+Die anderen Sternmonate außer den letzten Sternmonaten sind immer Schaltsternmonate.
+
+Der letzte Sternmonat im ist Schaltsternmonat im Allgemeinen aber nicht schalt sein, wenn Sie eine weitere Anpassung an den Kalender benötigen.
+
+Wenn dies geschieht, schauen Sie sich die Beschreibung der Sternepoche.
 
 <br/>
 <br/>
@@ -3283,19 +3285,19 @@
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td colspan="3" style="text-align: center; font-weight: bold;">
-            СТРУКТУРА НА ВИСОКОСНАТА ЗВЕЗДНА ГОДИНА<br/><br/>
+            STRUKTUR DES SCHALT STERN JAHR<br/><br/>
        </td>
    </tr>
    <tr>
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 1.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 1.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3339,12 +3341,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 2.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 2.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3388,12 +3390,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 3.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 3.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3439,12 +3441,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 4.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 4.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3488,12 +3490,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 5.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 5.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3538,16 +3540,16 @@
            <table class="calendartable">
          <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: yellow;" rowspan="6">
-                       <div class="calendarvertical starmonth">Невисокосен</div></td>
+                       <div class="calendarvertical starmonth">Nichat Schalt</div></td>
              <td class="calendartable" 
                               colspan="7" 
                               style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Звезден Месец 6.
+                       Sternmonat 6.
                    </td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3593,12 +3595,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 7.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 7.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3642,12 +3644,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 8.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 8.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3691,12 +3693,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 9.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 9.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3742,12 +3744,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 10.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 10.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3791,12 +3793,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 11.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 11.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3840,12 +3842,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 12.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 12.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3894,19 +3896,19 @@
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td colspan="3" style="text-align: center; font-weight: bold;">
-            СТРУКТУРА НА НЕВИСОКОСНАТА ЗВЕЗДНА ГОДИНА<br/><br/>
+            STRUKTUR DES NICHT SCHALT STERN JAHR<br/><br/>
        </td>
    </tr>
    <tr>
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 1.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 1.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3950,12 +3952,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 2.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 2.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -3999,12 +4001,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 3.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 3.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4050,12 +4052,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 4.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 4.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4099,12 +4101,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 5.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 5.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4149,16 +4151,16 @@
            <table class="calendartable">
          <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: yellow;" rowspan="6">
-                       <div class="calendarvertical starmonth">Невисокосен</div></td>
+                       <div class="calendarvertical starmonth">Nicht Schalt</div></td>
              <td class="calendartable" 
                               colspan="7" 
                               style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Звезден Месец 6.
+                       Sternmonat 6.
                    </td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4204,12 +4206,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 7.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 7.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4253,12 +4255,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 8.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 8.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4302,12 +4304,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 9.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 9.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4353,12 +4355,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 10.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 10.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4402,12 +4404,12 @@
        <td>
            <table class="calendartable">
          <tr>
-             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Високосен</div></td>
-             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Звезден Месец 11.</td>
+             <td class="calendartable" style="vertical-align: bottom;" rowspan="6"><div class="calendarvertical starmonth">Schalt</div></td>
+             <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">Sternmonat 11.</td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -4452,16 +4454,16 @@
            <table class="calendartable">
          <tr>
              <td class="calendartable bottomspace" style="vertical-align: bottom; background-color: yellow;" rowspan="6">
-                       <div class="calendarvertical starmonth">Невисокосен</div></td>
+                       <div class="calendarvertical starmonth">Nicht Schalt</div></td>
              <td class="calendartable" 
                               colspan="7" 
                               style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Звезден Месец 12.
+                       Sternmonat 12.
                    </td>
          </tr>
          <tr>
              <td class="calendartable" colspan="7" style="text-align: center; font-weight: bold; background-color: yellow;">
-                       Пореден &#x2116; на зв. ден
+                       Seriennummer auf Sterntag
                    </td>
          </tr>
          <tr class="calendartable">
@@ -5036,6 +5038,7 @@
 <br/>
 <br/>
 
+<?php include('footer.php');?>
 </body>
 </html>
 

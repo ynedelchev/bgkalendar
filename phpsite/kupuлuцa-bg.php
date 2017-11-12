@@ -87,6 +87,10 @@
    <title>Какво начертание на кирилицата наричаме типично българско</title>
 </head>
 <body class="calendarbody">
+<nav>
+<?php include('navigation.php');?>
+</nav>
+<br/>
 <h3>Какво начертание на кирилицата наричаме типично българско</h3>
 
 Сайтът <a href="http://bgkalendar.com">"Българският Календар"</a> се включва в инициативата за разпространяване на 
@@ -310,5 +314,7 @@
   <li><a href="http://npoekmu.me/">«Проектите»</a></li>
   <li><a href="https://stefanpeev.wordpress.com/">Стефан Пеев</a></li>
 </ul>
+<br/>
+<?php include('footer.php');?>
 </body>
 </html>
