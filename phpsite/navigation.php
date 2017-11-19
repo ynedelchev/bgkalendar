@@ -1,4 +1,9 @@
-<?php require_once('includes.php'); ?>
+<?php 
+  require_once('includes.php'); 
+  if ($DIR_PREFIX == null) {
+    $DIR_PREFIX = '';
+  } 
+?>
 <div class="toptitle"><span class="toptitle"><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></span>
 <style>
    ul.vmenu {
@@ -86,27 +91,33 @@
 </ul>
 <ul class="vmenu" id="sm-intro">
   <li><a class="header"><?php tr('Начало', 'Home', '', '')?></a></li>
-  <li><a href="index.php#cyrcle-bgkalendar"><?php tr('Кръгов календар', 'Cyrcle calendar', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>index.php#cyrcle-bgkalendar"><?php tr('Кръгов календар', 'Cyrcle calendar', '', '')?></a></li>
 </ul>
 <ul class="vmenu" id="sm-info">
   <li><a class="header"><?php tr('Информация', 'Information', '', '')?></a></li>
-  <li><a href="kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('За календара', 'About the calendar', '', '')?></a></li>
-  <li><a href="imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('Източници', 'Sources of information', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('За календара', 'About the calendar', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('Източници', 'Sources of information', '', '')?></a></li>
 </ul>
 <ul class="vmenu" id="sm-other">
   <li><a class="header"><?php tr('Други', 'Other', '', '')?></a></li>
-  <li><a href="kupuлuцa-<?php echo $lang;?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('За българската кирилица', 'About the Bulgarian cyrillic', '', '')?></a></li>
-  <li><a href="papercalendar/2017/index.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('Свали версия за разпечатване 7522/2017', 'Download printable version 7522/2017', '', '')?></a></li>
-  <li><a href="papercalendar/2018"><?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>kupuлuцa-<?php echo $lang;?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('За българската кирилица', 'About the Bulgarian cyrillic', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>papercalendar/2017/index.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('Свали версия за разпечатване 7522/2017', 'Download printable version 7522/2017', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>papercalendar/2018"><?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', '', '')?></a></li>
 </ul>
 <ul class="vmenu" id="sm-contact">
   <li><a class="header"><?php tr('За нас', 'About us', 'Fur wir', 'Для нас')?></a></li>
-  <li><a href="gapu.php?lang=<?php echo $lang;?>"><?php tr('Направи дарение', 'Make a donation', '', '')?></a></li>
+  <li><a href="<?php echo $DIR_PREFIX;?>gapu.php?lang=<?php echo $lang;?>"><?php tr('Направи дарение', 'Make a donation', '', '')?></a></li>
 </ul>
 <span style="clear: both;">
 <script>
+  function isFirefox() {
+    return navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ? true : false;
+  }
+
   var visibleMenu = null;
   var visibleSubMenu = null;
+  var verticalAdjust = isFirefox() ? 14 : 0;
+
   
   function getSubmenuElement(eventObj) {
      if (eventObj == null || eventObj.target == null) {
@@ -119,7 +130,10 @@
      var subMenu = document.getElementById(subMenuId);
      return subMenu;
   } 
-  function openSubmenu() {
+  function openSubmenu(event) {
+     if (event == null) {
+       return;
+     } 
      if (visibleMenu != null && visibleMenu != event.target) {
        visibleMenu.classList.remove("active");
      } 
@@ -138,7 +152,7 @@
        console.log(rect.top, rect.right, rect.bottom, rect.left);
        subMenu.style.position = "absolute";
        subMenu.style.left = (rect.left-8) + "px";
-       subMenu.style.top  = (rect.bottom-8)  + "px";
+       subMenu.style.top  = (rect.bottom - 8 - verticalAdjust)  + "px";
        subMenu.style.display = 'block';
        visibleSubMenu = subMenu;
      } else {
@@ -147,7 +161,7 @@
        visibleMenu = null;
      } 
   } 
-  function checkIfMenuToBeClosed() {
+  function checkIfMenuToBeClosed(event) {
     if (visibleSubMenu == null || visibleMenu == null) {
       return;
     }
