@@ -213,11 +213,13 @@ function parseDate($date, $type) {
  return array($year, $month, $day);  
 }
 
-function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWeek, $startAtDayOfWeekGr, $indexbg, $tbg) {
+function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWeek, $startAtDayOfWeekGr, $indexbg, $tbg, $prefix) {
     global $lang;
     global $WEEKDAYS_SHORT_EN;
     global $WEEKDAYS_SHORT_DE;
     global $WEEKDAYS_SHORT_RU;
+
+    if ($prefix == null) {$prefix = '';}
 
     $WEEKDAYS_SHORT = array(
         tri('1<sup>-и</sup>','1<sup>-t</sup>','1<sup>-te</sup>','1<sup>-ий</sup>'), 
@@ -285,7 +287,7 @@ function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWee
        for ($col = 0; $col < count($WEEKDAYS_SHORT); $col++) {
 
            if (isset($month[$row][$col])) { 
-              $sb.="<td class=\"calendartable". getBckGrnd($indexbg,$tbg,$dayOfWeekGr++)."\" id=\"daybg".$indexbg."\">";
+              $sb.="<td class=\"calendartable". getBckGrnd($indexbg,$tbg,$dayOfWeekGr++)."\" id=\"".$prefix."daybg".$indexbg."\">";
               $sb.=$month[$row][$col];
               $sb.="</td>";
               $dayOfWeekGr%=7;
@@ -298,13 +300,13 @@ function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWee
     }
     if ($behti) {
       $sb.='<tr class="calendartable">';
-      $sb.='<td class="calendartable'.getBckGrnd($indexbg,$tbg,$dayOfWeekGr++).'" id="daybg'.$indexbg.'" colspan="7">'.tri('Ден Бехти', 'Day Behti', 'Tag Behti','День Бехти').'</td>';
+      $sb.='<td class="calendartable'.getBckGrnd($indexbg,$tbg,$dayOfWeekGr++).'" id="'.$prefix.'daybg'.$indexbg.'" colspan="7">'.tri('Ден Бехти', 'Day Behti', 'Tag Behti','День Бехти').'</td>';
       $sb.='</tr>';
       $dayOfWeekGr%=7;
       $indexbg++;
     } else if ($eni) {
       $sb.='<tr class="calendartable">';
-      $sb.='<td class="calendartable'.getBckGrnd($indexbg,$tbg,$dayOfWeekGr++).'" id="daybg'.$indexbg.'" colspan="7">'.tri('Ден Ени', 'Day Eni', 'Tag Eni', 'День Ени').'</td>';
+      $sb.='<td class="calendartable'.getBckGrnd($indexbg,$tbg,$dayOfWeekGr++).'" id="'.$prefix.'daybg'.$indexbg.'" colspan="7">'.tri('Ден Ени', 'Day Eni', 'Tag Eni', 'День Ени').'</td>';
       $sb.='</tr>';
       $dayOfWeekGr%=7;
       $indexbg++;
@@ -313,11 +315,13 @@ function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWee
     echo $sb;
     return $indexbg;
 }
-function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr) {
+function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr, $prefix) {
     global $lang;
     global $WEEKDAYS_SHORT_EN;
     global $WEEKDAYS_SHORT_DE;
     global $WEEKDAYS_SHORT_RU;
+
+    if ($prefix == null) {$prefix = '';}
 
     if ($startAtDayOfWeek <0 ) {
       $startAtDayOfWeek = 0 - $startAtDayOfWeek;
@@ -382,7 +386,7 @@ function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tg
        for ($col = 0; $col < count($WEEKDAYS_SHORT); $col++) {
 
            if (isset($month[$row][$col])) { 
-              $sb.="<td class=\"calendartable". getBckGrnd($indexgr,$tgr,$col)."\" id=\"daygr".$indexgr."\">";
+              $sb.="<td class=\"calendartable". getBckGrnd($indexgr,$tgr,$col)."\" id=\"".$prefix."daygr".$indexgr."\">";
               $sb.=$month[$row][$col];
               $sb.="</td>";
               $indexgr++;

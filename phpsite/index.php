@@ -1,14 +1,4 @@
-<?php
-  if (!isset($_REQUEST['dt']) || $_REQUEST['dt'] != 'true') {
-    require_once('mobile/Mobile_Detect.php'); 
-    $detect = new Mobile_Detect();
-    if ($detect->isMobile()) {
-      header('Location: mobile/', true, 301);
-      die();
-    }
-  }
-  require_once('includes.php');
-?><!DOCTYPE html>
+<?php require_once('includes.php'); ?><!DOCTYPE html>
 <html>
 <head>
    <meta charset="utf-8">
@@ -78,9 +68,9 @@
                 bg.onmousedown = this["onmousedown_" + namebg];
                 bg.onmouseup   = this["onmouseup_" + namebg];
                 bg.onkeypress  = this["onkeypress_" + namebg];
-                bg.setAttribute("tabindex", i + 1);
-                bg.setAttribute("tabIndex", i + 1);
-                bg.tabIndex = i + 1;
+                bg.setAttribute("tabindex", i + 1 + 366);
+                bg.setAttribute("tabIndex", i + 1 + 366);
+                bg.tabIndex = 366 + i + 1;
              }
           }
       // Initialize Gregorian Kalendar....
@@ -116,9 +106,9 @@
                 gr.onmousedown = this["onmousedown_" + namegr];
                 gr.onmouseup   = this["onmouseup_" + namegr];
                 gr.onkeypress  = this["onkeypress_" + namegr];
-                gr.setAttribute("tabindex", i + 1);
-                gr.setAttribute("tabIndex", i + 1);
-                gr.tabIndex = (366 + 31) + i + 1;
+                gr.setAttribute("tabindex", i + 1 + 366 + 366 + 31);
+                gr.setAttribute("tabIndex", i + 1 + 366 + 366 + 31);
+                gr.tabIndex = (366 + 366 + 31) + i + 1;
              }
           }
      }
@@ -129,138 +119,55 @@
 
 <nav>
 <?php include('navigation.php');?>
-
-<div class="lang"> 
-  <?php if ($lang != 'bg') echo '<a href="?lang=bg">'; ?> 
-  <div class="flag-box">
-    <div class="flag-flagbox">
-      <span class="flag bg <?php echo $lang != 'bg' ? 'selectflag' :  'currentflag';?>"/>
-    </div>
-    <div class="flag-title<?php echo $lang == 'bg' ? '-current' : '';?>">bg</div>
-  </div>
-  <?php echo '</a>';?> 
-
-  <?php if ($lang != 'en') echo '<a href="?lang=en">'; ?> 
-  <div class="flag-box">
-    <div class="flag-flagbox">
-      <span class="flag en <?php echo $lang != 'en' ? 'selectflag' :  'currentflag';?>"/>
-    </div>
-    <div class="flag-title<?php echo $lang == 'en' ? '-current' : '';?>">en</div>
-  </div>
-  <?php echo '</a>';?> 
-
-  <?php if ($lang != 'de') echo '<a href="?lang=de">'; ?> 
-  <div class="flag-box">
-    <div class="flag-flagbox">
-      <span class="flag de <?php echo $lang != 'de' ? 'selectflag' :  'currentflag';?>"/>
-    </div>
-    <div class="flag-title<?php echo $lang == 'de' ? '-current' : '';?>">de</div>
-  </div>
-  <?php echo '</a>';?> 
-
-  <?php if ($lang != 'ru') echo '<a href="?lang=ru">'; ?> 
-  <div class="flag-box">
-    <div class="flag-flagbox">
-      <span class="flag ru <?php echo $lang != 'ru' ? 'selectflag' :  'currentflag';?>"/>
-    </div>
-    <div class="flag-title<?php echo $lang == 'ru' ? '-current' : '';?>">ru</div>
-  </div>
-  <?php echo '</a>';?> 
-
-  <div class="flag-box" style="margin-left: 20px;">
-    <div class="flag-flagbox" style="min-height: 24px; ">
-<!-- Twitter Button Start -->
-<a class="twitter-share-button" 
-  href="https://twitter.com/intent/tweet?text=%D0%92%D0%B8%D0%B6+%D0%BA%D0%BE%D1%8F+%D0%B4%D0%B0%D1%82%D0%B0+%D1%81%D0%BC%D0%B5+%D0%B4%D0%BD%D0%B5%D1%81+%D1%81%D0%BF%D0%BE%D1%80%D0%B5%D0%B4+%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%8F%D1%82+%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8+%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B0%D0%BB%D0%B5%D0%BD+%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80+&url=http%3A%2F%2Fbgkalendar.com&hashtagsbgkalendar&">Tweet</a>
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));</script>
-<!-- Twitter Button End -->
-    </div>
-    <div class="flag-title" style="min-height: 25px;"> 
-<!-- Facebook Like Button JavaScript SDK - START -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-<!-- Facebook Like Button JavaScript SDK - END -->
-
-<!-- The actual Facebook like and share button START -->
-    <div class="fb-like" data-href="http://bgkalendar.com/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div> 
-<!-- The actual Facebook like and share button END -->
-    </div>
-  </div>
-</div>
-<!--
-<ul class="topmenu">
-    <li class="topmenucurrent"><span class="topmenu"><?php tr('Главна', 'Home', 'Grundseite', 'Главная страница');?></span></li>
-    <li class="topmenu"><a class="topmenu" href="forum"><span class="topmenu"><?php tr('Дискусии', 'Phorum', 'Forum', 'Форум');?></span></a></li>
-    <li class="topmenu"><a class="topmenu" href="papercalendar"><span class="topmenu"><?php tr('Хартиен Календар', 'Wall Calendar', 'Wandkalender', 'Стенный Календарь');?></span></a></li>
-</ul>
--->
-</nav>
 <!-- Fork Me On Github -->
-<a href="https://github.com/ynedelchev/bgkalendar">
 <img style="position: absolute; top: 0; right: 0; border: 0;" 
-     src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" 
-     alt="Fork me on GitHub" 
-     data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-</a>
+     src="images/fork-me-on-github.png" 
+     alt="Fork me on GitHub" usemap="#github">
+  <map name="github">
+    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/ynedelchev/bgkalendar" alt="bgkalendar">
+  </map>
 <!-- Fork Me On Github End -->
+
+<?php include(__DIR__ . '/langs.php'); ?>
+</nav>
    
 
 <br/>
 <br/>
+<span style="clear: both; float: left;">
 <?php if ($lang == 'bg') : ?>
    Древните българи, живели по нашите земи, създали собствен календар. Българският календар е 
-   възстановен по писмени исторически данни (<a href="imennik.html">Именник на Българските Владетели</a>) и по народни
+   възстановен по писмени исторически данни (<a href="imennik-bg.php">Именник на Българските Владетели</a>) и по народни
    предания и легенди. Безспорен успех за него е официалното признание на ЮНЕСКО, с което той е 
    признат за най-съвършенния в света. За начална точка на летоброенето е приет денят на зимното 
    слънцестоене (21-ви декември) през 5505 година преди Хр.<br/>
-   Тази страница представлява опит за компютърен модел на <a href="kalendar.html">древният български календар</a> 
+   Тази страница представлява опит за компютърен модел на <a href="kalendar-bg.php">древния български календар</a> 
    и сравнението му със съвременния грегориански календар.
-   <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a.html">тук</a>.
+   <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a-bg.php">тук</a>.
 <?php elseif ($lang == 'en') : ?>
    Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
-   reconstrucuted basedon on writen historical artefacts (<a href="imennik.html">Namelist of Bulgarian Rulers</a>), 
+   reconstrucuted basedon on writen historical artefacts (<a href="imennik-en.php">Namelist of Bulgarian Rulers</a>), 
    Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO, that this is 
    the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
    winter solstice (21-st of December) 5505 years before Christ.<br/>
-   This page is an attempt for a computer model of <a href="kalendar-en.html">the ancient Bulgarian calendar</a> and its 
+   This page is an attempt for a computer model of <a href="kalendar-en.php">the ancient Bulgarian calendar</a> and its 
    comparison with the modern Gregorian calendar.
    <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
    For more information, see <a href="kupu%D0%BBu%D1%86a-en.html">here</a>.
 <?php elseif ($lang == 'de') : ?>
    Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
-   uber geschrieben historischen Daten (<a href="imennik.html">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
+   uber geschrieben historischen Daten (<a href="imennik-en.php">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
    Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO, die er als die vollkommenste in der Welt anerkannt.
    Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
-   Diese Seite ist ein Computermodelanlauf von <a href="kalendar-de.html">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
+   Diese Seite ist ein Computermodelanlauf von <a href="kalendar-de.php">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
    Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-de.html">hier</a>.
 <?php elseif ($lang == 'ru') : ?>
    Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.  
    Мы восстановили здесь календарь на основании письменных исторических источников как 
-   (<a href="imennik.html">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.   
+   (<a href="imennik-bg.php">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.   
    Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.  
-   Наш сайт дает представлление о <a href="kalendar.html">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет 
+   Наш сайт дает представлление о <a href="kalendar-ru.php">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет 
    возможность сравнить его с современным Грегорианским календарём.  
    <br/><br/>
    Сайт "Болгарский Календарь", поддерживает инициативу «За Болгарский стиль шрифта Кириллицы». Для дополнительной информации, 
@@ -268,6 +175,9 @@
 <?php endif ?>
 <br/>
 <br/>
+<div class="treemonths">
+  <?php include(__DIR__.'/treemonths.php');?>
+</div>
 
 <div id="bgcalclosed" class="openclosebutton-closed">
    <a class="openclosebutton" onclick="javascript: openclosebutton('bgcalclosed', 'bgcal', 'inline-block');"><div class="openclosebutton">+</div></a>
@@ -422,6 +332,7 @@
    $wday = bcmod($igr, 7);
    $tbg = $daysbgFromStartOfCalendar;
 ?>
+<div class="fullmonths">
 <table border="0" style="margin: 10px; border: 10px;">
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
@@ -1210,6 +1121,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        </td>
    </tr>
 </table>
+</div> <!-- fullmonths -->
 </div>
 
 <!-- ***************************************************************************************************** -->
@@ -1217,7 +1129,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 <div id="grcalclosed" class="openclosebutton-closed">
    <a class="openclosebutton" onclick="javascript: openclosebutton('grcalclosed', 'grcal', 'inline-block');"><div class="openclosebutton">+</div></a>
 </div>
-<div class="calendartype" id="grcal" style="margin-left: 1em;">
+<div class="calendartype" id="grcal">
 <a class="openclosebutton" onclick="javascript: openclosebutton('grcal', 'grcalclosed', 'block');">
 <div class="openclosebutton openclosebutton-position">-</div>
 </a>
@@ -1363,6 +1275,7 @@ $tgr = $daysgrFromStartOfCalendar;
 $wday = bcmod($igr, 7);
 ?>
 
+<div class="fullmonths">
 <table border="0" style="float: left; margin: 10px; border: 10px;">
    <tr>
        <td class="calendartable yearperiod" rowspan="2">
@@ -1456,16 +1369,33 @@ $wday = bcmod($igr, 7);
        </td>
    </tr>
 </table>
+</div> <!-- div fullmonths -->
 </div>
 
 <span style="clear: both; float: left;">
 
 <div class="docs-section" id="cyrcle-bgkalendar">
-  <a name="cyrcle-bgkalendar"/><h6>Кръгов Календар</h6>
-  <p>Кръговият календар е подобен на часовник, само че по циферблата не са нанесени часове и минути, а вместо това са нанесени дните от годината.
+  <a name="cyrcle-bgkalendar"/><h6><?php tr('Кръгов Календар', 'Cyrclr Calendar', 'Cyrcle Kalender', 'Круговой Календарь');?></h6>
+  <p>
+
+     <?php if ($lang == 'bg') : ?>
+     Кръговият календар е подобен на часовник, само че по циферблата не са нанесени часове и минути, а вместо това са нанесени дните от годината.
      От външната страна са изписани датите по Грегорианския календар, а от вътрешната съответстващите им дати от Древния Български Календар.
      Единствената стрелка посочва текущият ден. 
      Този календар може да свалите и под формата на векторна графика оттук: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">виж</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">свали</a>.
+     <?php elseif ($lang == 'en') : ?>
+     The cyrcle calendar is similar to a clock, only it does not have the hours and minutes on its front, but rather the days of the year.
+     On the other side of the cyrcle, there are the dates based on Gregorian calendar. On the inner side - the corresponding dates based on the Old Bulgarian Calendar.
+     This calendar can be downloaded in the form of scalable vector graphics: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">see</a>  <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">download</a>.
+     <?php elseif ($lang == 'de') : ?>
+     Der Cyrcle Kalender ist ähnlich wie eine Uhr, nur hat er nicht die Stunden und Minuten auf der Vorderseite, sondern die Tage des Jahres.
+     Auf der anderen Seite des Cyrcle befinden sich die Daten nach dem Gregorianischen Kalender. Auf der Innenseite - die entsprechenden Daten basieren auf dem altbulgarischen Kalender.
+     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">siehe</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">herunterladen</a>.
+     <?php elseif ($lang == 'ru') : ?>
+     Круговой календарь похож на часы, только у него нет часов и минут на его циферблате, а скорее на дни года.
+     С внешной стороны окружности есть даты, основанные на григорианском календаре. С внутренней стороны - соответствующие даты, основанные на Древном болгарском календаре.
+     Этот календарь можно загрузить в виде масштабируемой векторной графики: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">смотрите</a> <a name = "cyrcle-download" href = "bgkalendar-Цикл статей-download.php">скачать</a>.
+     <?php endif ?>
   </p>
   <div style="display: flex;">
     <?php $setfonts = true; include(__DIR__ . '/cyrcle-bgkalendar.php'); ?> 

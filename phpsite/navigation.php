@@ -53,6 +53,7 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
+      padding-right: 100px;
       overflow: hidden;
       background-color: rgba(230,230,230, 1);
    }
@@ -83,30 +84,75 @@
 
 </style>
 <ul class="menu">
-  <li><a sub-menu="sm-intro"   href="#"><?php tr('Начало', 'Home', 'Home', 'Начало')?></a></li>
-  <li><a sub-menu="sm-info"    href="#"><?php tr('Информация', 'Information', '', '')?></a></li>
-  <li><a sub-menu="sm-forum"   href="forum"><?php tr('Дискусии', 'Forum', '', '')?></a></li>
-  <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', '', '')?></a></li>
-  <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', '', '')?></a></li>
+  <li><a sub-menu="sm-intro"   href="#"><?php tr('Начало', 'Home', 'Grundseite', 'Главная страница');?></a></li>
+  <li><a sub-menu="sm-info"    href="#"><?php tr('Информация', 'Information', 'Auskunft', 'Информация');?></a></li>
+  <li><a sub-menu="sm-forum"   href="forum"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
+  <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое');?></a></li>
+  <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нас');?></a></li>
 </ul>
 <ul class="vmenu" id="sm-intro">
-  <li><a class="header"><?php tr('Начало', 'Home', '', '')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>index.php#cyrcle-bgkalendar"><?php tr('Кръгов календар', 'Cyrcle calendar', '', '')?></a></li>
+  <li>
+      <a class="header"><?php tr('Начало', 'Home', '', '')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>index.php?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Календар', 'Calendar', 'Kalender', 'Календарь')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>index.php?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>#cyrcle-bgkalendar">
+        <?php tr('Кръгов календар', 'Cyrcle calendar', 'Cyrcle Kalender', 'Круговой календарь')?>
+      </a>
+  </li>
 </ul>
 <ul class="vmenu" id="sm-info">
-  <li><a class="header"><?php tr('Информация', 'Information', '', '')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('За календара', 'About the calendar', '', '')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('Източници', 'Sources of information', '', '')?></a></li>
+  <li>
+      <a class="header"><?php tr('Информация', 'Information', 'Auskunft', 'Информация')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('За календара', 'About the calendar', 'Über den Kalender', 'О календаре')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Източници', 'Sources of information', 'Informationsquellen', 'Источники информации')?>
+      </a>
+  </li>
 </ul>
 <ul class="vmenu" id="sm-other">
-  <li><a class="header"><?php tr('Други', 'Other', '', '')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>kupuлuцa-<?php echo $lang;?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('За българската кирилица', 'About the Bulgarian cyrillic', '', '')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>papercalendar/2017/index.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><?php tr('Свали версия за разпечатване 7522/2017', 'Download printable version 7522/2017', '', '')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>papercalendar/2018"><?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', '', '')?></a></li>
+  <li>
+      <a class="header"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>kupuлuцa-<?php echo $lang;?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('За българската кирилица', 'About the Bulgarian cyrillic', 'Über das Bulgarische Kyrillisch', 'О болгарской кириллице')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>papercalendar/2017/index.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Свали версия за разпечатване 7522/2017', 'Download printable version 7522/2017', 'Druckversion herunterladen 7522/2017', 'Скачать версию для печати 7522/2017')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>papercalendar/2018">
+        <?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', 'Druckversion herunterladen 7522/2017', 'Скачать версию для печати 7522/2017')?>
+      </a>
+  </li>
 </ul>
 <ul class="vmenu" id="sm-contact">
-  <li><a class="header"><?php tr('За нас', 'About us', 'Fur wir', 'Для нас')?></a></li>
-  <li><a href="<?php echo $DIR_PREFIX;?>gapu.php?lang=<?php echo $lang;?>"><?php tr('Направи дарение', 'Make a donation', '', '')?></a></li>
+  <li>
+      <a class="header"><?php tr('За нас', 'About us', 'Fur wir', 'Для нас')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>gapu.php?lang=<?php echo $lang;?>">
+        <?php tr('Направи дарение', 'Make a donation', 'Machen Sie eine Spende', 'Сделать пожертвование')?>
+      </a>
+  </li>
 </ul>
 <span style="clear: both;">
 <script>

@@ -205,6 +205,14 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- Facebook SDK END -->
 
+<!-- Fork Me On Github -->
+<img style="position: absolute; top: 0; right: 0; border: 0;"
+     src="../images/fork-me-on-github.png"
+     alt="Fork me on GitHub" usemap="#github">
+  <map name="github">
+    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/ynedelchev/bgkalendar" alt="bgkalendar">
+  </map>
+<!-- Fork Me On Github End -->
 <h1><span class="toptitle"><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></span></h1>
 <nav>
 <div class="toptitle"> 
@@ -253,14 +261,6 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 </div>
 </nav>
 
-<!-- Fork Me On Github -->
-<a href="https://github.com/ynedelchev/bgkalendar">
-<img style="position: absolute; top: 0; right: 0; border: 0;"
-     src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
-     alt="Fork me on GitHub"
-     data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-</a>
-<!-- Fork Me On Github End -->
 
 <a href="../?dt=true"><?php tr('Към Десктоп версия', 'To Desktop Version', 'Desktop Version', 'Настольная версия'); ?></a><br/><br/>
 <!-- Facebook Button Start -->
@@ -724,7 +724,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
  <ul>
      <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
      <li>
-         <a class="footer" href="../kalendar<?php tr('','-en','','');?>.html">
+         <a class="footer" href="../kalendar-<?php tr('bg','en','de','ru');?>.html">
              <span class="footer">
                  <?php 
                  tr('Принципи на Българския Календар', 
@@ -757,7 +757,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
          </a>
      </li>
      <li>
-         <a class="footer" href="../kupu%D0%BBu%D1%86a<?php tr('', '-en', '-de', '-ru');?>.html">
+         <a class="footer" href="../kupu%D0%BBu%D1%86a-<?php tr('bg', 'en', 'de', 'ru');?>.html">
              <span class="forum">
                  <?php 
                  tr('Българска кирилица', 'Bulgarian cyrillic', 'Bulgarisch Kyrillisch', 'Болгарская кириллица');
