@@ -39,15 +39,15 @@ if ($PHORUM['DATA']['CHARSET']) {
     {/IF}
   </head>
   <body background="../backgrnd.png" class="body" onload="{IF FOCUS_TO_ID}var focuselt=document.getElementById('{FOCUS_TO_ID}'); if (focuselt) focuselt.focus();{/IF}">
-<nav>
-<div class="toptitle"><span class="toptitle">Българският Календар</span>
-<ul class="topmenu">
-    <li class="topmenu"><a class="topmenu" href=".."><span class="topmenu">Главна</span></a></li>
-    <li class="topmenucurrent"><span class="topmenu">Дискусии</span></li>
-    <li class="topmenu"><a class="topmenu" href="../papercalendar/"><span class="topmenu">Хартиен Календар</span></a></li>
-</ul>
-</nav>
-
+ 
+    <nav>
+      <?php 
+        $DIR_PREFIX = '../';
+        include(dirname($PHORUM['DATA']['DIR']).'/navigation.php');
+      ?>
+    </nav>
+    <br/>
+   
     <div align="{forumalign}">
       <div class="PDDiv">
       {IF NOT PRINTVIEW}

@@ -40,6 +40,7 @@ $PHORUM = array
 (
     // The DATA member holds the template variables.
     'DATA' => array(
+        'DIR' => __DIR__,
         'GET_VARS'  => array(),
         'POST_VARS' => ''
     ),
