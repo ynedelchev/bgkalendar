@@ -9,7 +9,10 @@
 </head>
 <body class="body">
 <nav>
-<?php include(dirname(dirname(__DIR_)).'/../../navigation.php');?>
+<?php  
+    $DIR_PREFIX = '../../';
+    include(dirname(dirname(__DIR_)).'/../../navigation.php');
+?>
 </nav>
 <br/>
 
