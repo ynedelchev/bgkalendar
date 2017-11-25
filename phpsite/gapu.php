@@ -117,10 +117,7 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
    </script>
 </head>
 <body class="calendarbody" onload="javascript:qrcodegenerate();">
-<nav>
 <?php include('navigation.php');?>
-</nav>
-<br/>
 <h2><?php tr('Дарения', 'Donation', 'Spenden', 'Пожертвования');?></h2>
 
 <h3><?php tr('Направете дарение', 'Make a donation', 'Etwas spenden', 'Сделайте пожертвование');?></h3>
@@ -152,7 +149,7 @@ Bitte machen Sie eine Spende über Ihre bitcoin Geldbörse an folgende Adresse:
 ?>
 </span></font></b></code>
 <br/><br/>
-<div id="qrcode"></div>
+<div id="qrcode" style="width: 256px; height: 256px;"></div>
 <br/><br/>
 <?php if ($lang == 'bg') : ?>
 Текушият обменен курс към дата <b><?php echo $date;?></b> на биткойна според <a href="https://currencylayer.com">https://currencylayer.com</a> e

@@ -9,6 +9,7 @@ if ($PHORUM['DATA']['CHARSET']) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
 <html lang="<?php echo $PHORUM['locale']; ?>">
   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     {IF PRINTVIEW}
       <meta name="robots" content="NOINDEX,NOFOLLOW">
       <link rel="stylesheet" type="text/css" href="{URL->CSS_PRINT}" media="screen,print" />

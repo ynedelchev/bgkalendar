@@ -172,27 +172,15 @@ $prefix = 'mobile';
    </script>
 
 <a name="changeddate"/>
-<table border="0">
-  <tr>
-    <td valign="top">
-     <div class="calendartypetitle">
-         <?php tr('Древен Български<br/> Календар', 'Ancient Bulgarian Calendar', 'Der uralt Bulgarish Kalender', 'Древний Болгарский Календарь'); ?>
-      </div>
-    </td>
-    <td valign="top">
-      <div class="calendartypetitle">
-          <?php tr('Съвременен Грегориански<br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?>
-      </div>
-    </td>
-  </tr>
-  <tr>
-  <tr>
-    <td>
-      <nobr><?php tr('Ден',   'Day',   'Tag',   'День');   echo ": "; echo $daybgformatted;?>,</nobr> 
-      <nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');  echo ": "; echo $periodsbg[1]->getStructure()->getName($lang);?>,</nobr> 
-      <nobr><?php tr('Година','Year',  'Jahr',  'Год');    echo ": "; echo $yearbgformatted;?></nobr>
-         &nbsp; &nbsp;
-      <nobr>
+
+<div style="float: left; margin-right: 2em; max-width: 46%;">
+   <span class="calendartypetitle"><?php tr('Древен Български<br/> Календар', 'Ancient Bulgarian Calendar', 'Der uralt Bulgarish Kalender', 'Древний Болгарский Календарь'); ?></span>
+   <br/>
+   <nobr><?php tr('Ден',   'Day',   'Tag',   'День');   echo ": "; echo $daybgformatted;?>,</nobr><br/>
+   <nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');  echo ": "; echo $periodsbg[1]->getStructure()->getName($lang);?>,</nobr><br/>
+   <nobr><?php tr('Година','Year',  'Jahr',  'Год');    echo ": "; echo $yearbgformatted;?></nobr><br/>
+   <br/>
+   <nobr>
         <form method="GET" style="display: inline;">
         <input type="hidden" name="anchor" value="chgd"/>
         <input type="text" name="cb" value="<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>" size="10" style="text-align: right; font-weight: bold; "/>
@@ -206,15 +194,26 @@ $prefix = 'mobile';
          ]
         <?php } ?>
         -->
-      </nobr>
-      &nbsp; &nbsp;
-    </td>
-    <td>
-      <nobr><?php tr('Ден', 'Day', 'Tag', 'День');?>: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr>
-      <nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>: <?php echo $periodsgr[1]->getStructure()->getName($lang);?>,</nobr> 
-      <nobr><?php tr('Година', 'Year', 'Jahr', 'Год');?>: <?php echo formatMinimumDigits($yeargr, 4);?></nobr>
-        &nbsp; &nbsp;
-      <nobr>
+   </nobr>
+   &nbsp; &nbsp;
+   <br/>
+   <br/>
+   <?php $ibg = drawMonthBg($prevBgMonthYear, $prevBgMonthIndex, $prevBgMonthName, $prevBgMonthDays, $prevBgMonthWeekStart, $prevBgMonthWeekStartGr, $ibg, null, $prefix)?>
+   <br/>
+   <?php $ibg = drawMonthBg($currBgMonthYear, $currBgMonthIndex, $currBgMonthName, $currBgMonthDays, $currBgMonthWeekStart, $currBgMonthWeekStartGr, $ibg, $tbg, $prefix)?>
+   <br/>
+   <?php $ibg = drawMonthBg($nextBgMonthYear, $nextBgMonthIndex, $nextBgMonthName, $nextBgMonthDays, $nextBgMonthWeekStart, $nextBgMonthWeekStartGr, $ibg, null, $prefix)?>
+   <br/>
+</div>
+
+<div style="float: left; max-width: 46%;">
+   <span class="calendartypetitle"><?php tr('<nobr>Съвременен Грегориански</nobr><br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?></span>
+   <br/>
+   <nobr><?php tr('Ден', 'Day', 'Tag', 'День');?>: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr><br/>
+   <nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>: <?php echo $periodsgr[1]->getStructure()->getName($lang);?>,</nobr><br/>
+   <nobr><?php tr('Година', 'Year', 'Jahr', 'Год');?>: <?php echo formatMinimumDigits($yeargr, 4);?></nobr><br/>
+   <br/>
+   <nobr>
         <form method="GET" style="display: inline;">
         <input type="hidden" name="anchor" value="chgd"/>
           <input type="text" name="cg" value="<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargr;?>" size="10" style="text-align: right; font-weight: bold;"/>
@@ -228,44 +227,15 @@ $prefix = 'mobile';
         ]
         <?php } ?>
         -->
-      </nobr>
-      &nbsp; &nbsp;
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <div class="month">
-        <?php $ibg = drawMonthBg($prevBgMonthYear, $prevBgMonthIndex, $prevBgMonthName, $prevBgMonthDays, $prevBgMonthWeekStart, $prevBgMonthWeekStartGr, $ibg, null, $prefix)?>
-      </div>
-    </td>
-    <td valign="top">
-      <div class="month">
-        <?php $igr = drawMonth($prevGrMonthYear, $prevGrMonthName, $prevGrMonthDays, $prevGrMonthWeekStart, $igr, null, $prefix)?>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <div class="month">
-        <?php $ibg = drawMonthBg($currBgMonthYear, $currBgMonthIndex, $currBgMonthName, $currBgMonthDays, $currBgMonthWeekStart, $currBgMonthWeekStartGr, $ibg, $tbg, $prefix)?>
-      </div>
-    </td>
-    <td valign="top">
-      <div class="month">
-        <?php $igr = drawMonth($currGrMonthYear, $currGrMonthName, $currGrMonthDays, $currGrMonthWeekStart, $igr, $tgr, $prefix)?>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <div class="month">
-        <?php $ibg = drawMonthBg($nextBgMonthYear, $nextBgMonthIndex, $nextBgMonthName, $nextBgMonthDays, $nextBgMonthWeekStart, $nextBgMonthWeekStartGr, $ibg, null, $prefix)?>
-      </div>
-    </td>
-    <td valign="top">
-      <div class="month">
-        <?php $igr = drawMonth($nextGrMonthYear, $nextGrMonthName, $nextGrMonthDays, $nextGrMonthWeekStart, $igr, null, $prefix)?>
-      </div>
-    </td>
-  </tr>
-</table>
+   </nobr>
+   &nbsp; &nbsp;
+   <br/>
+   <br/>
+   <?php $igr = drawMonth($prevGrMonthYear, $prevGrMonthName, $prevGrMonthDays, $prevGrMonthWeekStart, $igr, null, $prefix)?>
+   <br/>
+   <?php $igr = drawMonth($currGrMonthYear, $currGrMonthName, $currGrMonthDays, $currGrMonthWeekStart, $igr, $tgr, $prefix)?>
+   <br/>
+   <?php $igr = drawMonth($nextGrMonthYear, $nextGrMonthName, $nextGrMonthDays, $nextGrMonthWeekStart, $igr, null, $prefix)?>
+   <br/>
+</div>
+<div style="clear: both;">&nbsp;</div>

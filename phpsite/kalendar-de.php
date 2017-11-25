@@ -18,10 +18,7 @@
    </style>
 </head>
 <body class="calendarbody">
-<nav>
 <?php include('navigation.php');?>
-</nav>
-<br/>
 <p>
 Die Bulgarischen Kalender ist der Kalender der alten Bulgaren restauriert geschriebenen historischen Daten
 (<a href="imennik.html">Namensliste der bulgarischen Khane</a>) 

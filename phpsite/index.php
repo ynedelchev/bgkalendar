@@ -116,21 +116,7 @@
 </head>
 <body class="body" onload="javascript:initialize();">
 
-
-<nav>
-<?php include('navigation.php');?>
-<!-- Fork Me On Github -->
-<img style="position: absolute; top: 0; right: 0; border: 0;" 
-     src="images/fork-me-on-github.png" 
-     alt="Fork me on GitHub" usemap="#github">
-  <map name="github">
-    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/ynedelchev/bgkalendar" alt="bgkalendar">
-  </map>
-<!-- Fork Me On Github End -->
-
-<?php include(__DIR__ . '/langs.php'); ?>
-</nav>
-   
+<?php include('navigation-main.php');?>
 
 <br/>
 <br/>
@@ -1397,7 +1383,7 @@ $wday = bcmod($igr, 7);
      Этот календарь можно загрузить в виде масштабируемой векторной графики: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">смотрите</a> <a name = "cyrcle-download" href = "bgkalendar-Цикл статей-download.php">скачать</a>.
      <?php endif ?>
   </p>
-  <div style="display: flex;">
+  <div style="width: 200px;">
     <?php $setfonts = true; include(__DIR__ . '/cyrcle-bgkalendar.php'); ?> 
   </div>
 </div>

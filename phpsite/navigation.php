@@ -1,254 +1,65 @@
-<?php 
-  require_once('includes.php'); 
-  if ($DIR_PREFIX == null) {
-    $DIR_PREFIX = '';
+<nav id="nav">
+<?php include('menu.php');?>
+</nav>
+<div id="navspace" style="height: 10px; display: block;">&nbsp;</div> 
+
+<script lang="javascript" charset="UTF-8" type="text/javascript">
+/**
+ * For some reason the top navigation menu stays on top of othe components and it when 
+ * the windows has small width (such as when viewed on a mobile device) or whne it gets
+ * resized, then the top navigation menu rerenders and goes over part of the text in the 
+ * page. 
+ * So in this navigation inclusion, we add one additional component div in front of the 
+ * text and we keep its height (with javascript - aghh nasty) the same as the height of 
+ * the top navigation menu. So this div component pushes the actual text down not 
+ * allowing it to be covered by the top navigation menu.
+ * TODO: find out why this happens and resove it with pure CSS.
+ *
+ * This function is to be called when the page is rendered or the window is resized, 
+ * so that the size of the spacer div is kept same as the size of the top nav. menu. 
+ */
+function rearrangeSizeOnSpacerWhenLoadedOrWindowResized() {
+  var navtoptitleObj = document.getElementById("navtoptitle");
+  var toptitleObj    = document.getElementById("toptitle");
+  var navmenuObj     = document.getElementById("navmenu");
+  var navspace       = document.getElementById("navspace");
+
+  if (navtoptitleObj != null && toptitleObj != null && navmenuObj != null && navspace != null) {
+    var navtoptitle = navtoptitleObj.clientHeight;
+    var toptitle    = toptitleObj.getBoundingClientRect().height;
+    var navmenu     = navmenuObj.clientHeight;
+//    var offsetHeight = navmenus.offsetHeight;
+//    var scrollHeight = navmenus.scrollHeight;
+//    var height = clientHeight > offsetHeight ? clientHeight  : offsetHeight;
+//    height = height > scrollHeight ? height : scrollHeight;
+    var height = toptitle + navmenu - navtoptitle + 5; // 5 added just to look a bit nicer :)
+    navspace.style.height = (height) + "px";
   } 
-?>
-<div class="toptitle"><span class="toptitle"><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></span>
-<style>
-   ul.vmenu {
-      display: none;
-      position: absolute;
-      z-index: 1000;         // Put it on top of everything
-      list-style-type: none; // Remove the bullets in front of a list item.
-      margin-top: 0px;
-      -webkit-margin-before: 0px;
-      -webkit-margin-after: 0px;
-      padding: 0;
-      background-color: #f1f1f1;
-      border: 1px solid blue;
-      border-bottom-left-radius: 1em;
-      border-bottom-right-radius: 1em;
-      overflow: auto;
-   }
-   
-   
-   ul.vmenu a {
-      display: block;
-      text-decoration: none;   // Remove underlining of links
-      background-color: rgba(230,230,230, 1);
-      color: black;
-      padding: 7px 3em;       // vertical horizontal
-   }
-   ul.vmenu li:last-child a:hover {
-     border-bottom-left-radius: 1em;
-     border-bottom-right-radius: 1em;
-   }
-   ul.vmenu a:hover {
-      color: rgba(230,230,230, 1);
-      background-color: blue;
-      font-weight: bold;
-   }
-   ul.vmenu li a.header {
-      pointer-events: none;
-      cursor: default;
-      color: rgba(230,230,230, 1);
-      background-color: darkblue;
-      font-weight: bold;
-   }
+}
+/**
+ * Trigger rearrangeSizeOnSpacerWhenLoadedOrWindowResized() the first time when the 
+ * page gets completely loaded. 
+ */
+document.addEventListener('DOMContentLoaded', rearrangeSizeOnSpacerWhenLoadedOrWindowResized);
+/**
+ * This is a global variable to store the id of the new timeout.
+ * Essentially you queue up the resize handling code, and then
+ * if the window resize occurs again, you cancel it, and re-queue it.
+ * This keeps happening until the resize is complete, at which point,
+ * your rearrangeSizeOnSpacerWhenLoadedOrWindowResized() function 
+ * is actually executed.
+ */
+var resizeTimeoutIdNavigationMenu = null;
 
-   /* ================================================================================= */
- 
-   ul.menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      padding-right: 100px;
-      overflow: hidden;
-      background-color: rgba(230,230,230, 1);
-   }
+/**
+ * Trigger rearrangeSizeOnSpacerWhenLoadedOrWindowResized every time when the window gets
+ * resized, which might effect in the top navigation menu going into several rows instead 
+ * of just one and thus covering some of the actual text content in the page.
+ */
+window.addEventListener('resize', function(event){
+  window.clearTimeout(resizeTimeoutIdNavigationMenu);
+  resizeTimeoutIdNavigationMenu = window.setTimeout('rearrangeSizeOnSpacerWhenLoadedOrWindowResized();', 70);
+});
 
-   ul.menu li {
-     float: left;
-   }
-
-   ul.menu li a {
-     display: block;
-     color: black;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-   }
-
-   ul.menu li a:hover {
-     color: rgba(230, 230, 230, 1);
-     background-color: blue;
-     font-weight: bold;
-   }   
-
-   ul.menu li a.active {
-     color: rgba(230, 230, 230, 1);
-     background-color: darkblue;
-     font-weight: bold;
-   }
-
-</style>
-<ul class="menu">
-  <li><a sub-menu="sm-intro"   href="#"><?php tr('Начало', 'Home', 'Grundseite', 'Главная страница');?></a></li>
-  <li><a sub-menu="sm-info"    href="#"><?php tr('Информация', 'Information', 'Auskunft', 'Информация');?></a></li>
-  <li><a sub-menu="sm-forum"   href="forum"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
-  <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое');?></a></li>
-  <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нас');?></a></li>
-</ul>
-<ul class="vmenu" id="sm-intro">
-  <li>
-      <a class="header"><?php tr('Начало', 'Home', '', '')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>index.php?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('Календар', 'Calendar', 'Kalender', 'Календарь')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>index.php?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>#cyrcle-bgkalendar">
-        <?php tr('Кръгов календар', 'Cyrcle calendar', 'Cyrcle Kalender', 'Круговой календарь')?>
-      </a>
-  </li>
-</ul>
-<ul class="vmenu" id="sm-info">
-  <li>
-      <a class="header"><?php tr('Информация', 'Information', 'Auskunft', 'Информация')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('За календара', 'About the calendar', 'Über den Kalender', 'О календаре')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('Източници', 'Sources of information', 'Informationsquellen', 'Источники информации')?>
-      </a>
-  </li>
-</ul>
-<ul class="vmenu" id="sm-other">
-  <li>
-      <a class="header"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>kupuлuцa-<?php echo $lang;?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('За българската кирилица', 'About the Bulgarian cyrillic', 'Über das Bulgarische Kyrillisch', 'О болгарской кириллице')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>papercalendar/2017/index.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('Свали версия за разпечатване 7522/2017', 'Download printable version 7522/2017', 'Druckversion herunterladen 7522/2017', 'Скачать версию для печати 7522/2017')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>papercalendar/2018">
-        <?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', 'Druckversion herunterladen 7522/2017', 'Скачать версию для печати 7522/2017')?>
-      </a>
-  </li>
-</ul>
-<ul class="vmenu" id="sm-contact">
-  <li>
-      <a class="header"><?php tr('За нас', 'About us', 'Fur wir', 'Для нас')?>
-      </a>
-  </li>
-  <li>
-      <a href="<?php echo $DIR_PREFIX;?>gapu.php?lang=<?php echo $lang;?>">
-        <?php tr('Направи дарение', 'Make a donation', 'Machen Sie eine Spende', 'Сделать пожертвование')?>
-      </a>
-  </li>
-</ul>
-<span style="clear: both;">
-<script>
-  function isFirefox() {
-    return navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ? true : false;
-  }
-
-  var visibleMenu = null;
-  var visibleSubMenu = null;
-  var verticalAdjust = isFirefox() ? 14 : 0;
-
-  
-  function getSubmenuElement(eventObj) {
-     if (eventObj == null || eventObj.target == null) {
-       return null;
-     } 
-     var subMenuId = eventObj.target.getAttribute("sub-menu");
-     if (subMenuId == null) {
-       return null;
-     } 
-     var subMenu = document.getElementById(subMenuId);
-     return subMenu;
-  } 
-  function openSubmenu(event) {
-     if (event == null) {
-       return;
-     } 
-     if (visibleMenu != null && visibleMenu != event.target) {
-       visibleMenu.classList.remove("active");
-     } 
-     visibleMenu = event.target;
-     visibleMenu.classList.add("active");
-     var subMenu = getSubmenuElement(event);
-     if (subMenu == null) {
-       return;
-     } 
-     event.preventDefault();
-     if (visibleSubMenu != null) {
-       visibleSubMenu.style.display = 'none';
-     } 
-     if (visibleSubMenu != subMenu) {
-       var rect = event.target.getBoundingClientRect();
-       console.log(rect.top, rect.right, rect.bottom, rect.left);
-       subMenu.style.position = "absolute";
-       subMenu.style.left = (rect.left-8) + "px";
-       subMenu.style.top  = (rect.bottom - 8 - verticalAdjust)  + "px";
-       subMenu.style.display = 'block';
-       visibleSubMenu = subMenu;
-     } else {
-       visibleMenu.classList.remove("active");
-       visibleSubMenu = null;
-       visibleMenu = null;
-     } 
-  } 
-  function checkIfMenuToBeClosed(event) {
-    if (visibleSubMenu == null || visibleMenu == null) {
-      return;
-    }
-    var  outsideMenu = false;
-    var  outsideSubMenu = false;
-    var rect = visibleSubMenu.getBoundingClientRect();
-    var x = event.pageX;
-    var y = event.pageY;
-    console.log(x, y);
-    if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
-      outsideSubMenu = true;
-    } 
-    var rect = visibleMenu.getBoundingClientRect();
-    if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
-      outsideMenu = true;
-    } 
-    if (outsideMenu && outsideSubMenu) {
-      visibleMenu.classList.remove("active");
-      visibleSubMenu.style.display = 'none';
-      visibleSubMenu = null;
-      visibleMenu = null;
-    } 
-  }
-  function assignMenuAction(elements) {
-     if (elements == null && elements.lenght <= 0) {
-       return;
-     } 
-     for (var index in elements) {
-       if (elements[index]["getAttribute"] == null) {
-         continue;
-       } 
-       var subMenu = elements[index].getAttribute('sub-menu');  
-       if (subMenu == null) {
-          assignMenuAction(elements[index].childNodes);
-       } else {
-         elements[index].addEventListener("click", openSubmenu);
-       } 
-     }
-  }
-  var menues = document.getElementsByClassName("menu");
-  assignMenuAction(menues);
-  document.addEventListener("click", checkIfMenuToBeClosed);
-  
 </script>
+

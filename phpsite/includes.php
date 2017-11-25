@@ -228,7 +228,7 @@ function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWee
         tri('4<sup>-и</sup>','4<sup>-th</sup>','4<sup>-te</sup>','4<sup>-ий</sup>'), 
         tri('5<sup>-и</sup>','5<sup>-th</sup>','5<sup>-te</sup>','5<sup>-ий</sup>'), 
         tri('6<sup>-и</sup>','6<sup>-th</sup>','6<sup>-te</sup>','6<sup>-ой</sup>'), 
-        tri('7<sup>-ми</sup>','7<sup>-th</sup>','7<sup>-te</sup>','7<sup>-ой</sup>'), 
+        tri('7<sup>-и</sup>','7<sup>-th</sup>','7<sup>-te</sup>','7<sup>-ой</sup>'), 
     );
     $behti = false;
     $eni   = false;

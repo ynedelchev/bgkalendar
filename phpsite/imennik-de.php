@@ -26,10 +26,7 @@
    </style>
 </head>
 <body class="calendarbody">
-<nav>
 <?php include('navigation.php');?>
-</nav>
-<br/>
 <h3>Namelist of Bulgarian Rullers</h3>
 The Namelist of Bulgarian Rulers is a brief excerpt describing 
 the names and years of the reign of the Bulgarian rulers. 

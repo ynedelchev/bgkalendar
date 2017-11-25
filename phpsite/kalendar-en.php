@@ -18,10 +18,7 @@
    </style>
 </head>
 <body class="calendarbody">
-<nav>
 <?php include('navigation.php');?>
-</nav>
-<br/>
 <p>
 The Bulgarian calendar is the calendar of the ancient Bulgarians 
 restored from written historical data 

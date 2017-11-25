@@ -18,10 +18,7 @@
    </style>
 </head>
 <body class="calendarbody">
-<nav>
 <?php include('navigation.php');?>
-</nav>
-<br/>
 <p>
 Българският календар е календарът на древните българи 
 възстановен по писмени исторически данни 

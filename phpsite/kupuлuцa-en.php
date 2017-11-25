@@ -83,10 +83,7 @@
    <title>What typeface of Cyrillic do we call a typical Bulgarian</title>
 </head>
 <body class="calendarbody">
-<nav>
 <?php include('navigation.php');?>
-</nav>
-<br/>
 <h3>What typeface of Cyrillic do we call a typical Bulgarian</h3>
 
 The site <a href="http://bgkalendar.com">The Bulgarian Calendar</a> participates in the initiative to make the typical Bulgarian typeface of Cyrillic fonts more popular.<br/><br/> 

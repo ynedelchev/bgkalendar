@@ -38,7 +38,7 @@
   <?php echo '</a>';?>
 
 <!-- Social Media --> 
-  <div class="flag-box">
+  <div class="flag-box" style="margin-right: 20px; min-width: 80px;">
     <div class="flag-flagbox" style="min-height: 24px; ">
       <?php include(__DIR__ . '/githubrate.html');?>
     </div>
@@ -46,7 +46,7 @@
       &nbsp;
     </div>
   </div>
-  <div class="flag-box" style="margin-left: 20px; margin-right: 120px;">
+  <div class="flag-box" style="margin-right: 120px; min-width: 450px;">
     <div class="flag-flagbox" style="min-height: 24px; ">
 <!-- Twitter Button Start -->
       <?php include(__DIR__ . '/twitter.html');?> 
