@@ -89,7 +89,7 @@
 <ul id="navmenu" class="menu">
   <li><a sub-menu="sm-intro"   href="#"><?php tr('Начало', 'Home', 'Grundseite', 'Главная страница');?></a></li>
   <li><a sub-menu="sm-info"    href="#"><?php tr('Информация', 'Information', 'Auskunft', 'Информация');?></a></li>
-  <li><a sub-menu="sm-forum"   href="forum"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
+  <li><a sub-menu="sm-forum"   href="forum?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
   <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое');?></a></li>
   <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нас');?></a></li>
 </ul>
@@ -131,7 +131,7 @@
       </a>
   </li>
   <li>
-      <a href="<?php echo $DIR_PREFIX;?>kupuлuцa-<?php echo $lang;?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+      <a href="<?php echo $DIR_PREFIX;?>kupuлuцa-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
         <?php tr('За българската кирилица', 'About the Bulgarian cyrillic', 'Über das Bulgarische Kyrillisch', 'О болгарской кириллице')?>
       </a>
   </li>
@@ -152,7 +152,7 @@
       </a>
   </li>
   <li>
-      <a href="<?php echo $DIR_PREFIX;?>gapu.php?lang=<?php echo $lang;?>">
+      <a href="<?php echo $DIR_PREFIX;?>gapu.php?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>">
         <?php tr('Направи дарение', 'Make a donation', 'Machen Sie eine Spende', 'Сделать пожертвование')?>
       </a>
   </li>

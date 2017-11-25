@@ -44,6 +44,7 @@ if ($PHORUM['DATA']['CHARSET']) {
     <nav>
       <?php 
         $DIR_PREFIX = '../';
+        $LANGUAGE = $PHORUM['DATA']['lang'];
         include(dirname($PHORUM['DATA']['DIR']).'/navigation.php');
       ?>
     </nav>
