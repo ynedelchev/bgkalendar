@@ -121,7 +121,12 @@
   </li>
   <li>
       <a href="<?php echo $DIR_PREFIX;?>imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('Източници', 'Sources of information', 'Informationsquellen', 'Источники информации')?>
+        <?php tr('източници', 'sources of information', 'informationsquellen', 'источники информации')?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>BPb3Ku.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Външни препратки', 'External links', 'Externe Links', 'Внешние ссылки')?>
       </a>
   </li>
 </ul>
