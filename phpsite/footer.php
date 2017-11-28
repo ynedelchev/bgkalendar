@@ -2,9 +2,9 @@
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Карта на сайта', 'Site Map', 'Seitenübersicht', 'Карта сайта');?></span>
  <ul>
-     <li><a class="footer" href="."><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
+     <li><a class="footer" href=".?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
      <li>
-         <a class="footer" href="kalendar<?php tr('', '-en', '-de', '');?>.php">
+         <a class="footer" href="kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php">
              <span class="footer">
                  <?php 
                  tr('Принципи на Българския Календар', 
