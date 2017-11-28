@@ -6,11 +6,11 @@ if ($lang == 'en') {
   $monthsgrnames = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
   $monthsbgnames = array("Month One", "Month Two", "Month Tree", "Month Four", "Month Five", "MOnth Six", "Month Seven", "Month Eight", "Month Nine", "Month Ten", "Month Eleven", "Month Twelve");
 } else if ($lang == 'de') {
-  $monthsgrnames = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-  $monthsbgnames = array("Month One", "Month Two", "Month Tree", "Month Four", "Month Five", "MOnth Six", "Month Seven", "Month Eight", "Month Nine", "Month Ten", "Month Eleven", "Month Twelve");
+  $monthsgrnames = array("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "October", "November", "Dezember");
+  $monthsbgnames = array("Ersten Monat", "Zweiten Monat", "Dritten Monat", "Vierten Monat", "Fünften Monat", "Sechsten Monat", "Siebten Monat", "Achten Monat", "Neunten Monat", "Zehnten Monat", "Elften Monat", "Zwölften Monat");
 } else if ($lang == 'ru') {
-  $monthsgrnames = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-  $monthsbgnames = array("Month One", "Month Two", "Month Tree", "Month Four", "Month Five", "MOnth Six", "Month Seven", "Month Eight", "Month Nine", "Month Ten", "Month Eleven", "Month Twelve");
+  $monthsgrnames = array("Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь");
+  $monthsbgnames = array("Первый Месяц", "Второй Месяц", "Третий Месяц", "Четвёртый Месяц", "Пятый Месяц", "Шестой Месяц", "Седьмой Месяц", "Восьмой Месяц", "Девятый Месяц", "Десятый Месяц", "Одиннадцатый Месяц", "Двенадцатый Месяц");
 } 
 
 $grbgdiff = 1 +

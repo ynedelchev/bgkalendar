@@ -121,7 +121,7 @@
   </li>
   <li>
       <a href="<?php echo $DIR_PREFIX;?>imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-        <?php tr('източници', 'sources of information', 'informationsquellen', 'источники информации')?>
+        <?php tr('Източници', 'Sources of information', 'Informationsquellen', 'Источники информации')?>
       </a>
   </li>
   <li>

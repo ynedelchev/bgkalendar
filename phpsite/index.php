@@ -1376,7 +1376,7 @@ $wday = bcmod($igr, 7);
      <?php elseif ($lang == 'de') : ?>
      Der Cyrcle Kalender ist ähnlich wie eine Uhr, nur hat er nicht die Stunden und Minuten auf der Vorderseite, sondern die Tage des Jahres.
      Auf der anderen Seite des Cyrcle befinden sich die Daten nach dem Gregorianischen Kalender. Auf der Innenseite - die entsprechenden Daten basieren auf dem altbulgarischen Kalender.
-     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">siehe</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">herunterladen</a>.
+     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=<?php tr('bg','en','de','ru');?>">siehe</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=<?php tr('bg','en','de','ru');?>">herunterladen</a>.
      <?php elseif ($lang == 'ru') : ?>
      Круговой календарь похож на часы, только у него нет часов и минут на его циферблате, а скорее на дни года.
      С внешной стороны окружности есть даты, основанные на григорианском календаре. С внутренней стороны - соответствующие даты, основанные на Древном болгарском календаре.
