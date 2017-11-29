@@ -19,8 +19,8 @@
     + [Four hundred and twenty year period (STAR WEEK)](#four-hundred-and-twenty-year-period-star-week)
     + [Star month](#star-month)
     + [Star year](#star-year)
-- [Period of 4 star years](#period-of-4-star-years)
-- [Star Epoch](#star-epoch)
+    + [Period of 4 star years](#period-of-4-star-years)
+    + [Star Epoch](#star-epoch)
 - [License](#license)
 
 <!-- tocstop -->
@@ -590,6 +590,7 @@ To understand when such correction happens, see the description of star age.
         22 23 24  25 26 27 28   22 23 24  25 26 27 28   22 23 24  25 26 27 28
                                                                              
 ````
+
 Each star year consists of 48 weeks star. That equals exactly 336 star days (every star day consisting of 60 Earth years). Thus, each star year consists of 20 160 Earth years. Within a leap star year there are always exactly 7 363 283 (seven million, three hundred and sixty-three thousand, two hundred eighty-three) Earth days. Within a non leap star year there are always exactly 7 363 282 earth days. 
 
 ### Period of 4 star years
