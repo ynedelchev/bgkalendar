@@ -19,6 +19,8 @@
     + [Four hundred and twenty year period (STAR WEEK)](#four-hundred-and-twenty-year-period-star-week)
     + [Star month](#star-month)
     + [Star year](#star-year)
+- [Period of 4 star years](#period-of-4-star-years)
+- [Star Epoch](#star-epoch)
 - [License](#license)
 
 <!-- tocstop -->
