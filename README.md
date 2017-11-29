@@ -470,16 +470,29 @@ So one star month equals 1 680 Earth years. Star month could also be a "leap" or
 Here is its structure in both cases.
 
 ````
-                                 LEAP STAR MONTH                                                       NON LEAP STAR MONTH
+                                 LEAP STAR MONTH                    
 
-                     Sequential number of star day  Years       Days                           Sequential number of star day  Years       Days
-                     -----------------------------                                             -----------------------------
-     Leap star week    1   2   3   4   5   6   7      420    153 402           Leap star week    1   2   3   4   5   6   7      420    153 402
- Non-Leap star week    8   9  10  11  12  13  14      420    153 401       Non-Leap star week    8   9  10  11  12  13  14      420    153 401
-     Leap star week   15  16  17  18  19  20  21      420    153 402           Leap star week   15  16  17  18  19  20  21      420    153 402
-     Leap star week   22  23  24  25  26  27  28      420    153 402       Non-Leap star week   22  23  24  25  26  27  28      420    153 401
+                     Sequential number of star day  Years       Days  
+                     -----------------------------                    
+     Leap star week    1   2   3   4   5   6   7      420    153 402  
+ Non-Leap star week    8   9  10  11  12  13  14      420    153 401  
+     Leap star week   15  16  17  18  19  20  21      420    153 402  
+     Leap star week   22  23  24  25  26  27  28      420    153 402  
      
-                                          Total:    1 680    613 607                                                 Total:   1 680    613 606
+                                          Total:    1 680    613 607  
+
+
+
+                             NON LEAP STAR MONTH
+
+                     Sequential number of star day  Years       Days
+                     -----------------------------
+     Leap star week    1   2   3   4   5   6   7      420    153 402
+ Non-Leap star week    8   9  10  11  12  13  14      420    153 401
+     Leap star week   15  16  17  18  19  20  21      420    153 402
+ Non-Leap star week   22  23  24  25  26  27  28      420    153 401
+     
+                                           Total:   1 680    613 606
 ````
 
 ### Star year
