@@ -592,8 +592,7 @@ To understand when such correction happens, see the description of star age.
 ````
 Each star year consists of 48 weeks star. That equals exactly 336 star days (every star day consisting of 60 Earth years). Thus, each star year consists of 20 160 Earth years. Within a leap star year there are always exactly 7 363 283 (seven million, three hundred and sixty-three thousand, two hundred eighty-three) Earth days. Within a non leap star year there are always exactly 7 363 282 earth days. 
 
-Period of 4 star years
-======================
+### Period of 4 star years
 
 Star years just like earth years are grouped in fours. In general, only the second star year is a non leap year. From the rest - the first, the third and the fourth are leap. However when there is a need of correction to he calendar, all the four star years are leap. To understand when that happens, please see section for star epoch. Every period of 4 star years consists of just 80 640 Earth years. The usual non-leap period of 4 star years (when the second star year is non-leap, and the other star years are leap) consists of 29 453 131 earth days. The leap period of 4 star years (when all the four star years are leap due to the need for correction) consists of 29 453 132 earth days. 
 
@@ -623,8 +622,7 @@ Star years just like earth years are grouped in fours. In general, only the seco
                  total: 80 640    29 453 132 
 
 ````
-Star Epoch
-==========
+### Star Epoch
 
 Star epoch is the last and greatest period in the Bulgarian calendar. That period completes the correction of the calendar, so this period does not have a leap and non-leap variants. It consists of 125 periods of 4 star years, or exactly 500 star years. 
 All the periods of 4 star years are non leap (which means that the second star year is non leap and the first, the third and the fourth star years are leap), with the exception of the 63-rd period of 4 star years. It is leap, which means, that all its 4 star years are leap.
