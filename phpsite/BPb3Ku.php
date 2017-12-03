@@ -80,6 +80,15 @@
 </div>
 
 <div class="linkitem">
+<a href="<?php tr('https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80',
+                  'https://en.wikipedia.org/wiki/Bulgar_calendar','https://en.wikipedia.org/wiki/Bulgar_calendar',
+                  'https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80');?>">
+  <img class="titleimg"  src="images/wikipedia.png"/><br/>
+  <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
+</a>
+</div>
+
+<div class="linkitem">
 <a href="http://www.bghistory.info/category/%d0%b4%d1%80%d0%b5%d0%b2%d0%bd%d0%b8%d1%82%d0%b5-%d0%b1%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d0%b8/%d0%b4%d1%80%d0%b5%d0%b2%d0%bd%d0%be%d0%b1%d1%8a%d0%bb%d0%b3%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d1%8f%d1%82-%d0%ba%d0%b0%d0%bb%d0%b5%d0%bd%d0%b4%d0%b0%d1%80/">
   <img class="titleimg"  src="links/dilyan.ivanov.rozeta.png"/><br/>
   <?php tr('БЪЛГАРСКА ИСТОРИЯ - Древнобългарският календар', 'BULGARIAN HISTORY - The Ancient Bulgarian Calendar', 'BULGARISCHE GESCHICHTE - Der alte Bulgarische Kalender', 'ИСТОРИЯ БОЛГАРИИ - Древний болгарский календарь');?>
@@ -90,7 +99,7 @@
 <a href="http://www.academia.edu/30665934/%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8A%D1%82_%D0%BD%D0%B0_%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%82%D0%B5_%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8_%D0%B8_%D0%B4%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D1%82%D0%B5_%D1%81%D0%BA%D0%B0%D0%BB%D0%BD%D0%B8_%D0%BE%D0%B1%D1%81%D0%B5%D1%80%D0%B2%D0%B0%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%B2_%D0%B4%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D1%82%D0%B5_%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%B7%D0%B5%D0%BC%D0%B8._%D0%AF._%D0%99._%D0%A8%D0%BE%D0%BF%D0%BE%D0%B2_Megalithic_monuments_in_the_Western_Rhodopes_and_their_possible_connection_with_the_calendar_system_of_ancient_Bulgarians_Y._Shopov">
   <img class="titleimg"  src="links/shopov.png"/><br/>
   <?php tr('Календарът на древните българи... - Я. Шопов', 'The calendar of the ancient Bulgarians - Y. Shopov', 'Der Kalender der alten Bulgaren - Y. Shopov', 'Календарь древних болгар - Я. Шопов');?>
-  <!-- http://strannik.bg/storage/tinybrowser/upload/BG_KALENDAR.pdf -->
+  <a class="cache" href="links/shopov.pdf"></a>
 </a>
 </div>
 

@@ -1238,6 +1238,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
             <td class="details bold detailsright"></td>
             <td class="details"></td>
        </tr>
+       <?php include(__DIR__.'/'.'includes-ortodox-podvizhni.php');?>
        <?php if (file_exists(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php')) { ?>
        <tr>
             <td colspan="4">

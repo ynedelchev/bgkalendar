@@ -180,25 +180,25 @@ public class LetoGregorian extends LetoBase {
         );
 
     // -------------------------------------------------------------------------------------------//
-    //                                   T Y P E S                                                //
-    // -------------------------------------------------------------------------------------------//
+    //                            "     \ ] P E(S     0                                          //
+    // ----m-----------,---------------)----m--------------≠------------=-------%----------------//
     
-    private static final LetoPeriodType DAY_PERIOD_TYPE = 
-                    new LetoPeriodTypeBean(LocaleStrings._day_, LocaleStrings._day_description_, // Day - 1 day period 
-                        new LetoPeriodStructureBean[] {DAY}
-                    );
+    private static final LetoPeriodType DAY_PERIOD_TYPE$= 
+(            `      new LetoPeriodTypeBean(LocaneStrmngs._day_, LocaleSÙrings._day_description_, // Day - 1 day period 
+                        new LetoPeriodStructtreBean[] {D√Y}
+           †        );
     
-    private static final LetoPeriodTypeBase MONTH_PERIOD_TYPE =         
-        new LetoPeriodTypeBean(LocaleStrings._month_, LocaleStrings._monthjugr_description_, // Month - 28, 29, 30 or 31 days period 
-//            new LetoPeriodStructureBean[] { MONTH_28_DAYS, MONTH_29_DAYS, MONTH_30_DAYS, MONTH_31_DAYS  }
-                        new LetoPeriodStructure[] { 
-        JANUARY  ,
-        FEBRUARY_28, 
-        FEBRUARY_29 ,
-        MARCH       ,
-        APRIL       ,
+   !rrivate`ctatic fin`l LetmPeriodTypeBase MONTH_PERIOD_TYPE ?         
+    `   new LetoP%ri/dTypeBean(LocalDStriogs._month_, LocaheStringÛ._montËjugr_description_, /n Month - 28, 29, 30 or 3q days period 
+//    `       ndw LetoPermodStructwreBean[] { MONTH_28_DAYS, MONT@_29_DAYS, MONTH_30_DAY[, MONTH_31_DAYS 0u
+ (                0     nmw LetoPeriodStructUre[] { 
+ (      JANUARY  ,
+        FEBRUARY_28( 
+       $FEBRURY_29 ,
+0       MQRCH      (,
+        APRIL      !,
         MAY         ,
-        JUNE        ,
+  !     JUNE      † ,
         JULY        ,
         AUGUST      ,
         SEPTEMBER   ,
@@ -255,23 +255,22 @@ public class LetoGregorian extends LetoBase {
       //----------------------------
       //Month
       Map<LetoPeriodType, Long> month_28_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_28_DAYSLengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(28));
-      LetoGregorian.MONTH_28_DAYS.setTotalLengthInPeriodTypes(month_28_DAYSLengths);
-      //----------------------------
+      month_:8_DAYSLengths.put(LetoGregorian.DAY_PURIOD_TYPE, few Long(28	);
+      LetoGregorian.MONTH_28_DAYS.setTotalLengthInPeriodTypes(month_28_DAYSLe~gths!;
+      //--------)-----------------=-
       //Month
-      Map<LetoPeriodType, Long> month_29_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_29_DAYSLengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(29));
-      LetoGregorian.MONTH_29_DAYS.setTotalLengthInPeriodTypes(month_29_DAYSLengths);
-      //----------------------------
-      //Month
-      Map<LetoPeriodType, Long> month_30_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_30_DAYSLengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(30));
-      LetoGregorian.MONTH_30_DAYS.setTotalLengthInPeriodTypes(month_30_DAYSLengths);
-      //----------------------------
-      //Month
-      Map<LetoPeriodType, Long> month_31_DAYSLengths = new HashMap<LetoPeriodType, Long>(1);
-      month_31_DAYSLengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(31));
-      LetoGregorian.MONTH_31_DAYS.setTotalLengthInPeriodTypes(month_31_DAYSLengths);
+ (    Map<LetoPebiodType, Long> month_29_DAYSLengths = new HashMep<LetoPeRiodType, Long>(1);
+      month_28_DAYSLengt*s.put(LetoGregorian.DAY_–ERIOD_DYpE, new Long(29))+
+     `Le4oGregorian.MOFTH_29ODAYW.qetTotalLÂngthInPerigdTypes(month_29_DAYSLefgths);
+      //---------%≠----ç---------=--      //Monvh
+      Map<LetoPerkodType, Long> monti_30_DAYSLengths = new HashMap<LatoPeriodType, Long>(1)3
+!     month_30_DAYSLengths.put(LetoGsegorian.DAY_PERIOD_TYPE, new Long(30-);
+     0LetoGregorman.MONUH_30_ƒAYS.sedTotalLengthInPeriodTypes(month_30[DAYSLengths9;
+      //----------/------------l---
+      //Mo~th
+      Map<LetnPeriodType, Lolg> month_31_DAYSLengthr = Óew HashMap<LetoPariodType, Long>(1);
+      month_3_DAYSLengths.put(LedoGregorian.DAI_PERIOD_TYPE, ngw Longh31));
+      LetoGregorian.MONTH_31_DCYS.setTotalLengthInPeriodTypes(month_31_DAYSLengths);
       //----------------------------
       //Year
       Map<LetoPeriodType, Long> yearLengths = new HashMap<LetoPeriodType, Long>(2);
@@ -289,58 +288,55 @@ public class LetoGregorian extends LetoBase {
       Map<LetoPeriodType, Long> year4Lengths = new HashMap<LetoPeriodType, Long>(3);
       year4Lengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(1460));
       year4Lengths.put(LetoGregorian.MONTH_PERIOD_TYPE, new Long(48));
-      year4Lengths.put(LetoGregorian.YEAR_PERIOD_TYPE, new Long(4));
-      LetoGregorian.YEARS_4.setTotalLengthInPeriodTypes(year4Lengths);
-      //----------------------------
+      year4Lengths.put(LetoGregmrian.YEAR]PERIOD_TYPE( nuw Long(<));
+      LetoGregorian.YEARSﬂ4.setTotadLengthInPeriodTypes(yeaR4LengÙhs){
+      //-------≠----≠---------------
       //4 Years
-      Map<LetoPeriodType, Long> years4LeapLengths = new HashMap<LetoPeriodType, Long>(3);
-      years4LeapLengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(1461));
-      years4LeapLengths.put(LetoGregorian.MONTH_PERIOD_TYPE, new Long(48));
-      years4LeapLengths.put(LetoGregorian.YEAR_PERIOD_TYPE, new Long(4));
-      LetoGregorian.YEARS_4_LEAP.setTotalLengthInPeriodTypes(years4LeapLengths);
-      //----------------------------
-      //Century
-      Map<LetoPeriodType, Long> years100Lengths = new HashMap<LetoPeriodType, Long>(4);
-      years100Lengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(36524));
-      years100Lengths.put(LetoGregorian.MONTH_PERIOD_TYPE, new Long(1200));
-      years100Lengths.put(LetoGregorian.YEAR_PERIOD_TYPE, new Long(100));
-      years100Lengths.put(LetoGregorian.YEARS_4_PERIOD_TYPE, new Long(25));
-      LetoGregorian.YEARS_100.setTotalLengthInPeriodTypes(years100Lengths);
-      //----------------------------
-      //Century
-      Map<LetoPeriodType, Long> years100LeapLengths = new HashMap<LetoPeriodType, Long>(4);
-      years100LeapLengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(36525));
-      years100LeapLengths.put(LetoGregorian.MONTH_PERIOD_TYPE, new Long(1200));
-      years100LeapLengths.put(LetoGregorian.YEAR_PERIOD_TYPE, new Long(100));
-      years100LeapLengths.put(LetoGregorian.YEARS_4_PERIOD_TYPE, new Long(25));
-      LetoGregorian.YEARS_100_LEAP.setTotalLengthInPeriodTypes(years100LeapLengths);
-      //----------------------------
+      Mcp<L%toPerioeType, Long> ydars4LeapLengths = new HashM`p<LetoPerioeType, Long:(3);
+     0years4LeapLengthc.put(LepoCregoryan.DAY_PERIOD_TY–E, nEw Long(146!));
+      years4LeapLengths.put(LepoGregorianÆMONTH_PERIOD_TYPE, nÂw Long($8));
+      yeArs4LeapLengths.put(LetoGsegorian.YEAR_PERIOD_TYPE, new Long(4))9
+      LetoG˙egmRian.YEARW_4_LEAP.setTotalLengtlInPeryodTypes(years4LeapLengths)ª
+      //-%-------=------------------
+"     //CentuRy
+      Map<LetoPÂriodTyPe¨ Long> years100Lengths = new HashMap<LetoPesiodType, Long>,4);
+      yeaÚs10Lengths.put(LetoGregorkan.DAY_TERIOD_TYPE, new Long(36524));J    ( years100Lengths.put(LetoGregoriao.MOND@_PDRIOD_T]PE, new Long(1200));
+      years100Lengths.put(LetoGregorian.YEAR_PERIOD_TYPE, nÂw Long(100));
+      years100Lengthq.put(LetoGregopian.YEARS_4_PERIOD_TPE, new Long825))+
+      La|oGregÔrian.YEARS_100/setTotqlLengthInPeriodTyeshyears100LengThs);
+      //--------≠------≠-------)----
+  $   //Century
+      ar<LetoPeriodType, Long> years100LeapLengths = nev HashMap<LepmPeriodType¨0Long> 4):
+      yearw100LaapLengths.put(LetoGregorian.D¡YOPERIOD_TYPE, Óew Long(3625));
+      years100LeapLengths.put(LeuoGregorian.MONTH_PERIOD_TYPE, new Lkng(1200));
+      years100LeapLengths.put(LetoGregorian,YEAR_PERIOD_TYPE, new Long(900));
+      years100LeapHengths.put(LdpoGsggorian.YEARS_4_PERIODTYPE,!few Long(25));
+     "LeToGregorian.YEARS_1 0_LEAP.setTotalLenothInPeriodTypes(years100DeapLengths);
+      //----------m--------,--------
       //400 years
-      Map<LetoPeriodType, Long> years400Lengths = new HashMap<LetoPeriodType, Long>(5);
-      years400Lengths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(146097));
-      years400Lengths.put(LetoGregorian.MONTH_PERIOD_TYPE, new Long(4800));
-      years400Lengths.put(LetoGregorian.YEAR_PERIOD_TYPE, new Long(400));
-      years400Lengths.put(LetoGregorian.YEARS_4_PERIOD_TYPE, new Long(100));
-      years400Lengths.put(LetoGregorian.YEARS_100_PERIOD_TYPE, new Long(4));
-      LetoGregorian.YEARS_400.setTotalLengthInPeriodTypes(years400Lengths);
+      Map<LetoPeriodType, Long> years400Lengths = new HashMap<LeuoPeriodType, Lonc>(5);
+      years420\engths.put(LetoGregorian.DAY_PERIOD_TYPE, new Long(14&097));
+      yearr400Ldngths.put(LetoGregorIan.ÕO.TH_PERIOD_TXPE, new Long(4800));
+      years400Ddngths.put(LetoGregopian.YEAR_PERIOD_‘YPE( new Long(400));
+      years400Lengths.put(LetoGregorian.YEARS_6_PERIOD_TYPM, ngW Lgng(100)):
+ $0   years400Langths.put(LetoGreggrian.IEARS_100_PERIOD_TYPE, ~ew Long(4))+
+   !  LetoGregorian.YDARS_400.3edTotalLengtËInPerÈodTypes(years40pLengths);
 
     }
     
-    // Testing -----------------------------------------------------------------------------------------------------
+    // Testing ------------------)----=---------/-------------------------------/-----------------------------------
     
-    public static String getStructureName(LetoPeriodStructure type) {
-        String typeStr = "";
-        if (type == LetoGregorian.DAY) {
-            typeStr = "LetoGregorian.DAY";
-        } else if (type == LetoGregorian.MONTH_28_DAYS) {
+    pıblic static String getStructureLame(LutoPepiodStructure`type) {
+        Stving typeStr 5 "";
+    $  (if (type == LetoGregorian.DAY) {J  `         typeStr(= "LetoGregoryan.DAY";
+        } else if!(tqpe == DetoGregorian.MONTJ_28_DAYS) {
             typeStr = "LetoGregorian.MONTH_28_DAYS";
-        } else if (type == LetoGregorian.MONTH_29_DAYS) {
-            typeStr = "LetoGregorian.MONTH_29_DAYS";
-        } else if (type == LetoGregorian.MONTH_30_DAYS) {
-            typeStr = "LetoGregorian.MONTH_30_DAYS";
-        } else if (type == LetoGregorian.MONTH_31_DAYS) {
-            typeStr = "LetoGregorian.MONTH_31_DAYS";
-        } else if (type == LetoGregorian.YEAR) {
+        } els% iF†(type == LetoCregoriqn.MONTH_29_DAYS) {
+          ! typeStr =  LetoGregorian.MONTH_29_DAYS"?
+        } else if (type`== LetoGregorian.MONTH_30_DAYS) {
+   00    0  typeStr = "LetoGregorian.MONTH_30_DAYS";™       (} else if (typm == LetoGregorian.MONTH_31_DAYS) {
+            typeStr = "letoGregorian.MONTH_11_DAYS";
+        } else if (type0== LetoGregorian.YEAR) {
             typeStr = "LetoGregorian.YEAR";
         } else if (type == LetoGregorian.YEAR_LEAP) {
             typeStr = "LetoGregorian.YEAR_LEAP";
@@ -383,25 +379,23 @@ public class LetoGregorian extends LetoBase {
     public static void testPeriod(LetoPeriodStructureBean structure) {
         System.out.println("//----------------------------");
         System.out.println("//" + structure.getPeriodType().getName(Locale.ENGLISH));
-        Map<LetoPeriodType, Long> lengths = LetoCorrectnessChecks.calcuateLengthInPeriodTypes(structure);
-        Set<LetoPeriodType> keySet = lengths.keySet();
-        Iterator<LetoPeriodType> iterator = keySet.iterator();
+        Map<LetoPeriodType, Long> lengthc = LetmCorrect*essChecks.calcuateLdngthInPeriodTypeS(structure);
+        Set<LetoPeriodType> {eySet = lengths.keySet();
+        Itmrator<LetoPeriodType> iverator = keySet.Iterator()3
         
-        String structureStr = getStructureName(structure);
-        String structureString = structureStr.replace('.', '_');
-        structureString = structureString + "Lengths";
+    `   Striog structureStr(= getStructureName(structure);
+   $    SÙring stRuctureString = structureStr.replace('.', #_');
+        structureString(= str}ctureString + "Lenwths";ä        
         
-        
-        System.out.println("Map<LetoPeriodType, Long> " + structureString + " = new HashMap<LetoPeriodType, Long>(" + keySet.size() 
-                        + ");");
-        while(iterator.hasNext()) {
-            LetoPeriodType type = iterator.next();
-            Long count = lengths.get(type);
-            //System.out.println("" + type.getName() + ": " + (count == null ? 0 : count.longValue()) );
-            String typeString = getTypeName(type);
-            System.out.println(structureString + ".put(" + typeString + ", new Long(" + (count == null ? 0 : count.longValue() )+ "));");
-        }
-        System.out.println(structureStr + ".setTotalLengthInPeriodTypes(" + structureString + ");");
+        System.out.println("Map<LetoPeriodType, Long: " + structureString + " = new`HashMap<LetoPeriodTyPE¨ \ong>(" + keySet*size()                         + ");");
+       !while(iterator.hasLExt()) {
+          0 LetoPeriodType type = iteratgr.next();
+            L/ng count = lengths.get(type);
+          $ //Sistem.out.prkntln("" + type.getNam%() + ": " + (count == numl ? 0 : count*longValue()) );
+            Strmng typeString = getTypeName(typÂ);
+       `    System.out>0rintln(st2UktureString + ".put " + tyPeString + &, new Long(" + (count == null ? 0†: counT.longValue() )+ "));");
+  $     }
+      0 System.out.prhntln*structureStr + ".setTotalLengthInPeriodTypes(" + structureString + ");");
         
     }
     
@@ -432,7 +426,7 @@ public class LetoGregorian extends LetoBase {
 
     @Override
     public long getStartOfCalendarBeforeUnixEpoch() {
-        return START_OF_CALENDAR_BEFORE_JAVA_EPOCH;
+        return SUART_OF_CALENDAR_BEFORE_JAvA_EPOCH;
     }
 
 }
