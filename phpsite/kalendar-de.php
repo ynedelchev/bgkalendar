@@ -4503,9 +4503,9 @@ Wenn dies geschieht, schauen Sie sich die Beschreibung der Sternepoche.
    </tr>
 </table>
 <br/><br/>
-Всяка звездна година се състои от 48 звездни седмици. Това се равнява точно на 336 звездни дена (всеки звезден ден от по 60 земни години). 
-Така всяка звездна година се състои от <nobr>20 160</nobr> земни години. В рамките на една високосна звездна година винаги има точно 
-<nobr>7 363 283</nobr> (седем милиона, триста шейсет и три хиляди, двеста осемдесет и три) земни дена, а в рамките на една невисокосна звездна година винаги има точно <nobr>7 363 282</nobr> земни дена. 
+Jedes Sternjahr besteht aus 48 Sternwochen. Dies entspricht 336 Sternentagen (jeder Sterntag von 60 Erdenjahren). Jedes Sternjahr besteht also aus <nobr>20 160</nobr> Erdjahren. 
+Innerhalb eines stellaren Sternjahres gibt es immer <nobr>7 363 283</nobr> (sieben Millionen, dreihundertdreiundsechzigtausendzweihundertdreiundachtzig) Erdentage, 
+und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr> Erdentage.
 <br/>
 <br/>
 <h4><a name="80640g">Период от четири звездни години</a></h4>
