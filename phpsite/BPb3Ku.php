@@ -31,6 +31,14 @@
      margin: 7px;
      box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), -4px -4px 8px 0 rgba(0, 0, 0, 0.19);
    }
+   a.cache-notitle {
+     width: 28px; 
+     height: 20px;
+     background-image: url(images/cached.svg);
+     position: absolute; 
+     right: 5px;
+     bottom: 5px;
+   }
    a.cache {
      width: 28px; 
      height: 20px;
@@ -132,7 +140,19 @@
 </div>
 
 <div class="linkitem">
-<a href="links/pencho.mycontact.bg.html">
+<a href="https://www.youtube.com/watch?v=EujVzngonxM&feature=youtu.be&list=PLC1L34JwNaURJW3LnqdHzPCV6qGvL_GkO&t=425">
+  <img class="titleimg"  src="images/mandala.png"/><br/>
+  <?php tr('Българите - Кои сме ние? Слави Дончев от 7:12', 'Bulgarians - Who are we? Slavi Donchev from 7:12', 'Bulgaren - Wer sind wir? Slawi Donchev von 7:12', 'Болгары - Кто мы? Слави Дончев от 7:12');?>
+</a>
+<a class="cache-notitle" href="links/Bulgarians-who-are-we-part-1.mp4" style="margin-right: 140px;">1</a>
+<a class="cache-notitle" href="links/Bulgarians-who-are-we-part-2.mp4" style="margin-right: 105px;">2</a>
+<a class="cache-notitle" href="links/Bulgarians-who-are-we-part-3.mp4" style="margin-right: 70px;">3</a>
+<a class="cache-notitle" href="links/Bulgarians-who-are-we-part-4.mp4" style="margin-right: 35px; "><b>4</b></a>
+<a class="cache-notitle" href="links/Bulgarians-who-are-we-part-5.mp4"><b>5</b></a>
+</div>
+
+<div class="linkitem">
+<a href="http://pencho.my.contact.bg/start/razni/journey/explain.htm">
   <img class="titleimg"  src=""/><br/>
   <?php tr('От Пенчо', 'From Pencho', 'Von Pentscho', 'От Пенчо');?>
 </a>
@@ -140,7 +160,7 @@
 </div>
 
 <div class="linkitem">
-<a href="links/Prabg_kalendar.pdf">
+<a href="http://www.bulgari-istoria-2010.com/booksBG/Prabg_kalendar.pdf">
   <img class="titleimg"  src=""/><br/>
   <?php tr('ДРЕВНОБЪЛГАРСКИЯТ КАЛЕНДАР – МИТОВЕ И РЕАЛНОСТИ. ПРОИЗХОД И ЗНАЧЕНИЯ НА НАЗВАНИЯТА', 'THE ANCIENT BULGARIAN CALENDAR - MYTS AND REALITIES. ORIGIN AND SIGNATURE OF THE NAMES', 'DER ANTIKE BULGARISCHE KALENDER - MYTHEN UND REALITÄTEN. HERKUNFT UND BEDEUTUNG DER NAMEN', 'ДРЕВНОБОЛГАРСКИЙ КАЛЕНДАРЬ - МИФЫ И РЕАЛИИ. ПРОИСХОЖДЕНИЕ И ЗНАЧЕНИЯ НАЗВАНИЙ');?>
 
