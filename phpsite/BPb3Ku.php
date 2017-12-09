@@ -165,7 +165,7 @@
 </div>
 
 <div class="linkitem">
-<a href="http://balkan1.blog.bg/technology/2010/01/18/bylgarskiiat-kalendar.474831">
+<a href="<?php tr('http://balkan1.blog.bg/technology/2010/01/18/bylgarskiiat-kalendar.474831', 'http://balkan1.blog.bg/politika/2011/01/28/bulgarian-sun-jupiter-calendar.675596', 'http://balkan1.blog.bg/politika/2011/01/28/bulgarian-sun-jupiter-calendar.675596', 'http://balkan1.blog.bg/technology/2010/01/18/bylgarskiiat-kalendar.474831');?>">
   <img class="titleimg"  src="links/rusi-ivanov.jpg"/><br/>
   <?php tr('РАЗПРОСТРАНЯВАЙТЕ БЪЛГАРСКИЯ КАЛЕНДАР', 'SPREAD THE BULGARIAN CALENDAR', 'VERBREITEN SIE DEN BULGARISCHEN KALENDER', 'РАСПРОСТРАНЯЙТЕ БОЛГАРСКИЙ КАЛЕНДАРЬ');?>
 </a>
