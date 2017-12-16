@@ -8,27 +8,23 @@
    <link rel="stylesheet" type="text/css" href="css/flags.css" /> 
    <link rel="stylesheet" type="text/css" href="navigation.css" /> 
    <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
+   <link rel="stylesheet" type="text/css" href="bgkalendar-ie.css" /> 
    <link rel="stylesheet" type="text/css" href="forum.css" /> 
    <!-- Facebook tags start -->
    <meta property="og:url"           content="http://bgkalendar.com/" />
    <meta property="og:type"          content="website" />
    <meta property="og:title"         content="Българският Календар (Bulgarian Calendar)" />
    <meta property="og:description"   content="Универсален календар на древните българи" />
+   <meta property="og:image"         content="http://bgkalendar.com/cyrcle-bgkalendar.php" />
    <style>
    @font-face {
      font-family: animals;
      src: url(fonts/animals.ttf);
    }
    </style>
-   <!-- <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" /> -->
-   <!-- Facebook tags end  -->
-   <!-- extreme_yordan_0601ace132628511a2a71ae3a980c736 -->
-   <!--[if IE]>
-        <link rel="stylesheet" type="text/css" href="bgcalendar-ie.css" /> 
-   <![endif]-->
-   <!--[if !IE]><!-->
+   <!--[if !IE]>-->
         <link rel="stylesheet" type="text/css" href="bgkalendar-nonie.css" /> 
-   <!--<![endif]-->
+   <!--[endif]-->
 
    <script type="text/javascript" src="bgkalendar.js"></script>
    <!--
