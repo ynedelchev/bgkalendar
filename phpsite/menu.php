@@ -147,7 +147,7 @@
   </li>
   <li>
       <a href="<?php echo $DIR_PREFIX;?>papercalendar/2018">
-        <?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', 'Druckversion herunterladen 7522/2017', 'Скачать версию для печати 7522/2017')?>
+        <?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', 'Druckversion herunterladen 7523/2018', 'Скачать версию для печати 7523/2018')?>
       </a>
   </li>
 </ul>
