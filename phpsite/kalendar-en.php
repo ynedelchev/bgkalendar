@@ -1125,7 +1125,7 @@ are also controversial. Here are some examples:
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">name(s)</td>
   </tr>
   <tr>
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&nbsp;<!-- Pig --></td>
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">P<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pig</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dox</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Pig</td>
@@ -1233,7 +1233,7 @@ are also controversial. Here are some examples:
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Et-h</td>
   </tr>
   <tr>
-     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&nbsp;<!-- Pig --></td>
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">P<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>

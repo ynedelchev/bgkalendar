@@ -14,6 +14,12 @@
    <meta property="og:type"          content="website" />
    <meta property="og:title"         content="Българският Календар (Bulgarian Calendar)" />
    <meta property="og:description"   content="Универсален календар на древните българи" />
+   <style>
+   @font-face {
+     font-family: animals;
+     src: url(fonts/animals.ttf);
+   }
+   </style>
    <!-- <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" /> -->
    <!-- Facebook tags end  -->
    <!-- extreme_yordan_0601ace132628511a2a71ae3a980c736 -->
@@ -241,13 +247,15 @@
            </td>
            <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></td>
            <td class="details">
-                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#12g">
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#12g">
                   <?php 
                   $anim = ($periodsbg[2]->getAbsoluteNumber()) % 12;
                   tr($YEAR_ANIMALS[$anim], $YEAR_ANIMALS_EN[$anim],$YEAR_ANIMALS_DE[$anim],$YEAR_ANIMALS_RU[$anim]);
                   ?>
                 </a>
-                (<?php tr($YEAR_ANIMALS_BG[$anim], $YEAR_ANIMALS_BG_EN[$anim], $YEAR_ANIMALS_BG_DE[$anim], $YEAR_ANIMALS_BG_RU[$anim]);?>)<br/>
+                (<?php tr($YEAR_ANIMALS_BG[$anim], $YEAR_ANIMALS_BG_EN[$anim], $YEAR_ANIMALS_BG_DE[$anim], $YEAR_ANIMALS_BG_RU[$anim]);?>)
+                <span style="font-family: animals; color: black"><?php echo $ANIMALS_VIEW[$anim];?></span>
+                <br/>
                 <?php 
                 echo seqPrefix($periodsbg[2]->getNumber()+1, 'fnnm'); 
                 tr(' от началото на Четиригодие', 
@@ -270,32 +278,32 @@
    <table>
        <tr>
             <td class="details bold">
-                <a href="kalendar<?php tr('','-en','-de','');?>.html#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:
+                <a href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#4g" class="period"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[3]->getNumber()+1, 'nnmm');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#1680g"><?php tr('Звезден Месец', 'Star Month', 'Sternmonat', 'Звездный Месяц');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[6]->getNumber()+1, 'mnmm');?></td>
        </tr>
        <tr>
-            <td class="details bold"><a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
+            <td class="details bold"><a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#60g"><?php tr('Звезден Ден', 'Star Day', 'Sterntag', 'Звездный День');?></a>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[4]->getNumber()+1, 'mnmm');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#20160g"><?php tr('Звездна Година', 'Star Year', 'Sternjahr', 'Звездный Год');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[7]->getNumber()+1,'fnnm');?></td>
        </tr>
        <tr>
             <td class="details bold">
-                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 
             <td class="details bold detailsright">
-                <a class="period" href="kalendar<?php tr('','-en','-de','');?>.html#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#10080000g"><?php tr('Звездна Епоха', 'Star Epoch', 'Sternepoche', 'Звездная Эпоха');?></a>:
             </td>
             <td class="details nobr"><?php echo seqPrefix($periodsbg[8]->getNumber()+1, 'fnff');?></td>
        </tr>

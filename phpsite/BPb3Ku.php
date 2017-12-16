@@ -191,6 +191,13 @@
 </a>
 </div>
 
+<div class="linkitem">
+<a href="http://www.theworldcalendar.org">
+  <img class="titleimg"  src="images/twcalendar.png"/><br/>
+  <?php tr('Идея за нов календар (английски)', 'Idea for new calendar system (English)', 'Idee für neues Kalendersystem (Englisch)', 'Идея новой системы календаря (английский)');?>
+</a>
+</div>
+
 <br/>
 <br/>
 <?php include('footer.php');?>

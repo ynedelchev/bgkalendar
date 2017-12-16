@@ -4,7 +4,7 @@
  <ul>
      <li><a class="footer" href=".?lang=<?php tr('bg', 'en', 'de', 'ru');?>"><span class="footer"><?php tr('Главна страница', 'Home', 'Grundseite', 'Главная страница');?></span></a></li>
      <li>
-         <a class="footer" href="kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php">
+         <a class="footer" href="kalendar-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg','en', 'de', 'ru');?>">
              <span class="footer">
                  <?php 
                  tr('Принципи на Българския Календар', 
@@ -16,7 +16,7 @@
          </a>
      </li>
      <li>
-         <a class="footer" href="imennik-<?php tr('-bg', 'en', 'de', '-ru');?>.php?lang=<?php tr('bg','en', 'de', 'ru');?>">
+         <a class="footer" href="imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg','en', 'de', 'ru');?>">
              <span class="footer">
                  <?php 
                  tr('Именник на Българските Канове', 
@@ -28,7 +28,7 @@
          </a>
      </li>
      <li>
-         <a class="footer" href="forum?lang=<?php tr('-bg', 'en', 'de', '-ru');?>">
+         <a class="footer" href="forum?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
              <span class="forum">
                  <?php 
                  tr('Дискусии', 'Phorum', 'Forum', 'Форум');

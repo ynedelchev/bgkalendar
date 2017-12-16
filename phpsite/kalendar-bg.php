@@ -1094,14 +1094,17 @@
 <table style="border-collapse: collapse">
   <tr>
      <!-- <td class="calendartdrightseparator" rowspan="3">&nbsp;</td> -->
+     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
      <td class="calendartable" colspan="6" style="text-align: center">Според</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
      <td class="calendartable" style="text-align: center; background-color: rgba(255, 70, 70, 0.4);" colspan="2">Георги Кръстев</td>
      <td class="calendartable" style="text-align: center; background-color: rgba(200, 200, 200, 0.5)" colspan="2">Йордан Вълчев</td>
      <td class="calendartable" style="text-align: center; background-color: rgba(70, 70, 255, 0.4);" colspan="2">Петър Добрев</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">животно</td>
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">имена</td>
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">животно</td>
@@ -1110,6 +1113,7 @@
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">имена</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">P<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Свиня</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Докс</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Свиня</td>
@@ -1118,6 +1122,7 @@
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#81;<!-- Maus --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Мишка</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Каран</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Мишка</td>
@@ -1126,6 +1131,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Сомор</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#89;<!-- Caw  --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Вол</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Шегор</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Вол</td>
@@ -1134,6 +1140,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Шегор</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#121;<!-- Bars --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Барс</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Баръс</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Тигър</td>
@@ -1142,6 +1149,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#114;<!-- Rabbit --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Заек</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Дван</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Заек</td>
@@ -1150,6 +1158,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дван</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#71;<!-- Dragon --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Дракон</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Хала</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Змей</td>
@@ -1158,6 +1167,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Вер</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#119;<!--Snake--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Змия</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Змия</td>
@@ -1166,6 +1176,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Дилом</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#104;<!-- Horse--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Кон</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Таг</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Кон</td>
@@ -1174,6 +1185,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Теку</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#113;<!-- Monkey --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Маймуна</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Писин</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Маймуна</td>
@@ -1182,6 +1194,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#88;<!-- Ram--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Овен</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Коч</td>
@@ -1190,6 +1203,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#117;<!-- Cock--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Петел</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Тох</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Петел</td>
@@ -1198,6 +1212,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Тох</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#73;<!-- Dog--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Куче</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Етх</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Куче</td>
@@ -1206,6 +1221,7 @@
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Етх</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">P<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>

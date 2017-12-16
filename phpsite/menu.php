@@ -89,7 +89,7 @@
 <ul id="navmenu" class="menu">
   <li><a sub-menu="sm-intro"   href="#"><?php tr('Начало', 'Home', 'Grundseite', 'Главная страница');?></a></li>
   <li><a sub-menu="sm-info"    href="#"><?php tr('Информация', 'Information', 'Auskunft', 'Информация');?></a></li>
-  <li><a sub-menu="sm-forum"   href="forum?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
+  <li><a sub-menu="sm-forum"   href="<?php echo $DIR_PREFIX;?>forum?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
   <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое');?></a></li>
   <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нас');?></a></li>
 </ul>

@@ -248,7 +248,7 @@ $svgheight =  $strty*2 + $rad*2;
 ?>
 
   <g transform="translate(<?php echo $strtx + $rad - 380;?>,<?php echo $strty + $rad - 374;?>)">
-    <?php include(__DIR__.'/images/cyrcle-rozeta.svg');?>
+    <?php include(__DIR__.'/cyrcle-rozeta.php');?>
   </g>   
   <!--
   <g transform="rotate(11.0, 128, 128) translate(226, 82)">

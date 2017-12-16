@@ -1071,14 +1071,17 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
 <table style="border-collapse: collapse">
   <tr>
      <!-- <td class="calendartdrightseparator" rowspan="3">&nbsp;</td> -->
-     <td class="calendartable" colspan="6" style="text-align: center">Според</td>
+     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
+     <td class="calendartable" colspan="6" style="text-align: center">Nach</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
      <td class="calendartable" style="text-align: center; background-color: rgba(255, 70, 70, 0.4);" colspan="2">Georgi Krustew</td>
      <td class="calendartable" style="text-align: center; background-color: rgba(200, 200, 200, 0.5)" colspan="2">Jordan Wultschew</td>
      <td class="calendartable" style="text-align: center; background-color: rgba(70, 70, 255, 0.4);" colspan="2">Peter Dobrew</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;">&nbsp;</td>
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">Tier</td>
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(255, 70, 70, 0.4);">Namen</td>
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(200, 200, 200, 0.5)">Tier</td>
@@ -1087,6 +1090,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; font-weight: bold; background-color: rgba(70, 70, 255, 0.4);">Namen</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">P<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Wildschwein</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Doks</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Wildschwein</td>
@@ -1095,6 +1099,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#81;<!-- Maus --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Maus</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Karan</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Maus</td>
@@ -1103,6 +1108,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Somor</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#89;<!-- Caw  --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Ochse</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Schegor</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Ochse</td>
@@ -1111,6 +1117,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Schegor</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#121;<!-- Bars --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Schneeleopard</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Barus</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Tiger</td>
@@ -1119,6 +1126,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#114;<!-- Rabbit --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hase</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Dwan</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Hase</td>
@@ -1127,6 +1135,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dwan</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#71;<!-- Dragon --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Drache</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Chala</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Dragon</td>
@@ -1135,6 +1144,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Wer</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#119;<!--Snake--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Schlange</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Schlange</td>
@@ -1143,6 +1153,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Dilom</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#104;<!-- Horse--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pferd</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Tag</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Pferd</td>
@@ -1151,6 +1162,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Teku</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#113;<!-- Monkey --></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Widder</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Pisin</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Widder</td>
@@ -1159,6 +1171,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#88;<!-- Ram--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Affe</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);"></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Ramme</td>
@@ -1167,6 +1180,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">-</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#117;<!-- Cock--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hahn</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Toch</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Hahn</td>
@@ -1175,6 +1189,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Toch</td>
   </tr>
   <tr class="calendartable">
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">&#73;<!-- Dog--></td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Hund</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(255, 70, 70, 0.4);">Etch</td>
      <td class="calendartable" style="text-align: left; background-color: rgba(200, 200, 200, 0.5)">Hund</td>
@@ -1183,6 +1198,7 @@ Tiere sowie andere primäre Tier. Umstritten sind auch die Namen der Tiere. Hier
      <td class="calendartable" style="text-align: left; background-color: rgba(70, 70, 255, 0.4);">Etch</td>
   </tr>
   <tr>
+     <td class="calendartable" style="border-width: 0px;font-family: animals; font-size: 20px; color: black">P<!-- Pig --></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
      <td class="calendartable" style="text-align: left; border-width: 0px;"></td>
@@ -4508,35 +4524,32 @@ Innerhalb eines stellaren Sternjahres gibt es immer <nobr>7 363 283</nobr> (sieb
 und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr> Erdentage.
 <br/>
 <br/>
-<h4><a name="80640g">Период от четири звездни години</a></h4>
-Звездните години подобно на земните години са групирани в четворки. По принцип само втората звездна година е невисокосна, а останалите - първа, трета и четвърта са високосни. При нужда от корекция на календара обаче, и четирите години са високосни. 
-Кога се случва това вижте в раздела за звездна епоха.
-Всяка четворка от звездни години се състои точно от <nobr>80 640</nobr> земни години. <br/>
-Обичайната невисокосна четворка (когато втората звездна година е невисокосна, а останалите звездни години са високосни) се състои от 
-<nobr>29 453 131</nobr>
-земни дена, а високосната (когато и четирите звездни години са високосни, поради нужда от корекция) се състои от <nobr>29 453 132</nobr> земни дена.
+<h4><a name="80640g">Vier Sternjahre Abschnitt</a></h4>
+Stern Jahre wie die Erde Jahre sind in Vieren gruppiert. Im Allgemeinen ist nur das zweite stellare Jahr ein Nichtschaltsternjahr und der Rest - erste, dritte und vierte sind Schaltsternjahren. Wenn Sie den Kalender anpassen müssen, sind jedoch die vier Jahre Schaltsternjahren. Wenn es passiert, siehe im Srernepoche Abschnitt. Alle vier Sternjahre bestehen aus <nobr>80 640</nobr> Erdenjahren.i<br/>
+Die üblichen Nichtschaltsternjahr Quartett (wenn die zweite Sternjahr ist ein Nichtshaltsternjahr, und die restlichen Sternjahre sind schalt) besteht aus <nobr>29 453 131</nobr> Erdtage, und der Schalt (wenn die vier Sternjahre sind Schalt durch Korrektur) besteht aus <nobr>29 453 132</nobr> Erdtage.
+
 <br/>
 <br/>
 <table>
 <tr>
-  <td style="text-align: center;">НЕВИСОКОСЕН ПЕРИОД ОТ <br/>4 ЗВЕЗДНИ ГОДИНИ <br/>(80 640 ЗЕМНИ ГОД.)</td>
-  <td style="text-align: center;">ВИСОКОСЕН ПЕРИОД ОТ <br/>4 ЗВЕЗДНИ ГОДИНИ <br/>(80 640 ЗЕМНИ ГОД.)</td>
+  <td style="text-align: center;">VIER NICHT SCHALT STERN JAHREN ABSCHNITT<br/>(80 640 ERDJAHREN)</td>
+  <td style="text-align: center;">VIER SCHALT STERN JAHREN ABSCHNITT<br/>(80 640 ERDJAHREN)</td>
 </tr>
 <tr>
   <td style="text-align: center;">
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
-             <td class="calendartable" style="border-width: 0px;" colspan="2">
+             <td class="calendartable" style="border-width: 0px; height: 3em;" colspan="2">
                &nbsp;
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical god">
-                    год. 
+                    Jahre 
                  </div>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical dni">
-                    дни 
+                    Tage 
                  </div>
              </td>
           </tr>
@@ -4545,7 +4558,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4559,7 +4572,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(200, 200, 200, 0.5); text-align: center; font-weight: normal">
-                Невисокосна звездна година
+                Nichtschaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4573,7 +4586,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4587,7 +4600,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4598,7 +4611,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="2">
-                общо: 
+                insgesamt: 
              </td>
              <td class="calendartable">
                 <nobr>80 640</nobr> 
@@ -4612,17 +4625,17 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
   <td style="text-align: center;">
      <table border="0" style="margin: 10px; border: 10px;">
           <tr>
-             <td class="calendartable" style="border-width: 0px;" colspan="2">
+             <td class="calendartable" style="border-width: 0px; height: 3em;" colspan="2">
                &nbsp;
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical god">
-                    год. 
+                    Jahre 
                  </div>
              </td>
-             <td class="calendartable" style="vertical-align: bottom;">
+             <td class="calendartable" style="vertical-align: middle;">
                  <div class="calendarvertical dni">
-                    дни 
+                    Tage 
                  </div>
              </td>
           </tr>
@@ -4631,7 +4644,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 1. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4645,7 +4658,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 2. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4659,7 +4672,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 3. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4673,7 +4686,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
                 4. 
              </td>
              <td class="calendartable"  style="background-color: rgba(150, 150, 150, 0.9); text-align: center; font-weight: bold">
-                Високосна звездна година
+                Schaltsternjahr
              </td>
              <td class="calendartable">
                 <nobr>20 160</nobr> 
@@ -4684,7 +4697,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
           </tr>
           <tr>
              <td class="calendartable" style="border-width: 0px;" colspan="2">
-                общо: 
+                insgesamt: 
              </td>
              <td class="calendartable">
                 <nobr>80 640</nobr> 
@@ -4699,17 +4712,21 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
 </table>
 <br/>
 <br/>
-<h4><a name="10080000g">Звездна Епоха</a></h4>
-Звездната епоха е последният и най-голям период в българския календар. При него корекцията на календара е окончателно завършена, затова този 
-период няма високосен и невисокосен вариянт. Състои се от 125 периода от по 4 звездни години, или точно 500 звездни години. 
-<br/>
-Всички периоди от по 4 звездни години са невисокосни (което означава че втора звездна година е невисокосна, а първа, трета и четвърта звездни 
-години са високосни), <br/>
-освен<br/>
-63<sup>-тия</sup> период от 4 звездни години.
-Той е високосен, което означава, че при него и 4<sup>-те</sup> звездни години са високосни.<br/><br/>
-Тоест звездна година с номер 250 е високосна.<br/><br/>
-Звездната епоха се състои от <nobr>10 080 000</nobr> (десет милиона и осемдесет хиляди) земни години или точно <nobr>3 681 641 376</nobr> (три милиарда, шестстотин осемдесет и един милиона, шестстотин четирсет и една хиляди, триста седемдесет и шест) земни дена.
+<h4><a name="10080000g">Sternepoche</a></h4>
+Das Sternepoche ist die letzte und größte Periode im altbulgarischen Kalender. 
+Die Kalender Anpassung ist schließlich abgeschlossen, so dass dieser Zeitraum 
+keine Schalt oder Nichtschalt Option hat. Es besteht aus 125 Zeitraum von vier 
+Sternejahren, oder genau 500 Sternjahre.<br/>
+
+Alle Perioden von 4 Sternjahren sind nicht schalt (was bedeutet, dass die zweite 
+Sternjahr ist ein nicht schalt, und die ersten, dritten und vierten Sternjahre sind schalt),<br/><br/>
+Sofern nicht<br/>
+63 Zeitraum von vier Sternjahren. Er ist schalt, was bedeutet, dass er und die 4 Sternjahre schalt sind.<br/><br/>
+
+Das ist ein Sternjahr mit der Nummer 250 ist ein schalt.<br/><br/>
+
+Das Sternepoche besteht aus <nobr>10 080 000</nobr> (zehn Millionen und achtzigtausend)der Erdjahre oder genau <nobr>3 681 641 376</nobr> (3 Milliarden, 681 Millionen, 641.000, 376) Erdtage.
+
 <br/><br/>
 <table class="calendartable" style="margin-right: 10px; padding-right: 10px;">
    <tr>
@@ -4869,7 +4886,7 @@ und innerhalb eines Sternensternjahres gibt es immer genau <nobr>7 363 282</nobr
    <tr>
       <td class="e4syl_2" colspan="4">63</td>    
       <td colspan="46" rowspan="2" style="text-align: left; padding-left: 12px;">
-63<sup>-то</sup> звездно четиригодие е единственото в звездната ера при което и четирите звездни години са високосни звездни години.  
+Der 63<sup>-sten</sup> Sternvierjahr ist das einzige Sternvierjahr, in dem die vier Sternhahr schalt sind.
        </td>    
    </tr>
    <tr>
