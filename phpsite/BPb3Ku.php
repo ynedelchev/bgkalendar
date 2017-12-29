@@ -134,7 +134,7 @@
 
 <div class="linkitem">
 <a href="http://bulgaria-is-alive.com/kalendar.html">
-  <img class="titleimg"  src=""/><br/>
+  <img class="titleimg"  src="images/fakela.png"/><br/>
   <?php tr('Древна България е жива - ЖИВОТИНСКИ КАЛЕНДАР НА ПРАБЪЛГАРИТЕ', 'Ancient Bulgaria is alive - THE ANIMAL CALENDER OF BULGARIANS', 'Das alte Bulgarien lebt - TIERKALENDER DER PROTOBULGAREN', 'Древняя Болгария жива - ЖИВОТИНСКИЙ КАЛЕНДАРЬ ПРОТОБУЛГАРЫ');?>
 </a>
 </div>
@@ -153,7 +153,7 @@
 
 <div class="linkitem">
 <a href="http://pencho.my.contact.bg/start/razni/journey/explain.htm">
-  <img class="titleimg"  src=""/><br/>
+  <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('От Пенчо', 'From Pencho', 'Von Pentscho', 'От Пенчо');?>
 </a>
 <a class="cache" href="links/pencho.mycontact.bg.html"></a>
@@ -161,7 +161,7 @@
 
 <div class="linkitem">
 <a href="http://www.bulgari-istoria-2010.com/booksBG/Prabg_kalendar.pdf">
-  <img class="titleimg"  src=""/><br/>
+  <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('ДРЕВНОБЪЛГАРСКИЯТ КАЛЕНДАР – МИТОВЕ И РЕАЛНОСТИ. ПРОИЗХОД И ЗНАЧЕНИЯ НА НАЗВАНИЯТА', 'THE ANCIENT BULGARIAN CALENDAR - MYTS AND REALITIES. ORIGIN AND SIGNATURE OF THE NAMES', 'DER ANTIKE BULGARISCHE KALENDER - MYTHEN UND REALITÄTEN. HERKUNFT UND BEDEUTUNG DER NAMEN', 'ДРЕВНОБОЛГАРСКИЙ КАЛЕНДАРЬ - МИФЫ И РЕАЛИИ. ПРОИСХОЖДЕНИЕ И ЗНАЧЕНИЯ НАЗВАНИЙ');?>
 
   <!-- http://www.bulgari-istoria-2010.com/booksBG/Prabg_kalendar.pdf -->
@@ -172,7 +172,7 @@
 
 <div class="linkitem">
 <a href="http://ziezi.net/spiridon.html">
-  <img class="titleimg"  src=""/><br/>
+  <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('История во кратце о болгарском народе славенском написа Иеросхимонах Спиридон Габровски в лето 1792', 'Short history of Bulgarian Slavic Nation, written by hieromonk Spyridon Gabrovski in 1792', 'Kurtz Geschichte des Bulgarische Nation der slawischen Sprache von Priestermönch Spyridon Gabrovski im Sommer 1792 geschrieben', 'История болгарского народа славянского языка, написанная Иеросимонахом Спиридоном Габровским летом 1792 года');?>
 </a>
 </div>
