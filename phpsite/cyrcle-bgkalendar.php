@@ -22,14 +22,19 @@ $grbgdiff = 1 +
                    $bg->startOfCalendarInDaysBeforeJavaEpoch()
              )
          );
+if ($grbgdiff <= 0 ){
+  $grbgdiff = $grbgdiff + $periodsgr[2]->getStructure()->getTotalLengthInDays();
+  $yeargr = $periodsgr[2]->getAbsoluteNumber() + 1;
+} else {
+  $yeargr = $periodsgr[2]->getAbsoluteNumber();
+}
 $curdaybg = bcsub($periodsbg[0]->startsAtDaysAfterEpoch(), $periodsbg[2]->startsAtDaysAfterEpoch());
 $monthsgrdays  = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);  
-$rad = 500;
-$strtx = 35;
-$strty = 40;
+$rad = 500;    # Radius
+$strtx = 35;   # Start X coordinate
+$strty = 40;   # Start Y coordinate
 $grbegin = $grbgdiff;
-$year = 7522;
-$yeargr = 2017;
+$year = $yearbg;
 $leap = $isleapbg ? 1 : 0;
 $leapgr = $isleapgr ? 1 : 0;
 $monthsgrdays[1] = $monthsgrdays[1] + $leapgr;
@@ -69,7 +74,7 @@ $svgheight =  $strty*2 + $rad*2;
  </style>
 </defs>
 <?php endif ?>
-  <!-- Month One Begin -->
+<!-- Month One Begin -->
 <?php
   $color = "green";
   $end = "";
@@ -78,7 +83,7 @@ $svgheight =  $strty*2 + $rad*2;
   $day = 0;
 
   $colorgr = "green";
-  $monthgr = -1;
+  $monthgr = 11;
   $daygr = 32-$grbegin;
   
   $i = 0;
@@ -87,6 +92,7 @@ $svgheight =  $strty*2 + $rad*2;
     $colorgr = "green";
 
     if ($i+1 == $grbegin) {
+      $yeargr ++;
       $monthgr = 0; 
       $daygr = 1;
       $colorgr = "blue";
@@ -148,7 +154,7 @@ $svgheight =  $strty*2 + $rad*2;
        $end="<!-- Month Six   End   -->\n";
        $begin="";
        $color = "blue";
-       $month++; $day= 1;
+       $day= 1;
     }
     if ($i == 182 + $leap) {
        $begin="\n<!-- Month Seven Begin -->\n";
@@ -194,14 +200,16 @@ $svgheight =  $strty*2 + $rad*2;
     if (($month == 7) || ($month == 14)) {
        $day = 31;
     } 
+
+    echo $end;
+    echo $begin;
 ?>
 
-
-<!-- <?php echo $i+1;?> <?php echo $year;?>-<?php echo $month;?>-<?php echo $day;?>
+<!-- <?php echo $i+1;?> <?php echo formatMinimumDigits($yearbg, 4);?>-<?php echo formatMinimumDigits($month, 2);?>-<?php echo formatMinimumDigits($day, 2);?>
 <?php
-    if ($monthgr >= 0 && $daygr > 0) { 
-      echo "   ".$yeargr . '-' . ($monthgr + 1) . '-' .$daygr;
-    }
+    #if ($monthgr >= 0 && $daygr > 0) { 
+      echo "   ".formatMinimumDigits($yeargr,4) . '-' . formatMinimumDigits(($monthgr + 1), 2) . '-' .formatMinimumDigits($daygr,2);
+    #}
 ?>
  -->
 <?php
@@ -214,13 +222,10 @@ $svgheight =  $strty*2 + $rad*2;
 
     $ygr = $strty - 10;
     if (! is_null($colorgr) && $colorgr[0] == 'b') { $ygr = $strty - 40;  }
-    echo "<text x=\"".($strtx+$rad + 1)."\" y=\"".($strty+10)."\" fill=\"black\" transform=\"rotate($d,$cntr)\" style=\"font: 0.4em times\">$day</text>\n";
     if ($daygr > 0) { 
-      echo "<text x=\"".($strtx + $rad + 1)."\" y=\"".($strty-5)."\" fill=\"black\" transform=\"rotate($d,$cntr)\" style=\"font: 0.4em times\">$daygr</text>";
+      echo "<text x=\"".($strtx + $rad + 1)."\" y=\"".($strty-5)."\" fill=\"black\" transform=\"rotate($d,$cntr)\" style=\"font: 0.4em times\">$daygr</text>\n";
       echo "<line x1=\"".($strtx+$rad)."\" y1=\"$strty\" x2=\"".($strtx+$rad)."\" y2=\"$ygr\" stroke=\"$colorgr\" stroke-width=\"1\" transform=\"rotate($d, $cntr)\" />\n";
     }
-    echo $end;
-    echo $begin;
   }
 
 
