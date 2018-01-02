@@ -112,6 +112,14 @@
 </div>
 
 <div class="linkitem">
+<a href="http://www.otizvora.com/files2015/tschilingirov//atch-imennik.pdf">
+  <img class="titleimg" src="images/atschilingirov.png"><br/>
+  <?php tr('ИМЕННИКЪТ НА БЪЛГАРСКИТЕ КНЯЗЕ И НЕГОВИЯТ ПРОИЗХОД - Асен Чилингиров, Берлин', 'THE NAMELIST OF BULGARIAN KNYAZES AND ITS ORIGIN - Assen Tschilingirov, Berlin', 'DER NAMENLISTE DES BULGARISCHEN KNYAZEN UND SEINE HERKUNFT - Assen Tschilingirov, Berlin', 'ИМЕННИК БОЛГАРСКИХ КНЯЗОВ И ЕГО ПРОИЗХОД - Асен Чилингиров, Берлин');?>
+  <a class="cache" href="links/atch-imennik.pdf"></a>
+</a>
+</div>
+
+<div class="linkitem">
 <a href="http://protobulgarians.com/Kalendar%20na%20prabaalgarite.htm">
   <img class="titleimg"  src="links/Kalendarat-na-prabalgarite-preob.jpg"/><br/>
   <?php tr('Календар на (пра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
