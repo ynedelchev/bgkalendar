@@ -81,10 +81,11 @@
 </div>
 
 <div class="linkitem">
-<a href="http://historybg.info/%D0%B4%D1%80%D0%B5%D0%B2%D0%B5%D0%BD-%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">
+  <a href="http://historybg.info/%D0%B4%D1%80%D0%B5%D0%B2%D0%B5%D0%BD-%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">
   <img class="titleimg"  src="links/historybg.info.png"/><br/>
   <?php tr('ДРЕВЕН БЪЛГАРСКИ КАЛЕНДАР', 'ANCIENT BULGARIAN CALENDAR', 'DER ANTIK BULGARISCHER KALENDAR', 'ДРЕВНИЙ БОЛГАРСКИЙ КАЛЕНДАРЬ');?>
-</a>
+  </a>
+  <a class="cache" href="links/Dreven-Balgarski-Kalendar-Istoriya-na-Balgarite.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -94,6 +95,14 @@
   <img class="titleimg"  src="images/wikipedia.png"/><br/>
   <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
 </a>
+</div>
+
+<div class="linkitem">
+  <a href="http://alexandradelova.blogspot.bg/2015/02/blog-post_1.html">
+  <img class="titleimg"  src="images/snake.png"/><br/>
+  <?php tr('АСТРОНОМИЯ НА ПРАБЪЛГАРИТЕ<br/> Александра Делова', 'ASTRONOMY OF PROTO-BULGARIANS<br/> Alexandra Delova', 'DIE ASTRONOMIE DER PROTOBULGAREN<br/> Alexandra Delowa', 'АСТРОНОМИЯ ПРОТОБУЛГАР<br/> Александра Делова');?>
+  </a>
+  <a class="cache" href="links/Astronomiya-na-PraBalgarite-Aleksandra-Delova.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -122,8 +131,9 @@
 <div class="linkitem">
 <a href="http://protobulgarians.com/Kalendar%20na%20prabaalgarite.htm">
   <img class="titleimg"  src="links/Kalendarat-na-prabalgarite-preob.jpg"/><br/>
-  <?php tr('Календар на (пра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
+  <?php tr('Календар на (zvaniya-na-mesecite.pdfпра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
 </a>
+<a class="cache" href="links/Nachalo-na-godinata-v-Prabalgarskiya-kalendar.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -131,6 +141,7 @@
   <img class="titleimg"  src="links/protobulgarians.jpg"/><br/>
   <?php tr('За животинските названия в календара', 'About animal names in the calendar', 'Über Tier Namen im Kalender', 'О животинских названиях в календаре');?>
 </a>
+<a class="cache" href="links/Zhivotinski-nazvaniya-na-godinite.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -138,6 +149,7 @@
   <img class="titleimg"  src="links/protobulgarians-months.gif"/><br/>
   <?php tr('За названията на месеците', 'For the names of the months', 'Für die Namen der Monate', 'Для имен месяцев');?>
 </a>
+<a class="cache" href="links/Nazvaniya-na-mesecite.pdf"></a>
 </div>
 
 <div class="linkitem">
@@ -183,6 +195,7 @@
   <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('История во кратце о болгарском народе славенском написа Иеросхимонах Спиридон Габровски в лето 1792', 'Short history of Bulgarian Slavic Nation, written by hieromonk Spyridon Gabrovski in 1792', 'Kurtz Geschichte des Bulgarische Nation der slawischen Sprache von Priestermönch Spyridon Gabrovski im Sommer 1792 geschrieben', 'История болгарского народа славянского языка, написанная Иеросимонахом Спиридоном Габровским летом 1792 года');?>
 </a>
+<a class="cache" href="links/Istoriya-vo-kratce-o-Bolgarskom-narode-slavenskom.pdf"></a>
 </div>
 
 <div class="linkitem">
