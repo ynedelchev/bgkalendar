@@ -42,7 +42,21 @@ $DE = $D+$E; // days after 22-th of March in Julian calendar.
 $velikdeninjuyear = $march22injuyear + $DE;
 	
 $incfile = '';
-if ($velikdeninjuyear - 8 == $dayjuinjuyear) {
+if ($velikdeninjuyear - 56 == $dayjuinjuyear) {
+  $incfile='v-56-mesni-zagovezni';
+} else if ($velikdeninjuyear - 49 == $dayjuinjuyear) {
+  $incfile='v-49-sirni-zagovezni';
+} else if ($velikdeninjuyear - 42 == $dayjuinjuyear) {
+  $incfile='v-42-velik-post-1';
+} else if ($velikdeninjuyear - 35 == $dayjuinjuyear) {
+  $incfile='v-35-velik-post-2';
+} else if ($velikdeninjuyear - 28 == $dayjuinjuyear) {
+  $incfile='v-28-velik-post-3';
+} else if ($velikdeninjuyear - 21 == $dayjuinjuyear) {
+  $incfile='v-21-velik-post-4';
+} else if ($velikdeninjuyear - 14 == $dayjuinjuyear) {
+  $incfile='v-14-velik-post-5';
+} else if ($velikdeninjuyear - 8 == $dayjuinjuyear) {
   $incfile='v-08-lazarovden';
 } else if ($velikdeninjuyear - 7 == $dayjuinjuyear) {
   $incfile='v-07-cvetnica';
