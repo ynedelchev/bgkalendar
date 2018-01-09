@@ -430,7 +430,7 @@ $DETAILS_URL_PARAMETER = "m";
 $DAYS_BG_URL_PARAMETER = "db";
 $DAYS_GR_URL_PARAMETER = "dg";
 
-$ANIMALS_VIEW = array('&#81;<!-- Maus -->', '&#89;<!-- Caw  -->', '&#121;<!-- Bars -->', '&#114;<!-- Rabbit -->', '&#71;<!-- Dragon -->', '&#119;<!--Snake-->', '&#104;<!-- Horse-->', '&#113;<!-- Monkey -->', '&#88;<!-- Ram-->', '&#117;<!-- Cock-->', '&#73;<!-- Dog-->', 'P<!-- Pig -->');
+$ANIMALS_VIEW = array('&#81;<!-- Maus -->', '&#89;<!-- Caw  -->', '&#121;<!-- Bars -->', '&#114;<!-- Rabbit -->', '&#71;<!-- Dragon -->', '&#119;<!--Snake-->', '&#104;<!-- Horse-->', '&#88;<!-- Ram-->', '&#113;<!-- Monkey -->', '&#117;<!-- Cock-->', '&#73;<!-- Dog-->', 'P<!-- Pig -->');
 
 $locale = "bg";
 $areDetailsVisible = isset($_REQUEST[$DETAILS_URL_PARAMETER]) ? $_REQUEST[$DETAILS_URL_PARAMETER] : null; // details
@@ -520,5 +520,8 @@ $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 
 $igr = $periodsgr[2]->startsAtDaysAfterEpoch();
 $ibg = bcadd($igr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));
+
+$isleapbg = $periodsbg[2]->getStructure()->getTotalLengthInDays() > 365;
+$isleapgr = $periodsgr[2]->getStructure()->getTotalLengthInDays() > 365;
 
 ?>

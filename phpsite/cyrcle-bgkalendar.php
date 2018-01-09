@@ -85,7 +85,7 @@ $svgheight =  $strty*2 + $rad*2;
   $colorgr = "green";
   $monthgr = 11;
   $daygr = 32-$grbegin;
-  
+
   $i = 0;
   for (; $i < 365 + $leap; $i++) {
     $color = "green"; 
@@ -154,7 +154,7 @@ $svgheight =  $strty*2 + $rad*2;
        $end="<!-- Month Six   End   -->\n";
        $begin="";
        $color = "blue";
-       $day= 1;
+       $day= 31;
     }
     if ($i == 182 + $leap) {
        $begin="\n<!-- Month Seven Begin -->\n";
@@ -195,21 +195,17 @@ $svgheight =  $strty*2 + $rad*2;
        $end="<!-- Month Twelve End   -->\n\n";
        $begin="";
        $color = "blue";
-       $month++; $day= 1;
+       $day= 31;
     }
-    if (($month == 7) || ($month == 14)) {
-       $day = 31;
-    } 
 
     echo $end;
     echo $begin;
+
 ?>
 
 <!-- <?php echo $i+1;?> <?php echo formatMinimumDigits($yearbg, 4);?>-<?php echo formatMinimumDigits($month, 2);?>-<?php echo formatMinimumDigits($day, 2);?>
 <?php
-    #if ($monthgr >= 0 && $daygr > 0) { 
       echo "   ".formatMinimumDigits($yeargr,4) . '-' . formatMinimumDigits(($monthgr + 1), 2) . '-' .formatMinimumDigits($daygr,2);
-    #}
 ?>
  -->
 <?php
