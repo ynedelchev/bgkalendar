@@ -330,14 +330,14 @@
       <td class="oldbg" style="text-align: center;"> з </td>
       <td class="oldbg" style="text-align: left;"> земл&#x0463; </td>
       <td class="calendartable">70 </td>
-      <td class="oldbg" style="text-align: center;"> к </td>
-      <td class="oldbg" style="text-align: left;"> како </td>
-      <td class="calendartable">700 </td>
       <td class="oldbg" style="text-align: center;"> о</td>
       <td class="oldbg" style="text-align: left;"> онъ </td>
       <td class="calendartable">700 </td>
       <td class="oldbg" style="text-align: center;"> &#x0471;</td>
       <td class="oldbg" style="text-align: left;"> &#x0471;и, пси</td>
+      <td class="calendartable"> </td>
+      <td class="oldbg" style="text-align: center;"> </td>
+      <td class="oldbg" style="text-align: left;"> </td>
    </tr>
    <tr class="oldbg">
       <td class="calendartable">8 </td>
