@@ -153,6 +153,12 @@ $btcrub = $btcusd * $usdrub;
 $newrates = $rates == 'a' ? 'b' : 'a';
 
 $fh = fopen(__DIR__.'/fxrates-current.php', 'w');
+if (!$fh) {
+  $error = error_get_last();
+  error_log('Trying to open '.__DIR__.'/fxrates-current.php'.', but that failed with error of type '.$error['type'].' and message: '.$error['message']);
+  http_response_code(500);
+  exit(1);  
+}
 fwrite($fh, "<?php\n");
 fwrite($fh, "\$etag='".$etag."';\n");
 fwrite($fh, "\$date='".$date."';\n");
