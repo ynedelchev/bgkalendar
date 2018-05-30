@@ -117,7 +117,7 @@ Fügen Sie bitte die folgenden im Abschnitt &lt;header&gt; Ihrer Webseite ein.
 <code>&nbsp; &lt;style&gt;</code><br/>
 <code>&nbsp; &nbsp; <font color="brown"><b>@</b>font-face</font> <font color="blue">{</font></code><br/>
 <code>&nbsp; &nbsp; &nbsp; <b>font-family:</b> bgcyrillic; </code><br/>
-<code>&nbsp; &nbsp; &nbsp; <b>src:</b> url(<font color="blue">http://bgkalendar.com/fonts/notoserif-regular.ttf</font>); </code><br/>
+<code>&nbsp; &nbsp; &nbsp; <b>src:</b> url(<font color="blue">http://bgkalendar.com/fonts/notoserif-regular.php</font>); </code><br/>
 <code>&nbsp; &nbsp; <font color="blue">}</font></code><br/>
 <code>&nbsp; &nbsp; <font color="brown">*</font> <font color="blue">{</font> </code><br/>
 <code>&nbsp; &nbsp; &nbsp; <b>font-family:</b> bgcyrillic;</code><br/>
