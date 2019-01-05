@@ -28,7 +28,7 @@ Nach Georgi Welew und seinem Buch
 An diesem Tag war der alte bulgarische Kalender eine Feier der Frühlingstagung.
 <br/><br/>
 Die Symbolik dieser Feier wurde in Form des Festes in die christliche Tradition eingebracht
-<a href="https://de.wikipedia.org/wiki/Verkündigung_des_Herrn">Verkündigung</a> (Auch <i>Blagovets</i> genannt), In der Neuzeit von der orthodoxen Kirche der
+<a href="https://de.wikipedia.org/wiki/Verkündigung_des_Herrn">Verkündigung</a> (Auch <i>Blagowets</i> genannt), In der Neuzeit von der orthodoxen Kirche der
 <a href="http://bg-patriarshia.bg/calendar.php?month=2">25<sup>-te</sup> März</a>.
 
 <?php elseif ($lang == 'ru') : ?>
