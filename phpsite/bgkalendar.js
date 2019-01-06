@@ -149,14 +149,36 @@
          mdownparam = param;
      }
 
-     function mup(daybg, daygr, param, jepochindex) {
+     function mup(daybg, daygr, param, jepochindex, lang) {
         window.location = window.location.protocol + '//' 
                         + window.location.host 
                         + window.location.port
                         + window.location.pathname 
                         + "?" + (mdownparam != null ? mdownparam : param )
-                        + "=" + (mdownjepochindex != null ? mdownjepochindex : jepochindex);  
+                        + "=" + (mdownjepochindex != null ? mdownjepochindex : jepochindex)
+	                + "&lang=" + getLang(lang);
      }
+
+     /**
+      * Make sure that we support just the predefined languages and any invalid input 
+      * for the language is translated to the default language: in our case, that is 
+      * Bulgarian "bg".
+      * 
+      * @param lang - the language as specified in the query string of the given page. 
+      *               That one should have been captured by the backend logic and hsould 
+      *               have been then passed to the javascript.
+      */
+     function getLang(lang) {
+       if (lang == null) {
+         return "bg";
+       } else if (lang == "en" || lang == "de" || lang == "ru") {
+         return lang;
+       } else {
+         return "bg";
+       }
+     }
+
+
      function kpress(e, daybg, daygr, param, jepochindex) {
       /*
          alert( "e = " + e + "\n"
@@ -218,8 +240,8 @@
      function setFuncOnBlur ( setName, namebg, namegr ) { this[setName] = function() { unfocused(namebg, namegr); }; }
      function setFuncOnmover( setName, namebg, namegr ) { this[setName] = function() {     mover(namebg, namegr); }; }
      function setFuncOnmout ( setName, namebg, namegr ) { this[setName] = function() {      mout(namebg, namegr); }; }
-     function setFuncOnmdown( setName, namebg, namegr, param, jepoch ){ this[setName] = function(){mdown (namebg, namegr, param, jepoch);}; }
-     function setFuncOnmup  ( setName, namebg, namegr, param, jepoch ){ this[setName] = function(){mup   (namebg, namegr, param, jepoch); };}
-     function setFuncOnkpres( setName, namebg, namegr, param, jepoch ){ this[setName] = function(){kpress(namebg, namegr, param, jepoch);}; }
+     function setFuncOnmdown( setName, namebg, namegr, param, jepoch       ){ this[setName] = function(){mdown (namebg, namegr, param, jepoch      );}; }
+     function setFuncOnmup  ( setName, namebg, namegr, param, jepoch, lang ){ this[setName] = function(){mup   (namebg, namegr, param, jepoch, lang);}; }
+     function setFuncOnkpres( setName, namebg, namegr, param, jepoch       ){ this[setName] = function(){kpress(namebg, namegr, param, jepoch      );}; }
 
 

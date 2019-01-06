@@ -60,7 +60,7 @@
                 setFuncOnmover( "onmouseover_" + namebg, namebg, namegr);
                 setFuncOnmout ( "onmouseout_"  + namebg, namebg, namegr);
                 setFuncOnmdown( "onmousedown_" + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch);
-                setFuncOnmup  ( "onmouseup_"   + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch)
+		setFuncOnmup  ( "onmouseup_"   + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch, "<?php echo $lang;?>");
                 setFuncOnkpres( "onkeypress_"  + namebg, namebg, namegr, "<?php echo $DAYS_BG_URL_PARAMETER ?>", jepoch);
            
                 bg.onfocus     = this["onfocus_" + namebg];
@@ -98,7 +98,7 @@
                 setFuncOnmover( "onmouseover_" + namegr, namegr, namebg);
                 setFuncOnmout ( "onmouseout_"  + namegr, namegr, namebg);
                 setFuncOnmdown( "onmousedown_" + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch);
-                setFuncOnmup  ( "onmouseup_"   + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch);
+		setFuncOnmup  ( "onmouseup_"   + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch, "<?php echo $lang;?>");
                 setFuncOnkpres( "onkeypress_"  + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", jepoch);
            
                 gr.onfocus     = this["onfocus_" + namegr];

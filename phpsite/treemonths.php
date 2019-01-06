@@ -144,7 +144,7 @@ $prefix = 'mobile';
                 setFuncOnmover( "onmouseover_" + namegr, namegr, namebg);
                 setFuncOnmout ( "onmouseout_"  + namegr, namegr, namebg);
                 setFuncOnmdown( "onmousedown_" + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i);
-                setFuncOnmup  ( "onmouseup_"   + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i);
+		setFuncOnmup  ( "onmouseup_"   + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i, "<?php echo $lang;?>");
                 setFuncOnkpres( "onkeypress_"  + namegr, namegr, namebg, "<?php echo $DAYS_GR_URL_PARAMETER;?>", indexgr + i);
            
                 gr.onfocus     = this["onfocus_"     + namegr];
