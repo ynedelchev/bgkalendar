@@ -11,7 +11,7 @@
 
 
 <?php elseif ($lang == 'en') : ?>
-According to Georgy Velev and his book 
+According to Georgi Velev and his book 
 <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>
 Oon this day the Spring Equinox was celebrated on the Ancient Bulgarian Calendar.
 <br/><br/>
