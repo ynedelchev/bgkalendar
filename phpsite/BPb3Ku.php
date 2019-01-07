@@ -199,6 +199,14 @@
 </div>
 
 <div class="linkitem">
+<a href="http://islan.dir.bg/_wm/library/?df=660100">
+  <img class="titleimg"  src="images/islan.png" style="max-height: 100px; max-width: 100px;"/><br/>
+  <?php tr('БЪЛГАРСКИ КАЛЕНДАР', 'BULGARIAN CALENDAR', 'BULGARISCHER KALENDAR', 'БОЛГАРСКИЙ КАЛЕНДАРЬ');?>
+</a>
+<a class="cache" href="links/islan"></a>
+</div>
+
+<div class="linkitem">
 <a href="http://calendar.samoistina.com/">
   <img class="titleimg"  src="links/calendar.samoistina.com.gif"/><br/>
   <?php tr('Календар', 'Calendar', 'Kalender', 'Календарь');?>
