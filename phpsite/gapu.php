@@ -120,121 +120,126 @@ if (file_exists(__DIR__.'/internal/fxrates-a.php')) {
 <?php include('navigation.php');?>
 <h2><?php tr('Дарения', 'Donation', 'Spenden', 'Пожертвования');?></h2>
 
-<h3><?php tr('Направете дарение', 'Make a donation', 'Etwas spenden', 'Сделайте пожертвование');?></h3>
 
-<?php if ($lang == 'bg') : ?>
-В момента поддържаме дарения само в биткойни. 
-Моля направете дарение през вашият биткойн портфейл на следният адрес:
-<?php elseif ($lang == 'en') : ?>
-At the current moment, we support donations in bitcoin only.
-Please make a donation through your bitcoin wallet to the following address:
-<?php elseif ($lang == 'de') : ?>
-Momentan unterstützen wir Spenden nur in bitcoin.
-Bitte machen Sie eine Spende über Ihre bitcoin Geldbörse an folgende Adresse:
-<?php elseif ($lang == 'ru') : ?>
-Сейчас мы поддерживаем пожертвования только в биткойнами.
-Сделайте пожертвование, пожалуйста вашим биткойн портфель на следущей адресс:
-<?php endif ?>
-<br/><br/>
+<div style="float: left; margin-left: 1em; margin-right: 5em; margin-bottom: 5em;">
+  <h3><?php tr('Направете дарение чрез ПейПал', 'Make a donation via PayPal', 'Etwas spenden (PayPal)', 'Сделайте пожертвование через ПейПаль');?></h3>
+  <!-- PayPal Start -->
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick" />
+    <input type="hidden" name="hosted_button_id" value="8DTDJ9LLMCUK4" />
+    <input type="image" src="images/paypal.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+    <img alt="" border="0" src="https://www.paypal.com/en_BG/i/scr/pixel.gif" width="1" height="1" />
+  </form>
+<!-- PayPal End -->
+  <br/><br/>
+  <br/><br/>
+</div>
 
 
-<code><b><font color="darkblue"><span id="wallet" class="wallet">
-<?php 
-   if (file_exists(__DIR__.'/bitcoinwallet.php')) {
-      include(__DIR__.'/bitcoinwallet.php');
-   } else {
-      echo 'ERROR: Cannot find wallet address.';
-      error_log('ERROR: Cannot find wallet address. No file "'.__DIR__.'/bitcoinwallet.php'.'" found. Please create such file containing your bitcoin address for donations.');
-   }
-?>
-</span></font></b></code>
-<br/><br/>
-<div id="qrcode" style="width: 256px; height: 256px;"></div>
-<br/><br/>
-<?php if ($lang == 'bg') : ?>
-Текушият обменен курс към дата <b><?php echo $date;?></b> на биткойна според <a href="https://currencylayer.com">https://currencylayer.com</a> e
-<?php elseif ($lang == 'en') : ?>
-According to <a href="https://currencylayer.com">https://currencylayer.com</a> the current conversion rate of bitcoin at <b><?php echo $date;?></b> is:
-<?php elseif ($lang == 'de') : ?>
-Nach <a href="https://currencylayer.com">https://currencylayer.com</a> der aktuellen Conversion-Rate von bitcoin bei <b><?php echo $date;?></b> ist:
-<?php elseif ($lang == 'ru') : ?>
-Согласно <a href="https://currencylayer.com">https://currencylayer.com</a> текущий коэффициент пересчета биткоин на <b><?php echo $date;?></b> есть: 
-<?php endif ?>
-<br/><br/>
-<br/><br/>
-<table>
-<tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
-<td class="btc"><?php echo $btcbgn==''?'<font color="red">неизвестно колко</font> ':$btcbgn;?></td>
-<td align="right"> <?php tr('български лева', 'Bulgarian Levs', 'Bulgarische Lev', 'Болгарские Лева');?></td><td> (BGN)</td></tr>
+<div style="float: left; margin-left: 1em;">
+<!-- Bitcoin Start -->
+  <h3><?php tr('Направете дарение чрез Биткойн', 'Make a donation via Bitcoin', 'Etwas spenden (Bitcoin)', 'Сделайте пожертвование через Биткойн');?></h3>
 
-<tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
-<td class="btc"><?php echo $btcusd==''?'<font color="red">неизвестно колко</font> ':$btcusd;?></td>
-<td align="right"> <?php tr('щатски долара', 'US Dollars', 'US Dollars', 'США Долларов');?></td><td>  (USD)</td></tr>
 
-<tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
-<td class="btc"><?php echo $btccad==''?'<font color="red">неизвестно колко</font> ':$btccad;?></td>
-<td align="right"> <?php tr('канадски долара', 'Canadian Dollars', 'Kanadisch Dollars', 'Канадских Долларов');?></td><td> (CAD)</td></tr>
+  <code><b><font color="darkblue"><span id="wallet" class="wallet">
+  <?php 
+     if (file_exists(__DIR__.'/bitcoinwallet.php')) {
+        include(__DIR__.'/bitcoinwallet.php');
+     } else {
+        echo 'ERROR: Cannot find wallet address.';
+        error_log('ERROR: Cannot find wallet address. No file "'.__DIR__.'/bitcoinwallet.php'.'" found. Please create such file containing your bitcoin address for donations.');
+     }
+  ?>
+  </span></font></b></code>
+  <br/><br/>
+  <div id="qrcode" style="width: 256px; height: 256px;"></div>
+  <br/><br/>
+  <?php if ($lang == 'bg') : ?>
+  Текушият обменен курс към дата <b><?php echo $date;?></b> на биткойна според <a href="https://currencylayer.com">https://currencylayer.com</a> e
+  <?php elseif ($lang == 'en') : ?>
+  According to <a href="https://currencylayer.com">https://currencylayer.com</a> the current conversion rate of bitcoin at <b><?php echo $date;?></b> is:
+  <?php elseif ($lang == 'de') : ?>
+  Nach <a href="https://currencylayer.com">https://currencylayer.com</a> der aktuellen Conversion-Rate von bitcoin bei <b><?php echo $date;?></b> ist:
+  <?php elseif ($lang == 'ru') : ?>
+  Согласно <a href="https://currencylayer.com">https://currencylayer.com</a> текущий коэффициент пересчета биткоин на <b><?php echo $date;?></b> есть: 
+  <?php endif ?>
+  <br/><br/>
+  <br/><br/>
+  <table>
+  <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
+  <td class="btc"><?php echo $btcbgn==''?'<font color="red">неизвестно колко</font> ':$btcbgn;?></td>
+  <td align="right"> <?php tr('български лева', 'Bulgarian Levs', 'Bulgarische Lev', 'Болгарские Лева');?></td><td> (BGN)</td></tr>
 
-<tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
-<td class="btc"><?php echo $btcgbp==''?'<font color="red">неизвестно колко</font> ':$btcgbp;?></td>
-<td align="right"> <?php tr('британски паунда', 'British Pounds', 'Britisch Pounds', 'Британских Паунда');?></td><td> (GBP)</td></tr>
+  <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
+  <td class="btc"><?php echo $btcusd==''?'<font color="red">неизвестно колко</font> ':$btcusd;?></td>
+  <td align="right"> <?php tr('щатски долара', 'US Dollars', 'US Dollars', 'США Долларов');?></td><td>  (USD)</td></tr>
 
-<tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
-<td class="btc"><?php echo $btcrub==''?'<font color="red">неизвестно колко</font> ':$btcrub;?></td>
-<td align="right"> <?php tr('руски рубли', 'Russian Rubles', 'Russisch Rubles', 'рублей');?></td><td> (RUB)</td></tr>
+  <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
+  <td class="btc"><?php echo $btccad==''?'<font color="red">неизвестно колко</font> ':$btccad;?></td>
+  <td align="right"> <?php tr('канадски долара', 'Canadian Dollars', 'Kanadisch Dollars', 'Канадских Долларов');?></td><td> (CAD)</td></tr>
 
-</table>
+  <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
+  <td class="btc"><?php echo $btcgbp==''?'<font color="red">неизвестно колко</font> ':$btcgbp;?></td>
+  <td align="right"> <?php tr('британски паунда', 'British Pounds', 'Britisch Pounds', 'Британских Паунда');?></td><td> (GBP)</td></tr>
 
-<h3>Калкулатор</h3>
-<input class="btc" 
+  <tr><td>1 <?php tr('биткойн', 'bitcoin', 'bitcoin', 'биткойн');?> (BTC) = </td>
+  <td class="btc"><?php echo $btcrub==''?'<font color="red">неизвестно колко</font> ':$btcrub;?></td>
+  <td align="right"> <?php tr('руски рубли', 'Russian Rubles', 'Russisch Rubles', 'рублей');?></td><td> (RUB)</td></tr>
+
+  </table>
+
+  <h3>Калкулатор</h3>
+  <input class="btc" 
        type="text" 
        name="btc" 
        id="btc" 
        value="<?php echo 10/$btcbgn;?>" 
        onchange="javascript:convert(this.value, 'BTC');"
        onkeyup="javascript:convert(this.value, 'BTC')"
-/> BTC = 
-<input class="btc" 
+  /> BTC = 
+  <input class="btc" 
        type="text" 
        name="bgn" 
        id="bgn" 
        value="<?php echo 10;?>" 
        onchange="javascript:convert(this.value, 'BGN');"
        onkeyup="javascript:convert(this.value, 'BGN')"
-/> BGN = 
-<input class="btc" 
+  /> BGN = 
+  <input class="btc" 
        type="text" 
        name="usd" 
        id="usd" 
        value="<?php echo (10/$btcbgn)*$btcusd;?>" 
        onchange="javascript:convert(this.value, 'USD');"
        onkeyup="javascript:convert(this.value, 'USD')"
-/> USD = 
-<input class="btc" 
+  /> USD = 
+  <input class="btc" 
        type="text" 
        name="cad" 
        id="cad" 
        value="<?php echo (10/$btcbgn)*$btccad;?>" 
        onchange="javascript:convert(this.value, 'CAD');"
        onkeyup="javascript:convert(this.value, 'CAD')"
-/> CAD = 
-<input class="btc" 
+  /> CAD = 
+  <input class="btc" 
        type="text" 
        name="gbp" 
        id="gbp" 
        value="<?php echo (10/$btcbgn)*$btcgbp;?>" 
        onchange="javascript:convert(this.value, 'GBP');"
        onkeyup="javascript:convert(this.value, 'GBP')"
-/> GBP = 
-<input class="btc" 
+  /> GBP = 
+  <input class="btc" 
        type="text" 
        name="rub" 
        id="rub" 
        value="<?php echo (10/$btcbgn)*$btcrub;?>" 
        onchange="javascript:convert(this.value, 'RUB');"
        onkeyup="javascript:convert(this.value, 'RUB')"
-/> RUB 
+  /> RUB 
 
+<!-- Bitcoin End -->
+</div>
 
 
 
