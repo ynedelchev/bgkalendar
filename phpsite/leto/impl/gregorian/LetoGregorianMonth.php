@@ -7,13 +7,13 @@ class LetoGregorianMonth extends LetoPeriodStructureBean {
     private static $DEFAULT_LOCALE = "bg";
     private static $sLocaleMonthNames = array(
          'bg' => array('Януари',  'Февруари', 'Март',      'Април',    'Май',      'Юни',
-                       'Юли',     'Август',   'Септември', 'Октомври', 'Ноември',  'Декември'),
+                       'Юли',     'Август',   'Септември', 'Октомври', 'Ноември',  'Декември', 'Февруари Високосен'),
          'en' => array('January', 'February', 'March',     'April',    'May',      'June',
-                       'July',    'August',   'September', 'October',  'November', 'December'),
+                       'July',    'August',   'September', 'October',  'November', 'December', 'February Leap'),
          'de' => array('Januar',  'Februar',  'März',      'April',    'Mai',      'Juni',
-                       'Juli',    'August',   'September', 'Oktober',  'November', 'Dezember'),
+                       'Juli',    'August',   'September', 'Oktober',  'November', 'Dezember', 'Februar hoher Monat'),
          'ru' => array('Януарь',  'Февраль',  'Март',      'Апрель',   'Май',      'Июнь',
-                       'Июль',    'Август',   'Септябрь',  'Октябрь',  'Ноябрь',   'Декабрь')
+                       'Июль',    'Август',   'Септябрь',  'Октябрь',  'Ноябрь',   'Декабрь', 'Февраль Високосный')
     );
     
         
@@ -32,9 +32,9 @@ class LetoGregorianMonth extends LetoPeriodStructureBean {
         parent::__construct($totalLengthInDays, $subPeriods);
 
         $this->mIndexInYear = $indexInYear;
-        if ($this->mIndexInYear < 0 || $this->mIndexInYear >= 12) {
+        if ($this->mIndexInYear < 0 || $this->mIndexInYear > 12) {
             throw new LetoExceptionUnrecoverable("No month with index " . $indexInYear 
-                   . " is supported in Gregorian calendar. Its index shoul be between 0 (January) and 11 (December).");
+                   . " is supported in Gregorian calendar. Allowed values are between 0 (January) and 11 (December) and also includes 12 (for February Leap).");
         }
     }
     

@@ -31,7 +31,7 @@ class LetoBulgarianMonth extends LetoPeriodStructureBean {
         $this->mIndexInYear = $indexInYear;
         if ($this->mIndexInYear < 0 || $this->mIndexInYear > 12) {
             throw new LetoExceptionUnrecoverable("No month with index " . $indexInYear 
-                   . " is supported in Gregorian calendar. Its index shoul be between 0 (January) and 11 (December).");
+                   . " is supported in Gregorian calendar. Allowed values are between 0 (First Month) and 11 (Twelvth Month) and also includes 12 (Sixt Leap Month).");
         }
     }
     

@@ -38,8 +38,8 @@ function get() {
   $calendars['gregorian'] = array(
      'link' => $baselink.'gregorian',
      'path' => $basepath.'gregorian',
-     'name' => 'Gregorian Calendar',
-     'description' => ''
+     'name' => 'Modern Gregorian Calendar',
+     'description' => 'Dates and Model of the Modern Gregorian Calendar.'
   );
   
   $calendars['julian'] = array(

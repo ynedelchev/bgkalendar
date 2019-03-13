@@ -98,7 +98,7 @@ function get() {
           'type'  => $calendarPeriod->getType()->getName(),
           'index' => $calendarPeriod->getNumber()+1,
           'name'  => $calendarPeriod->getActualName(),
-          'absoluteIndex' => $calendarPeriod->getAbsoluteNumber(),
+          'absoluteIndex' => $calendarPeriod->getAbsoluteNumber()+1,
           'absoluteStartIndex' => $calendarPeriod->startsAtDaysAfterEpoch()
        )
     );
@@ -124,14 +124,15 @@ function get() {
     'yearFromSTartOfSixtyYearsPeriod' => $yearFromStartOfSixtyYears, 
     'periodsNote'    => 'All indexes in periods start at 1',
     'periods' => $periods,
-    'gregorianEquivalent' => 
-           array(
-              'gregorainDate'  => $gregorianShortDate,
-              'gregorianLongDate' => $gregorianLongDate,
-              'gregorianLongDateAlternative' => $gregorianLongDateAlternative,
-              'gregorianWeekDay' => $gregorianWeekDay,
-              'gregorianWeekDayNumber' => $gregorianWeekDayIndex,
-           )
+    'equivalents' => array(
+          'gregorian' => array(
+              'date'  => $gregorianShortDate,
+              'longDate' => $gregorianLongDate,
+              'longDateAlternative' => $gregorianLongDateAlternative,
+              'weekDay' => $gregorianWeekDay,
+              'weekDayNumber' => $gregorianWeekDayIndex,
+              )
+          )
   );
 
   echo json_encode($result, $json_encode_props)."\n";

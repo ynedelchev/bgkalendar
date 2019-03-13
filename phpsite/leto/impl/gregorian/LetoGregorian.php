@@ -82,7 +82,8 @@ class LetoGregorian extends LetoBase {
                     $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY,  
                     $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY,
                     $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY, $DAY
-                )
+                ),
+                true
             );
         $MONTH_30_DAYS = 
             new LetoPeriodStructureBean(30, 
@@ -104,7 +105,7 @@ class LetoGregorian extends LetoBase {
     
         $JANUARY     = new LetoGregorianMonth(31, $MONTH_31_DAYS->getSubPeriods(), 0);
         $FEBRUARY_28 = new LetoGregorianMonth(28, $MONTH_28_DAYS->getSubPeriods(), 1);
-        $FEBRUARY_29 = new LetoGregorianMonth(29, $MONTH_29_DAYS->getSubPeriods(), 1);
+        $FEBRUARY_29 = new LetoGregorianMonth(29, $MONTH_29_DAYS->getSubPeriods(), 12);
         $MARCH       = new LetoGregorianMonth(31, $MONTH_31_DAYS->getSubPeriods(), 2);
         $APRIL       = new LetoGregorianMonth(30, $MONTH_30_DAYS->getSubPeriods(), 3);
         $MAY         = new LetoGregorianMonth(31, $MONTH_31_DAYS->getSubPeriods(), 4);
@@ -148,7 +149,8 @@ class LetoGregorian extends LetoBase {
                     $OCTOBER,        // October 
                     $NOVEMBER,       // November
                     $DECEMBER        // December
-                )
+                ),
+                true
             );
         
         $YEARS_4 = 
@@ -161,7 +163,8 @@ class LetoGregorian extends LetoBase {
             new LetoPeriodStructureBean(1461, 
                 array (
                     $YEAR, $YEAR, $YEAR, $YEAR_LEAP
-                )
+                ),
+                true
             );
 
     
@@ -185,7 +188,8 @@ class LetoGregorian extends LetoBase {
                     $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP,
                     $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP,
                     $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP,
-                )
+                ),
+                true
             );
     
         $YEARS_400 = 

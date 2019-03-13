@@ -38,7 +38,7 @@ function get() {
   $gregorian  = new LetoGregorian();
 
   $name = 'Ancient Bulgarian Calendar';
-  $description = 'Ancient Bulgarian Calendar';
+  $description = 'Dates and Model of the Ancient Bulgarian Calendar.';
   $daysFromStartOfCalendarTillJavaEpoch   = $calendar ->startOfCalendarInDaysBeforeJavaEpoch();
   $periods = $calendar->getCalendarPeriodTypes();
   $periodTypesJson = array();
