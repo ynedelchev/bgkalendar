@@ -84,7 +84,7 @@ class LetoBulgarian extends LetoBase {
         $FOURTH_31   = new LetoBulgarianMonth(31,$MONTH_31_DAYS->getSubPeriods(), 3);
         $FIFTH_30    = new LetoBulgarianMonth(30,$MONTH_30_DAYS->getSubPeriods(), 4);
         $SIXTH_30    = new LetoBulgarianMonth(30,$MONTH_30_DAYS->getSubPeriods(), 5);
-        $SIXTH_31    = new LetoBulgarianMonth(31,$MONTH_31_DAYS->getSubPeriods(), 5);
+        $SIXTH_31    = new LetoBulgarianMonth(31,$MONTH_31_DAYS->getSubPeriods(), 12);
         $SEVENTH_31  = new LetoBulgarianMonth(31,$MONTH_31_DAYS->getSubPeriods(), 6);
         $EIGHTH_30   = new LetoBulgarianMonth(30,$MONTH_30_DAYS->getSubPeriods(), 7);
         $NINTH_30    = new LetoBulgarianMonth(30,$MONTH_30_DAYS->getSubPeriods(), 8);
@@ -112,7 +112,8 @@ class LetoBulgarian extends LetoBase {
                     $FOURTH_31,  $FIFTH_30,    $SIXTH_31,
                     $SEVENTH_31, $EIGHTH_30,   $NINTH_30,
                     $TENTH_31,   $ELEVENTH_30, $TWELVTH_31,
-                )
+                ),
+                true
             );
         
     //-----------------------------------------------------------
@@ -128,7 +129,8 @@ class LetoBulgarian extends LetoBase {
             new LetoPeriodStructureBean(1461, 
                 array (
                     $YEAR, $YEAR, $YEAR, $YEAR_LEAP
-                )
+                ),
+                true
             );
     
     //-----------------------------------------------------------
@@ -148,7 +150,8 @@ class LetoBulgarian extends LetoBase {
                     $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP,
                     $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP,
                     $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP, $YEARS_4_LEAP,
-                )
+                ),
+                true
             );
     
     //-----------------------------------------------------------
@@ -176,7 +179,8 @@ class LetoBulgarian extends LetoBase {
                     $STAR_DAY, 
                     $STAR_DAY_LEAP, 
                     $STAR_DAY_LEAP
-                )
+                ),
+                true
             );
     
     //-----------------------------------------------------------
@@ -192,7 +196,8 @@ class LetoBulgarian extends LetoBase {
             new LetoPeriodStructureBean(613607, 
                 array (
                     $STAR_WEEK_LEAP, $STAR_WEEK, $STAR_WEEK_LEAP, $STAR_WEEK_LEAP
-                )
+                ),
+                true
             );
         
     //-----------------------------------------------------------
@@ -214,7 +219,8 @@ class LetoBulgarian extends LetoBase {
                     $STAR_MONTH_LEAP, $STAR_MONTH_LEAP, $STAR_MONTH,
                     $STAR_MONTH_LEAP, $STAR_MONTH_LEAP, $STAR_MONTH_LEAP,
                     $STAR_MONTH_LEAP, $STAR_MONTH_LEAP, $STAR_MONTH_LEAP
-                )
+                ),
+                true
             );
         
     //-----------------------------------------------------------
@@ -230,7 +236,8 @@ class LetoBulgarian extends LetoBase {
             new LetoPeriodStructureBean(29453132, 
                 array (
                     $STAR_YEAR_LEAP, $STAR_YEAR_LEAP, $STAR_YEAR_LEAP, $STAR_YEAR_LEAP
-                )
+                ),
+                true
             );
     
     //-----------------------------------------------------------
@@ -718,6 +725,6 @@ class LetoBulgarian extends LetoBase {
         $bg = new LetoBulgarian();
         $bg.checkCorrectness();
     }
-    
+
 }
 ?>

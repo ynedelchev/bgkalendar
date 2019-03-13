@@ -7,13 +7,13 @@ class LetoBulgarianMonth extends LetoPeriodStructureBean {
     private static $DEFAULT_LOCALE = "bg";
     private static $sLocaleMonthNames = array(
               'bg' => array ( 'Първи',  'Втори',   'Трети',   'Четвърти',  'Пети',         'Шести',
-                              'Седми',  'Осми',    'Девети',  'Десети',    'Единайсти',    'Дванайсти' ),
+                              'Седми',  'Осми',    'Девети',  'Десети',    'Единайсти',    'Дванайсти', 'Шести Високосен' ),
               'en' => array ('First',   'Second',  'Third',   'Fourth',    'Fifth',        'Sixth',
-                             'Seventh', 'Eight',   'Ninth',   'Tenth',     'Eleventh',     'Twelvth'),
+                             'Seventh', 'Eight',   'Ninth',   'Tenth',     'Eleventh',     'Twelvth', 'Sixth Leap'),
               'de' => array ('Zuerst',  'Zweiter', 'Dritter', 'Vierter',   'Fünfter',      'Sechster',
-                             'Siebter', 'Achter',  'Neunter', 'Zehntel',   'Elfter',       'Zwölfter'),
+                             'Siebter', 'Achter',  'Neunter', 'Zehntel',   'Elfter',       'Zwölfter', 'Sechster hoher Monat'),
               'ru' => array ('Первый',  'Второй',  'Третий',  'Четвёртый', 'Пятый',        'Шестой',
-                             'Седьмой', 'Восьмой', 'Девятый', 'Десятый',   'Одиннадцатый', 'Двенадцатый')
+                             'Седьмой', 'Восьмой', 'Девятый', 'Десятый',   'Одиннадцатый', 'Двенадцатый', 'Шестой Високосный')
     );
     
     
@@ -29,7 +29,7 @@ class LetoBulgarianMonth extends LetoPeriodStructureBean {
     {
         parent::__construct($totalLengthInDays, $subPeriods);
         $this->mIndexInYear = $indexInYear;
-        if ($this->mIndexInYear < 0 || $this->mIndexInYear >= 12) {
+        if ($this->mIndexInYear < 0 || $this->mIndexInYear > 12) {
             throw new LetoExceptionUnrecoverable("No month with index " . $indexInYear 
                    . " is supported in Gregorian calendar. Its index shoul be between 0 (January) and 11 (December).");
         }

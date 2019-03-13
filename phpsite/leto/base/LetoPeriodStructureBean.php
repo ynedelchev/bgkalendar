@@ -7,13 +7,15 @@ class LetoPeriodStructureBean implements LetoPeriodStructure {
     private $mPeriodType = null; // LetoPeriodType
     private $mTotalLengthInDays = 0; // long
     private $mTotalLengthInPeriodTyps = null; // Map<LetoPeriodType, Long>
+    private $isLeap;
     
     
     /** long totalLengthInDays, LetoPeriodStructure[] subPeriods */
-    public function __construct($totalLengthInDays, $subPeriods) 
+    public function __construct($totalLengthInDays, $subPeriods, $isLeap = false) 
     {
         $this->mSubPeriods = $subPeriods;
         $this->mTotalLengthInDays = $totalLengthInDays;
+	$this->isLeap = $isLeap;
     }
     
     /**
@@ -84,7 +86,7 @@ class LetoPeriodStructureBean implements LetoPeriodStructure {
     }
 
     public function getName($locale) {
-        return $this->getPeriodType()->getName();
+        return $this->getPeriodType()->getName().($this->isLeap?' Leap':'');
     }
 
 }

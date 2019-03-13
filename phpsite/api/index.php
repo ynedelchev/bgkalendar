@@ -16,9 +16,12 @@ function get() {
         if ($entry != '..' && $entry != '.' && !is_file(__DIR__.'/'.$entry) && substr($entry, 0, 1) === 'v') {
           $expires = isset($versions[$entry]) ? $versions[$entry] : null;
           $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')?'s':'' );
+	  $requesturi = $_SERVER['REQUEST_URI'];
+	  $requesturi = $requesturi ? $requesturi : '/'; 
+	  $requesturi = substr($requesturi, -1) == '/' ? $requesturi : $requesturi.'/' ; 
           $vers[$entry] = array(
-                  'link'=> $proto.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/'.$entry,
-                  'path'=>$_SERVER['REQUEST_URI'].'/'.$entry,
+                  'link'=> $proto.'://'.$_SERVER['HTTP_HOST'].$requesturi.$entry,
+                  'path'=>$requesturi.$entry,
           ); 
           if (isset($versions[$entry])) {
              $vers[$entry]['expires'] = $versions[$entry];

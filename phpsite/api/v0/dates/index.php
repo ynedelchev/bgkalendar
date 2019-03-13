@@ -10,30 +10,34 @@ function get() {
   header('Content-Type: application/json');
   handle_version(basename(dirname(__DIR__)));
 
+  $requesturi = $_SERVER['REQUEST_URI'];
+  $requesturi = $requesturi ? $requesturi : '/';
+  $requesturi = substr($requesturi, -1) == '/' ? $requesturi : $requesturi.'/' ;
+
   $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'    )?'s':'' );
-  $baselink = $proto.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-  $basepath = $_SERVER['REQUEST_URI'];
+  $baselink = $proto.'://'.$_SERVER['HTTP_HOST'].$requesturi;
+  $basepath = $requesturi;
 
 
   $result = array();
   $calendars = array();
   $calendars['bulgarian'] = array(
-     'link' => $baselink.'/bulgarian',
-     'path' => $basepath.'/bulgarian',
+     'link' => $baselink.'bulgarian',
+     'path' => $basepath.'bulgarian',
      'name' => 'Old Bulgarian Calendar',
      'description' => ''
   );
 
   $calendars['gregorian'] = array(
-     'link' => $baselink.'/gregorian',
-     'path' => $basepath.'/gregorian',
+     'link' => $baselink.'gregorian',
+     'path' => $basepath.'gregorian',
      'name' => 'Gregorian Calendar',
      'description' => ''
   );
   
   $calendars['julian'] = array(
-     'link' => $baselink.'/julian',
-     'path' => $basepath.'/julian',
+     'link' => $baselink.'julian',
+     'path' => $basepath.'julian',
      'name' => 'Julian Calendar',
      'description' => ''
   );

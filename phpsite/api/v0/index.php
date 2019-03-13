@@ -14,17 +14,28 @@ function get() {
    array_push($results, $calendars);
    array_push($results, $dates);
 
+   $requesturi = $_SERVER['REQUEST_URI'];
+   $requesturi = $requesturi ? $requesturi : '/';
+   $requesturi = substr($requesturi, -1) == '/' ? $requesturi : $requesturi.'/' ;
+
+
    $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')?'s':'' );
 
-   $dates['link'] = $proto.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/dates';
-   $dates['path'] = $_SERVER['REQUEST_URI'].'/dates';
-   $dates['description'] = 'Get current date for different calendars, do date algebra or convert a date from one calendar to another.'; 
+#   $dates['link'] = $proto.'://'.$_SERVER['HTTP_HOST'].$requesturi.'dates';
+#   $dates['path'] = $_SERVER['REQUEST_URI'].'/dates';
+#   $dates['description'] = 'Get current date for different calendars, do date algebra or convert a date from one calendar to another.'; 
 
-   $calendars['link'] = $proto.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/calendars';
-   $calendars['path'] = $_SERVER['REQUEST_URI'].'/calendars';
+   $self = array(
+     'link' => $proto.'://'.$_SERVER['HTTP_HOST'].$requesturi,
+     'path' => $requesturi,
+     'description' => 'This version is still under testing but is the only available right now. Expect version 1 soon.'
+   );
+
+   $calendars['link'] = $proto.'://'.$_SERVER['HTTP_HOST'].$requesturi.'calendars';
+   $calendars['path'] = $requesturi.'calendars';
    $calendars['description'] = 'Get information for supported calendars or define a new calendar'; 
 
-   $result['links'] = array($dates, $calendars);
+   $result['links'] = array('self' => $self, 'calendars' => $calendars);
    
    echo json_encode($result, $json_encode_props)."\n";
 }

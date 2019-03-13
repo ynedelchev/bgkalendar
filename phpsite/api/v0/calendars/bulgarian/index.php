@@ -1,7 +1,8 @@
 <?php
 require dirname(dirname(dirname(__DIR__))) . "/include/" . "config.php";
 require dirname(dirname(dirname(__DIR__))) . "/include/" . "imageutils.php";
-require_once(dirname(__DIR__).'/calendar_util.php');
+
+
 
 function get() {
     
@@ -9,18 +10,50 @@ function get() {
   header('Content-Type: application/json');
   handle_version(basename(dirname(dirname(__DIR__))));
 
-  $calendar = new LetoBulgarian();
-  $name = 'Old Bulgarian Calendar';
-  $description = 'The old Bulgarian Calendar';
-  $result = calendar_to_json($calendar, $name, $description);
+  $requesturi = $_SERVER['REQUEST_URI'];
+  $requesturi = $requesturi ? $requesturi : '/';
+  $requesturi = substr($requesturi, -1) == '/' ? $requesturi : $requesturi.'/' ;
 
+  $proto = "http".((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'    )?'s':'' );
+  $baselink = $proto.'://'.$_SERVER['HTTP_HOST'].$requesturi;
+  $basepath = $requesturi;
+
+
+  $result = array();
+  $calendars = array();
+  $calendars['self'] = array(
+     'link' => $baselink,
+     'path' => $basepath,
+     'name' => 'Ancient Bulgarian Calendar',
+     'description' => 'Dates and Model of the Ancient Bulgarian Calendar.'
+  );
+  $calendars['dates'] = array(
+     'link' => $baselink.'dates',
+     'path' => $basepath.'dates',
+     'name' => 'Dates in the Old Bulgarian Calendar',
+     'description' => 'Allows you to see the current date (today) or specific day in the past or future (yyyy-mm-dd).'
+  );
+
+  $calendars['model'] = array(
+     'link' => $baselink.'model',
+     'path' => $basepath.'model',
+     'name' => 'Model strucutre of the calendar',
+     'description' => 'Gives you information of different periods in the callendar such as Day, Month, Year and so on and their structure.'
+  );
+  
+   
+  $result['links'] = $calendars; 
+       
   echo json_encode($result, $json_encode_props)."\n";
 
 }
 
 function post() {
+
+   global $json_encode_props;
+   global $datadir;
+
    echo json_encode($obj, $json_encode_props)."\n";
-  http_exit(405, "Method '" . $method . "' not allowed. Allowed methods are 'GET' and 'POST'.");
       
 } 
 

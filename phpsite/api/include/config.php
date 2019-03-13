@@ -1,5 +1,9 @@
 <?php
 
+
+$lang = 'en'; # for now 
+$GLOBALS['lang'] = $lang;
+
 $stable_version = "v0";
 $testing_version = "v1";
 $versions = array("v0"=> "2017-05-30");

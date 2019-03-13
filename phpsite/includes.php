@@ -184,7 +184,7 @@ function getBckGrnd($indexbg, $daysbgFromStartOfCalendar, $wday) {
 }
 
 function parseDate($date, $type) {
- list($day, $month, $year) = split('[/.-]', $date);
+ list($day, $month, $year) = preg_split("/-|\.|\//", $date);
  $day   = intval($day);
  $month = intval($month);
  $year  = intval($year);
