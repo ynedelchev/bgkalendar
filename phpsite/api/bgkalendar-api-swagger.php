@@ -1,7 +1,19 @@
 <?php 
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT, PATCH, OPTIONS");
+header("Access-Control-Allow-Methods: GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, api_key, Authorization");
+
+$ssl      = ( ! empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' );
+$s = empty($_SERVER["HTTPS"]) ? '' : ($_SERVER["HTTPS"] == "on") ? "s" : "";
+$protocol = substr(strtolower($_SERVER["SERVER_PROTOCOL"]), 0, strpos(strtolower($_SERVER["SERVER_PROTOCOL"]), "/")) . $s;
+$port     = $_SERVER['SERVER_PORT'];
+$port     = ( ( ! $ssl && $port=='80' ) || ( $ssl && $port=='443' ) ) ? '' : ':'.$port;
+$len = strlen(realpath($_SERVER["DOCUMENT_ROOT"]));
+$dir = realpath(__DIR__);
+$uri = substr($dir, $len);
+$server = $_SERVER['SERVER_NAME'];
+$fullurl = $protocol . "://" . $server . $port . $uri;
+
 ?>
 {
     "swagger": "2.0",
@@ -18,8 +30,8 @@ header("Access-Control-Allow-Headers: Content-Type, api_key, Authorization");
             "url": "https://opensource.org/licenses/MIT"
         }
     },
-    "host": "bgkalendar.com",
-    "basePath": "/api/v0/calendars",
+    "host": "<?php echo $server; ?>",
+    "basePath": "<?php echo $uri;?>/v0/calendars",
     "tags": [
        {
         "name": "bulgarian",
@@ -31,7 +43,7 @@ header("Access-Control-Allow-Headers: Content-Type, api_key, Authorization");
        }
     ],
     "schemes": [
-        "https"
+        "<?php echo $protocol;?>"
     ],
     "paths": {
         "/bulgarian/dates/today": {
