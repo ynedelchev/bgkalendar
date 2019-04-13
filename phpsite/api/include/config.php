@@ -1,5 +1,7 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, OPTIONS");
 
 $lang = 'en'; # for now 
 $GLOBALS['lang'] = $lang;
