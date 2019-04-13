@@ -306,7 +306,7 @@
        <?php if (file_exists(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php')) { ?>
        <tr>
             <td colspan="4">
-               <div class="info">
+               <div class="inform">
                <?php include(__DIR__ . "/infobg/" . $daybgformatted.'-'.$monthbgformatted.'.php'); ?> 
                </div>
             </td>
@@ -1246,7 +1246,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <?php if (file_exists(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php')) { ?>
        <tr>
             <td colspan="4">
-               <div class="info">
+               <div class="inform">
                <?php include(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php'); ?> 
                </div>
             </td>

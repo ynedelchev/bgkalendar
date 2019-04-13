@@ -98,7 +98,7 @@ if ($velikdeninjuyear - 56 == $dayjuinjuyear) {
 <?php if ($incfile != '' && file_exists(__DIR__.'/infogr/'.$incfile.'.php')) { ?>
        <tr>
             <td colspan="4">
-               <div class="info" style="border-color: dark-green;">
+               <div class="inform" style="border-color: dark-green;">
                <?php include(__DIR__.'/infogr/'.$incfile.'.php'); ?>
                </div>
             </td>

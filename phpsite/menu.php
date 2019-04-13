@@ -89,7 +89,8 @@
 <ul id="navmenu" class="menu">
   <li><a sub-menu="sm-intro"   href="#"><?php tr('Начало', 'Home', 'Grundseite', 'Главная страница');?></a></li>
   <li><a sub-menu="sm-info"    href="#"><?php tr('Информация', 'Information', 'Auskunft', 'Информация');?></a></li>
-  <li><a sub-menu="sm-forum"   href="<?php echo $DIR_PREFIX;?>forum?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li>
+  <li><a sub-menu="sm-dev"     href="#"><?php tr('За разработчици', 'For Developers', 'Für Entwickler', 'Разработчикам');?></a></li>
+  <!-- <li><a sub-menu="sm-forum"   href="<?php echo $DIR_PREFIX;?>forum?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li> -->
   <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое');?></a></li>
   <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нам');?></a></li>
 </ul>
@@ -127,6 +128,17 @@
   <li>
       <a href="<?php echo $DIR_PREFIX;?>BPb3Ku.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
         <?php tr('Външни препратки', 'External links', 'Externe Links', 'Внешние ссылки')?>
+      </a>
+  </li>
+</ul>
+<ul class="vmenu" id="sm-dev">
+  <li>
+      <a class="header"><?php tr('За разработчици', 'For Developers', 'Für Entwickler', 'Разработчикам');?>
+      </a>
+  </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>dev-rest-api.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('REST API', 'REST API', 'REST API', 'REST API')?>
       </a>
   </li>
 </ul>
