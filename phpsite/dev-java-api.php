@@ -47,7 +47,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
 
 <?php if ($lang == 'bg') : ?>
  <h1>Java API</h1>
- Библиотека за разработка на програмният език Джава (Java) може да бъде намерена <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">тук</a>.
+ Библиотека за разработка на програмния език Джава (Java) може да бъде намерена <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">тук</a>.
  
  <h2>Изграждане на проекта</h2> 
  При изграждането ще ви е наобходим <a href="https://git-scm.com/downloads">git</a> за клониране на изходния код от публичното 
