@@ -149,7 +149,7 @@ Please insert the following in the &lt;header&gt; section of your web page:
   Ζαφείρι δέξου πάγκαλο, βαθῶν ψυχῆς τὸ σῆμα.<br/><br/>
   <br/>
   <b style="font-family: notoserif;">Noto Serif</b><br/>
-  Site: <a style="font-family: notoserif;" href="https://stefanpeev.wordpress.com/%D0%B1%D0%B5%D0%B7%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%B8-%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8-%D1%88%D1%80%D0%B8%D1%84%D1%82%D0%BE%D0%B2%D0%B5/#NotoSerifBulgarian">https://stefanpeev.wordpress.com/</a><br/>
+  Site: <a style="font-family: notoserif;" href="https://localfonts.eu/freefonts/bulgarian-cyrillic/">https://localfonts.eu/</a><br/>
   <a style="font-family: notoserif" href="downloads/Noto%20Serif%20Bulgarian.zip">Download</a>
 </div>
 <div style="max-width: 300px; float: left; margin: 2em; font-family: balezdrov;">
