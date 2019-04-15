@@ -28,15 +28,6 @@
          </a>
      </li>
      <li>
-         <a class="footer" href="forum?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
-             <span class="forum">
-                 <?php 
-                 tr('Дискусии', 'Phorum', 'Forum', 'Форум');
-                 ?>
-             </span>
-         </a>
-     </li>
-     <li>
          <a class="footer" href="kupu%D0%BBu%D1%86a-<?php tr('bg','en', 'de', 'ru');?>.php?lang=<?php tr('bg','en', 'de', 'ru');?>">
              <span class="forum">
                  <?php 
@@ -61,6 +52,33 @@
              <span class="footer">
                  <?php 
                  tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');
+                 ?>
+             </span>
+          </a>
+     </li>
+     <li>
+         <a class="footer" href="http://bgkalendar.com/dev-rest-api.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+             <span class="footer">
+                 <?php 
+                 tr('REST API', 'REST API', 'REST API', 'REST API');
+                 ?>
+             </span>
+          </a>
+     </li>
+     <li>
+         <a class="footer" href="http://bgkalendar.com/dev-java-api.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+             <span class="footer">
+                 <?php 
+                 tr('Java API', 'Java API', 'Java API', 'Java API');
+                 ?>
+             </span>
+          </a>
+     </li>
+     <li>
+         <a class="footer" href="http://bgkalendar.com/javadoc">
+             <span class="footer">
+                 <?php 
+                 tr('Javadoc', 'Javadoc', 'Javadoc', 'Javadoc');
                  ?>
              </span>
           </a>
