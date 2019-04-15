@@ -268,7 +268,7 @@ Fügen Sie bitte die folgenden im Abschnitt &lt;header&gt; Ihrer Webseite ein.
   Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich<br/>
   <br/>
   <b style="font-family: hkgrotesk;">HK Grotesk</b><br/>
-  Webseite: <a style="font-family: hkgrotesk;" href="https://hanken.co/product/hk-grotesk/">https://hanken.co/</a><br/>
+  Webseite: <a style="font-family: hkgrotesk;" href="https://localfonts.eu/shop/sans-serif-fonts/hk-grotesk-free/">https://localfonts.eu/</a><br/>
   <a style="font-family: hkgrotesk;" href="downloads/HK-Grotesk.zip">Herunterladen</a>
 </div>
 <div style="max-width: 300px; float: left; margin: 2em; font-family: td-neumann;">

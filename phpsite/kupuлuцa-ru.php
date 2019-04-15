@@ -279,7 +279,7 @@
   The quick brown fox jumps over the lazy dog.<br/>
   <br/>
   <b style="font-family: hkgrotesk;">ХК Гротеск</b><br/>
-  Веб-страница: <a style="font-family: hkgrotesk;" href="https://hanken.co/product/hk-grotesk/">https://hanken.co/</a><br/>
+  Веб-страница: <a style="font-family: hkgrotesk;" href="https://localfonts.eu/shop/sans-serif-fonts/hk-grotesk-free/">https://localfonts.eu/</a><br/>
   <a style="font-family: hkgrotesk;" href="downloads/HK-Grotesk.zip">Скачать</a>
 </div>
 <div style="max-width: 300px; float: left; margin: 2em; font-family: td-neumann;">
