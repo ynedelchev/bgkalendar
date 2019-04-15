@@ -22,7 +22,7 @@ import bg.util.leto.api.LetoPeriodStructure;
  * This is an abstract class that can be used as base (parent) for any leto (calendar) implementation. 
  * It offers some usefull utilities like calculating the current date given the number of days from the 
  * leto (calendar) EPOCH.
- * <br/>
+ * <br>
  * In fact each instance of a class that inherits from LetoBase, is a representation of a given date.
  */
 public abstract class LetoBase implements Leto {

@@ -12,7 +12,7 @@ public interface LetoPeriodStructure {
     
     /**
      * Return a reference to the abstract period type, this strucutre describes. For example, if this structure 
-     * describes a leap year, the the getPeriodType() method will return a reference to the period type year.<br/> 
+     * describes a leap year, the the getPeriodType() method will return a reference to the period type year.<br> 
      * Ahother exaple is: If this structure describes 28 days month (like fecruary in non-leap years), then the 
      * getPeriodType() method will return a reference to the period type "month".
      * @return The period type this structure describes.
@@ -23,7 +23,7 @@ public interface LetoPeriodStructure {
      * Once the period is set (to something different than null) either by the constructor or the setPeriodType method,
      * it can no longer be reset to any value. If a try to reset it is performed, then a LetoException will be thrown.
      * @param period The period type that has to be set to this strucutre. 
-     * @throws LetoException If the period type of this strucutre is already set.
+     * @throws LetoExceptionUnrecoverable If the period type of this strucutre is already set.
      */
     public void setPeriodType(LetoPeriodType period) throws LetoExceptionUnrecoverable;
     
@@ -60,21 +60,21 @@ public interface LetoPeriodStructure {
     
     /**
      * Return the human readable name of this structure if one is available or just return null if no specific name 
-     * is defined. <br/><br/> 
+     * is defined. <br><br> 
      * Example: Please assume that we have the LetoPeriodType for year. The method getPossibleStructures() would return 
      * a LetoPeriodStructure object without a specific name (or maybe just "year" as a name), but then one could 
      * call the method getSubperiods() of that LetoPeriodStructure. That method this time could return 
      * an array of LetoPeriodStructure object, each of which would have a specific name: "January", "February", etc...
-     * <br/><br/>
-     * LetoPeriodType year = ...                                                                              <br/>
-     * LetoPeriodStructure[] possibleTypeOfYearss = year.getPossibleStructgures();  // Leap and non leap uears<br/>
-     * LetoPeriodStructure   firstPossibility = possibleTypeOfYearss[0];                                      <br/>
-     * LetoPeriodStructure[] subPeriods = firstPossibility.getSubPeriods();                                   <br/>
-     * for (int i = 0; i < subPeriods.length; i++) {                                                          <br/>
-     *     String name = subPeriod[i].getName();        // This could return "January", "February", etc...    <br/>
-     *     System.out.println(name + ", ");                                                                   <br/>
-     * }                                                                                                      <br/>
-     * <br/><br/>
+     * <br><br>
+     * LetoPeriodType year = ...                                                                              <br>
+     * LetoPeriodStructure[] possibleTypeOfYearss = year.getPossibleStructgures();  // Leap and non leap uears<br>
+     * LetoPeriodStructure   firstPossibility = possibleTypeOfYearss[0];                                      <br>
+     * LetoPeriodStructure[] subPeriods = firstPossibility.getSubPeriods();                                   <br>
+     * for (int i = 0; i &lt; subPeriods.length; i++) {                                                          <br>
+     *     String name = subPeriod[i].getName();        // This could return "January", "February", etc...    <br>
+     *     System.out.println(name + ", ");                                                                   <br>
+     * }                                                                                                      <br>
+     * <br><br>
      * @param locale The locale to be used to return the name of the structure. For example if locale is 
      *         java.util.Locale ENGLISH, then the implementation might output "January", 
      *         while if the Locale is Bulgarian, then it might output "Yanuary" or "Януари". 

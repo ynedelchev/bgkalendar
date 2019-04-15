@@ -28,7 +28,8 @@ sourceSets {
   }
   test {
     java {
-      srcDir 'src/bg/util/leto/test'
+      srcDir 'test'
     }
   }
 }
+

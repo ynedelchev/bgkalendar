@@ -141,6 +141,11 @@
         <?php tr('REST API', 'REST API', 'REST API', 'REST API')?>
       </a>
   </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>dev-java-api.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Java API', 'Java API', 'Java API', 'Java API')?>
+      </a>
+  </li>
 </ul>
 <ul class="vmenu" id="sm-other">
   <li>

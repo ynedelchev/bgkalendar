@@ -199,6 +199,8 @@ public class LetoCorrectnessChecks {
      * Check internal correctness of the calendar definitions.
      * This is a method that is intended to be run during debug and testing only. It is intended to support developers
      * when deffining new classes that derive from LetoBase.
+     * @param types The period types of the given calendar.
+     * @param leto Check correctness of the calculation of a particular calendar.
      * @return A string representation of the errors that happened while checking the correctness of the type 
      * definitions in the calendar.
      */

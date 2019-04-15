@@ -83,16 +83,3 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
 <?php include('footer.php');?>
 </body>
 </html>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
-
-  <body>
-  </body>
-</html>
-

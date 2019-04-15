@@ -16,6 +16,7 @@ public interface Leto {
     
     /**
      * Short name of this calendar system.
+     * @param locale The localization to be used.
      * @return Short name of that calendar system.
      */
     String getName(Locale locale);
@@ -34,6 +35,7 @@ public interface Leto {
     
     /**
      * Long description of this calendar system.
+     * @param locale The localization to be used.
      * @return The long humand readable description of this calendar system.
      */
     String getDescription(Locale locale);
@@ -53,7 +55,7 @@ public interface Leto {
     
     /**
      * 
-     * @return
+     * @return Period types.
      */
     LetoPeriodType[] getCalendarPeriodTypes();
     
@@ -74,7 +76,11 @@ public interface Leto {
      * (upper level period such as a century).
      * On the other side the month is the manth iside the given year (day from the beginning of the year)
      * and day is the day inside the given month (day from the begining of the month).
+     * @param year  Year
+     * @param month Month
+     * @param day   Day
      * @return Number of days since the begining of the calendar.
+     * @throws LetoException If something goes wrong.
      */
     public long calculateDaysFronStartOfCalendar(long year, long month, long day) throws LetoException;
 }

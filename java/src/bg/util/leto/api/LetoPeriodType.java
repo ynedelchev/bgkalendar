@@ -5,14 +5,14 @@ import java.util.Map;
 
 /**
  * An interface to define an abstract period type, such as day, month, year, century and so on...
- * <br/><br/>
+ * <br><br>
  * 
  * Each calendar splits the time into abstract periods of time. Each of the supported periods is defined 
  * internally by an implementation of LetoPeriodType.
- * <br/><br/>
+ * <br><br>
  * 
  * The main characteristics of the period type are: 
- * <table>
+ * <table summary="">
  *    <tr><td>Characteristic</td>        <td>Description</td></tr>
  *    <tr><td>Name</td>                    <td>The name of the period type. Examples: "day", "month", "year", "century", 
  *                                          ...
@@ -50,6 +50,7 @@ public interface LetoPeriodType {
     
     /**
      * The name of the period type. For example: "day", "month", "year", "century" and so on...
+     * @param locale The localization to be used.
      * @return The name of this period type.
      */
     public String getName(Locale locale);
@@ -68,6 +69,7 @@ public interface LetoPeriodType {
     
     /**
      * Longer human readable description of the period type.  
+     * @param locale The localization to be used.
      * @return Longer human readable description of the given period type.
      */
     public String getDescription(Locale locale);
@@ -81,9 +83,9 @@ public interface LetoPeriodType {
      /**
       * Return the possible structures for this period type. Each possible structure is defined as an element 
       * of the array returned. Each possible structure contains the duration of the period in days as well
-      * as information about how much sub-periods it contains.<br/>
+      * as information about how much sub-periods it contains.<br>
       * For example in Gregorian calendar, the month period type should return an array of 4 elements like this:
-      * <table border="1">
+      * <table border="1" summary="">
       *    <tr><td>Number</td>    <td>Duration in days  </td>       <td>Description</td>                         </tr>
       *    
       *    <tr><td>1-st  </td>    <td>duration - 28 days</td>       <td>February in non leap year</td>           </tr>
