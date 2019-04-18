@@ -316,7 +316,7 @@ function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWee
     echo $sb;
     return $indexbg;
 }
-function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr, $prefix) {
+function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr, $prefix = null) {
     global $lang;
     global $WEEKDAYS_SHORT_EN;
     global $WEEKDAYS_SHORT_DE;
