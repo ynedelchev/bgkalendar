@@ -1,14 +1,17 @@
+Welcome to the Bulgarian Calendar Project
+====================
+
 <!-- Please use markdown-toc -i README.md to update the table of contents -->
 <!-- -->
 **Table of Contents**  *generated with [Markdown-TOC](https://www.npmjs.com/package/markdown-toc#install)*
 
 <!-- toc -->
 
-- [Welcome to the Bulgarian Calendar Project](#welcome-to-the-bulgarian-calendar-project)
+  * [What is the Ancient Bulgarian Calendar](#what-is-the-ancient-bulgarian-calendar)
 - [Java Library](#java-library)
 - [PHP Library and Web Site](#php-library-and-web-site)
 - [Gregorian and Julian Calendar](#gregorian-and-julian-calendar)
-- [Old Bulgarain Calendar Principles](#old-bulgarain-calendar-principles)
+- [Ancient Bulgarain Calendar Principles](#ancient-bulgarain-calendar-principles)
   * [Beginning of the Calendar](#beginning-of-the-calendar)
   * [Structure of the year](#structure-of-the-year)
   * [Cycles for correction of the calendar](#cycles-for-correction-of-the-calendar)
@@ -24,16 +27,16 @@
 
 <!-- tocstop -->
 
-Welcome to the Bulgarian Calendar Project
-====================
+What is the Ancient Bulgarian Calendar
+--------------------------------------
 
-There have been lots of researches regarding how old Bulgarians have measured 
-times and the researches showed that there has been an Old Bulgarian calendar 
+There have been lots of researches regarding how Ancient Bulgarians have measured 
+times and the researches showed that there has been an Ancient Bulgarian calendar 
 which has been (according to most researchers) solar based.
 
 This project aims to provide a library and a 
 [web-site](http://bgkalendar.com/) for calculation of the 
-current year, month and day according to the assumptive Old Bulgarian calendar.
+current year, month and day according to the assumptive Ancient Bulgarian calendar.
 
 Calculation is based on some assumptions. For example when does the calendar 
 begin. When is day 1, month 1 from year 1, and others. 
@@ -63,7 +66,7 @@ Sample of this site has been installed on [http://bgkalendar.com](http://bgkalen
 Gregorian and Julian Calendar
 =============================
 Although the primary goal of the project was to calculate the current date based 
-on the Old Bulgarian calendar, it has been designed in a generic and extendable 
+on the Ancient Bulgarian calendar, it has been designed in a generic and extendable 
 way, so it in fact provides an API and a framework for calculating the date on 
 any calendar (not even just solar based calendars). 
 
@@ -71,9 +74,9 @@ Then 3 implementations on top of this API interface has been implemented:
 
   - Implementation of the Julian calendar
   - Implementation of the Gregorian calendar (the modern calendar used in European countries)
-  - Implementation of the Old Bulgarain calendar.
+  - Implementation of the Ancient Bulgarain calendar.
 
-Old Bulgarain Calendar Principles
+Ancient Bulgarain Calendar Principles
 =================================
 
 The Bulgarian calendar is the calendar of the ancient Bulgarians restored from 
@@ -101,7 +104,7 @@ with 5504 BC in the Gregorian calendar.
         +-------------------------------------------------------------+
         |1  2  3  4  5  6  7  8  9 10 11 12           ...             |
         +-------------------------------------------------------------+
-        | First Month of the First year of Old Bulgarian Calendar     |
+        | First Month of the First year of Ancient Bulgarian Calendar |
         +-------------------------------------------------------------+
         ^
         |

@@ -1,25 +1,24 @@
+Java API for Ancient Bulgarian, Modern Gregorin and Julian Calendars
+====================================================================
+
 <!-- Please use markdown-toc -i README.md to update the table of contents -->
 <!-- -->
 **Table of Contents**  *generated with [Markdown-TOC](https://www.npmjs.com/package/markdown-toc#install)*
 
 <!-- toc -->
 
-- [Java API for Ancient Bulgarian, Modern Gregorin and Julian Calendars](#java-api-for-ancient-bulgarian-modern-gregorin-and-julian-calendars)
-  * [Supported Features](#supported-features)
-  * [Sample Usage](#sample-usage)
-    + [Get current date in Ancient Bulgarian Calendar](#get-current-date-in-ancient-bulgarian-calendar)
-    + [Convert a date written as date in Ancient Bulgarian Calendar into a date in the Modern Gregorian Calendar](#convert-a-date-written-as-date-in-ancient-bulgarian-calendar-into-a-date-in-the-modern-gregorian-calendar)
-  * [Compile](#compile)
-    + [Windows](#windows)
-    + [Linux or UNIX](#linux-or-unix)
-  * [Generate Java Documentation (JavaDoc)](#generate-java-documentation-javadoc)
-    + [Windows](#windows-1)
-    + [Linux or UNIX](#linux-or-unix-1)
+- [Supported Features](#supported-features)
+- [Sample Usage](#sample-usage)
+  * [Get current date in Ancient Bulgarian Calendar](#get-current-date-in-ancient-bulgarian-calendar)
+  * [Convert a date written as date in Ancient Bulgarian Calendar into a date in the Modern Gregorian Calendar](#convert-a-date-written-as-date-in-ancient-bulgarian-calendar-into-a-date-in-the-modern-gregorian-calendar)
+- [Compile](#compile)
+  * [Windows](#windows)
+  * [Linux or UNIX](#linux-or-unix)
+- [Generate Java Documentation (JavaDoc)](#generate-java-documentation-javadoc)
+  * [Windows](#windows-1)
+  * [Linux or UNIX](#linux-or-unix-1)
 
 <!-- tocstop -->
-
-Java API for Ancient Bulgarian, Modern Gregorin and Julian Calendars
-====================================================================
 
 Supported Features
 ------------------
