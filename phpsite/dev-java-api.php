@@ -47,11 +47,11 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
 
 <?php if ($lang == 'bg') : ?>
  <h1>Java API</h1>
- Библиотека за разработка на програмния език Джава (Java) може да бъде намерена <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">тук</a>.
+ Библиотека за разработка на програмния език Джава (Java) може да бъде намерена <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">тук</a>.
  
  <h2>Изграждане на проекта</h2> 
  При изграждането ще ви е наобходим <a href="https://git-scm.com/downloads">git</a> за клониране на изходния код от публичното 
- <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">хранилище</a> 
+ <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">хранилище</a> 
  и <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Версия на Джава за разработка</a> за компилиране на проекта. 
  При самото изграждане се използва вградена версия на <a href="https://gradle.org/">gradle</a> (инсталация не се изисква).<br/><br/> 
  Клониране на изходния код:<br/>
@@ -59,7 +59,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <table style="border: solid brown 1px; margin-left: 2em; min-width: 50%;"><tr><td>
    <br/>
    <br/>
-   <code>&nbsp; git clone https://github.com/ynedelchev/bgkalendar/</code><br/>
+   <code>&nbsp; git clone https://github.com/bgkalendar/bgkalendar/</code><br/>
    <br/>
    <br/>
  </td></tr></table>
@@ -88,11 +88,11 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
 
 
  <h1>Java API</h1>
- The Java programming API library can be found <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">here</a>.
+ The Java programming API library can be found <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">here</a>.
  
  <h2>Cloning the project</h2> 
  In order to build it, you would need <a href="https://git-scm.com/downloads">git</a> to clone the source code from the public 
- <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">repository</a> 
+ <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">repository</a> 
  and <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Java Development Kit (JDK)</a> to compile the project.
  Please note that the usual JRE (Java Runtime Environment) would not work in that case.  
  During the build process, you would use <a href="https://gradle.org/">gradle</a> wraper (no installation required).<br/><br/> 
@@ -101,7 +101,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <table style="border: solid brown 1px; margin-left: 2em; min-width: 50%;"><tr><td>
    <br/>
    <br/>
-   <code>&nbsp; git clone https://github.com/ynedelchev/bgkalendar/</code><br/>
+   <code>&nbsp; git clone https://github.com/bgkalendar/bgkalendar/</code><br/>
    <br/>
    <br/>
  </td></tr></table>
@@ -123,17 +123,17 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
 
  Online Javadoc documentation can be found <a href="javadoc/">here</a>.
  <h1>Java API</h1>
- A programming library in Java can be found <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">here</a>.
+ A programming library in Java can be found <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">here</a>.
 
 
 
 <?php elseif ($lang == 'de') : ?>
  <h1>Java API</h1>
- The Java programming API library can be found <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">here</a>.
+ The Java programming API library can be found <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">here</a>.
  
  <h2>Cloning the project</h2> 
  In order to build it, you would need <a href="https://git-scm.com/downloads">git</a> to clone the source code from the public 
- <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">repository</a> 
+ <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">repository</a> 
  and <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Java Development Kit (JDK)</a> to compile the project.
  Please note that the usual JRE (Java Runtime Environment) would not work in that case.  
  During the build process, you would use <a href="https://gradle.org/">gradle</a> wraper (no installation required).<br/><br/> 
@@ -142,7 +142,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <table style="border: solid brown 1px; margin-left: 2em; min-width: 50%;"><tr><td>
    <br/>
    <br/>
-   <code>&nbsp; git clone https://github.com/ynedelchev/bgkalendar/</code><br/>
+   <code>&nbsp; git clone https://github.com/bgkalendar/bgkalendar/</code><br/>
    <br/>
    <br/>
  </td></tr></table>
@@ -165,11 +165,11 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  Online Javadoc documentation can be found <a href="javadoc/">here</a>.
 <?php elseif ($lang == 'ru') : ?>
  <h1>Java API</h1>
- The Java programming API library can be found <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">here</a>.
+ The Java programming API library can be found <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">here</a>.
  
  <h2>Cloning the project</h2> 
  In order to build it, you would need <a href="https://git-scm.com/downloads">git</a> to clone the source code from the public 
- <a href="https://github.com/ynedelchev/bgkalendar/tree/master/java">repository</a> 
+ <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">repository</a> 
  and <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Java Development Kit (JDK)</a> to compile the project.
  Please note that the usual JRE (Java Runtime Environment) would not work in that case.  
  During the build process, you would use <a href="https://gradle.org/">gradle</a> wraper (no installation required).<br/><br/> 
@@ -178,7 +178,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <table style="border: solid brown 1px; margin-left: 2em; min-width: 50%;"><tr><td>
    <br/>
    <br/>
-   <code>&nbsp; git clone https://github.com/ynedelchev/bgkalendar/</code><br/>
+   <code>&nbsp; git clone https://github.com/bgkalendar/bgkalendar/</code><br/>
    <br/>
    <br/>
  </td></tr></table>
