@@ -44,17 +44,16 @@ function LetoGregorianMonth(/*LetoPeriodStructureBean*/ bean, /*LocaleStringId*/
         }
         return countLong.longValue();
     }
-
-    this.getName = function () {
-        return getName("en");
-    }
     
-    this.getName(locale) {
+    this.getName = function (locale) {
+        if (locale == null) {
+           locale = "en";
+        } 
         return LocaleStrings.get(mNameTranslationId, locale, mBean.getName(locale));
     }
 
     this.getNameTranslations = function () {
-        Map<Locale, String> translations = LocaleStrings.get(mNameTranslationId);
+        var translations = LocaleStrings.get(mNameTranslationId);
         return translations;
     }
 

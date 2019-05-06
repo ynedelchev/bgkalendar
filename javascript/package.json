@@ -1,6 +1,6 @@
 {
   "name": "bgkalendar",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "bgkalendar <admin@bgkalendar.com> (https://bgkalendar.com)",
   "description": "Calcultion of the current date based on the Ancient Bulgarian Calendar, The Modern Gregorian Calendar or The Julian Calendaar as well as being able to do conversions between the dates of different calendars.",
   "license": "MIT",

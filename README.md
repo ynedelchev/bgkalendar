@@ -71,7 +71,7 @@ Under the `phpsite` sub-directory, you can find a PHP version of the library.
 That makes it easy to use that library in your own PHP Web site. 
 
 We also have a sample site with a main page `phpsite/index.php` and some `css` 
-styling and so on. Look at the [`phpsite/kalendar-en.php`](https://github.com/ynedelchev/bgkalendar/blob/master/phpsite/kalendar-en.php) 
+styling and so on. Look at the [`phpsite/kalendar-en.php`](https://github.com/bgkalendar/bgkalendar/blob/master/phpsite/kalendar-en.php) 
 for an explanation of the principles of the calendar.
 
 Sample of this site has been installed on [http://bgkalendar.com](http://bgkalendar.com).

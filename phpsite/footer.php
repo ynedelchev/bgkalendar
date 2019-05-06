@@ -48,7 +48,7 @@
  <span class="footer bold"><?php tr('Разработка', 'Development', 'Entwicklung', 'Разработка');?></span>
  <ul>
      <li>
-         <a class="footer" href="https://github.com/ynedelchev/bgkalendar/">
+         <a class="footer" href="https://github.com/bgkalendar/bgkalendar/">
              <span class="footer">
                  <?php 
                  tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');
