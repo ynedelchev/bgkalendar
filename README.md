@@ -6,7 +6,6 @@
 
 - [Welcome to the Bulgarian Calendar Project](#welcome-to-the-bulgarian-calendar-project)
 - [Java Library](#java-library)
-  * [Testing the Java Library](#testing-the-java-library)
 - [PHP Library and Web Site](#php-library-and-web-site)
 - [Gregorian and Julian Calendar](#gregorian-and-julian-calendar)
 - [Old Bulgarain Calendar Principles](#old-bulgarain-calendar-principles)
@@ -46,23 +45,8 @@ Please feel free to obtain/use/modify the code according to your own research.
 
 Java Library
 ============
-This project offers a nice java library for Bulgarian Calendar calculations. 
-For building it uses the [ant](https://ant.apache.org/)  build system. To build 
-it go to the `build` sub-directory and run `ant`: 
 
-````
-cd build
-ant
-````
-
-Testing the Java Library
-------------------------
-There is a simple java servlet that could be deployed on top of a web container 
-such as Tomcat and tested. It would present containing a complete calendar table 
-with all of the months, days, days of week, etc... according to the Old Bulgarian 
-calendar, and will also mark the current day with dark blue in the calendar table. 
-
-Unfortunately there are no deploy instructions as of yet. 
+Please get more information [here](https://github.com/bgkalendar/bgkalendar/tree/master/java).
 
 PHP Library and Web Site
 ========================
