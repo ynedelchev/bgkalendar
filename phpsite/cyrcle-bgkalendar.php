@@ -73,9 +73,9 @@ $svgheight =  $strty*2 + $rad*2;
     /* ]]> */
  </style>
 </defs>
-<?php   $font='style="font: 0.4em notos"'; ?>
+<?php   $font='style="font: 1.0em notos"'; ?>
 <?php else: ?>
-<?php   $font='style="font: 0.4em times"'; ?>
+<?php   $font='style="font: 1.0em times"'; ?>
 <?php endif ?>
 <!-- Month One Begin -->
 <?php
