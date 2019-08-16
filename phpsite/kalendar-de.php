@@ -2456,7 +2456,7 @@ Jedes der 12 Jahre Zyklus ist ein Element und der entsprechenden Farbe und Richt
      <td class="calendartable" style="text-align: left; background-color: yellow;">3.</td>
      <td class="calendartable" style="text-align: left; background-color: yellow;">ERDE</td>
      <td class="calendartable" style="text-align: left; background-color: yellow;">GELB</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">SÜDEN</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">WESTEN</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: blue;">4.</td>

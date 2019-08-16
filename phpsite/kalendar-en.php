@@ -2490,7 +2490,7 @@ elements/colors/directions are:
      <td class="calendartable" style="text-align: left; background-color: red;">2.</td>
      <td class="calendartable" style="text-align: left; background-color: red;">FIRE</td>
      <td class="calendartable" style="text-align: left; background-color: red;">RED</td>
-     <td class="calendartable" style="text-align: left; background-color: red;">SOUTH</td>
+     <td class="calendartable" style="text-align: left; background-color: red;">WEST</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: yellow;">3.</td>

@@ -2481,7 +2481,7 @@
      <td class="calendartable" style="text-align: left; background-color: yellow;">3.</td>
      <td class="calendartable" style="text-align: left; background-color: yellow;">ЗЕМЯ</td>
      <td class="calendartable" style="text-align: left; background-color: yellow;">ЖЪЛТО</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">ЮГ</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">ЗАПАД</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: blue;">4.</td>

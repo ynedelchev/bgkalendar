@@ -386,8 +386,8 @@ The five elements/colors/directions are:
        Element    Color      Direction
      
   1.   Water      BLACK      Center
-  2.   Fire       RED        South ??? - direction to be checked again
-  3.   Earth      YELLOW     South ??? - direction to be checked again
+  2.   Fire       RED        South 
+  3.   Earth      YELLOW     West
   4.   Tree       BLUE       North
   5.   Metal      WHITE      East
   
