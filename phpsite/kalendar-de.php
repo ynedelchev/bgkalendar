@@ -27,11 +27,10 @@ Es gibt Studien von verschiedenen Gelehrten, die manchmal ganz anderen Schlussfo
 </p>
 
 <h3><a name="nachalo">Anfang</a></h3>
-Die meisten Forscher akzeptieren den Ausgangspunkt auf dem Tag der Wintersonnenwende
-(21<sup>-sten</sup> Dezember)
-im Laufe des Jahres 5505 BC-das heißt, wir können davon ausgehen, 
-dass das erste Jahr des Bulgarischen Kalenders fällt fast vollständig mit 5504 
-v. Chr. im gregorianischen Kalender.
+Verschiedene Entdecker nehmen einen anderen Punkt, um die Kelendara zu starten.
+
+In unserem Kalendermodell ist das Datum, an dem der Kalender beginnt, der Wintersonnenwende-Tag (21<sup>-sten</sup>. Dezember) 5506 v. Chr. - mit anderen Worten, wir können davon ausgehen, dass das erste Jahr des bulgarischen Sommers fast genau mit 5505 v. Chr. Übereinstimmt Christus auf dem Gregorianischen Kalender.
+
 <br/>
 <br/>
 <table>
@@ -76,10 +75,10 @@ v. Chr. im gregorianischen Kalender.
    </tr>
    <tr>
         <td class="calendartable"  colspan="18" align="right" 
-            bgcolor="lightgray">Dezember des Jahres 5505 BC
+            bgcolor="lightgray">Dezember des Jahres 5506 BC
         </td>
         <td class="calendartable" bgcolor="lightblue" 
-      colspan="18">Januar-5504 BC
+      colspan="18">Januar-5505 BC
   </td>
    </tr>
    <tr>
@@ -194,7 +193,6 @@ das 1<sup>-sten</sup> Jahr, die BC das 1<sup>-sten</sup> Jahr nach Christus sofo
    </tr>
 </table>
 <br/>
-In unserem Kalenderdatum Modell für den Start des Kalenders angenommen hat ein Jahr zuvor, nämlich 21<sup>-sten</sup> Dezember 5506 (Montag nach dem Grigoriânskiâ-Kalender) für den ersten Tag der Bulgarischen Kalender angenommen wurde.
 
 <h3><a name="godina">Struktur des Jahres</a></h3>
 Nach Ansicht der Forscher gliedert sich das Jahr in 12 Monate + ein oder zwei (im Schaltjahr) Werktage, 

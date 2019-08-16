@@ -29,12 +29,15 @@ conclusions reached.
 </p>
 
 <h3><a name="nachalo">Beginning of the Calendar</a></h3>
-Most researchers accept the starting point on the 
-22<sup>-nd</sup> day of the winter solstice 
-(December 21) during the year 5505 Before Christ – in other words, 
-we can assume that the first year of the Bulgarian 
+Different researchers assume different starting point for the calendar.
+In our calendar model, we have adopted for the start of the calendar 
+the day of the winter solstice 21<sup>-st</sup> of December 5506 Before Christ 
+(Monday according to the Grigorian calendar). And that is the assumed to be the the first 
+day of the Bulgarian calendar year 1.
+
+In other words, we can assume that the first year of the Bulgarian 
 calendar coincides almost completely with 
-5504 Before Christ in the Gregorian calendar.<br/>
+5505 Before Christ in the Gregorian calendar.<br/>
 <br/>
 <br/>
 <table>
@@ -79,10 +82,10 @@ calendar coincides almost completely with
    </tr>
    <tr>
         <td class="calendartable"  colspan="18" align="right" 
-            bgcolor="lightgray">December 5505 yr. Before Christ
+            bgcolor="lightgray">December 5506<sup>-th</sup> yr. Before Christ
         </td>
         <td class="calendartable" bgcolor="lightblue" 
-      colspan="18">January 5504 yr. Before Christ
+      colspan="18">January 5505<sup>-th</sup> yr. Before Christ
   </td>
    </tr>
    <tr>
@@ -196,16 +199,12 @@ followed by the 1<sup>-st</sup> year after Christ.<br/>
       December 1<sup>-st</sup> year Before Christ
   </td>
   <td class="calendartable" bgcolor="lightblue" colspan="18">
-      January 1 year After Christ
+      January 1<sup>-st</sup> year After Christ
   </td>
 
    </tr>
 </table>
 <br/>
-In our calendar model, we have adopted for the start of the calendar 
-to be a year earlier. So 21<sup>-st</sup> of December 5506 Before Christ 
-(Monday according to the Grigorian calendar) was adopted as the first 
-day of the Bulgarian calendar.
 
 <h3><a name="godina">Structure of the year</a></h3>
 According to researchers, the year has been divided into 12 months 
