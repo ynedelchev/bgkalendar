@@ -294,7 +294,7 @@
        </tr>
        <tr>
             <td class="details bold">
-                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#420g"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 

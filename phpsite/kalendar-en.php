@@ -20,6 +20,21 @@
 <body class="calendarbody">
 <?php include('navigation.php');?>
 <p>
+<ul>
+  <li><a href="#nachalo">Beginning of the Calendar</a></li>
+  <li><a href="#godina">Structure of the year</a></li>
+  <li><a href="#cikli">Cycles for correction of the calendar</a></li>
+  <ul>
+     <li><a href="#4g">Four year period</a></li>
+     <li><a href="#12g">Twelve year period</a></li>
+     <li><a href="#60g">Sixty year period (star day)</a></li>
+     <li><a href="#420g">Four hundred and twenty year period (STAR WEEK)</a></li>
+     <li><a href="#1680g">Star month</a></li>
+     <li><a href="#20160g">Star year</a></li>
+     <li><a href="#80640g">Period of 4 star years</a></li>
+     <li><a href="#10080000g">Star Epoch</a></li>
+  </ul>
+</ul>
 The Bulgarian calendar is the calendar of the ancient Bulgarians 
 restored from written historical data 
 <a href="imennik.html">Nominalia of the Bulgarian khans</a> 
@@ -2693,7 +2708,7 @@ date within a 120-year period.
 </table>
 <br/>
 <br/>
-<h4><a name="420">Four hundred and twenty year period (STAR WEEK)</a></h4>
+<h4><a name="420g">Four hundred and twenty year period (STAR WEEK)</a></h4>
 When we group 7 star days (each consisting of 60 years), 
 we receive an amount of 420 years, which we call a star week.
 The first, third and fifth star days in each star week are always 

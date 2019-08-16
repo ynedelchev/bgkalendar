@@ -20,6 +20,21 @@
 <body class="calendarbody">
 <?php include('navigation.php');?>
 <p>
+<ul>
+  <li><a href="#nachalo">Anfang</a></li>
+  <li><a href="#godina">Struktur des Jahres</a></li>
+  <li><a href="#cikli">Zyklen für die Korrektur des Kalenders</a></li>
+  <ul>
+     <li><a href="#4g">Vier Jahre Abschnitt</a></li>
+     <li><a href="#12g">Zwölf Jahre Abschnitt</a></li>
+     <li><a href="#60g">Sechzig Jahre Abschnitt (Sterntag)</a></li>
+     <li><a href="#420g">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></li>
+     <li><a href="#1680g">Sternmonat</a></li>
+     <li><a href="#20160g">Sternjahr</a></li>
+     <li><a href="#80640g">Vier Sternjahre Abschnitt</a></li>
+     <li><a href="#10080000g">Sternepoche</a></li>
+  </ul>
+</ul>
 Die Bulgarischen Kalender ist der Kalender der alten Bulgaren restauriert geschriebenen historischen Daten
 (<a href="imennik.html">Namensliste der bulgarischen Khane</a>) 
 und den Märchen und Legenden.<br/>
@@ -2651,7 +2666,7 @@ So kann die Kombination von Element, Geschlecht und Tier für Termine innerhalb 
 </table>
 <br/>
 <br/>
-<h4><a name="420">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></h4>
+<h4><a name="420g">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></h4>
 Als Gruppe erhalten die 7 Sterntage (jeweils 60 Erdjahren) wir über einen Zeitraum von 420 Jahren, die wir eine Sternwoche nennen.
 In jeder Sternwoche die ersten dritten und fünften Sterntag sind nicht schalt (Nichtschaltsterntag) 
 und die zweite, vierte und sechste sind schalt (Schaltsterntag).
