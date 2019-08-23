@@ -52,7 +52,8 @@ function LetoCorrectnessChecks() {
     
     
     /**
-     * Internal member variable that stores the already calculated lengths in days of period types.
+     * Internal member variable that stores the already calculated lengths in 
+     * days of period types.
      */
     this.sCalculatedLеngths = new Map(); //Map<LetoPeriodStructure, Long>
 
@@ -98,10 +99,11 @@ function LetoCorrectnessChecks() {
     
     
     /**
-     * Check the correctness of the definition of a given type and return a human redable representation of the errors 
-     * that have happened during this check. This method is intended to be used during debug or while the code is of 
-     * a new child of LetoBase is created. It is intended to help developers create their own derivatives from 
-     * LetoBase.
+     * Check the correctness of the definition of a given type and return a 
+     * human redable representation of the errors that have happened during 
+     * this check. This method is intended to be used during debug or while the
+     * code is of a new child of LetoBase is created. It is intended to help 
+     * developers create their own derivatives from LetoBase.
      * @param type The period type definition to be checked for correctness.
      * @return Human redable representation ofthe errors that hace happened.
      */
@@ -185,10 +187,11 @@ function LetoCorrectnessChecks() {
     
     /**
      * Check internal correctness of the calendar definitions.
-     * This is a method that is intended to be run during debug and testing only. It is intended to support developers
-     * when deffining new classes that derive from LetoBase.
-     * @return A string representation of the errors that happened while checking the correctness of the type 
-     * definitions in the calendar.
+     * This is a method that is intended to be run during debug and testing only
+     * . It is intended to support developers when deffining new classes that 
+     * derive from LetoBase.
+     * @return A string representation of the errors that happened while 
+     * checking the correctness of the type definitions in the calendar.
      */
     this.checkCorrectness = function (/*LetoPeriodType[]*/ types, /*Leto*/ leto) {
         if (types == null) {

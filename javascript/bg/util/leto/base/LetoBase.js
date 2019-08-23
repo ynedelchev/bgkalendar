@@ -1,10 +1,12 @@
 
 /**
- * This is an abstract class that can be used as base (parent) for any leto (calendar) implementation. 
- * It offers some usefull utilities like calculating the current date given the number of days from the 
- * leto (calendar) EPOCH.
+ * This is an abstract class that can be used as base (parent) for any leto 
+ * (calendar) implementation. 
+ * It offers some usefull utilities like calculating the current date given 
+ * the number of days from the leto (calendar) EPOCH.
  * <br/>
- * In fact each instance of a class that inherits from LetoBase, is a representation of a given date.
+ * In fact each instance of a class that inherits from LetoBase, is a 
+ * representation of a given date.
  */
 function LetoBase() {
   this.names        = { "bg": null, "en": null, "de": null, "ru": null }  
@@ -35,27 +37,32 @@ function LetoBase() {
     
     
   /**
-   * All inheriting classes should define the beginning of their calendar in days before the java EPOCH. 
+   * All inheriting classes should define the beginning of their calendar in 
+   * days before the java EPOCH. 
    * @return The beginning of calendar in days before java EPOCH.
    */
   this.startOfCalendarInDaysBeforeJavaEpoch = function () {return this.start;}
     
   /**
-   * All inheriting classes should define the supported calendar period types. For example the Gregorian calendar 
-   * would return day, month, year, century (a period of 100 years) and 400 years period.
-   * @return An array of all of the supported period types sorted in increasing order. The smolest period first
-   * (with lower index). 
+   * All inheriting classes should define the supported calendar period types. 
+   * For example the Gregorian calendar would return day, month, year, century 
+   * (a period of 100 years) and 400 years period.
+   * @return An array of all of the supported period types sorted in increasing
+   * order. The smolest period first (with lower index). 
    */
   this.getCalendarPeriodTypes = funxrion () { return this.types;}
     
   /**
-   * Calculate the exact period values for the today's date. In general this method will calculate how much days have
-   * elapsed since Java epoch (1-st January 1970) an then add the days from the beginning of the calendar.
-   * Based on that data it would try to split that amount of dates into periods and fill in a LetoPeriod array. 
-   * The LetoPeriod array should have the exact same size as the array returned by getCalendarPeriodTypes(). 
+   * Calculate the exact period values for the today's date. In general this 
+   * method will calculate how much days have elapsed since Java epoch (1-st 
+   * January 1970) an then add the days from the beginning of the calendar.
+   * Based on that data it would try to split that amount of dates into periods
+   * and fill in a LetoPeriod array. 
+   * The LetoPeriod array should have the exact same size as the array returned
+   * by getCalendarPeriodTypes(). 
    * @return The exact period values of the current today's date.
-   * @throws LetoException If there is a problem during calculation or if the calendar internal structures are not 
-   *     well defined.
+   * @throws LetoException If there is a problem during calculation or if the 
+   * calendar internal structures are not well defined.
    */
   this.getToday = function () {
     var days = this.startOfCalendarInDaysBeforeJavaEpoch();
@@ -69,10 +76,12 @@ function LetoBase() {
     
     
   /**
-   * Calculate the periods based on the number of days since the leto (calendar) EPOCH.
+   * Calculate the periods based on the number of days since the leto (calendar)
+   * EPOCH.
    * @param days Number of days since the calendar starts.
    * @return The calculated array of periods.
-   * @throws LetoException If there is some unrecoverable error while calculating the date.
+   * @throws LetoException If there is some unrecoverable error while 
+   * calculating the date.
    */
   this.calculateCalendarPeriods = function (days) {
     var types = this.getCalendarPeriodTypes();
@@ -153,15 +162,16 @@ function LetoBase() {
     
  /**
   * This method is the reverse of the prevuos method (calculateCalendarPeriods).
-  * It would get year, month and a day and will try to get how many days have passes since
-  * the start of the calendar.
-  * That is a convenient method. Please note that the value of the year an absolute value
-  * from the beginning of the calendar. It is not the year for the current
-  * (upper level period such as a century).
-  * On the other side the month is the manth iside the given year (day from the beginning of the year)
-  * and day is the day inside the given month (day from the begining of the month).
+  * It would get year, month and a day and will try to get how many days have 
+  * passed since the start of the calendar.
+  * That is a convenient method. Please note that the value of the year an 
+  * absolute value from the beginning of the calendar. It is not the year for 
+  * the current (upper level period such as a century).
+  * On the other side the month is the manth iside the given year (day from the
+  * beginning of the year) and day is the day inside the given month (day from 
+  * the begining of the month).
   * @return Number of days since the begining of the calendar.
-     */
+  */
  this.calculateDaysFronStartOfCalendar = function (year, month, day) {
    year  = year  > 0 ? year  - 1 : 0;
    month = month > 0 ? month - 1 : 0;
@@ -307,11 +317,12 @@ function LetoBase() {
  }
     
  /**
-  * Given the representation of the date by periods, this method calculates the number of days since the 
-  * start of the calendar.
+  * Given the representation of the date by periods, this method calculates 
+  * the number of days since the start of the calendar.
   * @param periods An array of periods.
   * @return The number of days since the start of the calendar.
-  * @throws LetoException If there is some unrecoverable error during calculation.
+  * @throws LetoException If there is some unrecoverable error during 
+  * calculation.
   */
  this.calculateDaysFromPeriods = function (periods) {
    var days = 0;

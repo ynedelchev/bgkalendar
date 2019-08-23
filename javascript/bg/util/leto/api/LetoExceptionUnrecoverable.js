@@ -1,6 +1,6 @@
 /**
- * This is generic exception indicating some unrecoverable error while calculating Leto/Calendar 
- * dates.
+ * This is generic exception indicating some unrecoverable error while 
+ * calculating Leto/Calendar dates.
  */
 function LetoExceptionUnrecoverable(message, causeException) {
   this.message = message;
