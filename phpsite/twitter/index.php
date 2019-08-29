@@ -205,7 +205,7 @@ if ($periodsbg == null || $periodsgr == null) {
   header('X-Reason: Cannot calculate current date because of unknown reason');
   $obj = array('code'=>400, 
                'reason'=>'Cannot calculate current date because of unknown reason.', 
-               'suggestion'=>'Please contact admin@bgkalendar.com for further troubleshooting.');
+               'suggestion'=>'Please contact admin [а] bgkalendar.com for further troubleshooting.');
   echo json_encode($obj, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR)."\n";
   exit(0);
 }
@@ -262,7 +262,7 @@ if ($twitter == null) {
   header('X-Reason: Cannot create Twitter object.');
   $obj = array('code'=>500, 
                'reason'=>'Cannot create Twitter object', 
-               'suggestion'=>'Contact admin@bgkalendar.com for additional troubleshooting.');
+               'suggestion'=>'Contact admin [а] bgkalendar.com for additional troubleshooting.');
   echo json_encode($obj, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PARTIAL_OUTPUT_ON_ERROR)."\n";
   exit(0);
 }

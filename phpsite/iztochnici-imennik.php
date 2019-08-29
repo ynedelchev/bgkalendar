@@ -1,54 +1,47 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
-"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
-<html>
-<head>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <link rel="stylesheet" type="text/css" href="navigation.css" /> 
-   <link rel="stylesheet" type="text/css" href="bgkalendar.css" /> 
-   <title>Namelist of Bulgarian Rullers</title>
-   <style>
-   @font-face {
-     font-family: izhitsa;
-     src: url(fonts/izhitsa-cyrillic.ttf);
-   }
-   .oldbg
-   {
-     vertical-align: top;
-     border-collapse: collapse;
-     border-width: 1px;
-     border-color: blue;
-     border-style: solid;
-     vertical-align: top;
-     text-align: right;
-     font-family: "izhitsa", "Times New Roman", "Times", "serif";
-   }
-   </style>
-</head>
-<body class="calendarbody">
-<?php include('navigation.php');?>
-<h3>Namelist of Bulgarian Rullers</h3>
-The Namelist of Bulgarian Rulers is a brief excerpt describing 
-the names and years of the reign of the Bulgarian rulers. 
-Inserted in the book &#xab;Hellenistic and Roman chronicler&#xbb;
-between the first and third part without being separated from them. 
-There are three transcripts that contain the namelist.
-They are referred as Uvarov, Pogodinov and Moscow, Uvarov.
-There are small differences in transcription of names between 
-the 3 of them. 
 
-<br/><br/>
-Because it contains the years (and months) to the accession 
-of rulers and expresses their names with the ancient Bulgarian, 
-the namelist  has become the basis for numerous studies on 
-the calendar of the ancient Bulgarians.
+<?php require_once('includes.php'); ?><!DOCTYPE html>
+
+<h3><a name="imennik"></a><?php tr('Именник на българските владетели', 'Namelist of Bulgarian Rullers', '', '');?> </h3>
+<?php if ($lang == 'bg') : ?>
+  Именникът на Българските владетели е кратък откъс описваш 
+  имената и годините на царуване на Български владетели. 
+  Вмъкнат е в книгата &#xab;Елински и римски летописец&#xbb; 
+  между първа и трета част без да е отделен от тях.
+  Известни са три преписа които съдържат именника 
+  - Уваров, Погодинов и Московски, между които има 
+  известна разлика в транскрипцията на имената. 
+  <br/><br/>
+  Тъй като съдържа годините ( и месеците) на възкачване
+  на владетелите изразени с древните им български имена, именникът е станал 
+  основа за множество изследвания върху календара на древните българи.
+<?php elseif ($lang == 'en') : ?>
+  The Namelist of Bulgarian Rulers is a brief excerpt describing 
+  the names and years of the reign of the Bulgarian rulers. 
+  Inserted in the book &#xab;Hellenistic and Roman chronicler&#xbb;
+  between the first and third part without being separated from them. 
+  There are three transcripts that contain the namelist.
+  They are referred as Uvarov, Pogodinov and Moscow, Uvarov.
+  There are small differences in transcription of names between 
+  the 3 of them. 
+
+  <br/><br/>
+  Because it contains the years (and months) to the accession 
+  of rulers and expresses their names with the ancient Bulgarian, 
+  the namelist  has become the basis for numerous studies on 
+  the calendar of the ancient Bulgarians.
+<?php elseif ($lang == 'de') : ?>
+Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden Sie sich bitte an admin [a] bgkalendar.com.  Link zu einer Seite <a href="iztochnici.php?lang=en#imennik">in Englisch</a>.
+<?php elseif ($lang == 'ru') : ?>
+Перевод еще не готов. Чтобы помочь перевести этот пункт, пожалуйста, свяжитесь с admin [ a ]  bgkalendar.com.  Ссылка на страницу на <a href="iztochnici.php?lang=bg#imennik">болгарском языке.</a>
+<?php endif ?>
+
 
 <br/><br/>
 
 <table>
    <tr>
       <td colspan="2">
-          Uvarov transcript from 15<sup>-th</sup> Century
+          <?php tr('Уваров препис от 15<sup>-ти</sup> век', 'Uvarov transcript from 15<sup>-th</sup> Century', 'Uwarow-Transkript aus dem 15. Jahrhundert', 'Уваров препись 15<sup>-ого</sup> века');?>
       </td>
    </tr>
    <tr>
@@ -93,55 +86,25 @@ the calendar of the ancient Bulgarians.
           
           
       </td>
+<?php if ($lang != 'bg') : ?>
       <td class="transl" style="text-align: left;" >
-         <a href="https://en.wikipedia.org/wiki/Avitohol">Avitohol</a> lived 300 years. 
-         His clan was <a href="https://en.wikipedia.org/wiki/Dulo_clan">Dulo</a> and his year 
-         (of ascending to the throne) <i>dilom tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Ernak">Irnik</a> lived 150 years. 
-         His clan Dulo and his year <i>dilom tverim</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Gostun">Gostun</a>, the regent, 2 years. 
-         His clan 
-         <a href="https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D1%80%D0%BE%D0%B4%D0%BE%D0%B2%D0%B5">
-         Ermi</a> and his year <i>dokhs tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Kubrat">Kurt</a> ruled 60 years. His clan Dulo and his year <i>shegor vechem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Batbayan">Bezmer</a> 3 years and his clan Dulo and his year <i>shegor vem (vechem)</i>.<br/>
-         <br/>
-         These five princes ruled the kingdom over the other side of the Danube for 515 years with shaven heads and after that 
-         came to this side of the Danube Asparuh <a href="https://en.wikipedia.org/wiki/Knyaz">knyaz</a> and until now (rules).<br/>
-         <br/>
-
-         <a href="https://en.wikipedia.org/wiki/Asparuh_of_Bulgaria">Asparuh</a> knyaz 61 years (ruled). His clan Dulo and his year <i>vereni alem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Tervel_of_Bulgaria">Tervel</a> 21 years. His clan Dulo and his year <i>tekuchitem tvirem</i>.<br/>
-
-         <br/>
-         <i style="color: gray;">(An additional ruler is sometimes inserted here, depending on the reading.)</i><br/>
-         <br/>
-
-         <a href="https://en.wikipedia.org/wiki/Sevar_of_Bulgaria">Sevar</a> 15 years. His clan Dulo and his year <i>toh altom</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Kormisosh">Kormisosh</a> 17 years. His clan Vokil and his year <i>shegor tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Vineh_of_Bulgaria">Vinekh</a> 7 years. His clan <a href="https://en.wikipedia.org/wiki/Vokil">Ukil</a> [<a href="https://en.wikipedia.org/wiki/Vokil">Vokil</a>]. And his year <i>(imen)shegor alem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Telets_of_Bulgaria">Telets</a> 3 years. 
-         His clan <a href="https://en.wikipedia.org/wiki/Ugain">Ugain</a> and his year <i>somor altem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Umor_of_Bulgaria">Umor</a> (ruled) 40 days. His clan Ukil [Vokil] and his year <i>dilom tutom</i>.
-
+        <?php include('iztochnici-imennik-translate.php');?>
       </td>
    </tr>
    <tr>
+<?php endif ?>
       <td class="calendartable" style="text-align: center; width: 400px;">
           <a href="images/uvarov.jpg">
           <img width="400" src="images/uvarov.jpg" />
           </a><br/>
-          Original<br/>
-          Uvarov's transcript № 10, sheet 69, turnover 70.
-      </td>
-      <td class="transl" style="text-align: left;" >
-
+          <?php tr('Оригинал', 'Original', 'Original', 'Оригиналь');?><br/>
+          <?php tr('Уваровского собрания № 10, лист 69, оборот 70.', "Uvarov's transcript № 10, sheet 69, turnover 70.", 'Uwarow Collection No. 10, Blatt 69, Umsatz 70.', 'Уваровского собрания № 10, лист 69, оборот 70.');?>
       </td>
    </tr>
    <tr>
       <td colspan="2">
           <br/><br/>
-          Pogodin's transcript from 16<sup>-th</sup> century
+          <?php tr('Погодинов препис от 16<sup>-ти</sup> век', "Pogodin's transcript from 16<sup>-th</sup> century", 'Pogodinow - Transkript aus dem 16. Jahrhundert', 'Погодинов препись 16<sup>-ого</sup> века');?>
       </td>
    </tr>
    <tr>
@@ -196,156 +159,89 @@ the calendar of the ancient Bulgarians.
           род е&#x0301;му оу&#x0301;киль. л&#x0301; е&#x0301;му
           диломтоутомъ. <br/>
       </td>
+<?php if ($lang != 'bg') : ?>
       <td class="transl" style="text-align: left;" >
-         <a href="https://en.wikipedia.org/wiki/Avitohol">Avitohol</a> lived 300 years. 
-         His clan was <a href="https://en.wikipedia.org/wiki/Dulo_clan">Dulo</a> and his year 
-         (of ascending to the throne) <i>dilom tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Ernak">Irnik</a> lived 150 years. 
-         His clan Dulo and his year <i>dilom tverim</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Gostun">Gostun</a>, the regent, 2 years. 
-         His clan 
-         <a href="https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D1%80%D0%BE%D0%B4%D0%BE%D0%B2%D0%B5">
-         Ermi</a> and his year <i>dokhs tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Kubrat">Kurt</a> ruled 60 years. His clan Dulo and his year <i>shegor vechem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Batbayan">Bezmer</a> 3 years and his clan Dulo and his year <i>shegor vem (vechem)</i>.<br/>
-         <br/>
-         These five princes ruled the kingdom over the other side of the Danube for 515 years with shaven heads and after that 
-         came to this side of the Danube Asparuh <a href="https://en.wikipedia.org/wiki/Knyaz">knyaz</a> and until now (rules).<br/>
-         <br/>
-
-         <a href="https://en.wikipedia.org/wiki/Asparuh_of_Bulgaria">Asparuh</a> knyaz 61 years (ruled). His clan Dulo and his year <i>vereni alem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Tervel_of_Bulgaria">Tervel</a> 21 years. His clan Dulo and his year <i>tekuchitem tvirem</i>.<br/>
-
-         <br/>
-         <i style="color: gray;">(An additional ruler is sometimes inserted here, depending on the reading.)</i><br/>
-         <br/>
-
-         <a href="https://en.wikipedia.org/wiki/Sevar_of_Bulgaria">Sevar</a> 15 years. His clan Dulo and his year <i>toh altom</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Kormisosh">Kormisosh</a> 17 years. His clan Vokil and his year <i>shegor tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Vineh_of_Bulgaria">Vinekh</a> 7 years. His clan <a href="https://en.wikipedia.org/wiki/Vokil">Ukil</a> [<a href="https://en.wikipedia.org/wiki/Vokil">Vokil</a>]. And his year <i>(imen)shegor alem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Telets_of_Bulgaria">Telets</a> 3 years. 
-         His clan <a href="https://en.wikipedia.org/wiki/Ugain">Ugain</a> and his year <i>somor altem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Umor_of_Bulgaria">Umor</a> (ruled) 40 days. His clan Ukil [Vokil] and his year <i>dilom tutom</i>.
-
+        <?php include('iztochnici-imennik-translate.php');?>
       </td>
    </tr>
    <tr>
+<?php endif ?>
       <td class="calendartable" style="text-align: center;">
           <a href="images/pogodinov.jpg">
           <img width="400" src="images/pogodinov.jpg" />
           </a><br/>
-          Original <br/>
-          It is kept in the public library in Petrograd as № 1437, 
-          sheet 72a-73.
+          <?php tr('Оригинал', 'Original', 'Original', 'Оригиналь');?> <br/>
+          <?php tr('Съхранява се в Петроградската обществена библиотека под № 1437, лист 72а-73.', 'It is kept in the public library in Petrograd as № 1437, sheet 72a-73.', 'Es wird in der öffentlichen Bibliothek in Petrograd als Nr. 1437, Blatt 72a-73 aufbewahrt.', 'Хранится в публичной библиотеке в Петрограде по состоянию на 1437, лист 72а-73.');?>
       </td>
    </tr>
    <tr>
       <td colspan="2">
           <br/><br/>
-          Transcript from Moscow from  16<sup>-th</sup> century
+          <?php tr('Московски препис от 16<sup>-ти</sup> век', 'Transcript from Moscow from  16<sup>-th</sup> century', 'Moskauer Transkript des 16. Jahrhundert', 'Московский препись 16<sup>-ого</sup> века'); ?>
       </td>
    </tr>
    <tr>
       <td class="oldbg" style="text-align: left;">
       </td>
+<?php if ($lang != 'bg') : ?>
       <td class="transl" style="text-align: left;" >
-         <a href="https://en.wikipedia.org/wiki/Avitohol">Avitohol</a> lived 300 years. 
-         His clan was <a href="https://en.wikipedia.org/wiki/Dulo_clan">Dulo</a> and his year 
-         (of ascending to the throne) <i>dilom tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Ernak">Irnik</a> lived 150 years. 
-         His clan Dulo and his year <i>dilom tverim</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Gostun">Gostun</a>, the regent, 2 years. 
-         His clan 
-         <a href="https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D1%80%D0%BE%D0%B4%D0%BE%D0%B2%D0%B5">
-         Ermi</a> and his year <i>dokhs tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Kubrat">Kurt</a> ruled 60 years. His clan Dulo and his year <i>shegor vechem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Batbayan">Bezmer</a> 3 years and his clan Dulo and his year <i>shegor vem (vechem)</i>.<br/>
-         <br/>
-         These five princes ruled the kingdom over the other side of the Danube for 515 years with shaven heads and after that 
-         came to this side of the Danube Asparuh <a href="https://en.wikipedia.org/wiki/Knyaz">knyaz</a> and until now (rules).<br/>
-         <br/>
-
-         <a href="https://en.wikipedia.org/wiki/Asparuh_of_Bulgaria">Asparuh</a> knyaz 61 years (ruled). His clan Dulo and his year <i>vereni alem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Tervel_of_Bulgaria">Tervel</a> 21 years. His clan Dulo and his year <i>tekuchitem tvirem</i>.<br/>
-
-         <br/>
-         <i style="color: gray;">(An additional ruler is sometimes inserted here, depending on the reading.)</i><br/>
-         <br/>
-
-         <a href="https://en.wikipedia.org/wiki/Sevar_of_Bulgaria">Sevar</a> 15 years. His clan Dulo and his year <i>toh altom</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Kormisosh">Kormisosh</a> 17 years. His clan Vokil and his year <i>shegor tvirem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Vineh_of_Bulgaria">Vinekh</a> 7 years. His clan <a href="https://en.wikipedia.org/wiki/Vokil">Ukil</a> [<a href="https://en.wikipedia.org/wiki/Vokil">Vokil</a>]. And his year <i>(imen)shegor alem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Telets_of_Bulgaria">Telets</a> 3 years. 
-         His clan <a href="https://en.wikipedia.org/wiki/Ugain">Ugain</a> and his year <i>somor altem</i>.<br/>
-         <a href="https://en.wikipedia.org/wiki/Umor_of_Bulgaria">Umor</a> (ruled) 40 days. His clan Ukil [Vokil] and his year <i>dilom tutom</i>.
-
+        <?php include('iztochnici-imennik-translate.php');?>
       </td>
    </tr>
    <tr>
+<?php endif ?>
       <td class="calendartable" style="text-align: center;">
           <a href="images/moskovski.jpg">
           <img width="400" src="images/moskovski.jpg" />
           </a><br/>
-          Original <br/>
-          It is kept in the synodal library in Moscow as № 280, 
-          sheet 68a-69. 
-      </td>
-      <td class="oldbg" style="text-align: left;">
+          <?php tr('Оригинал', 'Original', 'Original', 'Оригиналь');?> <br/>
+          <?php tr('Съхранява се в Московската синодална библиотека под № 280, лист 68а-69.', 'It is kept in the synodal library in Moscow as № 280, sheet 68a-69.', 'Es wird in der Moskauer Synoidalbibliothek unter Nr. 280, Blatt 68 a-69 aufbewahrt.', 'Хранится в Московской синоидальной библиотеке no 280, лист 68 а-69.'); ?>
       </td>
    </tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
+<?php if ($lang == 'bg') : ?>
+Таблица за преобразуване на числови стойности изразени с кирилски букви към 
+съвременен запис на числата с арабски цифри.
+<?php elseif ($lang == 'en') : ?>
+Table for conversoin from number values represented as cyrillic letters 
+to modern representation of the numbers with arabic digits.
+<?php elseif ($lang == 'de') : ?>
+Tabelle zum Konvertieren numerischer Werte in kyrillischen Buchstaben in
+Eine zeitgenössische Zahlenaufzeichnung mit arabischen Ziffern.
+<?php elseif ($lang == 'ru') : ?>
+Таблица для преобразования численных значений, выраженных в кириллических буквах, в
+Современный запись чисел с арабскими цифрами.
+<?php endif ?>
 
 
 <table class="calendartable">
    <tr class="calendartable">
-      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4">units </td>
+      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4"><?php tr('единици', 'units', 'Einheiten', 'единиц'); ?> </td>
       <td rowspan="11"> &nbsp; </td> 
-      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4">tenths </td>
+      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4"><?php tr('десетици', 'tenths', 'Dutzende', 'десятки');?> </td>
       <td rowspan="11"> &nbsp; </td> 
-      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4">hundreds </td>
+      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4"><?php tr('стотици', 'hundreds', 'Hunderte', 'сотни');?> </td>
       <td rowspan="11"> &nbsp; </td> 
-      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4">others </td>
+      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="4"><?php tr('други', 'others', 'andere', 'другие'); ?> </td>
    </tr>
    <tr class="calendartable">
-      <td class="calendartable">value </td>
-      <td class="calendartable"> letter </td>
-      <td class="calendartable" colspan="2"> name</td> 
-      <td class="calendartable">value </td>
-      <td class="calendartable"> letter </td>
-      <td class="calendartable" colspan="2"> name</td> 
-      <td class="calendartable">value </td>
-      <td class="calendartable"> letter </td>
-      <td class="calendartable" colspan="2"> name</td> 
-      <td class="calendartable">value </td>
-      <td class="calendartable"> letter </td>
-      <td class="calendartable" colspan="2"> name</td> 
+      <td class="calendartable"><?php tr('стойност', 'value', 'Wert', 'значение');?></td>
+      <td class="calendartable"><?php tr('Буква', 'letter', 'Wert', 'письмо');?></td>
+      <td class="calendartable" colspan="2"><?php tr('Наименование', 'name', 'Name', 'имя');?></td> 
+      <td class="calendartable"><?php tr('стойност', 'value', 'Wert', 'значение');?></td>
+      <td class="calendartable"><?php tr('Буква', 'letter', 'Wert', 'письмо');?></td>
+      <td class="calendartable" colspan="2"><?php tr('Наименование', 'name', 'Name', 'имя');?></td> 
+      <td class="calendartable"><?php tr('стойност', 'value', 'Wert', 'значение');?></td>
+      <td class="calendartable"><?php tr('Буква', 'letter', 'Wert', 'письмо');?></td>
+      <td class="calendartable" colspan="2"><?php tr('Наименование', 'name', 'Name', 'имя');?></td> 
+      <td class="calendartable"><?php tr('стойност', 'value', 'Wert', 'значение');?></td>
+      <td class="calendartable"><?php tr('Буква', 'letter', 'Wert', 'письмо');?></td>
+      <td class="calendartable" colspan="2"><?php tr('Наименование', 'name', 'Name', 'имя');?></td> 
       </td>
    </tr>
    <tr class="oldbg">
@@ -355,11 +251,11 @@ the calendar of the ancient Bulgarians.
       <td class="name"  style="text-align: left;">az</td>
       <td class="calendartable">10 </td>
       <td class="oldbg" style="text-align: center;"> &#x0457; </td>
-      <td class="oldbg" style="text-align: left;"> &#x0457;жеи</td>
+      <td class="oldbg" style="text-align: left;"> &#x0457;жеи </td>
       <td class="name"  style="text-align: left;">zhei</td>
       <td class="calendartable">100 </td>
       <td class="oldbg" style="text-align: center;"> р </td>
-      <td class="oldbg" style="text-align: left;"> рьци</td>
+      <td class="oldbg" style="text-align: left;"> рьци </td>
       <td class="name"  style="text-align: left;">rtsi</td>
       <td class="calendartable"></td>
       <td class="oldbg" style="text-align: center;"> </td>
@@ -391,7 +287,7 @@ the calendar of the ancient Bulgarians.
       <td class="name"  style="text-align: left;"> glagoli </td>
       <td class="calendartable">30 </td>
       <td class="oldbg" style="text-align: center;"> л </td>
-      <td class="oldbg" style="text-align: left;"> люди&#x0465; </span></td>
+      <td class="oldbg" style="text-align: left;"> люди&#x0465; </td>
       <td class="name"  style="text-align: left;"> ljudi </td>
       <td class="calendartable">300 </td>
       <td class="oldbg" style="text-align: center;"> т</td>
@@ -469,9 +365,9 @@ the calendar of the ancient Bulgarians.
       <td class="oldbg" style="text-align: center;"> &#x0471;</td>
       <td class="oldbg" style="text-align: left;"> &#x0471;и, пси</td>
       <td class="name"  style="text-align: left;"> psi</td>
-      <td class="calendartable"></td>
+      <td class="calendartable"> </td>
       <td class="oldbg" style="text-align: center;"> </td>
-      <td class="oldbg" style="text-align: left;"></td>
+      <td class="oldbg" style="text-align: left;"> </td>
       <td class="name"  style="text-align: left;"></td>
    </tr>
    <tr class="oldbg">
@@ -515,21 +411,40 @@ the calendar of the ancient Bulgarians.
 <br/>
 <table class="calendartable" style="border-right-width: 0px;">
    <tr class="calendartable">
-      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="3">thousands </td>
+      <td class="calendartable" style="text-align: center; font-weight: bold;" colspan="3">хиляди </td>
       <td rowspan="11"> &nbsp; &nbsp; </td>
       <td rowspan="11" style="text-align: left; border-top-width: 0px; border-bottom-width: 0px; border-right-width: 0px;">
-           Tenths of thousands had been represented as the corresponding 
-           letter for units surrounded in a cyrcle. 
-           For example a surrounded in a cyrcle means 10 000.<br/>
-           Hundreds of thousands - corresponding letter surrounded with a dashed cyrcle.<br/>
-           Millions - corresponding letter surrounded in a cyrcle with wave lines.<br/> 
-           Hundreds of millions - corresponding letter surrounded in a cyrcle of crosses. <br/>
+           <?php if ($lang == 'bg') : ?>
+             Десетки хиляди са се изразявали като се загради съответната 
+             буква за единици  
+             с кръгче. Например а заградено в кръгче е 10 000. <br/>
+             Стотици хиляди - заградено с пунктирно кръгче. <br/>
+             Милиони - заграждане в кръгче от вълнички. <br/>
+             Стотици милиони - заграждане в кръгче от кръстчета. <br/>
+           <?php elseif ($lang == 'en') : ?>
+             Tenths of thousands had been represented as the corresponding 
+             letter for units surrounded in a cyrcle. 
+             For example a surrounded in a cyrcle means 10 000.<br/>
+             Hundreds of thousands - corresponding letter surrounded with a dashed cyrcle.<br/>
+             Millions - corresponding letter surrounded in a cyrcle with wave lines.<br/> 
+             Hundreds of millions - corresponding letter surrounded in a cyrcle of crosses. <br/>
+           <?php elseif ($lang == 'de') : ?>
+             Zehntausende haben sich mit dem Beifügen des entsprechenden Ausdrucks geäußert Einheitsbuchstabe mit einem Kreis. <br/>
+             Hunderttausende - umgeben von einem gepunkteten Kreis. <br/>
+             Millionen - im Kreis der Wellen. <br/>
+             Hunderte von Millionen - Einfriedung in einem Kreis von Kreuzen. <br/>
+           <?php elseif ($lang == 'ru') : ?>
+             Десятки тысяч выразились, приложив соответствующий единичное письмо с кругом. Например а, вложенноев вокруг равно 10000. <br/>
+             Сотни тысяч - заключены в пунктирный круг. <br/>
+             Миллионы - кружатся в круге волн. <br/>
+             Сотни миллионов - вложение в круг крестов. <br/>
+           <?php endif ?>
       </td>
    </tr>
    <tr class="calendartable">
-      <td class="calendartable">value </td>
-      <td class="calendartable"> letter </td>
-      <td class="calendartable"> name</td> 
+      <td class="calendartable"><?php tr('стойност', 'value', '', '');?> </td>
+      <td class="calendartable"><?php tr('Буква', 'letter', '', '');?></td>
+      <td class="calendartable"><?php tr('Наименование', 'name', '', '');?></td> 
       </td>
    </tr>
    <tr class="oldbg">
@@ -571,6 +486,3 @@ the calendar of the ancient Bulgarians.
    </tr>
 </table>
 <br/>
-<?php include('footer.php');?>
-</body>
-</html>

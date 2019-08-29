@@ -36,7 +36,7 @@
   </ul>
 </ul>
 Die Bulgarischen Kalender ist der Kalender der alten Bulgaren restauriert geschriebenen historischen Daten
-(<a href="imennik.html">Namensliste der bulgarischen Khane</a>) 
+(<a href="iztochnici.php#imennik?lang=<?php tr('bg', 'en', 'de', 'ru');?>">Namensliste der bulgarischen Khane</a>) 
 und den Märchen und Legenden.<br/>
 Es gibt Studien von verschiedenen Gelehrten, die manchmal ganz anderen Schlussfolgerungen.
 </p>

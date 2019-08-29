@@ -37,7 +37,7 @@
 </ul>
 The Bulgarian calendar is the calendar of the ancient Bulgarians 
 restored from written historical data 
-<a href="imennik.html">Nominalia of the Bulgarian khans</a> 
+<a href="iztochnici.php#imennik?lang=<?php tr('bg', 'en', 'de', 'ru');?>">Nominalia of the Bulgarian khans</a> 
 and the folk tales and legends. There are studies of various 
 scholars who sometimes quite differ in
 conclusions reached.
