@@ -48,41 +48,41 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
   <div style="border: 1px solid black; position: absolute; width: auto; margin-left: 1em; padding-bottom: 1em; padding-right: 1em;">
   <table style="border-spacing: 0; border-collapse: collapse; text-align: center;">
    <tr style="text-align: center;">
-      <th style="text-align: right; vertical-align: bottom;">Летоброене по:</th>
+      <th style="text-align: right; vertical-align: bottom;"><?php tr('Летоброене по:', 'Counting by:', 'nach', 'считая по');?></th>
       <td colspan="31">&nbsp;</td>
-      <td colspan="5" style="text-align: left; position: relative; color: rgba(255, 0, 0, 0.8); padding-bottom: 5px;"><div class="chatalarski">&nbsp;</div>чаталарски<br/>надпис</td>
+      <td colspan="5" style="text-align: left; position: relative; color: rgba(255, 0, 0, 0.8); padding-bottom: 5px;"><div class="chatalarski">&nbsp;</div><?php tr('чаталарски<br/>надпис', 'chatalar<br/>inscription', 'tschatalar-<br/>inschrift', 'чаталарский<br/>надпись');?></td>
       <td colspan="31">&nbsp;</td>
    </tr>
    <tr style="text-align: center;">
-      <th style="text-align: right;">Източна Римска Империя: </th>
+      <th style="text-align: right;"><?php tr('Източна Римска Империя:', 'Eastern Roman Empire:', 'Oströmische Reich:', 'Восто́чная Ри́мская импе́рия:');?> </th>
       <td colspan="19" style="border-bottom: 1px solid blue;">&nbsp;</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">14<sup>-ти</sup> Индикт</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">15<sup>-ти</sup> Индикт</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">1<sup>-ви</sup> Индикт</td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('14<sup>-ти</sup> Индикт', '14<sup>-th</sup> Indiction', '14 Indiction', '14<sup>-тий</sup> Индикт');?></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('15<sup>-ти</sup> Индикт', '15<sup>-th</sup> Indiction', '15 Indiction', '15<sup>-тий</sup> Индикт');?></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('1<sup>-ви</sup> Индикт', '1<sup>-st</sup> Indiction', '1 Indiction', '1<sup>-ой</sup> Индикт');?></td>
       <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
    </tr>
    <tr style="text-align: center;">
-      <th style="text-align: right;">Грегориански Календар: </th>
+      <th style="text-align: right;"><?php tr('Грегориански Календар:', 'Gregorian Calendar:', 'Gregorianischer Kalender:', 'Григориа́нский календа́рь:');?></th>
       <td colspan="12" style="border-bottom: 1px solid blue;">&nbsp;</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">820<sup>-та</sup> година</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">821<sup>-ва</sup> година</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">822<sup>-ра</sup> година</td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('820<sup>-та</sup> година', '820<sup>-th</sup> year', '820 Jahr', '820<sup>-ой</sup> год');?></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('821<sup>-ва</sup> година', '821<sup>-st</sup> year', '821 Jahr', '821<sup>-ой</sup> год');?></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('822<sup>-ра</sup> година', '822<sup>-nd</sup> year', '822 Jahr', '822<sup>-ой</sup> год');?></td>
       <td colspan="19" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
    </tr>
    <tr style="text-align: center;">
-      <th style="text-align: right;">Древният Български Календар: </th>
+      <th style="text-align: right;"><?php tr('Древният Български Календар:', 'Ancient Bulgarian Calendar:', 'Bulgarisch Kalender:', 'Болгарский Календарь:');?> </th>
       <td colspan="13" style="border-bottom: 1px solid blue;">&nbsp;</td>
       <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp; <b>ШЕГОР</b></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp; <b><?php tr('ШЕГОР', 'SHEGOR', 'SCHEGOR', 'ШЕГОР');?></b></td>
       <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
       <td colspan="18" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
    </tr>
    <tr style="text-align: center;">
-      <th style="text-align: right;">Китайският Календар: </th>
+      <th style="text-align: right;"><?php tr('Китайският Календар:', 'Chinese calendar:', 'Chinesischer Kalender:', 'Китайский Календарь:');?> </th>
       <td colspan="13" style="border-bottom: 1px solid blue;">&nbsp;</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">ПЛЪХ</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">ВОЛ</td>
-      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">ТИГЪР</td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('ПЛЪХ', 'RAT', 'RATTE', 'КРЫСА');?></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('ВОЛ', 'OX', 'OCHSE', 'ВОЛ');?></td>
+      <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('ТИГЪР', 'TIGER', 'TIGER', 'ТИГР');?></td>
       <td colspan="18" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
    </tr>
    <tr>
@@ -121,9 +121,13 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
   
   <br/>
 <?php if ($lang == 'bg') : ?>
+  Това е отразено и в нашия модел на календара. Вижте как е <a href="index.php?cg=22-06-821">изглеждал Древния Български Календар за 821-ва година</a> по Грегорианския Календар.
+  <br/><br/>
   Днес колоната се съхранява в <a href="https://osm.org/go/x1DHaROM0--?m=">Националния Археологически Музей в София</a>, 
   а нейно копие можете да откриете също и в <a href="https://osm.org/go/x1tlnoGYQ?m=">археологическия музей на град Плиска</a>
 <?php elseif ($lang == 'en') : ?>
+  This is well represented in our model of the calendar. Please check <a href="index.php?cg=21-06-821&lang=en">whow the Ancient Bulgarian Calendar looked like for year 821</a> of the Gregorian Calendar.
+  <br/><br/>
   Today the column is kept in <a href="https://osm.org/go/x1DHaROM0--?m=">National Archeological Museum in Sofia</a>, 
   and a copy of it can be found als in the <a href="https://osm.org/go/x1tlnoGYQ?m=">archeological museum in the town of Pliska</a>
 <?php elseif ($lang == 'de') : ?>
@@ -141,7 +145,7 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
    </tr>
    <tr>
       <td class="blueborder" style="text-align: left; width: 555px;" >
-        ΚΑΝΑCYΒΙΓΙ ΩΜΟΡΤΑΓ ΙC ΤΙΝ ΓΙΝ ΟΠΟΥ ΕΓΕΝΙΘΙΝ<br/>
+        ΚΑΝΑCYΒΙΓΙ ΩΜΟΥΡΤΑΓ ΙC ΤΙΝ ΓΙΝ ΟΠΟΥ ΕΓΕΝΙΘΙΝ<br/>
         ΕΚ ΘΕΟΥ ΑΡΧΟΝ ΕCΤΙ ΙC ΤΙC ΠΛCΚΣΑC ΤΟΝ ΚΑΝΠΟΝ<br/>
         ΜΕΝΟΝΤΑ ΕΠΥΗCΕ ΑΥΛΙΝ ΙC ΤΙΝ ΤΟΥΝΤΖΑΝ ΚΕ<br/>
         ΜΕΤΙΓΑΓΕΝ ΤΙΝ ΔΥΝΑΜΙΝ ΤΟΥ ΙC ΤΟΥΣ ΓΡΙΚΟΥC<br/>
@@ -158,13 +162,13 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
       </td>
       <td class="blueborder" style="text-align: left; width: 555px;" >
         <?php if ($lang == 'bg') : ?>
-          Канасювиги Омортаг е кан от бога в земята, дето се е родил. 
+          Канасювиги Омуртаг е кан от бога в земята, дето се е родил. 
           Като остая [да пребъдва] в лагера на Плиска, 
           той построи аул на Туча 
           и уголеми силата си спрямо гърци и склавяни. 
           И построи изкусно мост на Туча отзад аула [укрепление]; 
           а в самата крепост постави четири стълба и между стълбовете 
-          два медни лъва. Нека бог удостои хана от бога да притиска 
+          два медни лъва. Нека бог удостои кана от бога да притиска 
           с ногата си императора, докато тече Туча и докато тя задържа 
           многото български противници, и като покорява враговете си, 
           в радост и веселие да проживее сто години. А времето, когато 
@@ -174,7 +178,7 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
         <?php elseif ($lang == 'en') : ?>
           Kanasubigi Omortag, in the land where he was born
           is lord (archon) by God. In the field of Pliska
-          staying he made a court/camp (aulis) at [the river] Ticha (Kamchiya)
+          staying he made a court/camp (aulis) at [the river] Tucha (Kamchiya)
           and moved his forces against the Greeks (i.e. Byzantines)
           and the Sklavs and skillfully erected a bridge at Ticha
           together with the camp [he put] four columns and above the columns
@@ -187,7 +191,33 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
           in Bulgarian Shigor Elem and in Greek
           Indiction 15. 
         <?php elseif ($lang == 'de') : ?>
+          Kanasuvigi Omurtag ist ein Khan des Gottes in dem Land, in dem er geboren wurde.
+          Durch den Aufenthalt in Pliskas Lager,
+          er baute Tuchas Aul
+          und verstärken ihre Stärke gegen die Griechen und Sklawen.
+          Und er baute geschickt die Brücke von Tucah im hinteren Teil der Aula.
+          und in der Festung selbst platzierte er vier Säulen und zwischen den Säulen
+          zwei kupferne Löwen. Möge Gott dem Khan den Gott gewähren, Druck auszuüben
+          mit seinem fuß der kaiser als tucca fließt und während sie sich festhält
+          viele bulgarische Gegner und durch die Eroberung ihrer Feinde,
+          in der Freude und Freude, hundert Jahre zu leben. Und die Zeit wann
+          er [der Aud] wurde gebaut,
+          war bulgarische sigor elem,
+          und auf Griechisch die 15. Indiktion.
         <?php elseif ($lang == 'ru') : ?>
+          Канасювиги Омуртаг - кан от бога на земле, где он родился.
+          Оставаясь в лагере Плиски,
+          он построил аул Тучи
+          и увеличил свою силу против греков и склавянов.
+          И он умело построил мост Тучи в задней части аулы;
+          и в самом форте он разместил четыре колонны, и между колоннами
+          два медных льва. Дай бог кана богу давить
+          с его ногой императора, как течет Туча, и пока она держится
+          много болгарских противников, и победив их врагов,
+          в радости и радости жизни сто лет. И время, когда
+          он был построен,
+          была по болгарскому сигор елем,
+          и по-гречески 15 индиктион.
         <?php endif ?>
       </td>
    </tr>
