@@ -1339,7 +1339,7 @@ $wday = bcmod($igr, 7);
 <?php if ($lang == 'bg') : ?>
    Древните българи, живели по нашите земи, създали собствен календар. Българският календар е 
    възстановен по писмени исторически данни (<a href="iztochnici.php?lang=bg">Именник на Българските Владетели</a>) и по народни
-   предания и легенди. Безспорен успех за него е официалното признание на ЮНЕСКО, с което той е 
+   предания и легенди. Безспорен успех за него е официалното признание на ЮНЕСКО през 1976, с което той е 
    признат за най-съвършенния в света. За начална точка на летоброенето е приет денят на зимното 
    слънцестоене (21-ви декември) през 5505 година преди Хр.<br/>
    Тази страница представлява опит за компютърен модел на <a href="kalendar-bg.php">древния български календар</a> 
@@ -1348,7 +1348,7 @@ $wday = bcmod($igr, 7);
 <?php elseif ($lang == 'en') : ?>
    Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
    reconstrucuted basedon on writen historical artefacts (<a href="iztochnici.php?lang=en">Namelist of Bulgarian Rulers</a>), 
-   Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO, that this is 
+   Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO in 1976, that this is 
    the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
    winter solstice (21-st of December) 5505 years before Christ.<br/>
    This page is an attempt for a computer model of <a href="kalendar-en.php">the ancient Bulgarian calendar</a> and its 
@@ -1358,7 +1358,7 @@ $wday = bcmod($igr, 7);
 <?php elseif ($lang == 'de') : ?>
    Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
    uber geschrieben historischen Daten (<a href="iztochnici.php?lang=de">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
-   Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO, die er als die vollkommenste in der Welt anerkannt.
+   Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO im 1976, die er als die vollkommenste in der Welt anerkannt.
    Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
    Diese Seite ist ein Computermodelanlauf von <a href="kalendar-de.php">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
    <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
@@ -1366,7 +1366,7 @@ $wday = bcmod($igr, 7);
 <?php elseif ($lang == 'ru') : ?>
    Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.  
    Мы восстановили здесь календарь на основании письменных исторических источников как 
-   (<a href="iztochnici.php?lang=ru">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.   
+   (<a href="iztochnici.php?lang=ru">Именник Болгарских Канов</a>), легенд и современных исследований. В 1976 г., он признан ЮНЕСКО и считается одним из самых совершенных.   
    Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.  
    Наш сайт дает представлление о <a href="kalendar-ru.php">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет 
    возможность сравнить его с современным Грегорианским календарём.  
