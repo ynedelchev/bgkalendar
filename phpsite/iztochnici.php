@@ -31,6 +31,7 @@
 <ul>
   <li><a href="#imennik"><?php tr('Имменник на българските владетели', 'Namelist of Bulgarian Rullers', 'Namensliste der bulgarischen Rullers', 'Именник болгарских правителей');?></a></li>
   <li><a href="#chatalarski"><?php tr('Чаталарски надпис', 'Chatalar Inscription', 'Tschatalarinschrift', 'Чаталарский надпись');?></a></li>
+  <li><a href="#tudordoksov"><?php tr('Приписка на Тудор черноризец Доксов', 'Postscript of chernorizets Tudor Doksov', 'Nachtrag von Tudor Doksov', 'Приписька чёрноризца Тудора Доксова');?></a></li>
 </ul>
 
 
@@ -39,6 +40,13 @@
 <br/>
 <br/>
 <?php include_once('iztochnici-chatalarski.php'); ?>
+<br/>
+<br/>
+<br/>
+<?php include_once('iztochnici-tudordoksov.php'); ?>
+<br/>
+<br/>
+<br/>
 
 <br/>
 <?php include('footer.php');?>

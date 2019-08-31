@@ -1,7 +1,7 @@
 
 <?php require_once('includes.php'); ?><!DOCTYPE html>
 
-<h3><a name="imennik"></a><?php tr('Именник на българските владетели', 'Namelist of Bulgarian Rullers', '', '');?> </h3>
+<h3><a name="imennik"></a><?php tr('Именник на българските владетели', 'Namelist of Bulgarian Rullers', 'Namensliste der bulgarischen Rullers', 'Именник болгарских правителей');?> </h3>
 <?php if ($lang == 'bg') : ?>
   Именникът на Българските владетели е кратък откъс описваш 
   имената и годините на царуване на Български владетели. 
