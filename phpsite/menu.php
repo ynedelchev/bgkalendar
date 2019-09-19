@@ -92,7 +92,7 @@
   <li><a sub-menu="sm-dev"     href="#"><?php tr('За разработчици', 'For Developers', 'Für Entwickler', 'Разработчикам');?></a></li>
   <!-- <li><a sub-menu="sm-forum"   href="<?php echo $DIR_PREFIX;?>forum?lang=<?php echo tr('bg', 'en', 'de', 'ru');?>"><?php tr('Дискусии', 'Forum', 'Diskussionen', 'Форум');?></a></li> -->
   <li><a sub-menu="sm-other"   href="#"><?php tr('Други', 'Other', 'Anderen Themen', 'Другое');?></a></li>
-  <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нам');?></a></li>
+  <li><a sub-menu="sm-contact" href="#"><?php tr('За нас', 'About us', 'Über uns', 'О нас');?></a></li>
 </ul>
 <ul class="vmenu" id="sm-intro">
   <li>
@@ -170,7 +170,7 @@
 </ul>
 <ul class="vmenu" id="sm-contact">
   <li>
-      <a class="header"><?php tr('За нас', 'About us', 'Fur wir', 'Для нас')?>
+      <a class="header"><?php tr('За нас', 'About us', 'Fur wir', 'О нас')?>
       </a>
   </li>
   <li>
