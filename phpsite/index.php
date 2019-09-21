@@ -425,7 +425,7 @@
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Трети', 'Tird Month', 'Dritten Monat', 'Третий Месяц');?></td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Трети', 'Third Month', 'Dritten Monat', 'Третий Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
