@@ -12,4 +12,14 @@
 Освен това се "секне" и водата и става опасна за къпане, а самодивите, змиите и гущерите се прибират по своите зимовища. 
 Интересно е, че според народните вярвания, те започват своята активност на <a href="https://bg.wikipedia.org/wiki/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5">Благовец</a>, който ден е предполагаем аналог на пролетното слънцестоене. 
 Това още веднъж потвърждава, че Секновене съответства на есенното слънцестоене. 
+<br/><br/>
+<?php if ($lang == 'bg') : ?>
+ Вижте също книгата на Георги Велев <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">Народният календар и неговите празници</a>.
+<?php elseif ($lang == 'en') : ?>
+Please also see the book from Georgi Velev <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>.
+<?php elseif ($lang == 'de') : ?>
+Sehen Sie bitte also, der Buch von Georgi Welew <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Volkskalender und seine Feiertage"</a>.
+<?php elseif ($lang == 'ru') : ?>
+Посмотрите также книгу Георгия Велева <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народный календарь и его праздники"</a>.
+<?php endif ?>
 

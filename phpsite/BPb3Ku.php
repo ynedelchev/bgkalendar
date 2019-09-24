@@ -89,15 +89,6 @@
 </div>
 
 <div class="linkitem">
-<a href="<?php tr('https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80',
-                  'https://en.wikipedia.org/wiki/Bulgar_calendar','https://en.wikipedia.org/wiki/Bulgar_calendar',
-                  'https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80');?>">
-  <img class="titleimg"  src="images/wikipedia.png"/><br/>
-  <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
-</a>
-</div>
-
-<div class="linkitem">
   <a href="http://alexandradelova.blogspot.bg/2015/02/blog-post_1.html">
   <img class="titleimg"  src="images/snake.png"/><br/>
   <?php tr('АСТРОНОМИЯ НА ПРАБЪЛГАРИТЕ<br/> Александра Делова', 'ASTRONOMY OF PROTO-BULGARIANS<br/> Alexandra Delova', 'DIE ASTRONOMIE DER PROTOBULGAREN<br/> Alexandra Delowa', 'АСТРОНОМИЯ ПРОТОБУЛГАР<br/> Александра Делова');?>
@@ -117,6 +108,27 @@
   <img class="titleimg"  src="links/shopov.png"/><br/>
   <?php tr('Календарът на древните българи... - Я. Шопов', 'The calendar of the ancient Bulgarians - Y. Shopov', 'Der Kalender der alten Bulgaren - Y. Shopov', 'Календарь древних болгар - Я. Шопов');?>
   <a class="cache" href="links/shopov.pdf"></a>
+</a>
+</div>
+
+<div class="linkitem">
+<a href="https://www.spisanie8.bg/автори/загадки/2503-дао-на-българския-календар.html">
+  <img class="titleimg"  src="images/dao.png"/><br/>
+  <?php tr('Дао на българския календар - Георги Велев', 'Dao of the Bulgarian Calendar - Georgi Velev', 'Dao des Bulgarischen Kalenders - Georgi Welew', 'Дао болгарского календаря - Георги Велев');?><br/>
+  <?php tr('Вж: ', 'See: ', 'Schauen Sie: ', 'См: ');?>
+  <u><a href="https://spisanie8.bg/списание/списание-8-брой-52014-г.html"><?php tr('Целия брой', 'The whole magazine', 'Die ganze Zeitschrift', 'Весь журнал');?></a></u>
+  <?php tr('или', 'or', 'oder', 'или');?>
+  <u><a href="links/daobgkalendar.pdf"><?php tr('статията', 'the article', 'Artikel', 'статья');?></a></u>
+  <a class="cache" href="links/daobgkalendar.pdf"></a>
+</a>
+</div>
+
+<div class="linkitem">
+<a href="<?php tr('https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80',
+                  'https://en.wikipedia.org/wiki/Bulgar_calendar','https://en.wikipedia.org/wiki/Bulgar_calendar',
+                  'https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80');?>">
+  <img class="titleimg"  src="images/wikipedia.png"/><br/>
+  <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
 </a>
 </div>
 
