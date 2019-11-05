@@ -167,6 +167,11 @@
         <?php tr('Свали версия за разпечатване 7523/2018', 'Download printable version 7523/2018', 'Druckversion herunterladen 7523/2018', 'Скачать версию для печати 7523/2018')?>
       </a>
   </li>
+  <li>
+      <a href="<?php echo $DIR_PREFIX;?>papercalendar/2020/index.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>">
+        <?php tr('Вземи своя хартиен календар за 7525/2020', 'Obtain a printed version for 7525/2020', 'Holen Sie sich die Version für 7525/2020', 'Получите свою версию для 7525/2020')?>
+      </a>
+  </li>
 </ul>
 <ul class="vmenu" id="sm-contact">
   <li>

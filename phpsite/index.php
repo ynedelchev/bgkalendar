@@ -124,6 +124,20 @@
 <?php if ($lang == 'bg') : ?>
 <br/>
 <br/>
+<div style="border-radius: 1em; border: 1px solid green; background: lightgreen; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
+  <?php if ($lang == 'bg') : ?>
+    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7525/2020</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2020?lang=bg">Виж повече</a>
+  <?php elseif ($lang == 'en') : ?>
+    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7525, please contact <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2020?lang=en">More</a>
+  <?php elseif ($lang == 'de') : ?>
+    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7525 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
+  <?php elseif ($lang == 'ru') : ?>
+    Чтобы получить свою печатную версию болгарского календаря (Формат А2) на 7525, свяжитесь с <u>admin [а] bgkalendar.com</u> .
+  <?php endif ?>
+</div>
+<br/><br/>
 Екипът на bgkalendar започва издаването на <b>хартиена версия</b> на календара за <b>2020</b> (грегорианска) - 7525 (древна българска). 
 Издаваният календар, ще има нагледна съпоставка между датите на грегорианския календар за 2020 и съответните дати по българския календар, 
 като за целта, ще бъдат използвани кръгова и таблична версия. Календарът е еднолистов, формат А2.
