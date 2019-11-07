@@ -41,7 +41,7 @@
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Контакт', 'Contacts', 'Kontakte', 'Контакт');?></span></b>
  <ul>
-     <li><a class="footer" href="mailto:admin [а] bgkalendar.com"><span class="footer">admin [ а ]bgkalendar.com</span></a></li>
+     <li><a class="footer" href="mailto:admin [а] bgkalendar.com"><span class="footer">admin [ а ] bgkalendar.com</span></a></li>
  </ul>
 </div>
 <div class="footerfloat">
