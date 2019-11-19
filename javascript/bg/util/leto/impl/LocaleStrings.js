@@ -141,14 +141,14 @@ day.put("en", "Day");                                     month.put("en",   "Mon
 day.put("bg", "Ден");                                     month.put("bg", "Месец");
 day.put("de", "Tag");                                     month.put("de",   "Monat");
 day.put("ru", "День");                                    month.put("ru",   "Месяц");
-LocaleStrings.sStrings.put(LocaleStrings._day_, day);                                 LocaleStrings.sStrings.put(LocaleStrings._month_, month);
+LocaleStrings.sStrings.put(LocaleStrings._day_, day);     LocaleStrings.sStrings.put(LocaleStrings._month_, month);
 
 var year = new Map();                                     var years4 = new Map();
 year.put("en", "Year");                                   years4.put("en",   "Four Years");
 year.put("bg", "Година");                                 years4.put("bg", "Четиригодие");
 year.put("de", "Jahr");                                   years4.put("de",   "");
 year.put("ru", "Год");                                    years4.put("ru",   "");
-LocaleStrings.sStrings.put(LocaleStrings._year_, year);                               LocaleStrings.sStrings.put(LocaleStrings._years4_, years4);
+LocaleStrings.sStrings.put(LocaleStrings._year_, year);   LocaleStrings.sStrings.put(LocaleStrings._years4_, years4);
 
 var star_day = new Map();                                  var star_week = new Map();
 star_day.put("en", "Star Day");                            star_week.put("en",   "Star Week");
@@ -176,7 +176,7 @@ century.put("en", "Century");                                centuries4.put("en"
 century.put("bg", "Век");                                    centuries4.put("bg", "Четири Века");
 century.put("de", "");                                       centuries4.put("de",   "");
 century.put("ru", "");                                       centuries4.put("ru",   "");
-LocaleStrings.sStrings.put(LocaleStrings._century_, century);                            LocaleStrings.sStrings.put(LocaleStrings._centuries4_, centuries4);
+LocaleStrings.sStrings.put(LocaleStrings._century_, century);LocaleStrings.sStrings.put(LocaleStrings._centuries4_, centuries4);
 
 
 var january = new Map();                                     var february = new Map();
@@ -184,77 +184,77 @@ january.put("en", "January");                                february.put("en", 
 january.put("bg", "Януари");                                 february.put("bg", "Февруари");
 january.put("de", "Januar");                                 february.put("de",   "Februar");
 january.put("ru", "Январь");                                 february.put("ru",   "Февраль");
-LocaleStrings.sStrings.put(LocaleStrings._january_, january);                            LocaleStrings.sStrings.put(LocaleStrings._february_, february);
+LocaleStrings.sStrings.put(LocaleStrings._january_, january);LocaleStrings.sStrings.put(LocaleStrings._february_, february);
 
 var march = new Map();                                       var april = new Map();
 march.put("en", "March");                                    april.put("en",   "April");
 march.put("bg", "Март");                                     april.put("bg", "Април");
 march.put("de", "Mertz");                                    april.put("de",   "April");
 march.put("ru", "Март");                                     april.put("ru",   "Апрель");
-LocaleStrings.sStrings.put(LocaleStrings._march_, march);                                LocaleStrings.sStrings.put(LocaleStrings._april_, april);
+LocaleStrings.sStrings.put(LocaleStrings._march_, march);    LocaleStrings.sStrings.put(LocaleStrings._april_, april);
 
 var may = new Map();                                         var june = new Map();
 may.put("en", "May");                                        june.put("en",   "June");
 may.put("bg", "Май");                                        june.put("bg", "Юни");
 may.put("de", "Maj");                                        june.put("de",   "Juni");
 may.put("ru", "Май");                                        june.put("ru",   "Июнь");
-LocaleStrings.sStrings.put(LocaleStrings._may_, may);                                    LocaleStrings.sStrings.put(LocaleStrings._june_, june);
+LocaleStrings.sStrings.put(LocaleStrings._may_, may);        LocaleStrings.sStrings.put(LocaleStrings._june_, june);
 
 var july = new Map();                                        var august = new Map();
 july.put("en", "July");                                      august.put("en",   "August");
 july.put("bg", "Юли");                                       august.put("bg", "Август");
 july.put("de", "Juli");                                      august.put("de",   "August");
 july.put("ru", "Июль");                                      august.put("ru",   "Август");
-LocaleStrings.sStrings.put(LocaleStrings._july_, july);                                  LocaleStrings.sStrings.put(LocaleStrings._august_, august);
+LocaleStrings.sStrings.put(LocaleStrings._july_, july);      LocaleStrings.sStrings.put(LocaleStrings._august_, august);
 
 var september = new Map();                                   var october = new Map();
 september.put("en", "September");                            october.put("en",   "October");
 september.put("bg", "Септември");                            october.put("bg", "Октомври");
 september.put("de", "September");                            october.put("de",   "Oktober");
 september.put("ru", "Сентябрь");                             october.put("ru",   "Октябрь");
-LocaleStrings.sStrings.put(LocaleStrings._july_, july);                                  LocaleStrings.sStrings.put(LocaleStrings._october_, october);
+LocaleStrings.sStrings.put(LocaleStrings._july_, july);      LocaleStrings.sStrings.put(LocaleStrings._october_, october);
 
 var november = new Map();                                    var december = new Map();
 november.put("en", "November");                              december.put("en",   "December");
 november.put("bg", "Ноември");                               december.put("bg", "Декември");
 november.put("de", "Nowember");                              december.put("de",   "Dezember");
 november.put("ru", "Ноябрь");                                december.put("ru",   "Декабрь");
-LocaleStrings.sStrings.put(LocaleStrings._november_, november);                          LocaleStrings.sStrings.put(LocaleStrings._december_, december);
+LocaleStrings.sStrings.put(LocaleStrings._november_, november);  LocaleStrings.sStrings.put(LocaleStrings._december_, december);
 
 var month_28 = new Map();                                    var month_29 = new Map();
 month_28.put("en", "Month with 28 days");                    month_29.put("en",   "Month with 29 days");
 month_28.put("bg", "Месец със 28 дена");                     month_29.put("bg", "Месец със 29 дена");
 month_28.put("de", null);                                    month_29.put("de",   null);
 month_28.put("ru", null);                                    month_29.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._month_28_, month_28);                          LocaleStrings.sStrings.put(LocaleStrings._month_29_, month_29);
+LocaleStrings.sStrings.put(LocaleStrings._month_28_, month_28);  LocaleStrings.sStrings.put(LocaleStrings._month_29_, month_29);
 
 var month_30 = new Map();                                    var month_31 = new Map();
 month_30.put("en", "Month with 30 days");                    month_31.put("en",   "Month with 31 days");
 month_30.put("bg", "Месец със 30 дена");                     month_31.put("bg", "Месец със 31 дена");
 month_30.put("de", null);                                    month_31.put("de",   null);
 month_30.put("ru", null);                                    month_31.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._month_30_, month_30);                          LocaleStrings.sStrings.put(LocaleStrings._month_31_, month_31);
+LocaleStrings.sStrings.put(LocaleStrings._month_30_, month_30);  LocaleStrings.sStrings.put(LocaleStrings._month_31_, month_31);
 
 var m_first = new Map();                                         var m_second = new Map();
 m_first.put("en", "First");                                      m_second.put("en",   "Second");
 m_first.put("bg", "Първи");                                      m_second.put("bg", "Втори");
 m_first.put("de", null);                                         m_second.put("de",   null);
 m_first.put("ru", null);                                         m_second.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._m_first_, m_first);                                LocaleStrings.sStrings.put(LocaleStrings._m_second_, m_second);
+LocaleStrings.sStrings.put(LocaleStrings._m_first_, m_first);    LocaleStrings.sStrings.put(LocaleStrings._m_second_, m_second);
 
 var m_third = new Map();                                         var m_fourth = new Map();
 m_third.put("en", "Third");                                      m_fourth.put("en",   "Fourth");
 m_third.put("bg", "Трети");                                      m_fourth.put("bg", "Четвърти");
 m_third.put("de", null);                                         m_fourth.put("de",   null);
 m_third.put("ru", null);                                         m_fourth.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._m_third_, m_third);                                LocaleStrings.sStrings.put(LocaleStrings._m_fourth_, m_fourth);
+LocaleStrings.sStrings.put(LocaleStrings._m_third_, m_third);    LocaleStrings.sStrings.put(LocaleStrings._m_fourth_, m_fourth);
 
 var m_fifth = new Map();                                         var m_sixth_30 = new Map();
 m_fifth.put("en", "Fifth");                                      m_sixth_30.put("en",   "Sixth non leap");
 m_fifth.put("bg", "Пети");                                       m_sixth_30.put("bg", "Шести Невисокосен");
 m_fifth.put("de", null);                                         m_sixth_30.put("de",   null);
 m_fifth.put("ru", null);                                         m_sixth_30.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._m_fifth_, m_fifth);                                LocaleStrings.sStrings.put(LocaleStrings._m_sixth_30_, m_sixth_30);
+LocaleStrings.sStrings.put(LocaleStrings._m_fifth_, m_fifth);    LocaleStrings.sStrings.put(LocaleStrings._m_sixth_30_, m_sixth_30);
 
          						         var m_sixth_31 = new Map();
 	         					         m_sixth_31.put("en",   "Sixth leap");
@@ -268,14 +268,14 @@ m_third.put("en", "Seventh");                                    m_eight.put("en
 m_third.put("bg", "Седми");                                      m_eight.put("bg", "Осми");
 m_third.put("de", null);                                         m_eight.put("de",   null);
 m_third.put("ru", null);                                         m_eight.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._m_seventh_, m_seventh);                            LocaleStrings.sStrings.put(LocaleStrings._m_eight_, m_eight);
+LocaleStrings.sStrings.put(LocaleStrings._m_seventh_, m_seventh);LocaleStrings.sStrings.put(LocaleStrings._m_eight_, m_eight);
 
 var m_nineth = new Map();                                        var m_tenth = new Map();
 m_nineth.put("en", "Nineth");                                    m_tenth.put("en",   "Tenth");
 m_nineth.put("bg", "Девети");                                    m_tenth.put("bg", "Десети");
 m_nineth.put("de", null);                                        m_tenth.put("de",   null);
 m_nineth.put("ru", null);                                        m_tenth.put("ru",   null);
-LocaleStrings.sStrings.put(LocaleStrings._m_nineth_, m_nineth);                              LocaleStrings.sStrings.put(LocaleStrings._m_tenth_, m_tenth);
+LocaleStrings.sStrings.put(LocaleStrings._m_nineth_, m_nineth);  LocaleStrings.sStrings.put(LocaleStrings._m_tenth_, m_tenth);
 
 var m_eleventh = new Map();                                      var m_twelveth = new Map();
 m_eleventh.put("en", "Eleventh");                                m_twelveth.put("en",   "Twelveth");
@@ -289,7 +289,7 @@ year_leap.put("en", "Leap Year");                                year_non_leap.p
 year_leap.put("bg", "Високкосна Година");                        year_non_leap.put("bg", "Невисокосна Година");
 year_leap.put("de", "");                                         year_non_leap.put("de",   "");
 year_leap.put("ru", "");                                         year_non_leap.put("ru",   "");
-LocaleStrings.sStrings.put(LocaleStrings._year_leap_, year_leap);                            LocaleStrings.sStrings.put(LocaleStrings._year_non_leap_, year_non_leap);
+LocaleStrings.sStrings.put(LocaleStrings._year_leap_, year_leap);LocaleStrings.sStrings.put(LocaleStrings._year_non_leap_, year_non_leap);
 
 var years4_leap = new Map();                                     var years4_non_leap = new Map();
 years4_leap.put("en", "Leap Four Years");                        years4_non_leap.put("en",   "Non Leap Four Years");

@@ -37,7 +37,7 @@
 function LetoPeriod() {
 
   this.name = null;
-  this.number = -1'
+  this.number = -1;
   this.absoluteNumber = -1;
   this.start = -1;
   this.type = null;
