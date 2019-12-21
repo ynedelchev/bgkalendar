@@ -103,37 +103,53 @@ Vorschau
      }
 
      function recalc() {
+       var p = document.getElementById("price");
+       if (p == null || p.innerHTML == null) {
+         return;
+       } 
        var count = document.getElementById("count");
        if (count == null || count.value == null) {
          return;
        } 
        count = count.value;
-       var val = count * 710;
-       val = roundDecimal(val);
-       var p = document.getElementById("price");
-       if (p == null || p.innerHTML == null) {
-         return;
+       var val = count * 752;
+       if (isNaN(val) || val < 0) {
+         p.innerHTML = " - ";  
+       } else {
+         val = roundDecimal(val);
+         p.innerHTML = "" + val;
        } 
-       p.innerHTML = "" + val;
      }
 
      function validateForm() {
+       var countMessage = document.getElementById("countmessage");
+       var recipientMessage = document.getElementById("recipientmessage");
+       var addressMessage = document.getElementById("addressmessage");
+       var phoneMessage = document.getElementById("phonemessage");
+
+       countMessage.innerHTML = "";
+       recipientMessage.innerHTML = "";
+       addressMessage.innerHTML = "";
+       phoneMessage.innerHTML = "";
+
        var errors = false;
        var count = document.getElementById("count");
        if (count.value == null || count.value == undefined || count.value == "" || count.value.trim() == "" || isNaN(count.value) || count.value.length > 20) {
-         var countMessage = document.getElementById("countmessage");
          countMessage.innerHTML = "<?php tr('Броя трябва да е цяло положително число.', 'Count must be positive integer number.', 'Dieser Wert muss eine positive ganze Zahl sein.', 'Это значение должно быть положительным целым числом.');?>";
          errors = true;
        }  
+       var recipient = document.getElementById("recipient");
+       if (recipient.value == null || recipient.value == undefined || recipient.value == "" || recipient.value.length > 100) {
+         recipientMessage.innerHTML = "<?php tr('Получателят е задължителен', 'The name of recipient should be entered.', 'The name of recipient should be entered.', 'Имя получателя должно быть введено.');?>";
+         errors = true;
+       } 
        var address = document.getElementById("address");
        if (address.value == null || address.value == undefined || address.value == "" || address.value.length > 200) {
-         var addressMessage = document.getElementById("addressmessage");
          addressMessage.innerHTML = "<br/><?php tr('Адресът за доставка е задължителен.', 'The address for delivery should not be empty.', 'Die Lieferadresse sollte nicht leer sein.', 'Адрес доставки должен не быть пустым.');?>";
          errors = true;
        } 
        var phone = document.getElementById("phone");
        if (phone.value == null || phone.value == undefined || phone.value == "" || phone.value.length > 100) {
-         var phoneMessage = document.getElementById("phonemessage");
          phoneMessage.innerHTML = "<?php tr('Телефонът за връзка е задължителен.', 'The phone contact is required.', 'Der Telefonkontakt ist erforderlich.', 'Требуется телефонный контакт.');?>";
          errors = true;
        } 
@@ -151,7 +167,11 @@ Vorschau
        <b><font color="red"><span id="countmessage"></span></font></b></td>
      </tr>
      <tr>
-       <td><?php tr('Доставка*', 'Delivery*', 'Lieferung', 'Доставка');?>: </td><td><textarea name="address" id="address" placeholder="<?php tr('Адрес или офис на еконт в България', 'Address or office of Ekont in Bulgaria', 'Adresse oder Büro von Ekont in Bulgarien.', 'Адрес или офис Еконт в Болгарии');?>" 
+       <td><?php tr('Получател*', 'Recipient*', 'Empfänger','Получатель');?>:</td><td><input type="text" name="recipient" id="recipient" style="min-width: 22em;" placeholder="<?php tr('Иван Петров | Иванка Петрова', 'Ivan Petrov | Ivanka Petrova', 'Iwan Petrow | Iwanka Petrowa', 'Иван Петров | Иванка Петрова');?>">
+       <b><font color="red"><span id="recipientmessage"><?php echo $recipientmessage;?></span></font></b></td>
+     </tr>
+     <tr>
+       <td><?php tr('Доставка*', 'Delivery*', 'Lieferung', 'Доставка');?>: </td><td><textarea name="address" id="address" style="min-width: 22em;" placeholder="<?php tr('Адрес или офис на еконт в България', 'Address or office of Ekont in Bulgaria', 'Adresse oder Büro von Ekont in Bulgarien.', 'Адрес или офис Еконт в Болгарии');?>" 
        rows="7" cols="35"></textarea>
        <b><font color="red"><span id="addressmessage"></span></font></b></td>
      </tr>
