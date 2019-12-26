@@ -456,15 +456,15 @@ if ($dateBg != null) {
   list($year, $month, $day) = parseDate($dateGr, "gr");
   $daysgrFromStartOfCalendar = $gr->calculateDaysFronStartOfCalendar($year, $month, $day);
 }   
-if ($daysbgFromStartOfCalendar != null) {
+if ($daysbgFromStartOfCalendar !== null) {
   $daysgrFromStartOfCalendar = $daysbgFromStartOfCalendar - $daysbgFromStartOfCalendarTillJavaEpoch + $daysgrFromStartOfCalendarTillJavaEpoch;
-} else if ($daysgrFromStartOfCalendar != null) { 
+} else if ($daysgrFromStartOfCalendar !== null) { 
   $daysbgFromStartOfCalendar = $daysgrFromStartOfCalendar - $daysgrFromStartOfCalendarTillJavaEpoch + $daysbgFromStartOfCalendarTillJavaEpoch;
 } 
 
 $periodsbg = null;
 $periodsgr = null;
-if ($daysbgFromStartOfCalendar == null) {
+if ($daysbgFromStartOfCalendar === null) {
    $timezoneCorrection    = '7200'; // Two hours ahead of GMT in seconds.
    $dailysavingCorrection = '0';//(1L * 60L * 60L * 1000L); // One hour ahead of usual winter time. 0 - means winter time.
 
