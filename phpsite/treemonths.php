@@ -207,7 +207,7 @@ $prefix = 'mobile';
 </div>
 
 <div style="float: left; max-width: 46%;">
-   <span class="calendartypetitle"><?php tr('<nobr>Съвременен Грегориански</nobr><br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?></span>
+   <span class="calendartypetitle"><?php tr('<nobr>Съвременен Григориански</nobr><br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Григорианский Календарь');?></span>
    <br/>
    <nobr><?php tr('Ден', 'Day', 'Tag', 'День');?>: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr><br/>
    <nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>: <?php echo $periodsgr[1]->getStructure()->getName($lang);?>,</nobr><br/>

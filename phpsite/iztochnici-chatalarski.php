@@ -31,10 +31,10 @@
   Думата <b>ΕΛΕΜ</b> (<b>ЕЛЕМ</b>) има пълно припокриване с предполагаемото име на месец <span class="oldbgr">елем</span> от Именника на българските владетели.  
   <br/>
   <br/>
-  Петнайсти индикт по летоброенето на Източната Римска Империя се припокрива с края на 821<sup>-ва</sup> и началото на 822<sup>-ра</sup> година по Грегорианския календар.
+  Петнайсти индикт по летоброенето на Източната Римска Империя се припокрива с края на 821<sup>-ва</sup> и началото на 822<sup>-ра</sup> година по Григорианския календар.
   Това ни позволява доста точно да датираме древнобългарската година на бика/вола (<b>шегор</b>). 
   Според Александра Делова (виж секция <a href="links/Astronomiya-na-PraBalgarite-Aleksandra-Delova.pdf">Връзка с други календарни системи</a>),
-  тя съответства на 821<sup>-ва</sup> горина от Грегорианския календар.
+  тя съответства на 821<sup>-ва</sup> горина от Григорианския календар.
 <?php elseif ($lang == 'en') : ?>
 The translation of this paragraph is not ready yet. If you want to contribute to that translation, please contact admin [a] bgkalendar.com. Link to the <a href="iztochnici.php?lang=bg#chatalarski">bulgarian version</a>.
 <?php elseif ($lang == 'de') : ?>
@@ -62,7 +62,7 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
       <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;">&nbsp;</td>
    </tr>
    <tr style="text-align: center;">
-      <th style="text-align: right;"><?php tr('Грегориански Календар:', 'Gregorian Calendar:', 'Gregorianischer Kalender:', 'Григориа́нский календа́рь:');?></th>
+      <th style="text-align: right;"><?php tr('Григориански Календар:', 'Gregorian Calendar:', 'Gregorianischer Kalender:', 'Григориа́нский календа́рь:');?></th>
       <td colspan="12" style="border-bottom: 1px solid blue;">&nbsp;</td>
       <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('820<sup>-та</sup> година', '820<sup>-th</sup> year', '820 Jahr', '820<sup>-ой</sup> год');?></td>
       <td colspan="12" class="verticalseparator" style="border-bottom: 1px solid blue;"><?php tr('821<sup>-ва</sup> година', '821<sup>-st</sup> year', '821 Jahr', '821<sup>-ой</sup> год');?></td>
@@ -121,7 +121,7 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
   
   <br/>
 <?php if ($lang == 'bg') : ?>
-  Това е отразено и в нашия модел на календара. Вижте как е <a href="index.php?cg=22-06-821">изглеждал Древния Български Календар за 821-ва година</a> по Грегорианския Календар.
+  Това е отразено и в нашия модел на календара. Вижте как е <a href="index.php?cg=22-06-821">изглеждал Древния Български Календар за 821-ва година</a> по Григорианския Календар.
   <br/><br/>
   Днес колоната се съхранява в <a href="https://osm.org/go/x1DHaROM0--?m=">Националния Археологически Музей в София</a>, 
   а нейно копие можете да откриете също и в <a href="https://osm.org/go/x1tlnoGYQ?m=">археологическия музей на град Плиска</a>

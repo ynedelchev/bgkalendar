@@ -238,7 +238,7 @@ $monthgrformatted = formatMinimumDigits($monthgr, 2);
 $yeargrformatted  = formatMinimumDigits($yeargr, 4);
 
 $message = 'Днес е '.formatMinimumDigits($daybg, 2) . "-" . formatMinimumDigits($monthbg, 2) . "-"
-     . formatMinimumDigits($yearbg,4).' по Древния Български календар, и съответства на '.$daygrformatted.'-'.$monthgrformatted.'-'.$yeargrformatted.' по Грегорианския календар.'."\n\n\n".'http://bgkalendar.com/?dg='.$daysgr;
+     . formatMinimumDigits($yearbg,4).' по Древния Български календар, и съответства на '.$daygrformatted.'-'.$monthgrformatted.'-'.$yeargrformatted.' по Григорианския календар.'."\n\n\n".'http://bgkalendar.com/?dg='.$daysgr;
 
 /* MESSAGE end */
 
