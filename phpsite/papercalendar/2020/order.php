@@ -210,7 +210,7 @@
        <b><font color="red"><span id="recipientmessage"><?php echo $recipientmessage;?></span></font></b></td>
      </tr>
      <tr>
-       <td><?php tr('Доставка*', 'Delivery*', 'Lieferung', 'Доставка');?>: </td><td><textarea name="address" id="address" style="min-width: 22em;" placeholder="<?php tr('Адрес или офис на еконт в България', 'Address or office of Ekont in Bulgaria', 'Adresse oder Büro von Ekont in Bulgarien.', 'Адрес или офис Еконт в Болгарии');?>" 
+       <td><?php tr('Доставка*', 'Delivery*', 'Lieferung', 'Доставка');?>: </td><td><textarea name="address" id="address" style="min-width: 22em;" placeholder="<?php tr('Адрес или офис на Спиди в България', 'Address or office of Speedy in Bulgaria', 'Adresse oder Büro von Speedy in Bulgarien.', 'Адрес или офис Спиди в Болгарии');?>" 
        rows="7" cols="35"><?php echo $address;?></textarea>
        <b><font color="red"><span id="addressmessage"><?php echo $addressmessage;?></span></font></b></td>
      </tr>
