@@ -76,7 +76,9 @@
     #$count = "";
   }
   if (!$errors) {
+    $date = date("Y-m-d H:i s");
     $str  = "----------------------------------------------------------------\n";
+    $str .= "Date:      " . $date        . "\n";
     $str .= "Count:     " . $count       . "\n";
     $str .= "Recipient: " . $recipient   . "\n";
     $str .= "Address:   " . $address     . "\n";
@@ -93,7 +95,6 @@
 ?>
 
 <?php if (!$errors) { ?>
-   <h3>КОЛИЧЕСТВАТА СА ИЗЧЕРПАНИ</h3>
    <h1><?php tr('Заявката е приета', 'Request was successfull', 'Anfrage war erfolgreich', 'Запрос был успешний');?></h1>
    <table>
      <tr>

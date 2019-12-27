@@ -126,23 +126,15 @@
 <br/>
 <div style="border-radius: 1em; border: 1px solid green; background: lightgreen; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
-    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7525/2020</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
+    За да получите своя версия на хартиен календар (еднолистов формат 68 х 108 см) за <b>7525/2020</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
     <a href="papercalendar/2020?lang=bg">Виж повече</a>
-    <br/>
-    <b>КОЛИЧЕСТВАТА СА ИЗЧЕРПАНИ</b>
   <?php elseif ($lang == 'en') : ?>
-    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7525, please contact <u>admin [а] bgkalendar.com</u> .<br/>
+    In order to obtain your printed version of the Bulgarian calendar (format 68 x 108 cm) for 7525, please contact <u>admin [а] bgkalendar.com</u> .<br/>
     <a href="papercalendar/2020?lang=en">More</a>
-    <br/>
-    SOLD OUT
   <?php elseif ($lang == 'de') : ?>
-    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7525 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
-    <br/>
-    SOLD OUT
+    Um Ihre gedruckte Version des bulgarischen Kalenders (Format 68 x 108 cm) für 7525 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
   <?php elseif ($lang == 'ru') : ?>
-    Чтобы получить свою печатную версию болгарского календаря (Формат А2) на 7525, свяжитесь с <u>admin [а] bgkalendar.com</u> .
-    <br/>
-    SOLD OUT
+    Чтобы получить свою печатную версию болгарского календаря (Формат 68 х 108 см) на 7525, свяжитесь с <u>admin [а] bgkalendar.com</u> .
   <?php endif ?>
 </div>
 <br/><br/>
