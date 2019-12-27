@@ -93,6 +93,7 @@
 ?>
 
 <?php if (!$errors) { ?>
+   <h3>КОЛИЧЕСТВАТА СА ИЗЧЕРПАНИ</h3>
    <h1><?php tr('Заявката е приета', 'Request was successfull', 'Anfrage war erfolgreich', 'Запрос был успешний');?></h1>
    <table>
      <tr>

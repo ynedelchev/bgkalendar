@@ -18,6 +18,7 @@
 <br/>
 <div style="margin: 2em; align: auto;">
   <h3><?php tr('Хартиен календар за 7525/2020', 'Printed paper calendar for 7525/2020', 'Papierkalender für 7525/2020', 'Бумажный календарь для 7525/2020');?> </h3>
+  <!--
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за 7525/2020 моля свържете се със <u>admin [а] bgkalendar.com</u> .
   <?php elseif ($lang == 'en') : ?>
@@ -27,6 +28,7 @@
   <?php elseif ($lang == 'ru') : ?>
     Чтобы получить свою печатную версию болгарского календаря (Формат А2) на 7525, свяжитесь с <u>admin [а] bgkalendar.com</u> .
   <?php endif ?>
+  -->
 </div>
 
 <br/><br/>
@@ -174,6 +176,7 @@ Vorschau
      }
 
    </script>
+   <h3>КОЛИЧЕСТВАТА СА ИЗЧЕРПАНИ</h3>
    <form method="post" action="order.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>" onsubmit="return validateForm();">
    <input type="hidden" name="lang", value="<?php tr('bg', 'en', 'de', 'ru');?>" />
    <table>
