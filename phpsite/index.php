@@ -963,7 +963,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                 <?php tr('Месец Единайсти', 'Eleventh Month', 'Elften Monat', 'Одиннадцатый Месяц');?>
+                 <?php tr('Месец Единайсети', 'Eleventh Month', 'Elften Monat', 'Одиннадцатый Месяц');?>
                </td>
          </tr>
            <tr class="calendartable">
@@ -1025,7 +1025,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <div class="month">
            <table class="calendartable">
         <tr class="calendartable">
-          <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Дванайсти', 'Twelfth Month', 'Zwölften Monat', 'Двенадцатый Месяц');?> </td>
+          <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Дванайсети', 'Twelfth Month', 'Zwölften Monat', 'Двенадцатый Месяц');?> </td>
         </tr>
         <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>

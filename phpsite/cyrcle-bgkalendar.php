@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__.'/includes.php');
 $monthsgrnames = array("Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември");
-$monthsbgnames = array("Месец Първи", "Месец Втори", "Месец Трети", "Месец Четвърти", "Месец Пети", "Месец Шести", "Месец Седми", "Месец Осми", "Месец Девети", "Месец Десети", "Месец Едuнайсти", "Месец Дванайсти");
+$monthsbgnames = array("Месец Първи", "Месец Втори", "Месец Трети", "Месец Четвърти", "Месец Пети", "Месец Шести", "Месец Седми", "Месец Осми", "Месец Девети", "Месец Десети", "Месец Едuнайсети", "Месец Дванайсети");
 if ($lang == 'en') {
   $monthsgrnames = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
   $monthsbgnames = array("Month One", "Month Two", "Month Tree", "Month Four", "Month Five", "MOnth Six", "Month Seven", "Month Eight", "Month Nine", "Month Ten", "Month Eleven", "Month Twelve");
