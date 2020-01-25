@@ -219,6 +219,14 @@
 </div>
 
 <div class="linkitem">
+<a href="https://www.youtube.com/watch?v=yP_enTvipYg&app=desktop">
+  <img class="titleimg"  src="images/stoycho-kerev-yavor-shopov.png"/><br/>
+  <?php tr('НАЙ- ТОЧНИЯТ КАЛЕНДАР Е СЪЗДАДЕН ОТ ДРЕВНИТЕ БЪЛГАРИ със Стойчо Керев и Явор Шопов', 'THE MOST ACCURATE CALENDAR HAS BEEN CREATED BY ANCIENT BULGARIANS with Stoycho Kerev and Yavor Shopov', 'DER GENAUSTE KALENDER WURDE VON ALTEN BULGARERN ERSTELLT - Rubrik mit Stojtscho Kerew und Jawor Schopow', 'САМЫЙ ТОЧНЫЙ КАЛЕНДАРЬ СОЗДАН ДРЕВНИМИ БОЛГАРАМИ - рубрика Стойчо Керев и Явор Шопов');?>
+</a>
+<a class="cache" href="video.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>&video=stoycho-kerev-yavor-shopov.mkv&bg=НАЙ- ТОЧНИЯТ КАЛЕНДАР Е СЪЗДАДЕН ОТ ДРЕВНИТЕ БЪЛГАРИ със Стойчо Керев и Явор Шопов&en=THE MOST ACCURATE CALENDAR HAS BEEN CREATED BY ANCIENT BULGARIANS with Stoycho Kerev and Yavor Shopov&de=DER GENAUSTE KALENDER WURDE VON ALTEN BULGARERN ERSTELLT - Rubrik mit Stojtscho Kerew und Jawor Schopow&ru=САМЫЙ ТОЧНЫЙ КАЛЕНДАРЬ СОЗДАН ДРЕВНИМИ БОЛГАРАМИ - рубрика Стойчо Керев и Явор Шопов"></a>
+</div>
+
+<div class="linkitem">
 <a href="http://calendar.samoistina.com/">
   <img class="titleimg"  src="links/calendar.samoistina.com.gif"/><br/>
   <?php tr('Календар', 'Calendar', 'Kalender', 'Календарь');?>
