@@ -54,6 +54,28 @@ Vorschau
 </center>
 <div style="margin: 2em; align: auto;">
   <?php if ($lang == 'bg') : ?>
+    Свали като <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Оригинал)</a>, 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> или 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    <br/><br/>
+  <?php elseif ($lang == 'en') : ?>
+    Download as <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Original)</a>, 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> or 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    <br/><br/>
+  <?php elseif ($lang == 'de') : ?>
+    Download als <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Original)</a>, 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> oder 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    <br/><br/>
+  <?php elseif ($lang == 'ru') : ?>
+     Скачать как <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Оригиналь)</a>, 
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> или
+    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    <br/><br/>
+  <?php endif ?>
+  
+  <?php if ($lang == 'bg') : ?>
     Дизайнът на календара включва кръгов календар, при който като на циферблат са нанесени 365<sup>-те</sup> дни на годината, като от външната страна са поставени дните по месеци на Григорианския календар, а от вътрешната дните по месеците на Древния Български Календар. Така много лесно може да се види кой ден на кой съответства.
     <br/><br/>
     В кръгът е използван дизайн, който е подобен на митичната костенурка от изследванията на Слави Дончев 
