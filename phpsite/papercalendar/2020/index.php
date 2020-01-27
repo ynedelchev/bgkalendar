@@ -64,7 +64,7 @@ Vorschau
     <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'de') : ?>
-    Download als <a href="kalendar-2020-bg-morava-3.svg">SVG (Original)</a>, 
+    Download als <a href="kalendar-2020-bg.svg">SVG (Original)</a>, 
     <a href="kalendar-2020-bg.png">PNG</a> oder 
     <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>
