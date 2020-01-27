@@ -143,7 +143,7 @@
 <div class="linkitem">
 <a href="http://protobulgarians.com/Kalendar%20na%20prabaalgarite.htm">
   <img class="titleimg"  src="links/Kalendarat-na-prabalgarite-preob.jpg"/><br/>
-  <?php tr('Календар на (zvaniya-na-mesecite.pdfпра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
+  <?php tr('Календар на (пра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
 </a>
 <a class="cache" href="links/Nachalo-na-godinata-v-Prabalgarskiya-kalendar.pdf"></a>
 </div>
