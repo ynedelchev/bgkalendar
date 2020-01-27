@@ -54,24 +54,24 @@ Vorschau
 </center>
 <div style="margin: 2em; align: auto;">
   <?php if ($lang == 'bg') : ?>
-    Свали като <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Оригинал)</a>, 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> или 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    Свали като <a href="kalendar-2020-bg.svg">SVG (Оригинал)</a>, 
+    <a href="kalendar-2020-bg.png">PNG</a> или 
+    <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'en') : ?>
-    Download as <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Original)</a>, 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> or 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    Download as <a href="kalendar-2020-bg.svg">SVG (Original)</a>, 
+    <a href="kalendar-2020-bg.png">PNG</a> or 
+    <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'de') : ?>
-    Download als <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Original)</a>, 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> oder 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+    Download als <a href="kalendar-2020-bg-morava-3.svg">SVG (Original)</a>, 
+    <a href="kalendar-2020-bg.png">PNG</a> oder 
+    <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>
   <?php elseif ($lang == 'ru') : ?>
-     Скачать как <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.svg">SVG (Оригиналь)</a>, 
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.png">PNG</a> или
-    <a href="https://bgkalendar.com/downloads/kalendar/gr/kalendar-2020-bg-morava-3.pdf">PDF</a>.
+     Скачать как <a href="kalendar-2020-bg.svg">SVG (Оригиналь)</a>, 
+    <a href="kalendar-2020-bg.png">PNG</a> или
+    <a href="kalendar-2020-bg.pdf">PDF</a>.
     <br/><br/>
   <?php endif ?>
   
