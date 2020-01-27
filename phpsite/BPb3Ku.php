@@ -249,6 +249,14 @@
 </a>
 </div>
 
+<div class="linkitem">
+<a href="http://www.promacedonia.org/vz1a/vz1a_prit_16.html">
+  <img class="titleimg"  src="images/zlatarski.png"/><br/>
+  <?php tr('БЪЛГАРСКО ЛЕТОБРОЕНИЕ - Васил Н. Златарски', 'BULGARIAN YEAR COUNTING - Vassil N. Zlatarski', 'BULGARISCHE BRÜDER - Wassil N. Zlatarski', 'БОЛГАРСКОЕ ЛЕТОСЧИТЕНИЕ - Васил Н. Златарски');?>
+</a>
+<a class="cache" href="links/zlatarski/"></a>
+</div>
+
 <br/>
 <br/>
 <?php include('footer.php');?>
