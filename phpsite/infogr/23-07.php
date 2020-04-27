@@ -13,12 +13,12 @@
 Календар.
 <br/><br/>
 <?php if ($lang == 'bg') : ?>
- Вижте също книгата на Георги Велев <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">Народният календар и неговите празници</a>. 
+ Вижте също книгата на Георги Велев <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">Народният календар и неговите празници</a>. 
 <?php elseif ($lang == 'en') : ?>
-Please also see the book from Georgi Velev <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>.
+Please also see the book from Georgi Velev <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">"The Folk Calendar and its Holidays"</a>.
 <?php elseif ($lang == 'de') : ?>
-Sehen Sie bitte also, der Buch von Georgi Welew <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Volkskalender und seine Feiertage"</a>.
+Sehen Sie bitte also, der Buch von Georgi Welew <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">"Volkskalender und seine Feiertage"</a>.
 <?php elseif ($lang == 'ru') : ?>
-Посмотрите также книгу Георгия Велева <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народный календарь и его праздники"</a>.
+Посмотрите также книгу Георгия Велева <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">"Народный календарь и его праздники"</a>.
 <?php endif ?>
 
