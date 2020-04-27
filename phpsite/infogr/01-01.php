@@ -9,7 +9,7 @@
 Георги Велев</a>, приемането на 
 <a href="https://bg.wikipedia.org/wiki/%D0%AE%D0%BB%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">
 Юлианският календар</a> (по-късно подменен от своя страна от <a href="https://bg.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">Григорианския календар</a>) и изоставянето 
-на Древният Български Календар, празникът сурваки е запазил числовата си 
+на Древния Български Календар, празникът сурваки е запазил числовата си 
 стойност 01-01 (първи ден от първи месец), но се е преместил с десетина дена 
 заради разликата в началото на годината по Древния Български Календар и 
 Юлианския календар.
@@ -43,13 +43,13 @@ Georgi Velev findet Verbindung im Wesen des Festivals und die östliche Idee der
 
 
 <?php if ($lang == 'bg') : ?>
- Вижте също книгата на Георги Велев <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">Народният календар и неговите празници</a>.
+ Вижте също книгата на Георги Велев <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">Народният календар и неговите празници</a>.
 <?php elseif ($lang == 'en') : ?>
-Please also see the book from Georgi Velev <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>.
+Please also see the book from Georgi Velev <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">"The Folk Calendar and its Holidays"</a>.
 <?php elseif ($lang == 'de') : ?>
-Sehen Sie bitte also, der Buch von Georgi Welew <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Volkskalender und seine Feiertage"</a>.
+Sehen Sie bitte also, der Buch von Georgi Welew <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">"Volkskalender und seine Feiertage"</a>.
 <?php elseif ($lang == 'ru') : ?>
-Посмотрите также книгу Георгия Велева <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народный календарь и его праздники"</a>.
+Посмотрите также книгу Георгия Велева <a href="https://www.galaxy.bg/narodnijat-kalendar-i-negovite-praznici">"Народный календарь и его праздники"</a>.
 <?php endif ?>
 
 
