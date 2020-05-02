@@ -19,6 +19,10 @@ class LetoGregorian extends LetoBase {
     // In Gregorian calendar, year that can be devided by 100 are not leap unless, they can be devided by 400.
     //
     private $START_OF_CALENDAR_BEFORE_JAVA_EPOCH = 719162; // In days.
+   
+    // This specifies whether the data is calculated in the new era (After Christ - A.C.), when true
+    // or before the new era (Before Christ - B.C.), when AC equals false.
+    private $AC = true;
     
     /**
      * All inheriting classes should define the beginning of their calendar in days before the java EPOCH. 
@@ -65,7 +69,27 @@ class LetoGregorian extends LetoBase {
     //                                 S T R U C T U R E S                                        //
     // -------------------------------------------------------------------------------------------//
     
-    public function __construct() {
+    public function calculateCalendarPeriods($days) {
+      if ($days < 0) {
+         $days = 0 - $days;
+         $this->AC = false; // Before Christ - BC;
+         $periods = parent::calculateCalendarPeriods($days);
+         $periods[1] = new LetoGregorianMonthPeriodBc($periods[1]);
+         $periods[0] = new LetoGregorianDayPeriodBc($periods[0], $periods[1]);
+         return $periods;
+      } else {
+         $periods = parent::calculateCalendarPeriods($days);
+         return $periods;         
+      }
+    }
+
+    public function isBeforeChrist() {
+      return ! ($this->AC);
+    }
+
+    public function __construct($ac = true) {
+        $this->AC = $ac;   // By default, we are assuming dates After Christ (A.C).
+
         $DAY = new LetoPeriodStructureBean(1, null); 
     
         $MONTH_28_DAYS = 
@@ -166,9 +190,6 @@ class LetoGregorian extends LetoBase {
                 ),
                 true
             );
-
-    
-
     
         $YEARS_100 = 
             new LetoPeriodStructureBean(36524, 
@@ -198,6 +219,85 @@ class LetoGregorian extends LetoBase {
                     $YEARS_100, $YEARS_100, $YEARS_100, $YEARS_100_LEAP
                 )
             );
+    // Structurs for calculations Before Christ (B.C.) - Before the New Era.
+
+        $BC_YEAR = 
+            new LetoPeriodStructureBean(365, 
+                array ( 
+                    $DECEMBER,       // December
+                    $NOVEMBER,       // November
+                    $OCTOBER,        // October 
+                    $SEPTEMBER,      // September
+                    $AUGUST,         // August  
+                    $JULY,           // July 
+                    $JUNE,           // June 
+                    $MAY,            // May 
+                    $APRIL,          // April 
+                    $MARCH,          // March 
+                    $FEBRUARY_28,    // February
+                    $JANUARY,        // January 
+                )
+            );
+        $BC_YEAR_LEAP = 
+            new LetoPeriodStructureBean(366, 
+                array ( 
+                    $DECEMBER,       // December
+                    $NOVEMBER,       // November
+                    $OCTOBER,        // October 
+                    $SEPTEMBER,      // September
+                    $AUGUST,         // August  
+                    $JULY,           // July 
+                    $JUNE,           // June 
+                    $MAY,            // May 
+                    $APRIL,          // April 
+                    $MARCH,          // March 
+                    $FEBRUARY_29,    // February
+                    $JANUARY,        // January 
+                ),
+                true
+            );
+        $BC_YEARS_4 = 
+            new LetoPeriodStructureBean(1460, 
+                array (
+                    $BC_YEAR, $BC_YEAR, $BC_YEAR, $BC_YEAR
+                )
+            );
+        $BC_YEARS_4_LEAP = 
+            new LetoPeriodStructureBean(1461, 
+                array (
+                    $BC_YEAR_LEAP, $BC_YEAR, $BC_YEAR, $BC_YEAR
+                ),
+                true
+            );
+        $BC_YEARS_100 = 
+            new LetoPeriodStructureBean(36524, 
+                array (
+                    $BC_YEARS_4,      $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, 
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                )
+            );
+        $BC_YEARS_100_LEAP = 
+            new LetoPeriodStructureBean(36525, 
+                array (
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, 
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                    $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP, $BC_YEARS_4_LEAP,
+                ),
+                true
+            );
+    
+        $BC_YEARS_400 = 
+            new LetoPeriodStructureBean(146097, 
+                array (
+                    $BC_YEARS_100_LEAP, $BC_YEARS_100, $BC_YEARS_100, $BC_YEARS_100
+                )
+            );
+  
 
     // -------------------------------------------------------------------------------------------//
     //                                   T Y P E S                                                //
@@ -258,6 +358,40 @@ class LetoGregorian extends LetoBase {
             $YEARS_100_PERIOD_TYPE,
             $YEARS_400_PERIOD_TYPE,
         );
+        // Types for calculations Before Christ (B.C.) - Before the New Era.
+        $BC_YEAR_PERIOD_TYPE =         
+            new LetoPeriodTypeBean("Year", "Year", 
+                array ( $BC_YEAR, $BC_YEAR_LEAP )
+            );
+    
+        $BC_YEARS_4_PERIOD_TYPE =         
+            new LetoPeriodTypeBean("4 Years", "4 Years", 
+                array ( $BC_YEARS_4, $BC_YEARS_4_LEAP )
+            );
+    
+        $BC_YEARS_100_PERIOD_TYPE =         
+            new LetoPeriodTypeBean("Century", "100 years", 
+                array ( $BC_YEARS_100, $BC_YEARS_100_LEAP )
+            );
+                
+
+         $BC_YEARS_400_PERIOD_TYPE =         
+             new LetoPeriodTypeBean("400 years", "400 years", 
+                 array (
+                     $BC_YEARS_400
+                 )
+             );
+
+        
+        $this->BC_TYPES = array (
+            $DAY_PERIOD_TYPE, 
+            $MONTH_PERIOD_TYPE,
+            $BC_YEAR_PERIOD_TYPE,
+            $BC_YEARS_4_PERIOD_TYPE, 
+            $BC_YEARS_100_PERIOD_TYPE,
+            $BC_YEARS_400_PERIOD_TYPE,
+        );
+
         //----------------------------
         //Day
         $dayLengths = array();
@@ -320,12 +454,57 @@ class LetoGregorian extends LetoBase {
                                  $MONTH_PERIOD_TYPE->getName()     => 4800,
                                  $DAY_PERIOD_TYPE->getName()       => 146097);
         $YEARS_400->setTotalLengthInPeriodTypes($years400Lengths);
+        
+        //----------------------------
+        // Lengths for types and structures Before Christ (B.C)
+        //----------------------------
+        //Year
+        $bc_yearLengths = array($MONTH_PERIOD_TYPE->getName() => 12, $DAY_PERIOD_TYPE->getName() => 365);
+        $BC_YEAR->setTotalLengthInPeriodTypes($bc_yearLengths);
+        //----------------------------
+        //Year
+        $bc_yearLeapLengths = array($MONTH_PERIOD_TYPE->getName() => 12, $DAY_PERIOD_TYPE->getName() => 366);
+        $BC_YEAR_LEAP->setTotalLengthInPeriodTypes($bc_yearLeapLengths);
+        //----------------------------
+        //4 Years
+        $bc_year4Lengths = array($BC_YEAR_PERIOD_TYPE->getName()  => 4, 
+                                 $MONTH_PERIOD_TYPE->getName() => 48, 
+                                 $DAY_PERIOD_TYPE->getName()   => 1460);
+        $BC_YEARS_4->setTotalLengthInPeriodTypes($bc_year4Lengths);
+        //----------------------------
+        //4 Years
+        $bc_years4LeapLengths = array($BC_YEAR_PERIOD_TYPE->getName()  => 4,
+                                      $MONTH_PERIOD_TYPE->getName() => 48, 
+                                      $DAY_PERIOD_TYPE->getName()   =>1461);
+        $BC_YEARS_4_LEAP->setTotalLengthInPeriodTypes($bc_years4LeapLengths);
+        //----------------------------
+        //Century
+        $bc_years100Lengths = array($BC_YEARS_4_PERIOD_TYPE->getName() => 25, 
+                                    $BC_YEAR_PERIOD_TYPE->getName()    => 100,
+                                    $MONTH_PERIOD_TYPE->getName()   => 1200,
+                                    $DAY_PERIOD_TYPE->getName()     => 36524); 
+        $BC_YEARS_100->setTotalLengthInPeriodTypes($bc_years100Lengths);
+        //----------------------------
+        //Century
+        $bc_years100LeapLengths = array($BC_YEARS_4_PERIOD_TYPE->getName() => 25,
+                                        $BC_YEAR_PERIOD_TYPE->getName()    => 100,
+                                        $MONTH_PERIOD_TYPE->getName()   => 1200,
+                                        $DAY_PERIOD_TYPE->getName()     => 36525); 
+        $BC_YEARS_100_LEAP->setTotalLengthInPeriodTypes($bc_years100LeapLengths);
+        //----------------------------
+        //400 years
+        $bc_years400Lengths = array($BC_YEARS_100_PERIOD_TYPE->getName() => 4,
+                                    $BC_YEARS_4_PERIOD_TYPE->getName()   => 100,
+                                    $BC_YEAR_PERIOD_TYPE->getName()      => 400,
+                                    $MONTH_PERIOD_TYPE->getName()     => 4800,
+                                    $DAY_PERIOD_TYPE->getName()       => 146097);
+        $BC_YEARS_400->setTotalLengthInPeriodTypes($bc_years400Lengths);
 
     }
 
     
     public function getCalendarPeriodTypes() {
-        return $this->TYPES;
+        return $this->AC ? $this->TYPES : $this->BC_TYPES;
     }
     
     // Testing -----------------------------------------------------------------------------------------------------
@@ -356,6 +535,20 @@ class LetoGregorian extends LetoBase {
             $typeStr = "LetoGregorian.YEARS_100_LEAP";
         } else if ($type == LetoGregorian.YEARS_400) {
             $typeStr = "LetoGregorian.YEARS_400";
+        } else if ($type == LetoGregorian.BC_YEAR) {
+            $typeStr = "LetoGregorian.BC_YEAR";
+        } else if ($type == LetoGregorian.BC_YEAR_LEAP) {
+            $typeStr = "LetoGregorian.BC_YEAR_LEAP";
+        } else if ($type == LetoGregorian.BC_YEARS_4) {
+            $typeStr = "LetoGregorian.BC_YEARS_4";
+        } else if ($type == LetoGregorian.BC_YEARS_4_LEAP) {
+            $typeStr = "LetoGregorian.BC_YEARS_4_LEAP";
+        } else if ($type == LetoGregorian.BC_YEARS_100) {
+            $typeStr = "LetoGregorian.BC_YEARS_100";
+        } else if ($type == LetoGregorian.BC_YEARS_100_LEAP) {
+            $typeStr = "LetoGregorian.BC_YEARS_100_LEAP";
+        } else if ($type == LetoGregorian.BC_YEARS_400) {
+            $typeStr = "LetoGregorian.BC_YEARS_400";
         } else {
             $typeStr = "ERROR (" . $type . ", " . $type.getPeriodType().getName() . ") ";
         }
@@ -376,6 +569,14 @@ class LetoGregorian extends LetoBase {
             $typeStr = "LetoGregorian.YEARS_100_PERIOD_TYPE";
         } else if ($type == LetoGregorian.YEARS_400_PERIOD_TYPE) {
             $typeStr = "LetoGregorian.YEARS_400_PERIOD_TYPE";
+        } else if ($type == LetoGregorian.BC_YEAR_PERIOD_TYPE) {
+            $typeStr = "LetoGregorian.BC_YEAR_PERIOD_TYPE";
+        } else if ($type == LetoGregorian.BC_YEARS_4_PERIOD_TYPE) {
+            $typeStr = "LetoGregorian.BC_YEARS_4_PERIOD_TYPE";
+        } else if ($type == LetoGregorian.BC_YEARS_100_PERIOD_TYPE) {
+            $typeStr = "LetoGregorian.BC_YEARS_100_PERIOD_TYPE";
+        } else if ($type == LetoGregorian.BC_YEARS_400_PERIOD_TYPE) {
+            $typeStr = "LetoGregorian.BC_YEARS_400_PERIOD_TYPE";
         } else {
             $typeStr = "ERROR (" . $type . ", " . $type.getName() . ") ";
         }
@@ -418,6 +619,14 @@ class LetoGregorian extends LetoBase {
         testPeriod(LetoGregorian.YEARS_100);
         testPeriod(LetoGregorian.YEARS_100_LEAP);
         testPeriod(LetoGregorian.YEARS_400);
+
+        testPeriod(LetoGregorian.BC_YEAR);
+        testPeriod(LetoGregorian.BC_YEAR_LEAP);
+        testPeriod(LetoGregorian.BC_YEARS_4);
+        testPeriod(LetoGregorian.BC_YEARS_4_LEAP);
+        testPeriod(LetoGregorian.BC_YEARS_100);
+        testPeriod(LetoGregorian.BC_YEARS_100_LEAP);
+        testPeriod(LetoGregorian.BC_YEARS_400);
     }
 
 }

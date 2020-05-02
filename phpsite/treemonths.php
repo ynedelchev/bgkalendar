@@ -231,11 +231,11 @@ $prefix = 'mobile';
    &nbsp; &nbsp;
    <br/>
    <br/>
-   <?php $igr = drawMonth($prevGrMonthYear, $prevGrMonthName, $prevGrMonthDays, $prevGrMonthWeekStart, $igr, null, $prefix)?>
+   <?php $igr = drawMonth($prevGrMonthYear, $prevGrMonthName, $prevGrMonthDays, $prevGrMonthWeekStart, $igr, null, $prefix, $bc)?>
    <br/>
-   <?php $igr = drawMonth($currGrMonthYear, $currGrMonthName, $currGrMonthDays, $currGrMonthWeekStart, $igr, $tgr, $prefix)?>
+   <?php $igr = drawMonth($currGrMonthYear, $currGrMonthName, $currGrMonthDays, $currGrMonthWeekStart, $igr, $tgr, $prefix, $bc)?>
    <br/>
-   <?php $igr = drawMonth($nextGrMonthYear, $nextGrMonthName, $nextGrMonthDays, $nextGrMonthWeekStart, $igr, null, $prefix)?>
+   <?php $igr = drawMonth($nextGrMonthYear, $nextGrMonthName, $nextGrMonthDays, $nextGrMonthWeekStart, $igr, null, $prefix, $bc)?>
    <br/>
 </div>
 <div style="clear: both;">&nbsp;</div>

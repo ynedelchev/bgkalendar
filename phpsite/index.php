@@ -77,7 +77,15 @@
           }
       // Initialize Gregorian Kalendar....
 
-          <?php $indexgr = bcsub($periodsgr[2]->startsAtDaysAfterEpoch(), 31);?>
+          <?php 
+             $indexgr = bcsub($periodsgr[2]->startsAtDaysAfterEpoch(), 31);
+             if ($isbc) {
+               $startOfYearBcPositive  = bcadd($periodsgr[2]->startsAtDaysAfterEpoch(), $periodsgr[2]->getStructure()->getTotalLengthInDays());
+               $oneMonthBeforeYearStart= bcadd($startOfYearBcPositive, 31);
+               $oneMonthBeforeYearStartNegative = bcsub(0, $oneMonthBeforeYearStart);
+               $indexgr   = bcadd($oneMonthBeforeYearStartNegative, 1);
+             }
+          ?>
           var indexgr = <?php echo $indexgr;?>;
           var indexbg = 
           <?php echo bcadd($indexgr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));?>;
@@ -205,7 +213,7 @@
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></td>
+           <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm').$bc;?></td>
            <td class="details">
                 <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#12g">
                   <?php 
@@ -1102,6 +1110,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 <input type="text" name="cg" value="<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargr;?>" size="10" style="text-align: right; font-weight: bold; font-family: Times; "/>
 <input type="image" src="images/submit.svg" border="0" alt="Submit" />
 </form>
+<?php echo $bc;?>
 <?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
 &nbsp; 
 [
@@ -1123,6 +1132,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="details">
                <?php
                   $wee = bcmod($daysgrFromStartOfCalendar, '7'); 
+                  $wee = $isbc ? 6 + $wee : $wee;
                   tr('Ден от седмицата', 'Day of week', 'Wochentag', 'День недели'); 
                   echo ': '; 
                   tr($WEEKDAYS[$wee], $WEEKDAYS_EN[$wee], $WEEKDAYS_DE[$wee], $WEEKDAYS_RU[$wee]);
@@ -1144,10 +1154,11 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details nobr"><?php echo seqPrefix($periodsgr[2]->getAbsoluteNumber() + 1,'fnnm');?></td>
+           <td class="details nobr"><?php echo seqPrefix($periodsgr[2]->getAbsoluteNumber() + 1,'fnnm').$bc;?></td>
            <td class="details">
                 <?php 
-                echo seqPrefix($periodsgr[2]->getNumber()+1, 'fnnm'); 
+                $fromStartOf4Years = $isbc ? 4 - $periodsgr[2]->getNumber(): $periodsgr[2]->getNumber()+1;
+                echo seqPrefix($fromStartOf4Years, 'fnnm'); 
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' bis den Anfang dem Vierteljahr', 
@@ -1155,7 +1166,12 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                 ?>
                 <br/>
                 <?php 
-                $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1;
+                $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 );
+                if ($isbc) {
+                  $yeargrincentury = 100 - $yeargrincentury; 
+                } else {
+                  $yeargrincentury++;
+                }
                 echo seqPrefix($yeargrincentury, 'fnnm');
                 tr(' от началото на Столетие (Век)', 
                    ' from the beginning of a Century', 
@@ -1165,8 +1181,11 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            </td>
        </tr>
        <tr>
+            <?php 
+              $fourYearsFromStartOfCentury = $isbc ? 25 - $periodsgr[3]->getNumber() : $periodsgr[3]->getNumber()+1;
+            ?>
             <td class="details bold"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?>:</td>
-            <td class="details nobr"><?php echo seqPrefix($periodsgr[3]->getNumber()+1, 'nnmm');?></td>
+            <td class="details nobr"><?php echo seqPrefix($fourYearsFromStartOfCentury, 'nnmm');?></td>
 
             <td class="details" colspan="2">
                 <?php 
@@ -1178,20 +1197,30 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
             </td>
        </tr>
        <tr>
+            <?php 
+            ?>
             <td class="details bold"><?php tr('Столетие/Век', 'Century', 'Jahrhundert', 'Век');?>:</td>
             <td class="details nobr"><?php echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'nnnm');?></td>
 
             <td class="details" colspan="2">
                <?php 
                echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'nnnm'); 
-               tr(' от началото на календара и', 
-                  ' from the beginning of the calendar', 
-                  ' bis den Anfang dem Kalender', 
-                  ' с начала календаря');
+               if ($isbc) {
+                 tr(' преди Христа и', 
+                    ' before Christ and', 
+                    ' BC und', 
+                    ' до нашей эры и');
+               } else {
+                 tr(' от началото на календара и', 
+                    ' from the beginning of the calendar', 
+                    ' bis den Anfang dem Kalender', 
+                    ' с начала календаря');
+               }
                ?> 
                <br/>
                <?php 
-               echo seqPrefix($periodsgr[4]->getNumber()+1, 'mnnm'); 
+               $centuryFromStartOf400Years = $isbc ? 4 - $periodsgr[4]->getNumber(): $periodsgr[4]->getNumber()+1;
+               echo seqPrefix($centuryFromStartOf400Years, 'mnnm'); 
                tr(' от началото на 400г. период.', 
                   ' from the beginning of the 400y. period', 
                   ' bis den Anfang dem 400 Jahre Abschnitt', 
@@ -1203,8 +1232,18 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
             <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 летний период');?>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsgr[5]->getAbsoluteNumber()+1, 'mnmm');?></td>
 
-            <td class="details bold detailsright"></td>
-            <td class="details"></td>
+            <td class="details" colspan="2">
+               <?php 
+               if ($isbc) {
+                 tr(' преди Христа', 
+                    ' before Christ', 
+                    ' BC', 
+                    ' до нашей эры');
+               } else {
+                 echo "&nbsp;";
+               }
+               ?> 
+            </td>
        </tr>
        <?php include(__DIR__.'/'.'includes-ortodox-podvizhni.php');?>
        <?php if (file_exists(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php')) { ?>
@@ -1224,6 +1263,10 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 $igr = $periodsgr[2]->startsAtDaysAfterEpoch();
 $ibg = bcadd($igr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));
 
+if ($isbc) {
+  $startOfyearBcNegative = bcsub(0, bcadd($igr, $periodsgr[2]->getStructure()->getTotalLengthInDays()));
+  $igr   = bcadd($startOfyearBcNegative, 1);
+}
 
 $jepochindex = bcsub($igr, $daysgrFromStartOfCalendarTillJavaEpoch);
 $tgr = $daysgrFromStartOfCalendar;
@@ -1241,25 +1284,27 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Януари', 'January', 'Januar', 'Январь'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Януари', 'January', 'Januar', 'Январь'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
            <?php
             $wday = bcmod($igr, 7); 
+            $wday = $isbc ? 6 + $wday: $wday;
             $februarydays = 28; 
             $subperiods = ( isset($periodsgr[2]) && $periodsgr[2]->getStructure() != null) ?
                 ( $periodsgr[2]->getStructure()->getSubPeriods() ) :
                 ( null );
+            $februaryIndexInYear = $isbc ? 10 : 1; // 0-based. $isbc == true means that we are calculating for Before Christ (B.C.)
             if ( isset($subperiods[1])) {
-               $februarydays = $subperiods[1]->getTotalLengthIndays();
+               $februarydays = $subperiods[$februaryIndexInYear]->getTotalLengthIndays();
             }
             ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Февруари', 'February', 'Februar', 'Февраль'), $februarydays, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Февруари', 'February', 'Februar', 'Февраль'), $februarydays, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Март', 'March', 'März', 'Март'),31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Март', 'March', 'März', 'Март'),31, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1269,16 +1314,16 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top;">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Април', 'April', 'April', 'Апрель'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Април', 'April', 'April', 'Апрель'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Май', 'May', 'Mai', 'Май'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Май', 'May', 'Mai', 'Май'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юни', 'June', 'Juni', 'Июнь'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юни', 'June', 'Juni', 'Июнь'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1291,16 +1336,16 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юли', 'July', 'Juli', 'Июль'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юли', 'July', 'Juli', 'Июль'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Август', 'August', 'August', 'Август'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Август', 'August', 'August', 'Август'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Септември', 'September', 'September', 'Сентябрь'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Септември', 'September', 'September', 'Сентябрь'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1310,16 +1355,16 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Октомври', 'October', 'Oktober', 'Октябрь'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Октомври', 'October', 'Oktober', 'Октябрь'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Ноември', 'November', 'November', 'Ноябрь'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Ноември', 'November', 'November', 'Ноябрь'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Декември', 'December', 'Dezember', 'Декабрь'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Декември', 'December', 'Dezember', 'Декабрь'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
