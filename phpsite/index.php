@@ -129,10 +129,30 @@
 <?php include('navigation-main.php');?>
 
 <span style="clear: both; float: left;">
-<?php if ($lang == 'bg') : ?>
 <br/>
 <br/>
-<?php endif ?>
+<div style="border-radius: 1em; border: 1px solid green; background: lightgreen; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
+  <?php if ($lang == 'bg') : ?>
+    Ново. Календарът вече коректно показва дати от Древния Български Календар, които се равняват на дати преди новата ера (преди Христа) по Съвременния Григориански Календар. 
+    Вижте например <a href="?cb=14-05-0001">Ден 14 от Пети Месец 1<sup>-ва</sup>Година</a> (съответства на 6<sup>-ти</sup> Май 5505 г. пр.Хр.) или
+                   <a href="?cb=10-10-5355">Ден 10 от Десети Месец 5355<sup>-ва</sup> година</a> (съответства на 29<sup>-ти</sup> Септември 151 г. пр.Хр.).
+  
+    <br/>
+  <?php elseif ($lang == 'en') : ?>
+    New. The Calendar now correctly converts dates in Ancient Bulgarian Calendar, that corresponds to Gregorian dates Before Christ (B.C.). 
+    For example, please check <a href="?cb=14-05-0001&lang=en">Day 14 of Fifth Month, Year 1 (first year in the Bulgarian Calendar)</a> (corresponds to 6<sup>-th</sup> of May 5505 BC) or 
+                   <a href="?cb=10-10-5355&lang=en">Day 10 of Tenth Month, Year 5355</a> (corresponds to 29<sup>-th</sup> of September 151 B.C.).
+  <?php elseif ($lang == 'de') : ?>
+    Neu. Der Kalender konvertiert nun korrekt Datumsangaben im alten bulgarischen Kalender, die gregorianischen Daten vor Christus (B.C.) entsprechen. 
+    Bitte überprüfen Sie z. B. <a href="?cb=14-05-0001&lang=de">Tag 14 des Fünften Monats, Jahr 1 (erstes Jahr im bulgarischen Kalender)</a> (entspricht dem 6. Mai 5505 v. Chr.) oder 
+    <a href="?cb=10-10-5355&lang=de">Tag 10 des zehnten Monats, Jahr 5355</a> (entspricht dem 29. September 151 v. Chr.).
+  <?php elseif ($lang == 'ru') : ?>
+    Новое. Календарь теперь правильно преобразует даты от Древнем болгарском календаре, что соответствует григорианским датам перед Христом (до н.э.). 
+    Например, пожалуйста, проверьте День <a href="?cb=14-05-0001&lang=ru">14 Пятого месяца, год 1 (первый год в болгарском календаре)</a> (соответствует 6-го мая 5505 г. до н.э.) или 
+    <a href="?cb=10-10-5355&lang=ru">День 10 десятого месяца, год 5355</a> (соответствует 29-го сентября 151 г. до н.э.). 
+  <?php endif ?>
+</div>
+<br/><br/>
 <br/>
 <br/>
 <div class="treemonths">
