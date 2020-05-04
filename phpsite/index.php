@@ -1,4 +1,4 @@
-<?php require_once('includes.php'); ?><!DOCTYPE html>
+<?php require_once('includes.php'); $lang = $GLOBALS['lang']; ?><!DOCTYPE html>
 <html>
 <head>
    <meta charset="utf-8">

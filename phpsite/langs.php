@@ -1,4 +1,7 @@
-<?php $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg'; ?>
+<?php 
+  require_once('language.php');
+  $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : getPreferredLang()); 
+?>
 <div class="lang">
 
   <?php if ($lang != 'bg') echo '<a href="?lang=bg">'; ?>

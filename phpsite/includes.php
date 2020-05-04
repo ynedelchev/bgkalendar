@@ -18,7 +18,9 @@ require_once('leto/impl/gregorian/LetoGregorianDayPeriodBc.php');
 require_once('leto/impl/gregorian/LetoGregorianMonthPeriodBc.php');
 require_once('leto/impl/gregorian/LetoGregorian.php');
 
-$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : 'bg');
+require_once('language.php');
+
+$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : getPreferredLang());
 $GLOBALS['lang'] = $lang;
 function tri($bg, $en, $de, $ru) {
   global $lang;

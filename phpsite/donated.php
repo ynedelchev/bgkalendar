@@ -7,7 +7,7 @@
       error_log('ERROR: Cannot find wallet address. No file "'.__DIR__.'/bitcoinwallet.php'.'" found. Please create such file containing your bitcoin address for donations.');
       exit(1);
    }
-$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg';
+$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : getPreferredLang());
 if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
   $lang = 'bg';
 }
