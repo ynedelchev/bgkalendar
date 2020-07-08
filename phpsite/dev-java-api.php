@@ -52,7 +52,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <h2>Изграждане на проекта</h2> 
  При изграждането ще ви е наобходим <a href="https://git-scm.com/downloads">git</a> за клониране на изходния код от публичното 
  <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">хранилище</a> 
- и <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Версия на Джава за разработка</a> за компилиране на проекта. 
+ и <a href="https://www.oracle.com/java/technologies/javase-jdk14-downloads.html">Версия на Джава за разработка</a> за компилиране на проекта. 
  При самото изграждане се използва вградена версия на <a href="https://gradle.org/">gradle</a> (инсталация не се изисква).<br/><br/> 
  Клониране на изходния код:<br/>
  <br/>
@@ -93,7 +93,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <h2>Cloning the project</h2> 
  In order to build it, you would need <a href="https://git-scm.com/downloads">git</a> to clone the source code from the public 
  <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">repository</a> 
- and <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Java Development Kit (JDK)</a> to compile the project.
+ and <a href="https://www.oracle.com/java/technologies/javase-jdk14-downloads.html">Java Development Kit (JDK)</a> to compile the project.
  Please note that the usual JRE (Java Runtime Environment) would not work in that case.  
  During the build process, you would use <a href="https://gradle.org/">gradle</a> wraper (no installation required).<br/><br/> 
  Clone the source code:<br/>
@@ -134,7 +134,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <h2>Cloning the project</h2> 
  In order to build it, you would need <a href="https://git-scm.com/downloads">git</a> to clone the source code from the public 
  <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">repository</a> 
- and <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Java Development Kit (JDK)</a> to compile the project.
+ and <a href="https://www.oracle.com/java/technologies/javase-jdk14-downloads.html">Java Development Kit (JDK)</a> to compile the project.
  Please note that the usual JRE (Java Runtime Environment) would not work in that case.  
  During the build process, you would use <a href="https://gradle.org/">gradle</a> wraper (no installation required).<br/><br/> 
  Clone the source code:<br/>
@@ -170,7 +170,7 @@ if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
  <h2>Cloning the project</h2> 
  In order to build it, you would need <a href="https://git-scm.com/downloads">git</a> to clone the source code from the public 
  <a href="https://github.com/bgkalendar/bgkalendar/tree/master/java">repository</a> 
- and <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">Java Development Kit (JDK)</a> to compile the project.
+ and <a href="https://www.oracle.com/java/technologies/javase-jdk14-downloads.html">Java Development Kit (JDK)</a> to compile the project.
  Please note that the usual JRE (Java Runtime Environment) would not work in that case.  
  During the build process, you would use <a href="https://gradle.org/">gradle</a> wraper (no installation required).<br/><br/> 
  Clone the source code:<br/>
