@@ -143,7 +143,7 @@
     In Zusammenarbeit mit der <a href="https://kitkazdravets.bg">Kitka Zdravets Foundation</a> suchen wir Freiwillige, um den bulgarischen Kalender weiter zu verbessern.
     Weitere Informationen <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">finden Sie hier</a>.
   <?php elseif ($lang == 'ru') : ?>
-    В сотрудничестве с <a href="">Фондом Китки Здравец</a>, мы ищем добровольцев для дальнейшего совершенствования проекта «Болгарский календарь».
+    В сотрудничестве с <a href="https://kitkazdravets.bg">Фондом Китки Здравец</a>, мы ищем добровольцев для дальнейшего совершенствования проекта «Болгарский календарь».
     Для получения дополнительной информации, пожалуйста, <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">смотрите здесь</a>.
   <?php endif ?>
 </div>
