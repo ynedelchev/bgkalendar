@@ -133,7 +133,7 @@
 <br/>
 <div style="border-radius: 1em; border: 1px solid green; background: lightgreen; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
-    С съдействието на <a href="https://kitkazdravets.bg/">Фондация Китка Здравец</a>, се набират доброволци за бъдещо развитие на Проекта Българският Календар. 
+    Със съдействието на <a href="https://kitkazdravets.bg/">Фондация Китка Здравец</a>, се набират доброволци за бъдещо развитие на Проекта Българският Календар. 
     За повече информация, моля <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">Вижте Тук</a>.
     <br/>
   <?php elseif ($lang == 'en') : ?>
