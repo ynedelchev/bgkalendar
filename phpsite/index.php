@@ -1439,19 +1439,27 @@ $wday = bcmod($igr, 7);
      Кръговият календар е подобен на часовник, само че по циферблата не са нанесени часове и минути, а вместо това са нанесени дните от годината.
      От външната страна са изписани датите по Григорианския календар, а от вътрешната съответстващите им дати от Древния Български Календар.
      Единствената стрелка посочва текущият ден. 
-     Този календар може да свалите и под формата на векторна графика оттук: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">виж</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">свали</a>.
+     Този календар може да свалите и под формата на векторна графика оттук: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=bg&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">виж</a> 
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=bg&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">свали</a>.
      <?php elseif ($lang == 'en') : ?>
      The cyrcle calendar is similar to a clock, only it does not have the hours and minutes on its front, but rather the days of the year.
      On the other side of the cyrcle, there are the dates based on Gregorian calendar. On the inner side - the corresponding dates based on the Old Bulgarian Calendar.
-     This calendar can be downloaded in the form of scalable vector graphics: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">see</a>  <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">download</a>.
+     This calendar can be downloaded in the form of scalable vector graphics: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=en&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">see</a>  
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=en&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">download</a>.
      <?php elseif ($lang == 'de') : ?>
      Der Cyrcle Kalender ist ähnlich wie eine Uhr, nur hat er nicht die Stunden und Minuten auf der Vorderseite, sondern die Tage des Jahres.
      Auf der anderen Seite des Cyrcle befinden sich die Daten nach dem Gregorianischen Kalender. Auf der Innenseite - die entsprechenden Daten basieren auf dem altbulgarischen Kalender.
-     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=<?php tr('bg','en','de','ru');?>">siehe</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=<?php tr('bg','en','de','ru');?>">herunterladen</a>.
+     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=de&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">siehe</a> o
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=de&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">herunterladen</a>.
      <?php elseif ($lang == 'ru') : ?>
      Круговой календарь похож на часы, только у него нет часов и минут на его циферблате, а скорее на дни года.
      С внешней стороны окружности есть даты, основанные на григорианском календаре. С внутренней стороны - соответствующие даты, основанные на Древном болгарском календаре.
-     Этот календарь можно загрузить в виде масштабируемой векторной графики: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">смотрите</a> <a name = "cyrcle-download" href = "bgkalendar-Цикл статей-download.php">скачать</a>.
+     Этот календарь можно загрузить в виде масштабируемой векторной графики: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=ru&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">смотрите</a> o
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=ru&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">скачать</a>.
      <?php endif ?>
   </p>
   <div style="width: 200px;">
