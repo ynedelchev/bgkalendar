@@ -18,7 +18,14 @@
 <br/><br/>
 
 <?php elseif ($lang == 'en') : ?>
-
+  According to <a href="http://www.bookpoint.bg/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80-14084.htm">Yordan Valchev</a>, 
+  thid day (11<sup>-th</sup> day of the Eleventh month (11.11)) is a day of respect to hational heroes.<br/>
+  Later, the symbolism and rituals of this day were transferred to Christian Great Souls day and Archangel's Souls day, which is celebrated on saturday, 
+  just before <a href="https://bg.wikipedia.org/wiki/%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D0%BE%D0%B2%D0%B4%D0%B5%D0%BD">Archangel's day</a> (8<sup>-th</sup> of November based on the Gregorian Calendar).<br/>
+  Great Souls day is a moving holiday, and it is always around 1<sup>-st</sup> or 2<sup>-nd</sup> of November based on the Gregorian calendar, which with some approximation aligns very well to Day 11 in Month 11 based on Ancient Bulgarian calendar.<br/>
+  In the ancient Bulgarian calendar, this holiday is part of the cycle of "male" holidays. That is why this might not be a coincidence that Archangel's stew is also known as "Male Souls day".
+  This is another parallel between the ancient and the modern holiday.
+  <br/><br/>
   Yordan Valchev noticed that in the Bulgarian calendar the odd dates where the number of the day is the same as the number of the month
   <br/><br/>
   <b>First Half of the Year Odd</b><br/>
@@ -38,6 +45,15 @@
   
 <?php elseif ($lang == 'de') : ?>
 
+  Laut <a href="http://www.bookpoint.bg/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80-14084.htm">Jordan Waltschew</a> 
+  ist der Tag (11. Tag des elften Monats (11.11)) ein Tag des Respekts gegenüber den Helden.
+  Später wurden die Symbolik und Rituale dieses Tages auf den Tag der christlichen Großen Seelentag und den Tag der Erzengelseelen übertragen, der am Samstag, kurz vor dem Tag des 
+  <a href="https://bg.wikipedia.org/wiki/%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D0%BE%D0%B2%D0%B4%D0%B5%D0%BD">Erzengelstag</a> (8. November basierend auf dem Gregorianischen Kalender), gefeiert wird. <br/>
+  Großen Seelentag ist ein bewegender Feiertag, und es ist immer um 1<sup>-</sup> oder 2<sup>-</sup> November basierend auf dem Gregorianischen Kalender, 
+  der mit einer gewissen Annäherung sehr gut auf Tag 11 in Monat 11 auf der Grundlage des alten bulgarischen Kalenders ausgerichtet ist.<br/>
+  Im alten bulgarischen Kalender ist dieser Feiertag Teil des Zyklus der "männlichen" Feiertage. Deshalb ist dies vielleicht kein Zufall, dass Erzengels Eintopf auch als "Männerseelentag" bekannt ist. 
+  Dies ist ein weiteres Parallel zwischen dem alten und dem modernen Urlaub. 
+  <br/><br/>
   Jordan Waltschew bemerkte, dass im bulgarischen Kalender die ungeraden Daten, an denen die Zahl des Tages mit der Zahl des Monats zusammenfielen
   <br/><br/>
   <b>Erste Jahreshälb ungerade</b><br/>
@@ -55,7 +71,17 @@
   <br/><br/>
 
 <?php elseif ($lang == 'ru') : ?>
+  Этот день (одиннадцатый день одиннадцатого месяца (11.XI)) по словам 
+  <a href="http://www.bookpoint.bg/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80-14084.htm">Йордана Вълчева</a> 
+  является днем памяти героев Отечества.
 
+  Позже символика и ритуалы этого праздника были перенесены в христианская великая задушница или архангельская задушница, которое отмечается в субботу, как раз перед 
+  <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%D0%B4%D0%B5%D0%BD%D1%8C">Архангельском днем</a> (8 ноября по григорианскому календарю).<br/> 
+  Великая задушница является подвижным праздником, но всегда вокруг 1 или 2<sup>-го</sup> ноября по григорианскому календарю, который имеет при некоторое приближение довольно хорошее выравнивание 11.IX болгарского календаря.<br/><br/>
+  В древнем болгарском календаре этот праздник является частью цикла «мужских» праздников, так что, возможно, это не случайно и что Архангелова задушница также известна как «Мужская задушница». 
+  Это еще один параллел между древним и современным праздником.
+
+  <br/><br/>
   Йордан Вълчев заметил, что в болгарском календаре нечетные даты, когда номер дня совпадает с номером месяца
   <br/><br/>
   <b>Первый полгод нечетние</b><br/>
