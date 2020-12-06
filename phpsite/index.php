@@ -131,6 +131,7 @@
 <span style="clear: both; float: left;">
 <br/>
 <br/>
+<!--
 <div style="border-radius: 1em; border: 1px solid green; background: lightgreen; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
     Със съдействието на <a href="https://kitkazdravets.bg/">Фондация Китка Здравец</a>, се набират доброволци за бъдещо развитие на Проекта Българският Календар. 
@@ -147,6 +148,21 @@
     Для получения дополнительной информации, пожалуйста, <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">смотрите здесь</a>.
   <?php endif ?>
 </div>
+-->
+<div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
+  <?php if ($lang == 'bg') : ?>
+    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7525/2020</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2021?lang=bg">Виж повече</a>
+  <?php elseif ($lang == 'en') : ?>
+    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7526, please contact <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2021?lang=en">More</a>
+  <?php elseif ($lang == 'de') : ?>
+    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7526 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
+  <?php elseif ($lang == 'ru') : ?>
+    Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7526, свяжитесь с <u>admin [а] bgkalendar.com</u> .
+  <?php endif ?>
+</div>
+<br/><br/>
 <br/><br/>
 <br/>
 <br/>
