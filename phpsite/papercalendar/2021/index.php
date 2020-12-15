@@ -239,11 +239,13 @@ Vorschau
        var countMessage = document.getElementById("countmessage");
        var recipientMessage = document.getElementById("recipientmessage");
        var addressMessage = document.getElementById("addressmessage");
+       var emailMessage = document.getElementById("emailmessage");
        var phoneMessage = document.getElementById("phonemessage");
 
        countMessage.innerHTML = "";
        recipientMessage.innerHTML = "";
        addressMessage.innerHTML = "";
+       emailMessage.innerHTML = "";
        phoneMessage.innerHTML = "";
 
        var errors = false;
@@ -251,25 +253,30 @@ Vorschau
        if (count.value == null || count.value == undefined || count.value == "" || count.value.trim() == "" || isNaN(count.value) || count.value.length > 20) {
          countMessage.innerHTML = "<?php tr('Броя трябва да е цяло положително число.', 'Count must be positive integer number.', 'Dieser Wert muss eine positive ganze Zahl sein.', 'Это значение должно быть положительным целым числом.');?>";
          errors = true;
-       }  
+       }
        var recipient = document.getElementById("recipient");
        if (recipient.value == null || recipient.value == undefined || recipient.value == "" || recipient.value.length > 100) {
          recipientMessage.innerHTML = "<?php tr('Получателят е задължителен', 'The name of recipient should be entered.', 'The name of recipient should be entered.', 'Имя получателя должно быть введено.');?>";
          errors = true;
-       } 
+       }
        var address = document.getElementById("address");
        if (address.value == null || address.value == undefined || address.value == "" || address.value.length > 200) {
          addressMessage.innerHTML = "<br/><?php tr('Адресът за доставка е задължителен.', 'The address for delivery should not be empty.', 'Die Lieferadresse sollte nicht leer sein.', 'Адрес доставки должен не быть пустым.');?>";
          errors = true;
-       } 
+       }
+       var email = document.getElementById("email");
+       if (email.value != null && email.value != undefined && email.value != "" && email.value.indexOf("@") < 0) {
+         emailMessage.innerHTML = "<?php tr('Невалиден адрес на електронна поща.', 'Invalid E-mail address specified.', 'Ungültige E-Mail-Adresse angegeben.', 'Указан недействительный адрес электронной почты.');?>";
+         errors = true;
+       }
        var phone = document.getElementById("phone");
        if (phone.value == null || phone.value == undefined || phone.value == "" || phone.value.length > 100) {
          phoneMessage.innerHTML = "<?php tr('Телефонът за връзка е задължителен.', 'The phone contact is required.', 'Der Telefonkontakt ist erforderlich.', 'Требуется телефонный контакт.');?>";
          errors = true;
-       } 
+       }
        if (errors) {
          return false;
-       } 
+       }
      }
 
    </script>
@@ -293,6 +300,9 @@ Vorschau
      <tr>
        <td><?php tr('Телефон*', 'Telephone*', 'Telefon','Телефон');?>:</td><td><input type="text" name="phone" id="phone" placeholder="000-00-00-00">
        <b><font color="red"><span id="phonemessage"></span></font></b></td>
+     </tr>
+     <td><?php tr('Електронна поща', 'E-mail', 'Email','Эл. почта');?>:</td><td><input type="text" name="email" id="email" placeholder="ipetrov@mail.bg" value="<?php echo $email;?>">
+       <b><font color="red"><span id="emailmessage"><?php echo $emailmessage;?></span></font></b></td>
      </tr>
      <tr>
        <td><?php tr('Заплащане', 'Price', 'Preis', 'Цена');?>: </td><td><?php tr('Наложен платеж', 'Cash on delivery', 'Nachnahme', 'Денежные средства при доставке'); ?></td>

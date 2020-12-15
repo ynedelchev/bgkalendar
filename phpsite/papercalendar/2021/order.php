@@ -19,23 +19,112 @@
 <div style="margin: 2em; align: auto;">
 <center>
 <?php 
+
+  require_once dirname(dirname(__DIR__)).'/libs/PHPMailer/Exception.php';
+  require_once dirname(dirname(__DIR__)).'/libs/PHPMailer/OAuth.php';
+  require_once dirname(dirname(__DIR__)).'/libs/PHPMailer/POP3.php';
+  require_once dirname(dirname(__DIR__)).'/libs/PHPMailer/SMTP.php';
+  require_once dirname(dirname(__DIR__)).'/libs/PHPMailer/PHPMailer.php';
+  use PHPMailer\PHPMailer\PHPMailer;
+
+
+  function randomstr($size) {
+    $str = '';
+    for ($i =0; $i < $size; $i++) {
+      $ch = chr(rand(32, 127));
+      $str .= $ch;
+    }
+    return $str;
+  }
+
+  function confirmation_email($date, $email, $count, $price, $phone, $address, $recipient) {
+    if(!extension_loaded('openssl')) {
+      $errid = base64_encode(randomstr(20));
+      error_log("ERROR: Cannot send E-mail message to user '$recipient<$email>' : PHP openssl extension is not available. Please enable it with a line like `extension=php_openssl.dll` in your `php.ini` file.");
+      return tri('Вътрешна грешка номер: '.$errid.'. Моля свържете се с администратор на адрес admin@bgkalendar.com.', 
+                 'Internal error with Error Ref: '.$errid.'. Please contact the administrator on admin@bgkalendar.com',
+                 'Interner Fehler mit Fehlerreferenz: '.$errid.'. Bitte wenden Sie sich an den Administrator unter admin@bgkalendar.com', 
+                 'Внутренняя ошибка со ссылкой на ошибку: '.$errid.'. Пожалуйста, свяжитесь с администратором на admin@bgkalendar.com.');
+    }   
+    include(dirname(dirname(__DIR__)).'/libs/config.php');
+    $email = !!$email ? $email : $smtp_bcc;
+    $mail = new PHPMailer();
+
+    #$mail->SMTPDebug = 3;  // debugging: 1 = errors and messages, 2 = messages only
+    
+    
+    $mail->CharSet = 'UTF-8';
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = $smtp_server;                           // Specify main and backup SMTP servers smtp.gmail.com;smtp.live.com
+    $mail->Port = $smtp_port;                             // The port where the SMTP server listens on.
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = $smtp_user;                         // SMTP username
+    $mail->Password = base64_decode(base64_decode($smtp_pass)); 
+    $mail->SMTPSecure = $smtp_security;                   // Enable encryption, 'ssl' also accepted
+
+    $mail->AddEmbeddedImage(__DIR__.'/logo.png', 'logo');
+
+    $mail->From = $smtp_user;
+    $mail->FromName = 'BgKalendar Administrator';
+    $mail->addAddress($email, "User: ".$email);  // Add a recipient
+    $mail->addReplyTo($smtp_user, "User: ".$smtp_user);
+
+    //$mail->addCC('cc@example.com');
+    $mail->addBCC($smtp_bcc);
+
+    $mail->WordWrap = 75;                                 // Set word wrap to 75 characters
+    //$mail->addAttachment('/var/tmp/file.tar.gz');       // Add attachments
+    #$mail->addAttachment(__DIR__.'/images/circuit.jpg', 'circuit.jpg');    // Optional name
+    $mail->isHTML(true);                                  // Set email format to HTML
+
+    $mail->Subject = tri("Българският Календар: Поръчката за ".$count." календара на цена ".$price."лв. бе приета (цената за доставката не е включена)",
+                     "The Bulgarian Calender: The order for ".$count." calendars on price ".$price."leva was accepted. (delivery price not included)",
+                     "Der Bulgarisch Kalender: Die Bestellung von ".$count." Kalendern zum Preis von ".$price." Lewa wurde angenommen (lieferpreis nicht inbegriffen)",
+                     "Болгарский Календарь: Принят заказ на ".$count." календарей на цене ".$price." левов (цена доставки не включена).");
+
+
+    ob_start();
+    include('order-email.html.php');
+    $html = ob_get_clean();
+
+  
+    ob_start();
+    include('order-email.txt.php');
+    $txt = ob_get_clean();
+
+    $mail->Body    = $html; 
+    $mail->AltBody = $txt;           
+
+    if(!$mail->send()) {
+      $errid = base64_encode(randomstr(20));
+      error_log("ERROR: Cannot send E-mail message to user '$recipient<$email>' Erro Info: " . $mail->ErrorInfo.' Error Ref: '.$errid.'.');
+      return tri('Вътрешна грешка номер: '.$errid.'. Моля свържете се с администратор на адрес admin@bgkalendar.com.', 
+                 'Internal error with Error Ref: '.$errid.'. Please contact the administrator on admin@bgkalendar.com',
+                 'Interner Fehler mit Fehlerreferenz: '.$errid.'. Bitte wenden Sie sich an den Administrator unter admin@bgkalendar.com', 
+                 'Внутренняя ошибка со ссылкой на ошибку: '.$errid.'. Пожалуйста, свяжитесь с администратором на admin@bgkalendar.com.');
+    }   
+    return "";
+  }
+
   global $lang; 
   $lang      = htmlspecialchars($_POST["lang"]);
   $count     = htmlspecialchars($_POST["count"]);
   $recipient = htmlspecialchars($_POST["recipient"]);
+  $email     = htmlspecialchars($_POST["email"]);
   $address   = htmlspecialchars($_POST["address"]);
   $phone     = htmlspecialchars($_POST["phone"]);
   
   $countmessage = "";
   $recipientmessage = "";
   $addressmessage = "";
+  $emailmessage = "";
   $phonemessage = "";
   $generalmessage = "";
   $price = "";
   $errors = false;
   $countok = true;
 
-  if ($count == undefined || $count == "" || strlen($count) > 20) {
+  if (!isset($count) || $count == "" || strlen($count) > 20) {
      $countmessage = tri('Броя трябва да е цяло положително число.', 'Count must be positive integer number.', 'Dieser Wert muss eine positive ganze Zahl sein.', 'Это значение должно быть положительным целым числом.');
      $errors = true;
      $countok = false;
@@ -47,15 +136,20 @@
        $countok = false;
     } 
   }
-  if ($address == undefined || $address == "" || strlen($address) > 200) {
+  if (!isset($address) || $address == "" || strlen($address) > 200) {
      $addressmessage = tri('Адресът за доставка е задължителен.', 'The address for delivery should not be empty.', 'Die Lieferadresse sollte nicht leer sein.', 'Адрес доставки должен не быть пустым.');
      $errors = true;
   } 
-  if ($recipient == undefined || $recipient == "" || strlen($recipient) > 100) {
-     $phonemessage = tri('Получателят е задължителен', 'The name of recipient should be entered.', 'The name of recipient should be entered.', 'Имя получателя должно быть введено.');
+  if (!isset($recipient) || $recipient == "" || strlen($recipient) > 100) {
+     $emailmessage = tri('Получателят е задължителен', 'The name of recipient should be entered.', 'The name of recipient should be entered.', 'Имя получателя должно быть введено.');
      $errors = true;
   } 
-  if ($phone == undefined || $phone == "" || strlen($phone) > 100) {
+  if (isset($email) && $email != "" && strpos($email, '@') < 0) {
+     $emailmessage = tri('Невалиден адрес на електронна поща.', 'Invalid E-mail address specified.', 'Ungültige E-Mail-Adresse angegeben.', 'Указан недействительный адрес электронной почты.');
+     $errors = true;
+  } 
+  $email = !isset($email) ? "" : $email;
+  if (!isset($phone) || $phone == "" || strlen($phone) > 100) {
      $phonemessage = tri('Телефонът за връзка е задължителен.', 'The phone contact is required.', 'Der Telefonkontakt ist erforderlich.', 'Требуется телефонный контакт.');
      $errors = true;
   } 
@@ -63,7 +157,7 @@
     $val = $count * 752;
     $drob = $val % 100; 
     $floor = ($val- $drob ) / 100;
-    if ($drob == null || $drob == undefined || $drob == 0) { 
+    if ($drob == null || !isset($drob) || $drob == 0) { 
          $drob = "00";
     } else if ($drob < 10) {
          $drob = "0" . $drob;
@@ -82,6 +176,7 @@
     $str .= "Count:     " . $count       . "\n";
     $str .= "Recipient: " . $recipient   . "\n";
     $str .= "Address:   " . $address     . "\n";
+    $str .= "E-mail:    " . $email       . "\n";
     $str .= "Phone:     " . $phone       . "\n";
     $str .= "Price:     " . $price       . "\n";
     $str .= "----------------------------------------------------------------\n";
@@ -90,11 +185,15 @@
       $generalmessage = "Internal Server Error";
       $errors = true;
     }
+    $generalmessage = confirmation_email($date, $email, $count, $price, $phone, $address, $recipient);
+    if ($generalmessage) {
+      $errors = true;
+    }
   } 
   
 ?>
 
-<?php if (!$errors) { ?>
+<?php if ($errors != true) { ?>
    <h1><?php tr('Заявката е приета', 'Request was successfull', 'Anfrage war erfolgreich', 'Запрос был успешний');?></h1>
    <table>
      <tr>
@@ -122,7 +221,7 @@
    </table>
 <?php } else { ?> 
 <br/><br/>
-   <h1><font color="rred"><?php echo $generalmessage;?></font></h1>
+   <h1><font color="red"><?php echo $generalmessage;?></font></h1>
  <br/>
   <br/>
   <br/>
@@ -164,11 +263,13 @@
        var countMessage = document.getElementById("countmessage");
        var recipientMessage = document.getElementById("recipientmessage");
        var addressMessage = document.getElementById("addressmessage");
+       var emailMessage = document.getElementById("emailmessage");
        var phoneMessage = document.getElementById("phonemessage");
 
        countMessage.innerHTML = "";
        recipientMessage.innerHTML = "";
        addressMessage.innerHTML = "";
+       emailMessage.innerHTML = "";
        phoneMessage.innerHTML = "";
 
        var errors = false;
@@ -185,6 +286,11 @@
        var address = document.getElementById("address");
        if (address.value == null || address.value == undefined || address.value == "" || address.value.length > 200) {
          addressMessage.innerHTML = "<br/><?php tr('Адресът за доставка е задължителен.', 'The address for delivery should not be empty.', 'Die Lieferadresse sollte nicht leer sein.', 'Адрес доставки должен не быть пустым.');?>";
+         errors = true;
+       } 
+       var email = document.getElementById("email");
+       if (email.value != null && email.value != undefined && email.value != "" && email.value.indexOf("@") < 0) {
+         emailMessage.innerHTML = "<?php tr('Невалиден адрес на електронна поща.', 'Invalid E-mail address specified.', 'Ungültige E-Mail-Adresse angegeben.', 'Указан недействительный адрес электронной почты.');?>";
          errors = true;
        } 
        var phone = document.getElementById("phone");
@@ -218,6 +324,9 @@
      <td><?php tr('Телефон*', 'Telephone*', 'Telefon','Телефон');?>:</td><td><input type="text" name="phone" id="phone" placeholder="000-00-00-00" value="<?php echo $phone;?>">
        <b><font color="red"><span id="phonemessage"><?php echo $phonemessage;?></span></font></b></td>
      </tr>
+     <td><?php tr('Електронна поща', 'E-mail', 'Email','Эл. почта');?>:</td><td><input type="text" name="email" id="email" placeholder="ipetrov@mail.bg" value="<?php echo $email;?>">
+       <b><font color="red"><span id="emailmessage"><?php echo $emailmessage;?></span></font></b></td>
+     </tr>
      <tr>
        <td><?php tr('Заплащане', 'Price', 'Preis', 'Цена');?>: </td><td><?php tr('Наложен платеж', 'Cash on delivery', 'Nachnahme', 'Денежные средства при доставке'); ?></td>
      </tr>
@@ -229,9 +338,6 @@
      </tr>
      <tr>
        <td>&nbsp;</td><td><input type="submit" name="submit" value="<?php tr('Вземи своя хартиен календар', 'Take your paper calendar', 'Nehmen Sie Ihren Papierkalender', 'Возьмите свой бумажный календарь');?>"></td>
-     </tr>
-     <tr>
-       <td>&nbsp;</td><td><?php tr('Или се свържете по електронна поща със', 'Alternatively, you may simply contact us on E-mal ', 'Alternativ können Sie uns einfach über E-mal kontaktieren ', 'Кроме того, вы можете просто связаться с нами на ');?><br/> <u>admin [а] bgkalendar.com</u></td>
      </tr>
      
    </table>
