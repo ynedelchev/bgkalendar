@@ -1,4 +1,4 @@
-<?php require_once('includes.php'); ?><!DOCTYPE html>
+<?php require_once('includes.php'); $lang = $GLOBALS['lang']; ?><!DOCTYPE html>
 <html>
 <head>
    <meta charset="utf-8">
@@ -77,7 +77,15 @@
           }
       // Initialize Gregorian Kalendar....
 
-          <?php $indexgr = bcsub($periodsgr[2]->startsAtDaysAfterEpoch(), 31);?>
+          <?php 
+             $indexgr = bcsub($periodsgr[2]->startsAtDaysAfterEpoch(), 31);
+             if ($isbc) {
+               $startOfYearBcPositive  = bcadd($periodsgr[2]->startsAtDaysAfterEpoch(), $periodsgr[2]->getStructure()->getTotalLengthInDays());
+               $oneMonthBeforeYearStart= bcadd($startOfYearBcPositive, 31);
+               $oneMonthBeforeYearStartNegative = bcsub(0, $oneMonthBeforeYearStart);
+               $indexgr   = bcadd($oneMonthBeforeYearStartNegative, 1);
+             }
+          ?>
           var indexgr = <?php echo $indexgr;?>;
           var indexbg = 
           <?php echo bcadd($indexgr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));?>;
@@ -120,47 +128,42 @@
 
 <?php include('navigation-main.php');?>
 
-<br/>
-<br/>
 <span style="clear: both; float: left;">
-<?php if ($lang == 'bg') : ?>
-   Древните българи, живели по нашите земи, създали собствен календар. Българският календар е 
-   възстановен по писмени исторически данни (<a href="imennik-bg.php">Именник на Българските Владетели</a>) и по народни
-   предания и легенди. Безспорен успех за него е официалното признание на ЮНЕСКО, с което той е 
-   признат за най-съвършенния в света. За начална точка на летоброенето е приет денят на зимното 
-   слънцестоене (21-ви декември) през 5505 година преди Хр.<br/>
-   Тази страница представлява опит за компютърен модел на <a href="kalendar-bg.php">древния български календар</a> 
-   и сравнението му със съвременния грегориански календар.
-   <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a-bg.php">тук</a>.
-<?php elseif ($lang == 'en') : ?>
-   Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
-   reconstrucuted basedon on writen historical artefacts (<a href="imennik-en.php">Namelist of Bulgarian Rulers</a>), 
-   Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO, that this is 
-   the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
-   winter solstice (21-st of December) 5505 years before Christ.<br/>
-   This page is an attempt for a computer model of <a href="kalendar-en.php">the ancient Bulgarian calendar</a> and its 
-   comparison with the modern Gregorian calendar.
-   <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
-   For more information, see <a href="kupu%D0%BBu%D1%86a-en.html">here</a>.
-<?php elseif ($lang == 'de') : ?>
-   Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
-   uber geschrieben historischen Daten (<a href="imennik-en.php">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
-   Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO, die er als die vollkommenste in der Welt anerkannt.
-   Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
-   Diese Seite ist ein Computermodelanlauf von <a href="kalendar-de.php">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
-   <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
-   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-de.html">hier</a>.
-<?php elseif ($lang == 'ru') : ?>
-   Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.  
-   Мы восстановили здесь календарь на основании письменных исторических источников как 
-   (<a href="imennik-bg.php">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.   
-   Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.  
-   Наш сайт дает представлление о <a href="kalendar-ru.php">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет 
-   возможность сравнить его с современным Грегорианским календарём.  
-   <br/><br/>
-   Сайт "Болгарский Календарь", поддерживает инициативу «За Болгарский стиль шрифта Кириллицы». Для дополнительной информации, 
-   смотрите <a href="kupu%D0%BBu%D1%86a-ru.html">здесь</a>.  
-<?php endif ?>
+<br/>
+<br/>
+<!--
+<div style="border-radius: 1em; border: 1px solid green; background: lightgreen; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
+  <?php if ($lang == 'bg') : ?>
+    Със съдействието на <a href="https://kitkazdravets.bg/">Фондация Китка Здравец</a>, се набират доброволци за бъдещо развитие на Проекта Българският Календар. 
+    За повече информация, моля <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">Вижте Тук</a>.
+    <br/>
+  <?php elseif ($lang == 'en') : ?>
+    With the cooperation of <a href="https://kitkazdravets.bg">Kitka Zdravets Foundation</a>, we are searching for volunteers to further enhance the Project Bulgarian Calendar.
+    For more information, please <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">see here</a>.
+  <?php elseif ($lang == 'de') : ?>
+    In Zusammenarbeit mit der <a href="https://kitkazdravets.bg">Kitka Zdravets Foundation</a> suchen wir Freiwillige, um den bulgarischen Kalender weiter zu verbessern.
+    Weitere Informationen <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80/">finden Sie hier</a>.
+  <?php elseif ($lang == 'ru') : ?>
+    В сотрудничестве с <a href="https://kitkazdravets.bg">Фондом Китки Здравец</a>, мы ищем добровольцев для дальнейшего совершенствования проекта «Болгарский календарь».
+    Для получения дополнительной информации, пожалуйста, <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">смотрите здесь</a>.
+  <?php endif ?>
+</div>
+-->
+<div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
+  <?php if ($lang == 'bg') : ?>
+    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7525/2020</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2021?lang=bg">Виж повече</a>
+  <?php elseif ($lang == 'en') : ?>
+    In order to obtain your printed version of the Bulgarian calendar (format A2) for 7526, please contact <u>admin [а] bgkalendar.com</u> .<br/>
+    <a href="papercalendar/2021?lang=en">More</a>
+  <?php elseif ($lang == 'de') : ?>
+    Um Ihre gedruckte Version des bulgarischen Kalenders (Format A2) für 7526 zu erhalten, wenden Sie sich bitte an <u>admin [а] bgkalendar.com</u>.<br/>
+  <?php elseif ($lang == 'ru') : ?>
+    Чтобы получить свою печатную версию болгарского календаря (Формат A2) на 7526, свяжитесь с <u>admin [а] bgkalendar.com</u> .
+  <?php endif ?>
+</div>
+<br/><br/>
+<br/><br/>
 <br/>
 <br/>
 <div class="treemonths">
@@ -241,7 +244,7 @@
                <a class="up" href="?db=<?php echo $daysbg + $periodsbg[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?db=<?php echo $daysbg - $periodsbg[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm');?></td>
+           <td class="details nobr"><?php echo seqPrefix($periodsbg[2]->getAbsoluteNumber() + 1, 'fnnm').$bc;?></td>
            <td class="details">
                 <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#12g">
                   <?php 
@@ -294,7 +297,7 @@
        </tr>
        <tr>
             <td class="details bold">
-                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+                <a class="period" href="kalendar-<?php tr('bg','en','de','ru');?>.php?lang=<?php tr('bg','en','de','ru');?>#420g"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 
@@ -457,7 +460,7 @@
            <div class="month">
            <table class="calendartable">
            <tr class="calendartable">
-               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Трети', 'Tird Month', 'Dritten Monat', 'Третий Месяц');?></td>
+               <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Трети', 'Third Month', 'Dritten Monat', 'Третий Месяц');?></td>
            </tr>
            <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
@@ -985,7 +988,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="calendartable" 
                    colspan="7" 
                    style="text-align: center;">
-                 <?php tr('Месец Единайсти', 'Eleventh Month', 'Elften Monat', 'Одиннадцатый Месяц');?>
+                 <?php tr('Месец Единайсети', 'Eleventh Month', 'Elften Monat', 'Одиннадцатый Месяц');?>
                </td>
          </tr>
            <tr class="calendartable">
@@ -1047,7 +1050,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
        <div class="month">
            <table class="calendartable">
         <tr class="calendartable">
-          <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Дванайсти', 'Twelfth Month', 'Zwölften Monat', 'Двенадцатый Месяц');?> </td>
+          <td class="calendartable" colspan="7" style="text-align: center;"><?php tr('Месец Дванайсети', 'Twelfth Month', 'Zwölften Monat', 'Двенадцатый Месяц');?> </td>
         </tr>
         <tr class="calendartable">
                <td class="calendarweekrow dayofweek"><div class="calendarvertical dayofweek">1<sup><?php tr('-ви','-st','-te','-ый');?></sup></div></td>
@@ -1125,7 +1128,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 </a>
 <center>
 <div class="calendartypetitle">
-   <?php tr('Съвременен Грегориански Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?>
+   <?php tr('Съвременен Григориански Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Григорианский Календарь');?>
 </div>
 </center>
 <div>
@@ -1138,6 +1141,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 <input type="text" name="cg" value="<?php echo $daygrformatted.'-'.$monthgrformatted.'-'.$yeargr;?>" size="10" style="text-align: right; font-weight: bold; font-family: Times; "/>
 <input type="image" src="images/submit.svg" border="0" alt="Submit" />
 </form>
+<?php echo $bc;?>
 <?php if ($hour != -1 && $minute != -1 && $secund != -1) { ?>
 &nbsp; 
 [
@@ -1159,6 +1163,7 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            <td class="details">
                <?php
                   $wee = bcmod($daysgrFromStartOfCalendar, '7'); 
+                  $wee = $isbc ? 6 + $wee : $wee;
                   tr('Ден от седмицата', 'Day of week', 'Wochentag', 'День недели'); 
                   echo ': '; 
                   tr($WEEKDAYS[$wee], $WEEKDAYS_EN[$wee], $WEEKDAYS_DE[$wee], $WEEKDAYS_RU[$wee]);
@@ -1180,10 +1185,11 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                <a class="up" href="?dg=<?php echo $daysgr + $periodsgr[2]->getStructure()->getTotalLengthInDays();?>">&#x25B2;</a>
                <a class="down" href="?dg=<?php echo $daysgr - $periodsgr[2]->getStructure()->getTotalLengthInDays(); ?>">&#x25BC;</a>
            </td>
-           <td class="details nobr"><?php echo seqPrefix($periodsgr[2]->getAbsoluteNumber() + 1,'fnnm');?></td>
+           <td class="details nobr"><?php echo seqPrefix($periodsgr[2]->getAbsoluteNumber() + 1,'fnnm').$bc;?></td>
            <td class="details">
                 <?php 
-                echo seqPrefix($periodsgr[2]->getNumber()+1, 'fnnm'); 
+                $fromStartOf4Years = $isbc ? 4 - $periodsgr[2]->getNumber(): $periodsgr[2]->getNumber()+1;
+                echo seqPrefix($fromStartOf4Years, 'fnnm'); 
                 tr(' от началото на Четиригодие', 
                    ' from the beginning of four year period', 
                    ' bis den Anfang dem Vierteljahr', 
@@ -1191,7 +1197,12 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
                 ?>
                 <br/>
                 <?php 
-                $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 ) + 1;
+                $yeargrincentury = ( ( $periodsgr[2]->getAbsoluteNumber() ) % 100 );
+                if ($isbc) {
+                  $yeargrincentury = 100 - $yeargrincentury; 
+                } else {
+                  $yeargrincentury++;
+                }
                 echo seqPrefix($yeargrincentury, 'fnnm');
                 tr(' от началото на Столетие (Век)', 
                    ' from the beginning of a Century', 
@@ -1201,8 +1212,11 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
            </td>
        </tr>
        <tr>
+            <?php 
+              $fourYearsFromStartOfCentury = $isbc ? 25 - $periodsgr[3]->getNumber() : $periodsgr[3]->getNumber()+1;
+            ?>
             <td class="details bold"><?php tr('Четиригодие', 'Four year period', 'Vier Jahre Abschnitt', 'Четырёхлетный период');?>:</td>
-            <td class="details nobr"><?php echo seqPrefix($periodsgr[3]->getNumber()+1, 'nnmm');?></td>
+            <td class="details nobr"><?php echo seqPrefix($fourYearsFromStartOfCentury, 'nnmm');?></td>
 
             <td class="details" colspan="2">
                 <?php 
@@ -1214,20 +1228,30 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
             </td>
        </tr>
        <tr>
+            <?php 
+            ?>
             <td class="details bold"><?php tr('Столетие/Век', 'Century', 'Jahrhundert', 'Век');?>:</td>
             <td class="details nobr"><?php echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'nnnm');?></td>
 
             <td class="details" colspan="2">
                <?php 
                echo seqPrefix($periodsgr[4]->getAbsoluteNumber()+1, 'nnnm'); 
-               tr(' от началото на календара и', 
-                  ' from the beginning of the calendar', 
-                  ' bis den Anfang dem Kalender', 
-                  ' с начала календаря');
+               if ($isbc) {
+                 tr(' преди Христа и', 
+                    ' before Christ and', 
+                    ' BC und', 
+                    ' до нашей эры и');
+               } else {
+                 tr(' от началото на календара и', 
+                    ' from the beginning of the calendar', 
+                    ' bis den Anfang dem Kalender', 
+                    ' с начала календаря');
+               }
                ?> 
                <br/>
                <?php 
-               echo seqPrefix($periodsgr[4]->getNumber()+1, 'mnnm'); 
+               $centuryFromStartOf400Years = $isbc ? 4 - $periodsgr[4]->getNumber(): $periodsgr[4]->getNumber()+1;
+               echo seqPrefix($centuryFromStartOf400Years, 'mnnm'); 
                tr(' от началото на 400г. период.', 
                   ' from the beginning of the 400y. period', 
                   ' bis den Anfang dem 400 Jahre Abschnitt', 
@@ -1239,8 +1263,18 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
             <td class="details bold"><?php tr('400г. период', '400y. period', '400 J. Abschnitt', '400 летний период');?>:</td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsgr[5]->getAbsoluteNumber()+1, 'mnmm');?></td>
 
-            <td class="details bold detailsright"></td>
-            <td class="details"></td>
+            <td class="details" colspan="2">
+               <?php 
+               if ($isbc) {
+                 tr(' преди Христа', 
+                    ' before Christ', 
+                    ' BC', 
+                    ' до нашей эры');
+               } else {
+                 echo "&nbsp;";
+               }
+               ?> 
+            </td>
        </tr>
        <?php include(__DIR__.'/'.'includes-ortodox-podvizhni.php');?>
        <?php if (file_exists(__DIR__ . "/infogr/" . $daygrformatted.'-'.$monthgrformatted.'.php')) { ?>
@@ -1260,6 +1294,10 @@ $subperiods = ( isset($periodsbg[2]) && $periodsbg[2]->getStructure() != null) ?
 $igr = $periodsgr[2]->startsAtDaysAfterEpoch();
 $ibg = bcadd($igr, bcsub($daysbgFromStartOfCalendarTillJavaEpoch, $daysgrFromStartOfCalendarTillJavaEpoch));
 
+if ($isbc) {
+  $startOfyearBcNegative = bcsub(0, bcadd($igr, $periodsgr[2]->getStructure()->getTotalLengthInDays()));
+  $igr   = bcadd($startOfyearBcNegative, 1);
+}
 
 $jepochindex = bcsub($igr, $daysgrFromStartOfCalendarTillJavaEpoch);
 $tgr = $daysgrFromStartOfCalendar;
@@ -1277,25 +1315,27 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Януари', 'January', 'Januar', 'Январь'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Януари', 'January', 'Januar', 'Январь'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
            <?php
             $wday = bcmod($igr, 7); 
+            $wday = $isbc ? 6 + $wday: $wday;
             $februarydays = 28; 
             $subperiods = ( isset($periodsgr[2]) && $periodsgr[2]->getStructure() != null) ?
                 ( $periodsgr[2]->getStructure()->getSubPeriods() ) :
                 ( null );
+            $februaryIndexInYear = $isbc ? 10 : 1; // 0-based. $isbc == true means that we are calculating for Before Christ (B.C.)
             if ( isset($subperiods[1])) {
-               $februarydays = $subperiods[1]->getTotalLengthIndays();
+               $februarydays = $subperiods[$februaryIndexInYear]->getTotalLengthIndays();
             }
             ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Февруари', 'February', 'Februar', 'Февраль'), $februarydays, $wday, $igr, $tgr);?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Февруари', 'February', 'Februar', 'Февраль'), $februarydays, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Март', 'March', 'März', 'Март'),31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Март', 'March', 'März', 'Март'),31, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1305,16 +1345,16 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top;">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Април', 'April', 'April', 'Апрель'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Април', 'April', 'April', 'Апрель'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Май', 'May', 'Mai', 'Май'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Май', 'May', 'Mai', 'Май'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юни', 'June', 'Juni', 'Июнь'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юни', 'June', 'Juni', 'Июнь'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1327,16 +1367,16 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юли', 'July', 'Juli', 'Июль'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Юли', 'July', 'Juli', 'Июль'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Август', 'August', 'August', 'Август'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Август', 'August', 'August', 'Август'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Септември', 'September', 'September', 'Сентябрь'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Септември', 'September', 'September', 'Сентябрь'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1346,16 +1386,16 @@ $wday = bcmod($igr, 7);
        </td>
        <td style="vertical-align: top">
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Октомври', 'October', 'Oktober', 'Октябрь'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Октомври', 'October', 'Oktober', 'Октябрь'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Ноември', 'November', 'November', 'Ноябрь'), 30, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Ноември', 'November', 'November', 'Ноябрь'), 30, $wday, $igr, $tgr, '', $bc);?>
          </div>
          <div class="month">
-           <?php $wday = bcmod($igr, 7); ?>
-           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Декември', 'December', 'Dezember', 'Декабрь'), 31, $wday, $igr, $tgr);?>
+           <?php $wday = bcmod($igr, 7); $wday = $isbc ? 6 + $wday: $wday;?>
+           <?php $igr = drawMonth($periodsgr[2]->getAbsoluteNumber()+1, tri('Декември', 'December', 'Dezember', 'Декабрь'), 31, $wday, $igr, $tgr, '', $bc);?>
          </div>
        </td>
    </tr>
@@ -1365,33 +1405,94 @@ $wday = bcmod($igr, 7);
 
 <span style="clear: both; float: left;">
 
+<br/>
+<br/>
+
+<?php if ($lang == 'bg') : ?>
+   Древните българи, живели по нашите земи, създали собствен календар. Българският календар е 
+   възстановен по писмени исторически данни (<a href="iztochnici.php?lang=bg">Именник на Българските Владетели</a>) и по народни
+   предания и легенди. Безспорен успех за него е официалното признание на ЮНЕСКО през 1976, с което той е 
+   признат за най-съвършения в света. За начална точка на летоброенето е приет денят на зимното 
+   слънцестоене (21-ви декември) през 5505 година преди Хр.<br/>
+   Тази страница представлява опит за компютърен модел на <a href="kalendar-bg.php">древния български календар</a> 
+   и сравнението му със съвременния григориански календар.
+   <br/><br/>Сайтът "Българският Календар", подкрепя инициативата «За Българска Кирилица». За повече подробности, вижте <a href="kupu%D0%BBu%D1%86a-bg.php">тук</a>.
+<?php elseif ($lang == 'en') : ?>
+   Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
+   reconstrucuted basedon on writen historical artefacts (<a href="iztochnici.php?lang=en">Namelist of Bulgarian Rulers</a>), 
+   Bulgarian national folklore and legends. Undisputed success is the official recognition from UNESCO in 1976, that this is 
+   the most perfect and correct Callendar system known to the world. The start of this calendar system lays on the 
+   winter solstice (21-st of December) 5505 years before Christ.<br/>
+   This page is an attempt for a computer model of <a href="kalendar-en.php">the ancient Bulgarian calendar</a> and its 
+   comparison with the modern Gregorian calendar.
+   <br/><br/>The site "Bulgarian Calendar", supports the initiative «Pro Bulgarian Style Cyrillic Font». 
+   For more information, see <a href="kupu%D0%BBu%D1%86a-en.html">here</a>.
+<?php elseif ($lang == 'de') : ?>
+   Das alte Bulgaren, die in bulgarisch Land gelebt hat, erstellt einen eigenen Kalender. Der bulgarische Kalender. 
+   uber geschrieben historischen Daten (<a href="iztochnici.php?lang=de">Namensliste der bulgarischen Khane</a>) und Volks Legenden umgebaut war.
+   Der unbestrittene Erfolg ist die officielle Anerkennung durch die UNESCO im 1976, die er als die vollkommenste in der Welt anerkannt.
+   Der Ausgangspunkt der Chronologie ist Tag des Winters akzeptiert Solstice (21. Dezember) in 5505 Jahre vor Christus.
+   Diese Seite ist ein Computermodelanlauf von <a href="kalendar-de.php">des Bulgarischen Kalender</a> und seinen Vergleich mit modernen Gregorischen Kalender.
+   <br/><br/>Die Webseite "Der Bulgarischer Kalender", unterstützt die Initiative  «Für Bulgarisch Kyrillisch Schriftart». 
+   Weitere Informationen finden Sie <a href="kupu%D0%BBu%D1%86a-de.html">hier</a>.
+<?php elseif ($lang == 'ru') : ?>
+   Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.  
+   Мы восстановили здесь календарь на основании письменных исторических источников как 
+   (<a href="iztochnici.php?lang=ru">Именник Болгарских Канов</a>), легенд и современных исследований. В 1976 г., он признан ЮНЕСКО и считается одним из самых совершенных.   
+   Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.  
+   Наш сайт дает представлление о <a href="kalendar-ru.php">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет 
+   возможность сравнить его с современным Григорианским календарём.  
+   <br/><br/>
+   Сайт "Болгарский Календарь", поддерживает инициативу «За Болгарский стиль шрифта Кириллицы». Для дополнительной информации, 
+   смотрите <a href="kupu%D0%BBu%D1%86a-ru.html">здесь</a>.  
+<?php endif ?>
+
 <div class="docs-section" id="cyrcle-bgkalendar">
   <a name="cyrcle-bgkalendar"/><h6><?php tr('Кръгов Календар', 'Cyrclr Calendar', 'Cyrcle Kalender', 'Круговой Календарь');?></h6>
   <p>
 
      <?php if ($lang == 'bg') : ?>
      Кръговият календар е подобен на часовник, само че по циферблата не са нанесени часове и минути, а вместо това са нанесени дните от годината.
-     От външната страна са изписани датите по Грегорианския календар, а от вътрешната съответстващите им дати от Древния Български Календар.
+     От външната страна са изписани датите по Григорианския календар, а от вътрешната съответстващите им дати от Древния Български Календар.
      Единствената стрелка посочва текущият ден. 
-     Този календар може да свалите и под формата на векторна графика оттук: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">виж</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">свали</a>.
+     Този календар може да свалите и под формата на векторна графика оттук: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=bg&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">виж</a> 
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=bg&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">свали</a>.
      <?php elseif ($lang == 'en') : ?>
      The cyrcle calendar is similar to a clock, only it does not have the hours and minutes on its front, but rather the days of the year.
      On the other side of the cyrcle, there are the dates based on Gregorian calendar. On the inner side - the corresponding dates based on the Old Bulgarian Calendar.
-     This calendar can be downloaded in the form of scalable vector graphics: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">see</a>  <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php">download</a>.
+     This calendar can be downloaded in the form of scalable vector graphics: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=en&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">see</a>  
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=en&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">download</a>.
      <?php elseif ($lang == 'de') : ?>
      Der Cyrcle Kalender ist ähnlich wie eine Uhr, nur hat er nicht die Stunden und Minuten auf der Vorderseite, sondern die Tage des Jahres.
      Auf der anderen Seite des Cyrcle befinden sich die Daten nach dem Gregorianischen Kalender. Auf der Innenseite - die entsprechenden Daten basieren auf dem altbulgarischen Kalender.
-     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=<?php tr('bg','en','de','ru');?>">siehe</a> <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=<?php tr('bg','en','de','ru');?>">herunterladen</a>.
+     Dieser Kalender kann in Form von skalierbaren Vektorgrafiken heruntergeladen werden: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=de&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">siehe</a> o
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=de&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">herunterladen</a>.
      <?php elseif ($lang == 'ru') : ?>
      Круговой календарь похож на часы, только у него нет часов и минут на его циферблате, а скорее на дни года.
-     С внешной стороны окружности есть даты, основанные на григорианском календаре. С внутренней стороны - соответствующие даты, основанные на Древном болгарском календаре.
-     Этот календарь можно загрузить в виде масштабируемой векторной графики: <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php">смотрите</a> <a name = "cyrcle-download" href = "bgkalendar-Цикл статей-download.php">скачать</a>.
+     С внешней стороны окружности есть даты, основанные на григорианском календаре. С внутренней стороны - соответствующие даты, основанные на Древном болгарском календаре.
+     Этот календарь можно загрузить в виде масштабируемой векторной графики: 
+     <a name="cyrcle-view" href="cyrcle-bgkalendar-view.php?lang=ru&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">смотрите</a> o
+     <a name="cyrcle-download" href="cyrcle-bgkalendar-download.php?lang=ru&cb=<?php echo $daybgformatted.'-'.$monthbgformatted.'-'.$yearbg;?>">скачать</a>.
      <?php endif ?>
   </p>
   <div style="width: 200px;">
     <?php $setfonts = true; include(__DIR__ . '/cyrcle-bgkalendar.php'); ?> 
   </div>
 </div>
+     <?php if ($lang == 'bg') : ?>
+       Вижте също и основните извори от които се черпи информация за съществуването и структурата на Древния Български Календар: <a href="iztochnici.php#imennik">Именника на Българските Владетели</a> и <a href="iztochnici.php#chatalarski">Чаталарския надпис</a>, 
+       както и <a href="BPb3Ku.php?lang=bg">многобройните статии и мултимедия</a> свързани с въпросите на Древния Български Календар. <br/><br/>
+       Как се предполага, че е бил устроен календара и какъв е алгоритъма за изчисление на датата, който е най-близо до астрономичните закони, можете да научите <a href="kalendar-bg.php?lang=bg">тук</a>.<br/><br/>
+       Ако желаете да споделите мнение, да дадете препоръка или да споделите ваши изследвания и/или наблюдения, можете да го направите по електронна поща до admin [а] bgkalendar.com.<br/><br/>
+       
+       Екипът на bgkalendar започва издаването на хартиена версия на календара за 2020 (григорианска) - 7525 (древна българска). Търсят се спонсори и разпространители. Ако се интересувайте, моля свържете се с нас отново на admin [а] bgkalendar.com.<br/><br/> 
+     <?php elseif ($lang == 'en') : ?>
+     <?php elseif ($lang == 'de') : ?>
+     <?php elseif ($lang == 'ru') : ?>
+     <?php endif ?>
 
 <a name="donate-button" href="gapu.php<?php tr('', '?lang=en', '?lang=de','?lang=ru');?>" style="clear:both;"><img src="images/gapu<?php tr('', '-en', '-de', '-ru')?>.png"/></a>
 </span>

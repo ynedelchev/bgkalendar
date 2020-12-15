@@ -89,15 +89,6 @@
 </div>
 
 <div class="linkitem">
-<a href="<?php tr('https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80',
-                  'https://en.wikipedia.org/wiki/Bulgar_calendar','https://en.wikipedia.org/wiki/Bulgar_calendar',
-                  'https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80');?>">
-  <img class="titleimg"  src="images/wikipedia.png"/><br/>
-  <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
-</a>
-</div>
-
-<div class="linkitem">
   <a href="http://alexandradelova.blogspot.bg/2015/02/blog-post_1.html">
   <img class="titleimg"  src="images/snake.png"/><br/>
   <?php tr('АСТРОНОМИЯ НА ПРАБЪЛГАРИТЕ<br/> Александра Делова', 'ASTRONOMY OF PROTO-BULGARIANS<br/> Alexandra Delova', 'DIE ASTRONOMIE DER PROTOBULGAREN<br/> Alexandra Delowa', 'АСТРОНОМИЯ ПРОТОБУЛГАР<br/> Александра Делова');?>
@@ -121,6 +112,27 @@
 </div>
 
 <div class="linkitem">
+<a href="https://www.spisanie8.bg/автори/загадки/2503-дао-на-българския-календар.html">
+  <img class="titleimg"  src="images/dao.png"/><br/>
+  <?php tr('Дао на българския календар - Георги Велев', 'Dao of the Bulgarian Calendar - Georgi Velev', 'Dao des Bulgarischen Kalenders - Georgi Welew', 'Дао болгарского календаря - Георги Велев');?><br/>
+  <?php tr('Вж: ', 'See: ', 'Schauen Sie: ', 'См: ');?>
+  <u><a href="https://spisanie8.bg/списание/списание-8-брой-52014-г.html"><?php tr('Целия брой', 'The whole magazine', 'Die ganze Zeitschrift', 'Весь журнал');?></a></u>
+  <?php tr('или', 'or', 'oder', 'или');?>
+  <u><a href="links/daobgkalendar.pdf"><?php tr('статията', 'the article', 'Artikel', 'статья');?></a></u>
+  <a class="cache" href="links/daobgkalendar.pdf"></a>
+</a>
+</div>
+
+<div class="linkitem">
+<a href="<?php tr('https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80',
+                  'https://en.wikipedia.org/wiki/Bulgar_calendar','https://en.wikipedia.org/wiki/Bulgar_calendar',
+                  'https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80');?>">
+  <img class="titleimg"  src="images/wikipedia.png"/><br/>
+  <?php tr('Прабългарски календар', 'Bulgar calendar', 'Protobulgaren Kalender', 'Булгарский календарь');?>
+</a>
+</div>
+
+<div class="linkitem">
 <a href="http://www.otizvora.com/files2015/tschilingirov//atch-imennik.pdf">
   <img class="titleimg" src="images/atschilingirov.png"><br/>
   <?php tr('ИМЕННИКЪТ НА БЪЛГАРСКИТЕ КНЯЗЕ И НЕГОВИЯТ ПРОИЗХОД - Асен Чилингиров, Берлин', 'THE NAMELIST OF BULGARIAN KNYAZES AND ITS ORIGIN - Assen Tschilingirov, Berlin', 'DER NAMENLISTE DES BULGARISCHEN KNYAZEN UND SEINE HERKUNFT - Assen Tschilingirov, Berlin', 'ИМЕННИК БОЛГАРСКИХ КНЯЗОВ И ЕГО ПРОИЗХОД - Асен Чилингиров, Берлин');?>
@@ -131,7 +143,7 @@
 <div class="linkitem">
 <a href="http://protobulgarians.com/Kalendar%20na%20prabaalgarite.htm">
   <img class="titleimg"  src="links/Kalendarat-na-prabalgarite-preob.jpg"/><br/>
-  <?php tr('Календар на (zvaniya-na-mesecite.pdfпра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
+  <?php tr('Календар на (пра-)българите', 'The calendar of (Proto-)Bulgarians', 'Der Kalender der (Proto-)Bulgaren - Y. Shopov', 'Календарь (прото-)булгары');?>
 </a>
 <a class="cache" href="links/Nachalo-na-godinata-v-Prabalgarskiya-kalendar.pdf"></a>
 </div>
@@ -191,7 +203,7 @@
 
 
 <div class="linkitem">
-<a href="http://ziezi.net/spiridon.html">
+<a href="links/Istoriya-vo-kratce-o-Bolgarskom-narode-slavenskom.pdf">
   <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('История во кратце о болгарском народе славенском написа Иеросхимонах Спиридон Габровски в лето 1792', 'Short history of Bulgarian Slavic Nation, written by hieromonk Spyridon Gabrovski in 1792', 'Kurtz Geschichte des Bulgarische Nation der slawischen Sprache von Priestermönch Spyridon Gabrovski im Sommer 1792 geschrieben', 'История болгарского народа славянского языка, написанная Иеросимонахом Спиридоном Габровским летом 1792 года');?>
 </a>
@@ -207,11 +219,21 @@
 </div>
 
 <div class="linkitem">
+<a href="https://www.youtube.com/watch?v=yP_enTvipYg&app=desktop">
+  <img class="titleimg"  src="images/stoycho-kerev-yavor-shopov.png"/><br/>
+  <?php tr('НАЙ- ТОЧНИЯТ КАЛЕНДАР Е СЪЗДАДЕН ОТ ДРЕВНИТЕ БЪЛГАРИ със Стойчо Керев и Явор Шопов', 'THE MOST ACCURATE CALENDAR HAS BEEN CREATED BY ANCIENT BULGARIANS with Stoycho Kerev and Yavor Shopov', 'DER GENAUSTE KALENDER WURDE VON ALTEN BULGARERN ERSTELLT - Rubrik mit Stojtscho Kerew und Jawor Schopow', 'САМЫЙ ТОЧНЫЙ КАЛЕНДАРЬ СОЗДАН ДРЕВНИМИ БОЛГАРАМИ - рубрика Стойчо Керев и Явор Шопов');?>
+</a>
+<a class="cache" href="video.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>&video=stoycho-kerev-yavor-shopov.mkv&bg=НАЙ- ТОЧНИЯТ КАЛЕНДАР Е СЪЗДАДЕН ОТ ДРЕВНИТЕ БЪЛГАРИ със Стойчо Керев и Явор Шопов&en=THE MOST ACCURATE CALENDAR HAS BEEN CREATED BY ANCIENT BULGARIANS with Stoycho Kerev and Yavor Shopov&de=DER GENAUSTE KALENDER WURDE VON ALTEN BULGARERN ERSTELLT - Rubrik mit Stojtscho Kerew und Jawor Schopow&ru=САМЫЙ ТОЧНЫЙ КАЛЕНДАРЬ СОЗДАН ДРЕВНИМИ БОЛГАРАМИ - рубрика Стойчо Керев и Явор Шопов"></a>
+</div>
+
+<!--
+<div class="linkitem">
 <a href="http://calendar.samoistina.com/">
   <img class="titleimg"  src="links/calendar.samoistina.com.gif"/><br/>
   <?php tr('Календар', 'Calendar', 'Kalender', 'Календарь');?>
 </a>
 </div>
+-->
 
 <div class="linkitem">
 <a href="<?php tr('http://balkan1.blog.bg/technology/2010/01/18/bylgarskiiat-kalendar.474831', 'http://balkan1.blog.bg/politika/2011/01/28/bulgarian-sun-jupiter-calendar.675596', 'http://balkan1.blog.bg/politika/2011/01/28/bulgarian-sun-jupiter-calendar.675596', 'http://balkan1.blog.bg/technology/2010/01/18/bylgarskiiat-kalendar.474831');?>">
@@ -221,10 +243,18 @@
 </div>
 
 <div class="linkitem">
-<a href="http://www.theworldcalendar.org">
+<a href="<?php tr('https://en.wikipedia.org/wiki/World_Calendar', 'https://en.wikipedia.org/wiki/World_Calendar', 'https://de.wikipedia.org/wiki/Weltkalender', 'https://en.wikipedia.org/wiki/World_Calendar');?>">
   <img class="titleimg"  src="images/twcalendar.png"/><br/>
   <?php tr('Идея за нов календар (английски)', 'Idea for new calendar system (English)', 'Idee für neues Kalendersystem (Englisch)', 'Идея новой системы календаря (английский)');?>
 </a>
+</div>
+
+<div class="linkitem">
+<a href="http://macedonia.kroraina.com/vz1a/vz1a_prit_01.html">
+  <img class="titleimg"  src="images/zlatarski.png"/><br/>
+  <?php tr('БЪЛГАРСКО ЛЕТОБРОЕНИЕ - Васил Н. Златарски', 'BULGARIAN YEAR COUNTING - Vassil N. Zlatarski', 'BULGARISCHE BRÜDER - Wassil N. Zlatarski', 'БОЛГАРСКОЕ ЛЕТОСЧИТЕНИЕ - Васил Н. Златарски');?>
+</a>
+<a class="cache" href="links/zlatarski/"></a>
 </div>
 
 <br/>

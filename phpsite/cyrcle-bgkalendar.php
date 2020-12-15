@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__.'/includes.php');
 $monthsgrnames = array("Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември");
-$monthsbgnames = array("Месец Първи", "Месец Втори", "Месец Трети", "Месец Четвърти", "Месец Пети", "Месец Шести", "Месец Седми", "Месец Осми", "Месец Девети", "Месец Десети", "Месец Едuнайсти", "Месец Дванайсти");
+$monthsbgnames = array("Месец Първи", "Месец Втори", "Месец Трети", "Месец Четвърти", "Месец Пети", "Месец Шести", "Месец Седми", "Месец Осми", "Месец Девети", "Месец Десети", "Месец Едuнайсети", "Месец Дванайсети");
 if ($lang == 'en') {
   $monthsgrnames = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
   $monthsbgnames = array("Month One", "Month Two", "Month Tree", "Month Four", "Month Five", "MOnth Six", "Month Seven", "Month Eight", "Month Nine", "Month Ten", "Month Eleven", "Month Twelve");
@@ -73,9 +73,9 @@ $svgheight =  $strty*2 + $rad*2;
     /* ]]> */
  </style>
 </defs>
-<?php   $font='style="font: 0.4em notos"'; ?>
+<?php   $font='style="font: 1.0em notos"'; ?>
 <?php else: ?>
-<?php   $font='style="font: 0.4em times"'; ?>
+<?php   $font='style="font: 1.0em times"'; ?>
 <?php endif ?>
 <!-- Month One Begin -->
 <?php
@@ -215,7 +215,7 @@ $svgheight =  $strty*2 + $rad*2;
     $cntr = "".($strtx+$rad).",".($strty+$rad);    
 
     $ybg = $strty + 15;
-    if ($i == 0 || ( ! is_null($color) && $color[0] == 'b')) { $ybg = $strty + 160;  }
+    if ($i == 0 || ( ! is_null($color) && $color[0] == 'b')) { $ybg = $strty + 69;  }
     echo "<text x=\"".($strtx+$rad + 1)."\" y=\"".($strty+10)."\" fill=\"black\" transform=\"rotate($d,$cntr)\" style=\"font: 0.4em times\">$day</text>\n";
     echo "<line x1=\"".($strtx+$rad)."\" y1=\"$ybg\" x2=\"".($strtx+$rad)."\" y2=\"$strty\" stroke=\"$color\" stroke-width=\"1\" transform=\"rotate($d, $cntr)\" />\n";
 

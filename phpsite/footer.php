@@ -16,7 +16,7 @@
          </a>
      </li>
      <li>
-         <a class="footer" href="imennik-<?php tr('bg', 'en', 'de', 'ru');?>.php?lang=<?php tr('bg','en', 'de', 'ru');?>">
+         <a class="footer" href="iztochnici.php?lang=<?php tr('bg','en', 'de', 'ru');?>">
              <span class="footer">
                  <?php 
                  tr('Именник на Българските Канове', 
@@ -41,14 +41,14 @@
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Контакт', 'Contacts', 'Kontakte', 'Контакт');?></span></b>
  <ul>
-     <li><a class="footer" href="mailto:admin@bgkalendar.com"><span class="footer">admin@bgkalendar.com</span></a></li>
+     <li><a class="footer" href="mailto:admin [а] bgkalendar.com"><span class="footer">admin [ а ] bgkalendar.com</span></a></li>
  </ul>
 </div>
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Разработка', 'Development', 'Entwicklung', 'Разработка');?></span>
  <ul>
      <li>
-         <a class="footer" href="https://github.com/ynedelchev/bgkalendar/">
+         <a class="footer" href="https://github.com/bgkalendar/bgkalendar/">
              <span class="footer">
                  <?php 
                  tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');

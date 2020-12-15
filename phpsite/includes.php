@@ -14,9 +14,13 @@ require_once('leto/base/LetoPeriodTypeBean.php');
 require_once('leto/impl/bulgarian/LetoBulgarianMonth.php');
 require_once('leto/impl/bulgarian/LetoBulgarian.php');
 require_once('leto/impl/gregorian/LetoGregorianMonth.php');
+require_once('leto/impl/gregorian/LetoGregorianDayPeriodBc.php');
+require_once('leto/impl/gregorian/LetoGregorianMonthPeriodBc.php');
 require_once('leto/impl/gregorian/LetoGregorian.php');
 
-$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : 'bg');
+require_once('language.php');
+
+$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : getPreferredLang());
 $GLOBALS['lang'] = $lang;
 function tri($bg, $en, $de, $ru) {
   global $lang;
@@ -316,7 +320,7 @@ function drawMonthBg($year, $monthNumber, $monthName, $numDays, $startAtDayOfWee
     echo $sb;
     return $indexbg;
 }
-function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr, $prefix = null) {
+function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tgr, $prefix, $bc) {
     global $lang;
     global $WEEKDAYS_SHORT_EN;
     global $WEEKDAYS_SHORT_DE;
@@ -357,7 +361,7 @@ function drawMonth($year, $monthName, $numDays, $startAtDayOfWeek, $indexgr, $tg
     $sb.="<table class=\"calendartable\">";
     $sb.="<tr class=\"calendartable\">";
     $sb.="    <td class=\"calendartable\" colspan=\"7\" style=\"text-align: center;\">";
-    $sb.=$monthName . " " . $year;
+    $sb.=$monthName . " " . $year. $bc;
     $sb.="    </td>";
     $sb.="</tr>";
     $sb.="<tr class=\"calendartable\">";
@@ -456,15 +460,15 @@ if ($dateBg != null) {
   list($year, $month, $day) = parseDate($dateGr, "gr");
   $daysgrFromStartOfCalendar = $gr->calculateDaysFronStartOfCalendar($year, $month, $day);
 }   
-if ($daysbgFromStartOfCalendar != null) {
+if ($daysbgFromStartOfCalendar !== null) {
   $daysgrFromStartOfCalendar = $daysbgFromStartOfCalendar - $daysbgFromStartOfCalendarTillJavaEpoch + $daysgrFromStartOfCalendarTillJavaEpoch;
-} else if ($daysgrFromStartOfCalendar != null) { 
+} else if ($daysgrFromStartOfCalendar !== null) { 
   $daysbgFromStartOfCalendar = $daysgrFromStartOfCalendar - $daysgrFromStartOfCalendarTillJavaEpoch + $daysbgFromStartOfCalendarTillJavaEpoch;
 } 
 
 $periodsbg = null;
 $periodsgr = null;
-if ($daysbgFromStartOfCalendar == null) {
+if ($daysbgFromStartOfCalendar === null) {
    $timezoneCorrection    = '7200'; // Two hours ahead of GMT in seconds.
    $dailysavingCorrection = '0';//(1L * 60L * 60L * 1000L); // One hour ahead of usual winter time. 0 - means winter time.
 
@@ -483,9 +487,11 @@ if ($daysbgFromStartOfCalendar == null) {
 } 
 $periodsbg = $bg->calculateCalendarPeriods($daysbgFromStartOfCalendar);
 $periodsgr = $gr->calculateCalendarPeriods($daysgrFromStartOfCalendar);
+$isbc = $gr->isBeforeChrist();
+$bc = $isbc ? ' '.tri('пр.Хр.', 'B.C.', 'B.C.', 'до н.э.') : '';
 
 if ($periodsbg == null || $periodsgr == null) {
-   throw new LetoException("Невъзможно изчисляването на текущата дата поради неизвестна причина.");
+   throw new LetoException("Calculation of current datae is not possible due to unknown reason. Please check for PHP syntax correctness.");
 }
 $daybg       = $periodsbg[0]->getNumber() + 1;
 $daygr       = $periodsgr[0]->getNumber() + 1;

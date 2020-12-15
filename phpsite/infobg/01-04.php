@@ -1,5 +1,5 @@
 <?php if ($lang == 'bg') : ?>
-Според Георги Велев и неговата книга 
+Според <a href="links/daobgkalendar.pdf">Георги Велев</a> и неговата книга 
 <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народният календар и неговите празници"</a>
 на този ден по Древния Български Календар се е чествало пролетното равноденствие.
 <br/><br/>
@@ -11,7 +11,7 @@
 
 
 <?php elseif ($lang == 'en') : ?>
-According to Georgi Velev and his book 
+According to <a href="links/daobgkalendar.pdf">Georgi Velev</a> and his book 
 <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"The Folk Calendar and its Holidays"</a>
 Oon this day the Spring Equinox was celebrated on the Ancient Bulgarian Calendar.
 <br/><br/>
@@ -23,7 +23,7 @@ celebrated in modern times by the Orthodox Church on
 
 
 <?php elseif ($lang == 'de') : ?>
-Nach Georgi Welew und seinem Buch
+Nach <a href="links/daobgkalendar.pdf">Georgi Welew</a> und seinem Buch
 <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Volkskalender und seine Feiertage"</a>
 An diesem Tag war der alte bulgarische Kalender eine Feier der Frühlingstagung.
 <br/><br/>
@@ -32,7 +32,7 @@ Die Symbolik dieser Feier wurde in Form des Festes in die christliche Tradition 
 <a href="http://bg-patriarshia.bg/calendar.php?month=2">25<sup>-te</sup> März</a>.
 
 <?php elseif ($lang == 'ru') : ?>
-По словам Георгия Велева и его книги
+По словам <a href="links/daobgkalendar.pdf">Георгия Велева</a> и его книги
 <a href="http://bookshop.bg/bg/knigi/nehudojestveni-izdanija/folklor-i-etnologija/narodniqt-kalendar-i-negovite-praznici-23917">"Народный календарь и его праздники"</a>
 В этот день по древний болгарский календарь праздновалось весеннего равноденствия.
 <br/><br/>
@@ -41,7 +41,21 @@ Die Symbolik dieser Feier wurde in Form des Festes in die christliche Tradition 
  (также называемый <i>Благовец</i>),
 Отмечаемый в наше время православной церковью
 <a href="http://bg-patriarshia.bg/calendar.php?month=2">25<sup>-ого</sup> Mарта</a>.
-
-
-
 <?php endif ?>
+
+
+<br/><br/>
+
+
+<?php if ($lang == 'bg') : ?>
+ Вижте също статията 
+<a href="links/daobgkalendar.pdf">Дао на българския календар</a>.
+в брой 5/2014 на <a href="https://spisanie8.bg/списание/списание-8-брой-52014-г.html">Списание 8</a>.
+<?php elseif ($lang == 'en') : ?>
+Please also see the article <a href="links/daobgkalendar.pdf">"Dao of the Bulgarian Calendar"</a> in issue 5/2014 of <a href="https://spisanie8.bg/списание/списание-8-брой-52014-г.html">Spisanie 8</a> magazine.
+<?php elseif ($lang == 'de') : ?>
+Siehen Sie bitte also den Artikel <a href="links/daobgkalendar.pdf">"Dao des Bulgarischen Kalenders"</a> in Ausgabe 5/2014 der Zeitschrift <a href="https://spisanie8.bg/списание/списание-8-брой-52014-г.html">Spissanie 8</a>.
+<?php elseif ($lang == 'ru') : ?>
+Сматрите также статью <a href="links/daobgkalendar.pdf">"Дао болгарского календаря"</a> в выпуске 5/2014 журнала <a href="https://spisanie8.bg/списание/списание-8-брой-52014-г.html">Списание 8</a>.
+<?php endif ?>
+

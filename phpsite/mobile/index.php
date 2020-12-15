@@ -210,7 +210,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
      src="../images/fork-me-on-github.png"
      alt="Fork me on GitHub" usemap="#github">
   <map name="github">
-    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/ynedelchev/bgkalendar" alt="bgkalendar">
+    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/bgkalendar/bgkalendar" alt="bgkalendar">
   </map>
 <!-- Fork Me On Github End -->
 <h1><span class="toptitle"><?php tr('Българският Календар', 'The Bulgarian Calendar', 'Der Bulgarisch Kalender', 'Болгарский Календарь')?></span></h1>
@@ -301,7 +301,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
     </td>
     <td valign="top">
       <div class="calendartypetitle">
-          <?php tr('Съвременен Грегориански<br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?>
+          <?php tr('Съвременен Григориански<br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Григорианский Календарь');?>
       </div>
     </td>
   </tr>
@@ -398,7 +398,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    признат за най-съвършенния в света. За начална точка на летоброенето е приет денят на зимното 
    слънцестоене (21-ви декември) през 5505 година преди Хр.<br/>
    Тази страница представлява опит за компютърен модел на <a href="../kalendar.html">древният български календар</a> 
-   и сравнението му със съвременния грегориански календар.
+   и сравнението му със съвременния григориански календар.
 <?php elseif ($lang == 'en') : ?>
    Ancient Bulgarians, who lived on Bulgarian land, created their own callendar system. The Bulgarian Callendar has been 
    reconstrucuted basedon on writen historical artefacts (<a href="../imennik.html">Namelist of Bulgarian Rulers</a>), 
@@ -418,7 +418,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
    Древние болгары, жившие на территорий Балканского полуострова, пользовались собственным календарём, созданный их предками.
    Мы восстановили здесь календарь на основании письменных исторических источников как (<a href="../imennik.html">Именник Болгарских Канов</a>), легенд и современных исследований. Он признан ЮНЕСКО и считается одним из самых совершенных.
 Отправной точкой в летоисчислении принимается день зимнего солнцестояния (21 декабря) 5505 года до нашей эры.
-   Наш сайт дает представлление о <a href="../kalendar.html">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет возможность сравнить его с современным Грегорианским календарём.
+   Наш сайт дает представлление о <a href="../kalendar.html">древнем болгарском календаре</a> в удобном для пользователей виде, а также предоставляет возможность сравнить его с современным Григорианским календарём.
 <?php endif ?>
 <br/>
 
@@ -553,7 +553,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
        </tr>
        <tr>
             <td class="details bold">
-                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#420"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
+                <a class="period" href="../kalendar<?php tr('','-en','','');?>.html#420g"><?php tr('Звездна Седмица', 'Star Week', 'Sternwoche', 'Звездная Неделя');?></a>:
             </td>
             <td class="details detailsleft nobr"><?php echo seqPrefix($periodsbg[5]->getNumber()+1, 'fnff');?></td>
 
@@ -581,7 +581,7 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 
 <a name="changeddategr"/>
 <div class="calendartypetitle">
-   <?php tr('Съвременен Грегориански Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?>
+   <?php tr('Съвременен Григориански Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Григорианский Календарь');?>
 </div>
 <div>
 <nobr><?php tr('Ден', 'Day', 'Tag', 'День');?>: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr>
@@ -770,14 +770,14 @@ $nextBgMonthWeekStartGr = bcmod(bcsub($nextBgMonthStart, $diffBgGr), 7);
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Контакт', 'Contacts', 'Kontakte', 'Контакт');?></span></b>
  <ul>
-     <li><a class="footer" href="mailto:admin@bgkalendar.com"><span class="footer">admin@bgkalendar.com</span></a></li>
+     <li><a class="footer" href="mailto:admin [а] bgkalendar.com"><span class="footer">admin[а]bgkalendar.com</span></a></li>
  </ul>
 </div>
 <div class="footerfloat">
  <span class="footer bold"><?php tr('Разработка', 'Development', 'Entwicklung', 'Разработка');?></span>
  <ul>
      <li>
-         <a class="footer" href="https://github.com/ynedelchev/bgkalendar/">
+         <a class="footer" href="https://github.com/bgkalendar/bgkalendar/">
              <span class="footer">
                  <?php 
                  tr('Изходен код', 'Source code', 'Quellcode', 'Исходный код');

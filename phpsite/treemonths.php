@@ -207,7 +207,7 @@ $prefix = 'mobile';
 </div>
 
 <div style="float: left; max-width: 46%;">
-   <span class="calendartypetitle"><?php tr('<nobr>Съвременен Грегориански</nobr><br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Грегорианский Календарь');?></span>
+   <span class="calendartypetitle"><?php tr('<nobr>Съвременен Григориански</nobr><br/> Календар', 'Modern Gregorian Calendar', 'Modernen Gregorischen Kalender', 'Современный Григорианский Календарь');?></span>
    <br/>
    <nobr><?php tr('Ден', 'Day', 'Tag', 'День');?>: <?php echo formatMinimumDigits($daygr, 2);?>,</nobr><br/>
    <nobr><?php tr('Месец', 'Month', 'Monat', 'Месяц');?>: <?php echo $periodsgr[1]->getStructure()->getName($lang);?>,</nobr><br/>
@@ -231,11 +231,11 @@ $prefix = 'mobile';
    &nbsp; &nbsp;
    <br/>
    <br/>
-   <?php $igr = drawMonth($prevGrMonthYear, $prevGrMonthName, $prevGrMonthDays, $prevGrMonthWeekStart, $igr, null, $prefix)?>
+   <?php $igr = drawMonth($prevGrMonthYear, $prevGrMonthName, $prevGrMonthDays, $prevGrMonthWeekStart, $igr, null, $prefix, $bc)?>
    <br/>
-   <?php $igr = drawMonth($currGrMonthYear, $currGrMonthName, $currGrMonthDays, $currGrMonthWeekStart, $igr, $tgr, $prefix)?>
+   <?php $igr = drawMonth($currGrMonthYear, $currGrMonthName, $currGrMonthDays, $currGrMonthWeekStart, $igr, $tgr, $prefix, $bc)?>
    <br/>
-   <?php $igr = drawMonth($nextGrMonthYear, $nextGrMonthName, $nextGrMonthDays, $nextGrMonthWeekStart, $igr, null, $prefix)?>
+   <?php $igr = drawMonth($nextGrMonthYear, $nextGrMonthName, $nextGrMonthDays, $nextGrMonthWeekStart, $igr, null, $prefix, $bc)?>
    <br/>
 </div>
 <div style="clear: both;">&nbsp;</div>

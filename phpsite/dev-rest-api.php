@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
    require_once('includes.php');
-$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : 'bg';
+$lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : (isset($LANGUAGE) ? $LANGUAGE : getPreferredLang());
 if ($lang != 'bg' && $lang != 'en' && $lang != 'de' && $lang != 'ru') {
   $lang = 'bg';
 }

@@ -322,8 +322,6 @@ the calendar of the ancient Bulgarians.
 <br/>
 <br/>
 
-Table for conversoin from number values represented as cyrillic letters 
-to modern representation of the numbers with arabic digits.
 
 <table class="calendartable">
    <tr class="calendartable">

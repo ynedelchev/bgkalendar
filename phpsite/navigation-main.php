@@ -5,7 +5,7 @@
      src="images/fork-me-on-github.png"
      alt="Fork me on GitHub" usemap="#github">
   <map name="github">
-    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/ynedelchev/bgkalendar" alt="bgkalendar">
+    <area shape="poly" coords="12,0,148,138,148,74,74,0,12,0" href="https://github.com/bgkalendar/bgkalendar" alt="bgkalendar">
   </map>
 <!-- Fork Me On Github End -->
 

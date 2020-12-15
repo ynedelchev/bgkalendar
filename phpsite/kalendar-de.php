@@ -20,18 +20,32 @@
 <body class="calendarbody">
 <?php include('navigation.php');?>
 <p>
+<ul>
+  <li><a href="#nachalo">Anfang</a></li>
+  <li><a href="#godina">Struktur des Jahres</a></li>
+  <li><a href="#cikli">Zyklen für die Korrektur des Kalenders</a></li>
+  <ul>
+     <li><a href="#4g">Vier Jahre Abschnitt</a></li>
+     <li><a href="#12g">Zwölf Jahre Abschnitt</a></li>
+     <li><a href="#60g">Sechzig Jahre Abschnitt (Sterntag)</a></li>
+     <li><a href="#420g">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></li>
+     <li><a href="#1680g">Sternmonat</a></li>
+     <li><a href="#20160g">Sternjahr</a></li>
+     <li><a href="#80640g">Vier Sternjahre Abschnitt</a></li>
+     <li><a href="#10080000g">Sternepoche</a></li>
+  </ul>
+</ul>
 Die Bulgarischen Kalender ist der Kalender der alten Bulgaren restauriert geschriebenen historischen Daten
-(<a href="imennik.html">Namensliste der bulgarischen Khane</a>) 
+(<a href="iztochnici.php#imennik?lang=<?php tr('bg', 'en', 'de', 'ru');?>">Namensliste der bulgarischen Khane</a>) 
 und den Märchen und Legenden.<br/>
 Es gibt Studien von verschiedenen Gelehrten, die manchmal ganz anderen Schlussfolgerungen.
 </p>
 
 <h3><a name="nachalo">Anfang</a></h3>
-Die meisten Forscher akzeptieren den Ausgangspunkt auf dem Tag der Wintersonnenwende
-(21<sup>-sten</sup> Dezember)
-im Laufe des Jahres 5505 BC-das heißt, wir können davon ausgehen, 
-dass das erste Jahr des Bulgarischen Kalenders fällt fast vollständig mit 5504 
-v. Chr. im gregorianischen Kalender.
+Verschiedene Entdecker nehmen einen anderen Punkt, um die Kelendara zu starten.
+
+In unserem Kalendermodell ist das Datum, an dem der Kalender beginnt, der Wintersonnenwende-Tag (21<sup>-sten</sup>. Dezember) 5506 v. Chr. - mit anderen Worten, wir können davon ausgehen, dass das erste Jahr des bulgarischen Sommers fast genau mit 5505 v. Chr. Übereinstimmt Christus auf dem Gregorianischen Kalender.
+
 <br/>
 <br/>
 <table>
@@ -76,10 +90,10 @@ v. Chr. im gregorianischen Kalender.
    </tr>
    <tr>
         <td class="calendartable"  colspan="18" align="right" 
-            bgcolor="lightgray">Dezember des Jahres 5505 BC
+            bgcolor="lightgray">Dezember des Jahres 5506 BC
         </td>
         <td class="calendartable" bgcolor="lightblue" 
-      colspan="18">Januar-5504 BC
+      colspan="18">Januar-5505 BC
   </td>
    </tr>
    <tr>
@@ -194,7 +208,6 @@ das 1<sup>-sten</sup> Jahr, die BC das 1<sup>-sten</sup> Jahr nach Christus sofo
    </tr>
 </table>
 <br/>
-In unserem Kalenderdatum Modell für den Start des Kalenders angenommen hat ein Jahr zuvor, nämlich 21<sup>-sten</sup> Dezember 5506 (Montag nach dem Grigoriânskiâ-Kalender) für den ersten Tag der Bulgarischen Kalender angenommen wurde.
 
 <h3><a name="godina">Struktur des Jahres</a></h3>
 Nach Ansicht der Forscher gliedert sich das Jahr in 12 Monate + ein oder zwei (im Schaltjahr) Werktage, 
@@ -2443,7 +2456,7 @@ Jedes der 12 Jahre Zyklus ist ein Element und der entsprechenden Farbe und Richt
      <td class="calendartable" style="text-align: left; background-color: yellow;">3.</td>
      <td class="calendartable" style="text-align: left; background-color: yellow;">ERDE</td>
      <td class="calendartable" style="text-align: left; background-color: yellow;">GELB</td>
-     <td class="calendartable" style="text-align: left; background-color: yellow;">SÜDEN</td>
+     <td class="calendartable" style="text-align: left; background-color: yellow;">WESTEN</td>
   </tr>
   <tr class="calendartable">
      <td class="calendartable" style="text-align: left; background-color: blue;">4.</td>
@@ -2653,7 +2666,7 @@ So kann die Kombination von Element, Geschlecht und Tier für Termine innerhalb 
 </table>
 <br/>
 <br/>
-<h4><a name="420">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></h4>
+<h4><a name="420g">Vierhundert und zwanzig Jahre Abschnitt (Sternwoche)</a></h4>
 Als Gruppe erhalten die 7 Sterntage (jeweils 60 Erdjahren) wir über einen Zeitraum von 420 Jahren, die wir eine Sternwoche nennen.
 In jeder Sternwoche die ersten dritten und fünften Sterntag sind nicht schalt (Nichtschaltsterntag) 
 und die zweite, vierte und sechste sind schalt (Schaltsterntag).
