@@ -203,7 +203,7 @@
 
 
 <div class="linkitem">
-<a href="http://ziezi.bg/spiridon.html">
+<a href="links/Istoriya-vo-kratce-o-Bolgarskom-narode-slavenskom.pdf">
   <img class="titleimg"  src="images/rozeta-pliska.svg" style="max-height: 100px; max-width: 100px;"/><br/>
   <?php tr('История во кратце о болгарском народе славенском написа Иеросхимонах Спиридон Габровски в лето 1792', 'Short history of Bulgarian Slavic Nation, written by hieromonk Spyridon Gabrovski in 1792', 'Kurtz Geschichte des Bulgarische Nation der slawischen Sprache von Priestermönch Spyridon Gabrovski im Sommer 1792 geschrieben', 'История болгарского народа славянского языка, написанная Иеросимонахом Спиридоном Габровским летом 1792 года');?>
 </a>
@@ -243,14 +243,14 @@
 </div>
 
 <div class="linkitem">
-<a href="http://www.theworldcalendar.org">
+<a href="<?php tr('https://en.wikipedia.org/wiki/World_Calendar', 'https://en.wikipedia.org/wiki/World_Calendar', 'https://de.wikipedia.org/wiki/Weltkalender', 'https://en.wikipedia.org/wiki/World_Calendar');?>">
   <img class="titleimg"  src="images/twcalendar.png"/><br/>
   <?php tr('Идея за нов календар (английски)', 'Idea for new calendar system (English)', 'Idee für neues Kalendersystem (Englisch)', 'Идея новой системы календаря (английский)');?>
 </a>
 </div>
 
 <div class="linkitem">
-<a href="http://www.promacedonia.org/vz1a/vz1a_prit_16.html">
+<a href="http://macedonia.kroraina.com/vz1a/vz1a_prit_01.html">
   <img class="titleimg"  src="images/zlatarski.png"/><br/>
   <?php tr('БЪЛГАРСКО ЛЕТОБРОЕНИЕ - Васил Н. Златарски', 'BULGARIAN YEAR COUNTING - Vassil N. Zlatarski', 'BULGARISCHE BRÜDER - Wassil N. Zlatarski', 'БОЛГАРСКОЕ ЛЕТОСЧИТЕНИЕ - Васил Н. Златарски');?>
 </a>

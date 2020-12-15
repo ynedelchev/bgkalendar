@@ -203,7 +203,7 @@ Die Übersetzung ist noch nicht fertig. Um diesen Absatz zu übersetzen, wenden 
 <br/>
 <br/>
 <br/>
-
+<a name="numeric"></a>
 <?php if ($lang == 'bg') : ?>
 Таблица за преобразуване на числови стойности изразени с кирилски букви към 
 съвременен запис на числата с арабски цифри.

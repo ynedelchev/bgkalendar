@@ -7,6 +7,23 @@
    <link rel="stylesheet" type="text/css" href="../../bgkalendar.css" />
 
    <title><?php tr('Хартиен календар за 7526/2021', 'Printed paper calendar for 7526/2021', 'Papierkalender für 7526/2021', 'Бумажный календарь для 7526/2021');?></title>
+   <style>
+   @font-face {
+     font-family: izhitsa;
+     src: url(../../fonts/izhitsa-cyrillic.ttf);
+   }
+   .oldbgfont
+   {
+     vertical-align: top;
+     border-collapse: collapse;
+     border-width: 1px;
+     border-color: blue;
+     border-style: solid;
+     vertical-align: top;
+     text-align: right;
+     font-family: "izhitsa", "Times New Roman", "Times", "serif";
+   }
+   </style>
 </head>
 <body class="body">
 <nav>
@@ -21,15 +38,26 @@
 </div>
 
 <br/><br/>
+<?php if ($lang == 'bg') : ?>
+Оттук можете да поръчате своя версия на хартиен календар за 7526/2021 година. Календарът е с размер 480 х 680 мм на метирана хартия 200 гр. <a href="#order">Към поръчка.</a>
+<?php elseif ($lang == 'en') : ?>
+Here you can order your copy of paper calendar for year 7526/2021. The calendar size is 480 x 680 mm on a 200 g paper.<a href="#order">Order here.</a>
+<?php elseif ($lang == 'de') : ?>
+Hier können Sie Ihre Kopie des Papierkalenders für das Jahr 7526/2021 bestellen. Die Kalendergröße beträgt 480 x 680 mm auf einem 200 g Papier. <a href="#order">Bestellen Sie hier</a>
+<?php elseif ($lang == 'ru') : ?>
+Здесь вы можете заказать копию бумажного календаря на 7526/2021 год. Размер календаря 480 x 680 мм на бумаге 200 г. <a href="#order">Заказать здесь.</a>
+<?php endif ?>
+
+<br/><br/>
 <center><b>
 <?php if ($lang == 'bg') : ?>
 Преглед
 <?php elseif ($lang == 'en') : ?>
 Preview
 <?php elseif ($lang == 'de') : ?>
-Предварительный просмотр
-<?php elseif ($lang == 'ru') : ?>
 Vorschau
+<?php elseif ($lang == 'ru') : ?>
+Предварительный просмотр
 <?php endif ?>
 </b></center>
 
@@ -127,6 +155,41 @@ Vorschau
     Новогодишният ден, който е след края на Дванадесетия месец (Месец Алтом) не се брои в рамките нито на месец, нито на седмица. С него завършва старата година и започва новата и в известен смисъл
     е едновременно част и от двете години. В нашият модел, за удобство този ден е отбелязан като последен 31<sup>-ви</sup> ден на Дванадесетия месец (Месец Алтом).
     <br/><br/>
+    Цитатът от <a href="../../iztochnici.php?lang=bg#imennik">Имменникът на българските владетели</a>, разположен долу вляво от календарния циферблат, е един от най-ценните извори за възстановяване на Българския календар.
+    <br/><br/>
+    <div class="oldbg" style="text-align: left; max-width: 40em;">
+      <br/>
+      Авитохолъ житъ лѣт. ҃т. рѡд ему Дуло. 
+      а лѣт ему дилѡмъ твирем. <br>
+      Ирникъ. житъ лѣт. ҃рн. рѡд ему Дуло.
+      а лѣт ему дилом твиремь. <br>
+      <br/>
+      ...
+      <br/>
+    </div>    
+    <br/><br/>
+    Този цитат свързва началото на българската държавност с полумитичния владетел <a href="https://bg.wikipedia.org/wiki/%D0%90%D0%B2%D0%B8%D1%82%D0%BE%D1%85%D0%BE%D0%BB">Авитохол</a>, 
+    който вероятно е <a href="https://bg.wikipedia.org/wiki/%D0%90%D1%82%D0%B8%D0%BB%D0%B0">Атила</a> и синът му <a href="https://bg.wikipedia.org/wiki/%D0%98%D1%80%D0%BD%D0%B8%D0%BA">Ирник</a> 
+    (вероятно съответства на синът на Атила известен от други извори като <a href="https://bg.wikipedia.org/wiki/%D0%95%D1%80%D0%BD%D0%B0%D1%85">Ернак</a>). 
+    Тези владетели са полулегендарни, защото посочените за тях години 300 (<span style="font-family: oldbgfont;"> ҃т</span>) за Авитохол и 150 (<span style="font-family: oldbgfont;"> ҃рн</span>) за Ирник са нереалистично дълги нито за живот, нито за царуване спрямо днешните ни представи. 
+    Вижте също и <a href="../../iztochnici.php#numeric">таблицата за преобразуване на буквите на кирилицата в числови стойности</a>.
+    В именникът на българските владетели се изброява царуването на владетелите от Авитохол до Умор, като за всеки владетел се посочва продължителност в години, както и датировка (по Древния Български Календар) вероятно на възцаряване на владетеля. Датировката по Древния Български Календар е винаги двусъставна - например "дилом твирем" както за Авитохол и Ирник. Първата част (дилом) се тълкува като име на животно в 12-годишният животински цикъл, а втората, се тълкува като име на месец от годината. Конкретно дилом съответства на змия, а твирем на четвърти месец.
+    Друго интересно нещо, което забелязваме е цикличността. При период от 300 години (животът на Авитохол), който е кратен на 60 и съответно и на 12 (5 * 60 = 300 и 25 * 12 = 300), имаме съвпадение на същата датировка - дилом твирем. Това подчертава цикличността на календара.
+    <br/><br/>
+    Другият цитат от <a href="../../iztochnici.php?lang=bg#tudordoksov">Приписката на Тудор черноризец Доксов</a>, е също много интересен с това, че свързва датировка по Древния Български Календар с реално историческо събитие - покръстването на българите.
+    <br/><br/>
+    <div class="oldbg" style="text-align: left; max-width: 40em;">
+      ...
+      <br/>
+      Сеи же Борисъ болгары крстилъ е в лѣт етхь бехти. Въ имѧ ѡ҃ца и с҃на и ст҃го д҃ха. амин. 
+      <br/>
+      ...
+      <br/>
+    </div>    
+    <br/><br/>
+    Отново виждаме двусъставната датировка по Древния Български Календар ("етх бехти"), където "етх" съответства на година "куче", а "бехти" е високосният ден, който не е част от месец, според една от хипотезите.
+   
+    <br/><br/>
     Фонът на календара е снимка на небесни облаци заснета над комплекс Елените, пред която е поставена замъглена палитра от преливащи бяло-зелено-червено (българският трибагреник) цветове.
     <br/><br/><br/>
     
@@ -210,6 +273,7 @@ Vorschau
      }
 
    </script>
+   <a name="order"></a>
    <form method="post" action="order.php?lang=<?php tr('bg', 'en', 'de', 'ru');?>" onsubmit="return validateForm();">
    <input type="hidden" name="lang", value="<?php tr('bg', 'en', 'de', 'ru');?>" />
    <table>
@@ -241,9 +305,6 @@ Vorschau
      </tr>
      <tr>
        <td>&nbsp;</td><td><input type="submit" name="submit" value="<?php tr('Вземи своя хартиен календар', 'Take your paper calendar', 'Nehmen Sie Ihren Papierkalender', 'Возьмите свой бумажный календарь');?>"></td>
-     </tr>
-     <tr>
-       <td>&nbsp;</td><td><?php tr('Или се свържете по електронна поща със', 'Alternatively, you may simply contact us on E-mal ', 'Alternativ können Sie uns einfach über E-mal kontaktieren ', 'Кроме того, вы можете просто связаться с нами на ');?><br/> <u>admin [а] bgkalendar.com</u></td>
      </tr>
      
    </table>
