@@ -151,7 +151,7 @@
 -->
 <div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
-    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7525/2020</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
+    За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7526/2021</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
     <a href="papercalendar/2021?lang=bg">Виж повече</a>
   <?php elseif ($lang == 'en') : ?>
     In order to obtain your printed version of the Bulgarian calendar (format A2) for 7526, please contact <u>admin [а] bgkalendar.com</u> .<br/>
@@ -1488,7 +1488,6 @@ $wday = bcmod($igr, 7);
        Как се предполага, че е бил устроен календара и какъв е алгоритъма за изчисление на датата, който е най-близо до астрономичните закони, можете да научите <a href="kalendar-bg.php?lang=bg">тук</a>.<br/><br/>
        Ако желаете да споделите мнение, да дадете препоръка или да споделите ваши изследвания и/или наблюдения, можете да го направите по електронна поща до admin [а] bgkalendar.com.<br/><br/>
        
-       Екипът на bgkalendar започва издаването на хартиена версия на календара за 2020 (григорианска) - 7525 (древна българска). Търсят се спонсори и разпространители. Ако се интересувайте, моля свържете се с нас отново на admin [а] bgkalendar.com.<br/><br/> 
      <?php elseif ($lang == 'en') : ?>
      <?php elseif ($lang == 'de') : ?>
      <?php elseif ($lang == 'ru') : ?>
