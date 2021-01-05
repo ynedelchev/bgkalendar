@@ -80,8 +80,8 @@
      src: url(fonts/leksfree-regular.otf);
    }
    @font-face {
-     font-family: butimes;
-     src: url(fonts/butimes.ttf);
+     font-family: vollkorn;
+     src: url(fonts/TTF/Vollkorn-Italic.ttf);
    }
    </style>
    <title>Какво начертание на кирилицата наричаме типично българско</title>
@@ -300,6 +300,16 @@
   <b style="font-family: butimes;">Таймс</b><br/>
   Сайт: <a style="font-family: butimes;" href="http://www.fontineed.com/font/bulgarian_times">http://www.fontineed.com</a><br/>
   <a style="font-family: butimes;" href="downloads/bulgarian_times.zip">Сваляне</a>
+</div>
+<div style="max-width: 300px; float: left; margin: 2em; font-family: vollkorn;">
+  Ах, чудна българска земьо, полюшвай цъфтящи жита!<br/>
+  The quick brown fox jumps over the lazy dog.<br/>
+  Ζαφείρι δέξου πάγκαλο, βαθῶν ψυχῆς τὸ σῆμα.<br/>
+  שפן אכל קצת גזר בטעם חסה, ודי.
+  <br/>
+  <b style="font-family: repo;">Фолкорн</b><br/>
+  Сайт: <a style="font-family: repo;" href="http://vollkorn-typeface.com/">http://vollkorn-typeface.com/</a><br/>
+  <a style="font-family: repo;" href="http://vollkorn-typeface.com/#download">Сваляне</a>
 </div>
 
 

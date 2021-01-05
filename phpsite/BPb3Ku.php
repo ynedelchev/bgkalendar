@@ -124,6 +124,14 @@
 </div>
 
 <div class="linkitem">
+<a href="https://www.youtube.com/watch?v=uGX0r6q1A_Y">
+  <img class="titleimg"  src="images/tsanov.png"/><br/>
+  <?php tr('Цанов НАПРЕД и НАГОРЕ - Древният БЪЛГАРСКИ календар - коя година/наистина/ идва?', 'Tsanov FORWARD and UP - The Ancient Bulgarian Calendar which year /really/ comes?', 'Tzanow VORWÄRTS und AUF - Der uralt bulgarische Kalender, welches Jahr /wirklich/ kommt? ', 'Цанов ВПЕРЁД и ВВЕРХ - Древний болгарский календарь, какой год /действительно/ приходит?');?>
+</a>
+<a class="cache" href="links/tsanov.mkv"></a>
+</div>
+
+<div class="linkitem">
 <a href="<?php tr('https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80',
                   'https://en.wikipedia.org/wiki/Bulgar_calendar','https://en.wikipedia.org/wiki/Bulgar_calendar',
                   'https://bg.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80');?>">
@@ -256,6 +264,7 @@
 </a>
 <a class="cache" href="links/zlatarski/"></a>
 </div>
+
 
 <br/>
 <br/>
