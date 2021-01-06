@@ -172,11 +172,11 @@
   if (!$errors) {
     $date = date("Y-m-d H:i s");
     $str  = "----------------------------------------------------------------\n";
+    $str .= "E-mail:    " . $email       . "\n";
     $str .= "Date:      " . $date        . "\n";
     $str .= "Count:     " . $count       . "\n";
     $str .= "Recipient: " . $recipient   . "\n";
     $str .= "Address:   " . $address     . "\n";
-    $str .= "E-mail:    " . $email       . "\n";
     $str .= "Phone:     " . $phone       . "\n";
     $str .= "Price:     " . $price       . "\n";
     $str .= "----------------------------------------------------------------\n";

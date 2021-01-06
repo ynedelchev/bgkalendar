@@ -51,10 +51,10 @@
 
   <?php if ($lang == 'bg') :?>
 
+      Електронна поща:   <?php echo "$email\n"; ?>
       Дата:              <?php echo "$date\n";?>
       Име на получател:  <?php echo "$recipient\n"; ?>
       Телефонен номер:   <?php echo "$phone\n"; ?>
-      Електронна поща:   <?php echo "$email\n"; ?>
       Адрес за доставка: <?php echo "$address\n"; ?>
       
       Брой:          <?php echo "$count\n";?>
@@ -68,10 +68,10 @@
      
   <?php elseif ($lang == 'en') :?>
 
+      E-mail:     <?php echo "$email\n"; ?>
       Date:       <?php echo "$date\n";?>
       Recipient:  <?php echo "$recipient\n"; ?>
       Phone:      <?php echo "$phone\n"; ?>
-      E-mail:     <?php echo "$email\n"; ?>
       Delivery:   <?php echo "$address\n"; ?>
       
       Count:          <?php echo "$count\n";?>
@@ -84,10 +84,10 @@
 
   <?php elseif ($lang == 'de') :?>
 
+      Email:      <?php echo "$email\n"; ?>
       Datum:      <?php echo "$date\n";?>
       Empfänger:  <?php echo "$recipient\n"; ?>
       Telefon:    <?php echo "$phone\n"; ?>
-      Email:      <?php echo "$email\n"; ?>
       Lieferung:  <?php echo "$address\n"; ?>
       
       Wie viele:  <?php echo "$count\n";?>
@@ -96,10 +96,10 @@
 
   <?php elseif ($lang == 'ru') :?>
 
+      Эл. почта:   <?php echo "$email\n"; ?>
       Дата:        <?php echo "$date\n";?>
       Получатель:  <?php echo "$recipient\n"; ?>
       Телефон:     <?php echo "$phone\n"; ?>
-      Эл. почта:   <?php echo "$email\n"; ?>
       Доставка:    <?php echo "$address\n"; ?>
       
       Сколько:     <?php echo "$count\n";?>

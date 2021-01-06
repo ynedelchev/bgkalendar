@@ -67,10 +67,10 @@
   </div>
   <br/><br/><br/>
   <?php if ($lang == 'bg') :?>
+      Електронна поща:   <?php echo $email; ?><br/>
       Дата:              <?php echo $date; ?><br/>
       Име на получател:  <?php echo $recipient; ?><br/>
       Телефонен номер:   <?php echo $phone; ?><br/>
-      Електронна поща:   <?php echo $email; ?><br/>
       Адрес за доставка: <?php echo $address; ?><br/>
       <br/>
       Брой:          <?php echo $count;?><br/>
@@ -80,10 +80,10 @@
       Ако имате въпроси или проблеми с доставката, моля позвънете на <?php echo "$admin_phone";?> или пишете на <a href="mailto:<?php echo $admin_email;?>"><?php echo "$admin_email";?></a>.<br/>
      
   <?php elseif ($lang == 'en') :?>
+      E-mail:     <?php echo $email; ?><br/>
       Date:       <?php echo $date; ?><br/>
       Recipient:  <?php echo $recipient; ?><br/>
       Phone:      <?php echo $phone; ?><br/>
-      E-mail:     <?php echo $email; ?><br/>
       Delivery:   <?php echo $address; ?><br/>
       <br/>
       Count:          <?php echo $count;?><br/>
@@ -92,20 +92,20 @@
       <br/>
       If you have any questions or issues with delivery, please call <?php echo "$admin_phone";?> or E-mail to <a href="mailto:<?php echo $admin_email;?>"><?php echo "$admin_email";?></a>.<br/>
   <?php elseif ($lang == 'de') :?>
+      Email:      <?php echo $email; ?><br/>
       Datum:      <?php echo $date; ?><br/>
       Empfänger:  <?php echo $recipient; ?><br/>
       Telefon:    <?php echo $phone; ?><br/>
-      Email:      <?php echo $email; ?><br/>
       Lieferung:  <?php echo $address; ?><br/>
       <br/>
       Wie viele:  <?php echo $count;?><br/>
       Preis:      <?php echo $price; ?> lewen<br/>
       (Der Preis der Postlieferung ist nicht inbegriffen.)<br/>
   <?php elseif ($lang == 'ru') :?>
+      Эл. почта:   <?php echo $email; ?><br/>
       Дата:        <?php echo $date; ?><br/>
       Получатель:  <?php echo $recipient; ?><br/>
       Телефон:     <?php echo $phone; ?><br/>
-      Эл. почта:   <?php echo $email; ?><br/>
       Доставка:    <?php echo $address; ?><br/>
       <br/>
       Сколько:     <?php echo $count;?><br/>
