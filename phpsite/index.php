@@ -148,7 +148,6 @@
     Для получения дополнительной информации, пожалуйста, <a href="https://kitkazdravets.bg/%D0%B1%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80">смотрите здесь</a>.
   <?php endif ?>
 </div>
--->
 <div style="border-radius: 1em; border: 1px solid green; background: lightblue; max-width: 80%; min-height: 3em; padding: 1em; text-align: center;">
   <?php if ($lang == 'bg') : ?>
     За да получите своя версия на хартиен календар (еднолистов формат А2) за <b>7526/2021</b> моля свържете се със <u>admin [а] bgkalendar.com</u> .<br/>
@@ -164,6 +163,7 @@
 </div>
 <br/><br/>
 <br/><br/>
+-->
 <br/>
 <br/>
 <div class="treemonths">

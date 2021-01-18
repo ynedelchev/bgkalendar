@@ -39,13 +39,13 @@
 
 <br/><br/>
 <?php if ($lang == 'bg') : ?>
-Оттук можете да поръчате своя версия на хартиен календар за 7526/2021 година. Календарът е с размер 480 х 680 мм на метирана хартия 200 гр. <a href="#order">Към поръчка.</a>
+Оттук можете да поръчате своя версия на хартиен календар за 7526/2021 година. Календарът е с размер 480 х 680 мм.<a href="#order">Към поръчка.</a>
 <?php elseif ($lang == 'en') : ?>
-Here you can order your copy of paper calendar for year 7526/2021. The calendar size is 480 x 680 mm on a 200 g paper.<a href="#order">Order here.</a>
+Here you can order your copy of paper calendar for year 7526/2021. The calendar size is 480 x 680 mm.<a href="#order">Order here.</a>
 <?php elseif ($lang == 'de') : ?>
-Hier können Sie Ihre Kopie des Papierkalenders für das Jahr 7526/2021 bestellen. Die Kalendergröße beträgt 480 x 680 mm auf einem 200 g Papier. <a href="#order">Bestellen Sie hier</a>
+Hier können Sie Ihre Kopie des Papierkalenders für das Jahr 7526/2021 bestellen. Die Kalendergröße beträgt 480 x 680 mm. <a href="#order">Bestellen Sie hier</a>
 <?php elseif ($lang == 'ru') : ?>
-Здесь вы можете заказать копию бумажного календаря на 7526/2021 год. Размер календаря 480 x 680 мм на бумаге 200 г. <a href="#order">Заказать здесь.</a>
+Здесь вы можете заказать копию бумажного календаря на 7526/2021 год. Размер календаря 480 x 680 мм. <a href="#order">Заказать здесь.</a>
 <?php endif ?>
 
 <br/><br/>
